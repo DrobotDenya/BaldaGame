@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="a2f11e9a-ddd8-4cb1-991c-da854dadab6d"
   name="ModelGame" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,28 +17,415 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="38bd4494-a488-43f2-a562-9be3c44b5e62"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b9a386c7-f785-4f2b-997e-afae16dd5dfd"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Log in"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3a0c26a1-7a8e-41de-8de3-1b5f3993e1f1"
+              LastKnownName="Log in"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80733d45-daa4-4459-9cdf-ca6d85177db2"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8259b529-19fd-4084-b68d-0b1906d55bd5"
+                  name="Log in"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a3073062-0230-4f3f-99f7-3227f4a119b1"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Start new Game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="48536cd7-8071-4b16-9681-f133e2425eda"
+              LastKnownName="Start new Game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ecf443eb-a0cb-4122-8371-5985d26d447e"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20c12b12-f45f-4d60-870d-8e823945bd40"
+                  name="Start new Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6baf1cc8-5dc0-40d3-92d3-7ecca29e2881"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Gameplay"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ae47fc3a-0cb8-4915-b487-689654770cae"
+              LastKnownName="Gameplay"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5664fcfa-f42e-4f81-95bc-941e6ba28778"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e76ecd8b-c89d-4cb0-98c7-d0e4a441e4ee"
+                  name="Gameplay"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dfa57262-1d4f-4b03-8e98-0945ea28c9c6"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Set configurations "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="51b9924f-feeb-48fd-a361-0448c2b3ccce"
+              LastKnownName="Set configurations "
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01c2c71c-d5e0-4f17-99c7-47c9759387c2"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="845dc47d-dcb9-481e-9dd7-fd136ad3f3ba"
+                  name="Set configurations "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="24f3f256-89ed-48b4-9311-af4f77c19537"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Load Game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="92fcd9ac-8331-4650-9da7-da701034571c"
+              LastKnownName="Load Game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a83a8fd-c97a-4d30-849a-7bd78ca85c67"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e9f6ab49-9176-4b68-8c3b-1de2b6fc19a0"
+                  name="Load Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3a0c26a1-7a8e-41de-8de3-1b5f3993e1f1"
+        name="Log in"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="48536cd7-8071-4b16-9681-f133e2425eda"
+        name="Start new Game"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="db0baccd-a262-474d-bacc-301f522aa053">
+            <useCaseMoniker
+              Id="de381126-f26a-4ebe-bc0d-81af99d0916d"
+              LastKnownName="Multiplayer"
+              LastKnownLocation="ModelGame.uml" />
+          </extend>
+          <extend
+            Id="36cfc4d7-eb4b-4303-a626-cb81001d7615">
+            <useCaseMoniker
+              Id="a878feb1-dd15-4b4f-b595-8a1ff95f3156"
+              LastKnownName="Single Player"
+              LastKnownLocation="ModelGame.uml" />
+          </extend>
+          <extend
+            Id="bb6c54b1-a593-4f47-9b7f-39f151ce387b">
+            <useCaseMoniker
+              Id="4acbe3d8-0222-44b4-a1d6-def205c95708"
+              LastKnownName="Restart game"
+              LastKnownLocation="ModelGame.uml" />
+          </extend>
+          <extend
+            Id="90b975c6-d95f-4547-9524-8f0eeedfffcd">
+            <useCaseMoniker
+              Id="92fcd9ac-8331-4650-9da7-da701034571c"
+              LastKnownName="Load Game"
+              LastKnownLocation="ModelGame.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ae47fc3a-0cb8-4915-b487-689654770cae"
+        name="Gameplay"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="091969bf-2cf0-45f6-90e0-7ad62a4af5b7">
+            <useCaseMoniker
+              Id="26a476af-fff4-43d8-99ca-7d0a9b30f05d"
+              LastKnownName="Pause Game"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+          <include
+            Id="4696a377-d9ea-4591-9209-d5e78c41336a">
+            <useCaseMoniker
+              Id="e37f929e-3fd6-4e15-afbb-3feb0f626573"
+              LastKnownName="Continue current game"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+          <include
+            Id="00b15947-22ac-4fce-a73b-90fc84a8719c">
+            <useCaseMoniker
+              Id="75bb304e-12fd-43da-8b7c-632811d2944d"
+              LastKnownName="Quit game"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+          <include
+            Id="7a627358-4e2f-4fd0-a243-f16e4b8fa9ec">
+            <useCaseMoniker
+              Id="d680fdeb-a075-4fab-a97b-41ddd17e663b"
+              LastKnownName="Save current game"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+          <include
+            Id="e32320df-6f1b-45b6-a943-359f447abf4c">
+            <useCaseMoniker
+              Id="4acbe3d8-0222-44b4-a1d6-def205c95708"
+              LastKnownName="Restart game"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51b9924f-feeb-48fd-a361-0448c2b3ccce"
+        name="Set configurations "
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c0f62456-61a8-4dc3-9b22-2a15e72c78bf">
+            <useCaseMoniker
+              Id="750719a9-1ed8-4902-8152-042062a29fbb"
+              LastKnownName="Change style"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+          <include
+            Id="bd8ea84c-f182-4dcd-a8ac-7387eb937e01">
+            <useCaseMoniker
+              Id="40327dde-3179-4950-bf73-372e17f097d4"
+              LastKnownName="Turn Audio On/Off"
+              LastKnownLocation="ModelGame.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a878feb1-dd15-4b4f-b595-8a1ff95f3156"
+        name="Single Player"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="de381126-f26a-4ebe-bc0d-81af99d0916d"
+        name="Multiplayer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="75bb304e-12fd-43da-8b7c-632811d2944d"
+        name="Quit game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e37f929e-3fd6-4e15-afbb-3feb0f626573"
+        name="Continue current game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="26a476af-fff4-43d8-99ca-7d0a9b30f05d"
+        name="Pause Game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d680fdeb-a075-4fab-a97b-41ddd17e663b"
+        name="Save current game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="750719a9-1ed8-4902-8152-042062a29fbb"
+        name="Change style"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40327dde-3179-4950-bf73-372e17f097d4"
+        name="Turn Audio On/Off"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4acbe3d8-0222-44b4-a1d6-def205c95708"
+        name="Restart game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="92fcd9ac-8331-4650-9da7-da701034571c"
+        name="Load Game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>
