@@ -58,7 +58,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="DCGameWindow.xaml.cs">
+      <DependentUpon>DCGameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DCSettingGameWindow.xaml.cs">
+      <DependentUpon>DCSettingGameWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DCGameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DCMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DCStartWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -66,10 +80,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="DCMenuWindow.xaml.cs">
+      <DependentUpon>DCMenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DCStartWindow.xaml.cs">
+      <DependentUpon>DCStartWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="DCSettingGameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
