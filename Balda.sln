@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balda", "Balda\Balda.csproj
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelGame", "ModelGame\ModelGame.modelproj", "{AF52328F-4E84-42AE-AA56-E3E2BC6DCD06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balda.Data", "Balda.Data\Balda.Data.csproj", "{E2979BC1-9149-4DB1-BB04-B4969CFD1350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,16 @@ Global
 		{AF52328F-4E84-42AE-AA56-E3E2BC6DCD06}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AF52328F-4E84-42AE-AA56-E3E2BC6DCD06}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AF52328F-4E84-42AE-AA56-E3E2BC6DCD06}.Release|x86.ActiveCfg = Release|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E2979BC1-9149-4DB1-BB04-B4969CFD1350}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
