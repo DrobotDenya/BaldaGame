@@ -6,17 +6,221 @@
     <Screen>
       <Type>Navigation</Type>
       <ClassName>BaldaSketchScreens.Screen_1</ClassName>
-      <DisplayName>Screen 1</DisplayName>
+      <DisplayName>StartScreen</DisplayName>
       <FileName>Screen 1.xaml</FileName>
       <Annotations />
       <Position>
-        <X>0</X>
-        <Y>0</Y>
+        <X>-315</X>
+        <Y>-263</Y>
       </Position>
       <VisualTag>0</VisualTag>
     </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_2_1</ClassName>
+      <DisplayName>MenuScreen</DisplayName>
+      <FileName>Screen 2_1.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>-161</X>
+        <Y>-279</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_1</ClassName>
+      <DisplayName>RegistrationScreen</DisplayName>
+      <FileName>Screen 1_1.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>-279</X>
+        <Y>-217</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_4</ClassName>
+      <DisplayName>MultiplierGameScreen</DisplayName>
+      <FileName>Screen 1_4.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>-20</X>
+        <Y>-334</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_5</ClassName>
+      <DisplayName>SettingsScreen</DisplayName>
+      <FileName>Screen 1_5.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>6</X>
+        <Y>-228</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_6</ClassName>
+      <DisplayName>HighscoreScreen</DisplayName>
+      <FileName>Screen 1_6.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>-105</X>
+        <Y>-204</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Navigation</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_3</ClassName>
+      <DisplayName>GamePlayScreen</DisplayName>
+      <FileName>Screen 1_3.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>143</X>
+        <Y>-278</Y>
+      </Position>
+      <VisualTag>0</VisualTag>
+    </Screen>
+    <Screen>
+      <Type>Composition</Type>
+      <ClassName>BaldaSketchScreens.Screen_1_7</ClassName>
+      <DisplayName>AboutScreen</DisplayName>
+      <FileName>Screen 1_7.xaml</FileName>
+      <Annotations />
+      <Position>
+        <X>-305</X>
+        <Y>-318</Y>
+      </Position>
+      <VisualTag>1</VisualTag>
+    </Screen>
   </Screens>
-  <Connections />
+  <Connections>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1</Source>
+      <Target>BaldaSketchScreens.Screen_2_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_1</Source>
+      <Target>BaldaSketchScreens.Screen_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_2_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_4</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_2_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_5</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_5</Source>
+      <Target>BaldaSketchScreens.Screen_2_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_2_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_6</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_6</Source>
+      <Target>BaldaSketchScreens.Screen_2_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_4</Source>
+      <Target>BaldaSketchScreens.Screen_2_1</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_4</Source>
+      <Target>BaldaSketchScreens.Screen_1_3</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_2_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_3</Target>
+      <Type>Navigation</Type>
+      <TransitionType>Fade</TransitionType>
+      <VisualTag>0</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_2_1</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_4</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_6</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+    <Connection>
+      <Source>BaldaSketchScreens.Screen_1_5</Source>
+      <Target>BaldaSketchScreens.Screen_1_7</Target>
+      <Type>Composition</Type>
+      <TransitionType>None</TransitionType>
+      <VisualTag>1</VisualTag>
+    </Connection>
+  </Connections>
   <BrandingText>Microsoft SketchFlow Prototype</BrandingText>
   <RuntimeOptions>
     <HideNavigation>false</HideNavigation>
@@ -60,7 +264,10 @@
     </VisualTag>
   </VisualTags>
   <ViewState>
-    <Zoom>1</Zoom>
-    <Center xsi:nil="true" />
+    <Zoom>0.8</Zoom>
+    <Center>
+      <X>-138.64734583031662</X>
+      <Y>-249.71564109791015</Y>
+    </Center>
   </ViewState>
 </Data>
