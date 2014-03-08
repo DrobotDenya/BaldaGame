@@ -2,10 +2,45 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Name="Screen_1_Name"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d"
+	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:pb="clr-namespace:Microsoft.Expression.Prototyping.Behavior;assembly=Microsoft.Expression.Prototyping.Interactivity" xmlns:local="clr-namespace:BaldaSketchScreens" x:Name="Screen_1_Name"
 	x:Class="BaldaSketchScreens.Screen_1"
-	Width="640" Height="480">
+	Width="300" Height="300">
 
-	<Grid x:Name="LayoutRoot" Background="White"/>
+	<Grid x:Name="LayoutRoot" Background="White">
+		<PasswordBox Margin="80,0,80,82" Style="{DynamicResource PasswordBox-Sketch}" VerticalAlignment="Bottom" Height="14" FontSize="13.333"/>
+		<TextBox Margin="80,0,80,102.536" Style="{DynamicResource TextBox-Sketch}" VerticalAlignment="Bottom" Height="17.464" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="Login" TextWrapping="Wrap"/>
+		<TextBlock HorizontalAlignment="Stretch" Margin="32.46,46.606,32,0" Style="{DynamicResource TitleCenter-Sketch}" VerticalAlignment="Top" Height="73.394" RenderTransformOrigin="0.5,0.5" FontSize="64" Foreground="#FFD47607"><TextBlock.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-16.111"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBlock.RenderTransform><Run Text="Балда"/><LineBreak/><Run Text=""/></TextBlock>
+		<Button HorizontalAlignment="Right" Margin="0,0,21,25.062" Style="{DynamicResource Button-Sketch}" VerticalAlignment="Bottom" Width="75" Height="22.938" Content="Play&#xa;" Foreground="#FFD47607" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="11.209"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<pb:NavigateToScreenAction TargetScreen="BaldaSketchScreens.Screen_2_1"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
+		<TextBlock HorizontalAlignment="Stretch" Margin="88,0,88.46,72" Style="{DynamicResource TitleCenter-Sketch}" VerticalAlignment="Bottom" FontSize="8" Foreground="#FF0477E8" Text="Registration" TextDecorations="Underline">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="MouseDown">
+					<pb:NavigateToScreenAction TargetScreen="BaldaSketchScreens.Screen_1_1"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</TextBlock>
+		<local:Screen_1_7 Margin="-16,0,-4,-0.5" VerticalAlignment="Bottom" d:IsPrototypingComposition="True"/>
+	</Grid>
 </UserControl>

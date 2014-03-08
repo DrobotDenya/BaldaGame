@@ -68,11 +68,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Screen 1_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 1_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 1_4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 1_5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 1_6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 1_7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screen 2_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SketchStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="Fonts\BuxtonSketch.ttf" />
+    <Resource Include="Fonts\BuxtonSketch.ttf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </Resource>
     <Resource Include="Fonts\SketchFlow Print.ttf" />
     <Resource Include="Fonts\SegoeMarker.ttf" />
     <Resource Include="Sketch.Flow" />
@@ -80,6 +111,31 @@
     <Compile Include="Screen 1.xaml.cs">
       <DependentUpon>Screen 1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screen 1_1.xaml.cs">
+      <DependentUpon>Screen 1_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 1_3.xaml.cs">
+      <DependentUpon>Screen 1_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 1_4.xaml.cs">
+      <DependentUpon>Screen 1_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 1_5.xaml.cs">
+      <DependentUpon>Screen 1_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 1_6.xaml.cs">
+      <DependentUpon>Screen 1_6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 1_7.xaml.cs">
+      <DependentUpon>Screen 1_7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen 2_1.xaml.cs">
+      <DependentUpon>Screen 2_1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SampleData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\3.0\WPF\Microsoft.Expression.Blend.WPF.targets" />
 </Project>
