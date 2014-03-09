@@ -220,6 +220,474 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="623a9de7-6a3f-494f-94b8-880125011757"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Restart game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4acbe3d8-0222-44b4-a1d6-def205c95708"
+              LastKnownName="Restart game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9383ca03-ef6c-459a-a474-2a47a17f9c1b"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd727877-30a9-4955-8393-1fdf69ddd933"
+                  name="Restart game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3f43ec19-52d3-4db3-ab94-16157c064eef"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="End game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="75bb304e-12fd-43da-8b7c-632811d2944d"
+              LastKnownName="End current game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17d0f860-3ffe-48c4-aef9-46bf70f35b4c"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="996f0687-d344-4905-b5b7-131a459b6764"
+                  name="End game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="aa7e0c59-17d2-42c9-9682-2bb3a7be2ed5"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Save current game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d680fdeb-a075-4fab-a97b-41ddd17e663b"
+              LastKnownName="Save current game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3d15008-0ecb-4d42-bfa9-7b09fb6807fd"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="122c1981-fc95-4a87-a594-e623413d655c"
+                  name="Save current game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ba17acc5-f284-482e-9a5a-9aabe4550e52"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Pause Game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="26a476af-fff4-43d8-99ca-7d0a9b30f05d"
+              LastKnownName="Pause Game"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="55ef33b1-0e54-44ea-bc59-9163c1b5edee"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ecffb735-8ae4-46dc-a881-db45693a421b"
+                  name="Pause Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a2b19ad8-5fd2-46b3-9da2-74ddc40aacdd"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="complexity degree"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="855b5857-cbf9-4969-a847-e62461efef61"
+              LastKnownName="complexity degree"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b28ea7cd-aa73-411d-9629-a0dc55352c94"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="57a3e7c3-2121-47b9-9f62-968d3944a08a"
+                  name="complexity degree"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d414497d-58b0-4013-9f31-dcdc7dc35b26"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Submit word"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5619ca88-052f-495c-8c6d-8c14c4fe0d6a"
+              LastKnownName="Submit word"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c44e29b8-d86a-4656-a94b-bd266b7616ad"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7c04252-c052-444d-a8f3-2a1c3fcb529f"
+                  name="Submit word"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c07f9e4b-f217-4dfb-b7cc-40a91848dbf3"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="See highscore"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c12e6193-6967-4e01-a6e5-95cd4a822607"
+              LastKnownName="See highscore"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="baf18bd4-de31-49e1-8151-bdb1f5eb05a6"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70be58fa-2a8a-494e-a6d1-d3a363b22d4c"
+                  name="See highscore"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6a2a94b7-5aef-4b1f-8894-be4317822173"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Registration"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="233200a4-4d69-45fe-87ba-266d7a3abfd1"
+              LastKnownName="Registration"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="394e1410-6807-49f6-b82d-94873f1b88f6"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9f79912-12ba-4599-b8ec-3d8ac9cd4e4c"
+                  name="Registration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5319a018-6f3a-4a6b-a89c-df65c537dad1"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="miss move"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="78ab06e9-2453-4560-8256-f7a1b0cd2567"
+              LastKnownName="miss move"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b00452b-e3f1-493d-8a65-006681f3fc70"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68579cfd-c88e-402a-9ef6-0f8fab3c7dae"
+                  name="miss move"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="362b9383-302c-4738-a5cc-999726c1818d"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="surrender"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a4bf9a69-1967-40b5-9034-9bc8bb431690"
+              LastKnownName="surrender"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="52a3d1be-16fa-4227-80c4-76ae4ba7268c"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22b25cce-bc75-474e-ba52-7d1fc230fdcf"
+                  name="surrender"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61a2242f-53c0-4774-8abe-fb919d1443a0"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Quit"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aca07f38-9146-4cd8-a670-01aa4ec8a51e"
+              LastKnownName="Quit"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abb8840a-3cb7-4a9a-b909-18de5f6facb3"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a582b8a6-9073-46cb-8241-073b3058ba12"
+                  name="Quit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="34cf9206-5b25-42ae-a255-19613938427b"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="pass"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="da76f4ab-1b9c-4da0-bc17-4f8006ff74c1"
+              LastKnownName="pass"
+              LastKnownLocation="ModelGame.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c84e1cb-7a1e-4b96-a4a0-3e70e55d916a"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7018e1ab-1e80-4361-9b4d-613be11df94f"
+                  name="pass"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -293,7 +761,7 @@
             Id="00b15947-22ac-4fce-a73b-90fc84a8719c">
             <useCaseMoniker
               Id="75bb304e-12fd-43da-8b7c-632811d2944d"
-              LastKnownName="Quit game"
+              LastKnownName="End current game"
               LastKnownLocation="ModelGame.uml" />
           </include>
           <include
@@ -354,7 +822,7 @@
     <packageHasNamedElement>
       <useCase
         Id="75bb304e-12fd-43da-8b7c-632811d2944d"
-        name="Quit game"
+        name="End current game"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -404,6 +872,69 @@
       <useCase
         Id="92fcd9ac-8331-4650-9da7-da701034571c"
         name="Load Game"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="855b5857-cbf9-4969-a847-e62461efef61"
+        name="complexity degree"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5619ca88-052f-495c-8c6d-8c14c4fe0d6a"
+        name="Submit word"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c12e6193-6967-4e01-a6e5-95cd4a822607"
+        name="See highscore"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="233200a4-4d69-45fe-87ba-266d7a3abfd1"
+        name="Registration"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="78ab06e9-2453-4560-8256-f7a1b0cd2567"
+        name="miss move"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a4bf9a69-1967-40b5-9034-9bc8bb431690"
+        name="surrender"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="379b6fc0-3c6f-4fc6-b31f-21433516b844"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aca07f38-9146-4cd8-a670-01aa4ec8a51e"
+        name="Quit"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="da76f4ab-1b9c-4da0-bc17-4f8006ff74c1"
+        name="pass"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

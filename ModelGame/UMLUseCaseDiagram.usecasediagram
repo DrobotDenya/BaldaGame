@@ -37,22 +37,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="a3073062-0230-4f3f-99f7-3227f4a119b1" />
           </association>
-          <association Id="cf44454e-59d7-4046-bf04-15f0da82a0e2" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Gameplay" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="3cc3328d-db9f-4f26-b908-52ea3d32004f" LastKnownName="Gameplay" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1eb691f2-6d40-483a-ba42-8ef84c6fd0e7" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="5664fcfa-f42e-4f81-95bc-941e6ba28778" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="7441b8f7-6ef3-4300-b6c2-63239e82fa31" name="Gameplay" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e76ecd8b-c89d-4cb0-98c7-d0e4a441e4ee" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="6baf1cc8-5dc0-40d3-92d3-7ecca29e2881" />
-          </association>
           <association Id="ebbfe0bc-c41f-4f80-a51f-42b14c4857ef" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Set configurations " isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="e66d1b17-982c-4692-add4-d8ca5dd8814b" LastKnownName="Set configurations " />
             <relationshipOwnedElementsInternal>
@@ -84,6 +68,182 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="24f3f256-89ed-48b4-9311-af4f77c19537" />
+          </association>
+          <association Id="c0b245e5-49cb-446d-8e17-e82d0f4a60f8" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Restart game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c3344e69-70cf-41aa-b89d-c803a4edc22c" LastKnownName="Restart game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5cc52289-d6c1-4b42-a272-1eb6b57835b3" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9383ca03-ef6c-459a-a474-2a47a17f9c1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6bc92afc-f2d7-49e7-b30c-47253653d744" name="Restart game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cd727877-30a9-4955-8393-1fdf69ddd933" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="623a9de7-6a3f-494f-94b8-880125011757" />
+          </association>
+          <association Id="9ce5517d-ed3c-4090-8c87-470340933c08" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="End game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6c9556e9-571c-499d-8adc-b094be04c959" LastKnownName="End current game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff3036dd-faa2-49b9-ad39-4a592e9a7499" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="17d0f860-3ffe-48c4-aef9-46bf70f35b4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50707438-92cf-4907-a1c7-dc4a49cb2b4c" name="End game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="996f0687-d344-4905-b5b7-131a459b6764" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3f43ec19-52d3-4db3-ab94-16157c064eef" />
+          </association>
+          <association Id="d274de4c-3895-4065-be9b-bcf715fa6619" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Save current game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b8f934db-1b57-4526-b2fd-0c4017217e6d" LastKnownName="Save current game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbe667a4-1fcc-4379-a016-6feea1fd4cb1" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3d15008-0ecb-4d42-bfa9-7b09fb6807fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4569ea7f-551f-4dd3-a20b-077d3656bdfd" name="Save current game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="122c1981-fc95-4a87-a594-e623413d655c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aa7e0c59-17d2-42c9-9682-2bb3a7be2ed5" />
+          </association>
+          <association Id="425e9a94-586c-4c84-bcec-85778cade56e" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Pause Game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="57a0c877-7d59-4e2b-8f89-d6736cec1963" LastKnownName="Pause Game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8a8be59-4d83-4656-9523-13ff1cc2de16" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="55ef33b1-0e54-44ea-bc59-9163c1b5edee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0540ef99-c8bf-4ef4-8add-3ca4b4026284" name="Pause Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ecffb735-8ae4-46dc-a881-db45693a421b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba17acc5-f284-482e-9a5a-9aabe4550e52" />
+          </association>
+          <association Id="eee8620d-5fcf-4300-96a1-f10f1f37f3a6" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="complexity degree" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8c883f4a-2f12-4862-a41c-5040a98932f9" LastKnownName="complexity degree" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f53c2e7-3abb-4da4-8934-0fcdf65e6675" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b28ea7cd-aa73-411d-9629-a0dc55352c94" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c863e70c-e8ef-4cb0-aadf-2be3eb0e77ce" name="complexity degree" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="57a3e7c3-2121-47b9-9f62-968d3944a08a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a2b19ad8-5fd2-46b3-9da2-74ddc40aacdd" />
+          </association>
+          <association Id="4b6bede5-4c97-49a8-a996-61d60f6fec5f" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Submit word" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4edd1fef-7de2-468b-80e5-9a7e2f7ca2f1" LastKnownName="Submit word" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f39cbaaa-c832-4c3d-966a-223c3bb1ffd0" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c44e29b8-d86a-4656-a94b-bd266b7616ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fcf961d0-218a-48e8-9e65-3263d8b77d11" name="Submit word" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c7c04252-c052-444d-a8f3-2a1c3fcb529f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d414497d-58b0-4013-9f31-dcdc7dc35b26" />
+          </association>
+          <association Id="92af9286-ba46-4400-8356-953ca0d5325b" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="See highscore" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2fb6c89d-181f-4e12-99fb-daf782442019" LastKnownName="See highscore" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de19284e-a961-439b-905a-322ebd6ee701" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="baf18bd4-de31-49e1-8151-bdb1f5eb05a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a040893-79ef-42db-8186-b8c10c20d9be" name="See highscore" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="70be58fa-2a8a-494e-a6d1-d3a363b22d4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c07f9e4b-f217-4dfb-b7cc-40a91848dbf3" />
+          </association>
+          <association Id="d9da9ede-d984-4d6c-b312-9032eeba1bab" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Registration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="05d9bf34-9710-4d75-af3c-c700e0392f80" LastKnownName="Registration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2cc3c044-9aa4-46d9-b7de-1859680daa07" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="394e1410-6807-49f6-b82d-94873f1b88f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="327afea8-3b17-4b20-a238-f52f0dfeadc4" name="Registration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c9f79912-12ba-4599-b8ec-3d8ac9cd4e4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a2a94b7-5aef-4b1f-8894-be4317822173" />
+          </association>
+          <association Id="bebcc91f-fd60-4aa8-b072-ba4a912ba83f" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="surrender" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="004eb77d-8cc8-416a-9930-321c454bd471" LastKnownName="surrender" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4528694b-1575-444f-a88a-3c25f34bcde9" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="52a3d1be-16fa-4227-80c4-76ae4ba7268c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="637a7622-29d0-4278-8eb7-eb8d4a933cbc" name="surrender" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="22b25cce-bc75-474e-ba52-7d1fc230fdcf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="362b9383-302c-4738-a5cc-999726c1818d" />
+          </association>
+          <association Id="82f2e0fa-2007-4f2c-9114-d978a6881e4d" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Quit" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c00da3fe-f542-4b52-b158-999a4944ac4a" LastKnownName="Quit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="188cda79-18df-4a15-8296-fda6edabe829" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="abb8840a-3cb7-4a9a-b909-18de5f6facb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f00eda25-b8b2-45ff-9dd8-4ce4b2036e50" name="Quit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a582b8a6-9073-46cb-8241-073b3058ba12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="61a2242f-53c0-4774-8abe-fb919d1443a0" />
+          </association>
+          <association Id="2030abdb-8e7c-44bf-9e87-6415aa15f87b" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="pass" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7121ebcd-1702-4e03-8068-45e30a11a8da" LastKnownName="pass" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b107f5b3-a2d1-41f6-8329-365072199a6e" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5c84e1cb-7a1e-4b96-a4a0-3e70e55d916a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c29cdd2-5f2d-4a72-9b46-ac0f33b92a4b" name="pass" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7018e1ab-1e80-4361-9b4d-613be11df94f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="34cf9206-5b25-42ae-a255-19613938427b" />
           </association>
         </targetEnds>
       </actor>
@@ -117,29 +277,6 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="3cc3328d-db9f-4f26-b908-52ea3d32004f" name="Gameplay" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="ae47fc3a-0cb8-4915-b487-689654770cae" />
-        <additions>
-          <include Id="281444ab-e808-42b8-9343-c4944f06d4a9">
-            <useCaseMoniker Id="57a0c877-7d59-4e2b-8f89-d6736cec1963" LastKnownName="Pause Game" />
-            <elementDefinition Id="091969bf-2cf0-45f6-90e0-7ad62a4af5b7" />
-          </include>
-          <include Id="50d0a18b-21fc-4f66-b8bb-8e40aca9b09b">
-            <useCaseMoniker Id="6c9556e9-571c-499d-8adc-b094be04c959" LastKnownName="Quit game" />
-            <elementDefinition Id="00b15947-22ac-4fce-a73b-90fc84a8719c" />
-          </include>
-          <include Id="4ca54fbc-e748-49f7-97fa-38896271a426">
-            <useCaseMoniker Id="b8f934db-1b57-4526-b2fd-0c4017217e6d" LastKnownName="Save current game" />
-            <elementDefinition Id="7a627358-4e2f-4fd0-a243-f16e4b8fa9ec" />
-          </include>
-          <include Id="447b346a-1095-411e-b231-e45f1d67070f">
-            <useCaseMoniker Id="c3344e69-70cf-41aa-b89d-c803a4edc22c" LastKnownName="Restart game" />
-            <elementDefinition Id="e32320df-6f1b-45b6-a943-359f447abf4c" />
-          </include>
-        </additions>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
       <useCase Id="e66d1b17-982c-4692-add4-d8ca5dd8814b" name="Set configurations " isAbstract="false" isLeaf="false">
         <elementDefinition Id="51b9924f-feeb-48fd-a361-0448c2b3ccce" />
         <additions>
@@ -165,7 +302,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="6c9556e9-571c-499d-8adc-b094be04c959" name="Quit game" isAbstract="false" isLeaf="false">
+      <useCase Id="6c9556e9-571c-499d-8adc-b094be04c959" name="End current game" isAbstract="false" isLeaf="false">
         <elementDefinition Id="75bb304e-12fd-43da-8b7c-632811d2944d" />
       </useCase>
     </useCaseModelRootHasTypes>
@@ -197,6 +334,41 @@
     <useCaseModelRootHasTypes>
       <useCase Id="65c2f78c-e13e-4343-ac6c-68253dcf115b" name="Load Game" isAbstract="false" isLeaf="false">
         <elementDefinition Id="92fcd9ac-8331-4650-9da7-da701034571c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8c883f4a-2f12-4862-a41c-5040a98932f9" name="complexity degree" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="855b5857-cbf9-4969-a847-e62461efef61" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4edd1fef-7de2-468b-80e5-9a7e2f7ca2f1" name="Submit word" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5619ca88-052f-495c-8c6d-8c14c4fe0d6a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2fb6c89d-181f-4e12-99fb-daf782442019" name="See highscore" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c12e6193-6967-4e01-a6e5-95cd4a822607" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="05d9bf34-9710-4d75-af3c-c700e0392f80" name="Registration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="233200a4-4d69-45fe-87ba-266d7a3abfd1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="004eb77d-8cc8-416a-9930-321c454bd471" name="surrender" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4bf9a69-1967-40b5-9034-9bc8bb431690" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c00da3fe-f542-4b52-b158-999a4944ac4a" name="Quit" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aca07f38-9146-4cd8-a670-01aa4ec8a51e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7121ebcd-1702-4e03-8068-45e30a11a8da" name="pass" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da76f4ab-1b9c-4da0-bc17-4f8006ff74c1" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
