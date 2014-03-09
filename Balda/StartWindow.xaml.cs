@@ -16,11 +16,11 @@ using System.Windows.Media.Animation;
 namespace Balda
 {
     /// <summary>
-    /// Логика взаимодействия для DCStartWindow.xaml
+    /// Логика взаимодействия для StartWindow.xaml
     /// </summary>
-    public partial class DCStartWindow : Window
+    public partial class StartWindow : Window
     {
-        public DCStartWindow()
+        public StartWindow()
         {
             InitializeComponent();
             textBoxLogin.Text = "Denya";
@@ -35,7 +35,7 @@ namespace Balda
         {
             if (textBoxLogin.Text == "Denya")
             {
-                DCMenuWindow menu = new DCMenuWindow();
+                MenuWindow menu = new MenuWindow();
                 menu.Show();
                 this.Hide();
             }

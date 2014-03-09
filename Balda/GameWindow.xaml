@@ -1,7 +1,7 @@
-﻿<Window x:Class="Balda.DCGameWindow"
+﻿<Window x:Class="Balda.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="DCGameWindow" Height="300" Width="431.955" Loaded="Window_Loaded">
+        Title="GameWindow" Height="300" Width="431.955" Loaded="Window_Loaded">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" Height="160" Margin="99,37,99,72" Width="226" VerticalAlignment="Center"/>
         <Label x:Name="lblPlayer1" Content="Label" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.455"/>
