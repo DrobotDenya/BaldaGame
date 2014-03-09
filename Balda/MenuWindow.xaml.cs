@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Balda
 {
     /// <summary>
-    /// Логика взаимодействия для DCMenuWindow.xaml
+    /// Логика взаимодействия для MenuWindow.xaml
     /// </summary>
-    public partial class DCMenuWindow : Window
+    public partial class MenuWindow : Window
     {
-        public DCMenuWindow()
+        public MenuWindow()
         {
             InitializeComponent();
             
@@ -31,7 +31,7 @@ namespace Balda
 
         private void buttonNewGame_Click(object sender, RoutedEventArgs e)
         {
-            DCSettingGameWindow settingGameWindow = new DCSettingGameWindow();
+            SettingGameWindow settingGameWindow = new SettingGameWindow();
             settingGameWindow.Show();
 
         }

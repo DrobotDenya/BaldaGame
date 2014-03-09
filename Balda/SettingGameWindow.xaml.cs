@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Balda
 {
     /// <summary>
-    /// Логика взаимодействия для DCSettingGameWindow.xaml
+    /// Логика взаимодействия для SettingGameWindow.xaml
     /// </summary>
-    public partial class DCSettingGameWindow : Window
+    public partial class SettingGameWindow : Window
     {
-        public DCSettingGameWindow()
+        public SettingGameWindow()
         {
             InitializeComponent();
             listboxDifficulty.Items.Add("Easy");
@@ -52,7 +52,7 @@ namespace Balda
 
         private void buttonStart_Click(object sender, RoutedEventArgs e)
         {
-            DCGameWindow gameWindow = new DCGameWindow();
+            GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
         }
     }

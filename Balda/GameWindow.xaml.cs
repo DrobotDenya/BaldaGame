@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Balda
 {
     /// <summary>
-    /// Логика взаимодействия для DCGameWindow.xaml
+    /// Логика взаимодействия для GameWindow.xaml
     /// </summary>
-    public partial class DCGameWindow : Window
+    public partial class GameWindow : Window
     {
-        public DCGameWindow()
+        public GameWindow()
         {
             InitializeComponent();
         }
