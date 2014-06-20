@@ -1,0 +1,2282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Balda.Data.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Balda.Data.Fakes.ShimDictionary">
+            <summary>Shim type of Balda.Data.Dictionary</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor(Balda.Data.Dictionary)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.Constructor">
+            <summary>Sets the shim of Dictionary.Dictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.connectionToDataBaseString">
+            <summary>Sets the shim of Dictionary.connectionToDataBase(String connectionString)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.insertWordToDataBase">
+            <summary>Sets the shim of Dictionary.insertWordToDataBase()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimDictionary.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.connectionToDataBaseString">
+            <summary>Sets the shim of Dictionary.connectionToDataBase(String connectionString)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.insertWordToDataBase">
+            <summary>Sets the shim of Dictionary.insertWordToDataBase()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.#ctor(Balda.Data.ListForPlayer1DataSet)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.Clone">
+            <summary>Sets the shim of ListForPlayer1DataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.Constructor">
+            <summary>Sets the shim of ListForPlayer1DataSet.ListForPlayer1DataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of ListForPlayer1DataSet.ListForPlayer1DataSet(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.GetSchemaSerializable">
+            <summary>Sets the shim of ListForPlayer1DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.GetTypedDataSetSchemaXmlSchemaSet">
+            <summary>Sets the shim of ListForPlayer1DataSet.GetTypedDataSetSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.InitClass">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.InitVars">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.InitVarsBoolean">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.InitializeDerivedDataSet">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of ListForPlayer1DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.RelationsGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of ListForPlayer1DataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.SchemaSerializationModeGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of ListForPlayer1DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShouldSerializeRelations">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShouldSerializeTableForPlayer1">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeTableForPlayer1()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShouldSerializeTables">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.TableForPlayer1Get">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_TableForPlayer1()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.TablesGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_Tables()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.Clone">
+            <summary>Sets the shim of ListForPlayer1DataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.GetSchemaSerializable">
+            <summary>Sets the shim of ListForPlayer1DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.InitClass">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.InitVars">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.InitVarsBoolean">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.InitializeDerivedDataSet">
+            <summary>Sets the shim of ListForPlayer1DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of ListForPlayer1DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.RelationsGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of ListForPlayer1DataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.SchemaSerializationModeGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of ListForPlayer1DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.ShouldSerializeRelations">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.ShouldSerializeTableForPlayer1">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeTableForPlayer1()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.ShouldSerializeTables">
+            <summary>Sets the shim of ListForPlayer1DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.TableForPlayer1Get">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_TableForPlayer1()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.AllInstances.TablesGet">
+            <summary>Sets the shim of ListForPlayer1DataSet.get_Tables()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSet+TableForPlayer1DataTable</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.#ctor(Balda.Data.ListForPlayer1DataSet.TableForPlayer1DataTable)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.Collections.Generic.IEnumerable{Balda.Data.ListForPlayer1DataSet.TableForPlayer1Row})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AddTableForPlayer1RowListForPlayer1DataSetTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.AddTableForPlayer1Row(TableForPlayer1Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AddTableForPlayer1RowStringInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.AddTableForPlayer1Row(String Word, Int32 Value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Clone">
+            <summary>Sets the shim of TableForPlayer1DataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.Constructor">
+            <summary>Sets the shim of TableForPlayer1DataTable.TableForPlayer1DataTable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.ConstructorDataTable">
+            <summary>Sets the shim of TableForPlayer1DataTable.TableForPlayer1DataTable(DataTable table)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of TableForPlayer1DataTable.TableForPlayer1DataTable(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.CountGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.CreateInstance">
+            <summary>Sets the shim of TableForPlayer1DataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.FindByКодInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.GetRowType">
+            <summary>Sets the shim of TableForPlayer1DataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.GetTypedTableSchemaXmlSchemaSet">
+            <summary>Sets the shim of TableForPlayer1DataTable.GetTypedTableSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.InitClass">
+            <summary>Sets the shim of TableForPlayer1DataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.InitVars">
+            <summary>Sets the shim of TableForPlayer1DataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.ItemGetInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer1DataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.NewTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.NewTableForPlayer1Row()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.RemoveTableForPlayer1RowListForPlayer1DataSetTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.RemoveTableForPlayer1Row(TableForPlayer1Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowChangedAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowChanged(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowChangedRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowChanged(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowChangingAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowChanging(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowChangingRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowChanging(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowDeletedAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowDeleted(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowDeletedRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowDeleted(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowDeletingAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowDeleting(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.TableForPlayer1RowDeletingRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowDeleting(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.ValueColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_ValueColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.WordColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_WordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.КодColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.AddTableForPlayer1RowListForPlayer1DataSetTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.AddTableForPlayer1Row(TableForPlayer1Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.AddTableForPlayer1RowStringInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.AddTableForPlayer1Row(String Word, Int32 Value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.Clone">
+            <summary>Sets the shim of TableForPlayer1DataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.CountGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.CreateInstance">
+            <summary>Sets the shim of TableForPlayer1DataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.FindByКодInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.GetRowType">
+            <summary>Sets the shim of TableForPlayer1DataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.InitClass">
+            <summary>Sets the shim of TableForPlayer1DataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.InitVars">
+            <summary>Sets the shim of TableForPlayer1DataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer1DataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.NewTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.NewTableForPlayer1Row()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer1DataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.RemoveTableForPlayer1RowListForPlayer1DataSetTableForPlayer1Row">
+            <summary>Sets the shim of TableForPlayer1DataTable.RemoveTableForPlayer1Row(TableForPlayer1Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowChangedAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowChanged(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowChangedRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowChanged(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowChangingAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowChanging(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowChangingRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowChanging(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowDeletedAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowDeleted(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowDeletedRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowDeleted(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowDeletingAddListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.add_TableForPlayer1RowDeleting(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.TableForPlayer1RowDeletingRemoveListForPlayer1DataSetTableForPlayer1RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer1DataTable.remove_TableForPlayer1RowDeleting(TableForPlayer1RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.ValueColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_ValueColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.WordColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_WordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1DataTable.AllInstances.КодColumnGet">
+            <summary>Sets the shim of TableForPlayer1DataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSet+TableForPlayer1Row</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.#ctor(Balda.Data.ListForPlayer1DataSet.TableForPlayer1Row)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.ConstructorDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer1Row.TableForPlayer1Row(DataRowBuilder rb)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.IsValueNull">
+            <summary>Sets the shim of TableForPlayer1Row.IsValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.IsWordNull">
+            <summary>Sets the shim of TableForPlayer1Row.IsWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.SetValueNull">
+            <summary>Sets the shim of TableForPlayer1Row.SetValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.SetWordNull">
+            <summary>Sets the shim of TableForPlayer1Row.SetWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.ValueGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Value()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.ValueSetInt32">
+            <summary>Sets the shim of TableForPlayer1Row.set_Value(Int32 value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.WordGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Word()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.WordSetString">
+            <summary>Sets the shim of TableForPlayer1Row.set_Word(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.КодGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.КодSetInt32">
+            <summary>Sets the shim of TableForPlayer1Row.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.IsValueNull">
+            <summary>Sets the shim of TableForPlayer1Row.IsValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.IsWordNull">
+            <summary>Sets the shim of TableForPlayer1Row.IsWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.SetValueNull">
+            <summary>Sets the shim of TableForPlayer1Row.SetValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.SetWordNull">
+            <summary>Sets the shim of TableForPlayer1Row.SetWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.ValueGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Value()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.ValueSetInt32">
+            <summary>Sets the shim of TableForPlayer1Row.set_Value(Int32 value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.WordGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Word()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.WordSetString">
+            <summary>Sets the shim of TableForPlayer1Row.set_Word(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.КодGet">
+            <summary>Sets the shim of TableForPlayer1Row.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1Row.AllInstances.КодSetInt32">
+            <summary>Sets the shim of TableForPlayer1Row.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSet+TableForPlayer1RowChangeEvent</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.#ctor(Balda.Data.ListForPlayer1DataSet.TableForPlayer1RowChangeEvent)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.ActionGet">
+            <summary>Sets the shim of TableForPlayer1RowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.ConstructorListForPlayer1DataSetTableForPlayer1RowDataRowAction">
+            <summary>Sets the shim of TableForPlayer1RowChangeEvent.TableForPlayer1RowChangeEvent(TableForPlayer1Row row, DataRowAction action)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.RowGet">
+            <summary>Sets the shim of TableForPlayer1RowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.AllInstances.ActionGet">
+            <summary>Sets the shim of TableForPlayer1RowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer1DataSet.ShimTableForPlayer1RowChangeEvent.AllInstances.RowGet">
+            <summary>Sets the shim of TableForPlayer1RowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.#ctor(Balda.Data.ListForPlayer2DataSet)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.Clone">
+            <summary>Sets the shim of ListForPlayer2DataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.Constructor">
+            <summary>Sets the shim of ListForPlayer2DataSet.ListForPlayer2DataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of ListForPlayer2DataSet.ListForPlayer2DataSet(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.GetSchemaSerializable">
+            <summary>Sets the shim of ListForPlayer2DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.GetTypedDataSetSchemaXmlSchemaSet">
+            <summary>Sets the shim of ListForPlayer2DataSet.GetTypedDataSetSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.InitClass">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.InitVars">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.InitVarsBoolean">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.InitializeDerivedDataSet">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of ListForPlayer2DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.RelationsGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of ListForPlayer2DataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.SchemaSerializationModeGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of ListForPlayer2DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShouldSerializeRelations">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShouldSerializeTableForPlayer2">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeTableForPlayer2()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShouldSerializeTables">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.TableForPlayer2Get">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_TableForPlayer2()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.TablesGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_Tables()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.Clone">
+            <summary>Sets the shim of ListForPlayer2DataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.GetSchemaSerializable">
+            <summary>Sets the shim of ListForPlayer2DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.InitClass">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.InitVars">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.InitVarsBoolean">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.InitializeDerivedDataSet">
+            <summary>Sets the shim of ListForPlayer2DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of ListForPlayer2DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.RelationsGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of ListForPlayer2DataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.SchemaSerializationModeGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of ListForPlayer2DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.ShouldSerializeRelations">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.ShouldSerializeTableForPlayer2">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeTableForPlayer2()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.ShouldSerializeTables">
+            <summary>Sets the shim of ListForPlayer2DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.TableForPlayer2Get">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_TableForPlayer2()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.AllInstances.TablesGet">
+            <summary>Sets the shim of ListForPlayer2DataSet.get_Tables()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSet+TableForPlayer2DataTable</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.#ctor(Balda.Data.ListForPlayer2DataSet.TableForPlayer2DataTable)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.Collections.Generic.IEnumerable{Balda.Data.ListForPlayer2DataSet.TableForPlayer2Row})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AddTableForPlayer2RowListForPlayer2DataSetTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.AddTableForPlayer2Row(TableForPlayer2Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AddTableForPlayer2RowStringInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.AddTableForPlayer2Row(String Word, Int32 Value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Clone">
+            <summary>Sets the shim of TableForPlayer2DataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.Constructor">
+            <summary>Sets the shim of TableForPlayer2DataTable.TableForPlayer2DataTable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.ConstructorDataTable">
+            <summary>Sets the shim of TableForPlayer2DataTable.TableForPlayer2DataTable(DataTable table)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of TableForPlayer2DataTable.TableForPlayer2DataTable(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.CountGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.CreateInstance">
+            <summary>Sets the shim of TableForPlayer2DataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.FindByКодInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.GetRowType">
+            <summary>Sets the shim of TableForPlayer2DataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.GetTypedTableSchemaXmlSchemaSet">
+            <summary>Sets the shim of TableForPlayer2DataTable.GetTypedTableSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.InitClass">
+            <summary>Sets the shim of TableForPlayer2DataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.InitVars">
+            <summary>Sets the shim of TableForPlayer2DataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.ItemGetInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer2DataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.NewTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.NewTableForPlayer2Row()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.RemoveTableForPlayer2RowListForPlayer2DataSetTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.RemoveTableForPlayer2Row(TableForPlayer2Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowChangedAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowChanged(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowChangedRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowChanged(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowChangingAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowChanging(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowChangingRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowChanging(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowDeletedAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowDeleted(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowDeletedRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowDeleted(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowDeletingAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowDeleting(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.TableForPlayer2RowDeletingRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowDeleting(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.ValueColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_ValueColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.WordColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_WordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.КодColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.AddTableForPlayer2RowListForPlayer2DataSetTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.AddTableForPlayer2Row(TableForPlayer2Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.AddTableForPlayer2RowStringInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.AddTableForPlayer2Row(String Word, Int32 Value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.Clone">
+            <summary>Sets the shim of TableForPlayer2DataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.CountGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.CreateInstance">
+            <summary>Sets the shim of TableForPlayer2DataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.FindByКодInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.GetRowType">
+            <summary>Sets the shim of TableForPlayer2DataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.InitClass">
+            <summary>Sets the shim of TableForPlayer2DataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.InitVars">
+            <summary>Sets the shim of TableForPlayer2DataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer2DataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.NewTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.NewTableForPlayer2Row()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of TableForPlayer2DataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.RemoveTableForPlayer2RowListForPlayer2DataSetTableForPlayer2Row">
+            <summary>Sets the shim of TableForPlayer2DataTable.RemoveTableForPlayer2Row(TableForPlayer2Row row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowChangedAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowChanged(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowChangedRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowChanged(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowChangingAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowChanging(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowChangingRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowChanging(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowDeletedAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowDeleted(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowDeletedRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowDeleted(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowDeletingAddListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.add_TableForPlayer2RowDeleting(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.TableForPlayer2RowDeletingRemoveListForPlayer2DataSetTableForPlayer2RowChangeEventHandler">
+            <summary>Sets the shim of TableForPlayer2DataTable.remove_TableForPlayer2RowDeleting(TableForPlayer2RowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.ValueColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_ValueColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.WordColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_WordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2DataTable.AllInstances.КодColumnGet">
+            <summary>Sets the shim of TableForPlayer2DataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSet+TableForPlayer2Row</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.#ctor(Balda.Data.ListForPlayer2DataSet.TableForPlayer2Row)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.ConstructorDataRowBuilder">
+            <summary>Sets the shim of TableForPlayer2Row.TableForPlayer2Row(DataRowBuilder rb)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.IsValueNull">
+            <summary>Sets the shim of TableForPlayer2Row.IsValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.IsWordNull">
+            <summary>Sets the shim of TableForPlayer2Row.IsWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.SetValueNull">
+            <summary>Sets the shim of TableForPlayer2Row.SetValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.SetWordNull">
+            <summary>Sets the shim of TableForPlayer2Row.SetWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.ValueGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Value()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.ValueSetInt32">
+            <summary>Sets the shim of TableForPlayer2Row.set_Value(Int32 value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.WordGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Word()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.WordSetString">
+            <summary>Sets the shim of TableForPlayer2Row.set_Word(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.КодGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.КодSetInt32">
+            <summary>Sets the shim of TableForPlayer2Row.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.IsValueNull">
+            <summary>Sets the shim of TableForPlayer2Row.IsValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.IsWordNull">
+            <summary>Sets the shim of TableForPlayer2Row.IsWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.SetValueNull">
+            <summary>Sets the shim of TableForPlayer2Row.SetValueNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.SetWordNull">
+            <summary>Sets the shim of TableForPlayer2Row.SetWordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.ValueGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Value()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.ValueSetInt32">
+            <summary>Sets the shim of TableForPlayer2Row.set_Value(Int32 value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.WordGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Word()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.WordSetString">
+            <summary>Sets the shim of TableForPlayer2Row.set_Word(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.КодGet">
+            <summary>Sets the shim of TableForPlayer2Row.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2Row.AllInstances.КодSetInt32">
+            <summary>Sets the shim of TableForPlayer2Row.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSet+TableForPlayer2RowChangeEvent</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.#ctor(Balda.Data.ListForPlayer2DataSet.TableForPlayer2RowChangeEvent)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.ActionGet">
+            <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.ConstructorListForPlayer2DataSetTableForPlayer2RowDataRowAction">
+            <summary>Sets the shim of TableForPlayer2RowChangeEvent.TableForPlayer2RowChangeEvent(TableForPlayer2Row row, DataRowAction action)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.RowGet">
+            <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances.ActionGet">
+            <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances.RowGet">
+            <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubDictionary">
+            <summary>Stub type of Balda.Data.Dictionary</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDictionary.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDictionary.InitializeStub">
+            <summary>Initializes a new instance of type StubDictionary</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubListForPlayer1DataSet">
+            <summary>Stub type of Balda.Data.ListForPlayer1DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.AttachBackingFieldToSchemaSerializationMode">
+            <summary>Attaches delegates to emulate StubListForPlayer1DataSet.SchemaSerializationMode as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubListForPlayer1DataSet.Site as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.Clone">
+            <summary>Sets the stub of ListForPlayer1DataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.Clone01">
+            <summary>Sets the stub of ListForPlayer1DataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.ContainerGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.DesignModeGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.Dispose(System.Boolean)">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.DisposeBoolean">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.GetSchemaSerializable">
+            <summary>Sets the stub of ListForPlayer1DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.GetSchemaSerializable01">
+            <summary>Sets the stub of ListForPlayer1DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.GetService(System.Type)">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.GetServiceType">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.InitializeDerivedDataSet">
+            <summary>Sets the stub of ListForPlayer1DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.InitializeDerivedDataSet01">
+            <summary>Sets the stub of ListForPlayer1DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.InitializeStub">
+            <summary>Initializes a new instance of type StubListForPlayer1DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.Load(System.Data.IDataReader,System.Data.LoadOption,System.Data.FillErrorEventHandler,System.Data.DataTable[])">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.LoadIDataReaderLoadOptionFillErrorEventHandlerDataTableArray">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.OnPropertyChangingPropertyChangedEventArgs">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.OnRemoveRelation(System.Data.DataRelation)">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.OnRemoveRelationDataRelation">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.OnRemoveTable(System.Data.DataTable)">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.OnRemoveTableDataTable">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.ReadXmlSerializable(System.Xml.XmlReader)">
+            <summary>Sets the stub of ListForPlayer1DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the stub of ListForPlayer1DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.RejectChanges">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.RejectChanges01">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.Reset">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.Reset01">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.SchemaSerializationModeGet">
+            <summary>Sets the stub of ListForPlayer1DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the stub of ListForPlayer1DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.ShouldSerializeRelations">
+            <summary>Sets the stub of ListForPlayer1DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.ShouldSerializeRelations01">
+            <summary>Sets the stub of ListForPlayer1DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.ShouldSerializeTables">
+            <summary>Sets the stub of ListForPlayer1DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.ShouldSerializeTables01">
+            <summary>Sets the stub of ListForPlayer1DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.SiteGet">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.SiteSetISite">
+            <summary>Sets the stub of DataSet.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer1DataSet.ToString">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer1DataSet.ToString01">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.Container">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.DesignMode">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.SchemaSerializationMode">
+            <summary>Sets the stub of ListForPlayer1DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer1DataSet.Site">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubListForPlayer2DataSet">
+            <summary>Stub type of Balda.Data.ListForPlayer2DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.AttachBackingFieldToSchemaSerializationMode">
+            <summary>Attaches delegates to emulate StubListForPlayer2DataSet.SchemaSerializationMode as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubListForPlayer2DataSet.Site as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.Clone">
+            <summary>Sets the stub of ListForPlayer2DataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.Clone01">
+            <summary>Sets the stub of ListForPlayer2DataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.ContainerGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.DesignModeGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.Dispose(System.Boolean)">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.DisposeBoolean">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.GetSchemaSerializable">
+            <summary>Sets the stub of ListForPlayer2DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.GetSchemaSerializable01">
+            <summary>Sets the stub of ListForPlayer2DataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.GetService(System.Type)">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.GetServiceType">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.InitializeDerivedDataSet">
+            <summary>Sets the stub of ListForPlayer2DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.InitializeDerivedDataSet01">
+            <summary>Sets the stub of ListForPlayer2DataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.InitializeStub">
+            <summary>Initializes a new instance of type StubListForPlayer2DataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.Load(System.Data.IDataReader,System.Data.LoadOption,System.Data.FillErrorEventHandler,System.Data.DataTable[])">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.LoadIDataReaderLoadOptionFillErrorEventHandlerDataTableArray">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.OnPropertyChangingPropertyChangedEventArgs">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.OnRemoveRelation(System.Data.DataRelation)">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.OnRemoveRelationDataRelation">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.OnRemoveTable(System.Data.DataTable)">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.OnRemoveTableDataTable">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.ReadXmlSerializable(System.Xml.XmlReader)">
+            <summary>Sets the stub of ListForPlayer2DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the stub of ListForPlayer2DataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.RejectChanges">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.RejectChanges01">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.Reset">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.Reset01">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.SchemaSerializationModeGet">
+            <summary>Sets the stub of ListForPlayer2DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the stub of ListForPlayer2DataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.ShouldSerializeRelations">
+            <summary>Sets the stub of ListForPlayer2DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.ShouldSerializeRelations01">
+            <summary>Sets the stub of ListForPlayer2DataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.ShouldSerializeTables">
+            <summary>Sets the stub of ListForPlayer2DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.ShouldSerializeTables01">
+            <summary>Sets the stub of ListForPlayer2DataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.SiteGet">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.SiteSetISite">
+            <summary>Sets the stub of DataSet.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubListForPlayer2DataSet.ToString">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubListForPlayer2DataSet.ToString01">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.Container">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.DesignMode">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.SchemaSerializationMode">
+            <summary>Sets the stub of ListForPlayer2DataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.Site">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor(Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.Constructor">
+            <summary>Sets the shim of TableAdapterManager.TableAdapterManager()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableForPlayer1TableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableForPlayer1TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableForPlayer1TableAdapterSetTableForPlayer1TableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_TableForPlayer1TableAdapter(TableForPlayer1TableAdapter value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateAllListForPlayer1DataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateDeletedRowsListForPlayer1DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateInsertedRowsListForPlayer1DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateUpdatedRowsListForPlayer1DataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableForPlayer1TableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableForPlayer1TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableForPlayer1TableAdapterSetTableForPlayer1TableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_TableForPlayer1TableAdapter(TableForPlayer1TableAdapter value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateAllListForPlayer1DataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateDeletedRowsListForPlayer1DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateInsertedRowsListForPlayer1DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateUpdatedRowsListForPlayer1DataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(ListForPlayer1DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter">
+            <summary>Shim type of Balda.Data.ListForPlayer1DataSetTableAdapters.TableForPlayer1TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.#ctor(Balda.Data.ListForPlayer1DataSetTableAdapters.TableForPlayer1TableAdapter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AdapterGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.ClearBeforeFillGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.CommandCollectionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.ConnectionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.Constructor">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.TableForPlayer1TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.FillListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Fill(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.GetData">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.InitAdapter">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.InitCommandCollection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.InitConnection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.InsertStringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.TransactionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.UpdateDataRow">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.UpdateDataRowArray">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.UpdateListForPlayer1DataSet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.UpdateListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.AdapterGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.ClearBeforeFillGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.CommandCollectionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.ConnectionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.FillListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Fill(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.GetData">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.InitAdapter">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.InitCommandCollection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.InitConnection">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.InsertStringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.TransactionGet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.UpdateDataRow">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.UpdateDataRowArray">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.UpdateListForPlayer1DataSet">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.UpdateListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableForPlayer1TableAdapter.AllInstances.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer1TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager">
+            <summary>Stub type of Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubTableAdapterManager.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.InitializeStub">
+            <summary>Initializes a new instance of type StubTableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnection(System.Data.IDbConnection)">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRows(System.Data.DataRow[],System.Data.DataRelation,System.Boolean)">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAll(Balda.Data.ListForPlayer1DataSet)">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAllListForPlayer1DataSet">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableAdapterManager.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter">
+            <summary>Stub type of Balda.Data.ListForPlayer1DataSetTableAdapters.TableForPlayer1TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubTableForPlayer1TableAdapter.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Delete(System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Fill(Balda.Data.ListForPlayer1DataSet.TableForPlayer1DataTable)">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Fill(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.FillListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Fill(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.GetData">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.GetData()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.GetData01">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.GetData()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.InitializeStub">
+            <summary>Initializes a new instance of type StubTableForPlayer1TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Insert(System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.InsertStringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Update(Balda.Data.ListForPlayer1DataSet)">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Update(System.Data.DataRow)">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Update(Balda.Data.ListForPlayer1DataSet.TableForPlayer1DataTable)">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Update(System.Data.DataRow[])">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Update(System.String,System.Nullable{System.Int32},System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.UpdateDataRow">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.UpdateDataRowArray">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.UpdateListForPlayer1DataSet">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(ListForPlayer1DataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.UpdateListForPlayer1DataSetTableForPlayer1DataTable">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(TableForPlayer1DataTable dataTable)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer1TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.StubTableForPlayer1TableAdapter.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor(Balda.Data.ListForPlayer2DataSetTableAdapters.TableAdapterManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.Constructor">
+            <summary>Sets the shim of TableAdapterManager.TableAdapterManager()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableForPlayer2TableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableForPlayer2TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.TableForPlayer2TableAdapterSetTableForPlayer2TableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_TableForPlayer2TableAdapter(TableForPlayer2TableAdapter value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateAllListForPlayer2DataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateDeletedRowsListForPlayer2DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateInsertedRowsListForPlayer2DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateUpdatedRowsListForPlayer2DataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableForPlayer2TableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableForPlayer2TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableForPlayer2TableAdapterSetTableForPlayer2TableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_TableForPlayer2TableAdapter(TableForPlayer2TableAdapter value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateAllListForPlayer2DataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateDeletedRowsListForPlayer2DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateInsertedRowsListForPlayer2DataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateUpdatedRowsListForPlayer2DataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(ListForPlayer2DataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter">
+            <summary>Shim type of Balda.Data.ListForPlayer2DataSetTableAdapters.TableForPlayer2TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.#ctor(Balda.Data.ListForPlayer2DataSetTableAdapters.TableForPlayer2TableAdapter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AdapterGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.ClearBeforeFillGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.CommandCollectionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.ConnectionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.Constructor">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.TableForPlayer2TableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.FillListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Fill(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.GetData">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.InitAdapter">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.InitCommandCollection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.InitConnection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.InsertStringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.TransactionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.UpdateDataRow">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.UpdateDataRowArray">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.UpdateListForPlayer2DataSet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.UpdateListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.AdapterGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.ClearBeforeFillGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.CommandCollectionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.ConnectionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.FillListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Fill(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.GetData">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.InitAdapter">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.InitCommandCollection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.InitConnection">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.InsertStringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.TransactionGet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.UpdateDataRow">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.UpdateDataRowArray">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.UpdateListForPlayer2DataSet">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.UpdateListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.ShimTableForPlayer2TableAdapter.AllInstances.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the shim of TableForPlayer2TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager">
+            <summary>Stub type of Balda.Data.ListForPlayer2DataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubTableAdapterManager.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.InitializeStub">
+            <summary>Initializes a new instance of type StubTableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnection(System.Data.IDbConnection)">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRows(System.Data.DataRow[],System.Data.DataRelation,System.Boolean)">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAll(Balda.Data.ListForPlayer2DataSet)">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAllListForPlayer2DataSet">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableAdapterManager.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter">
+            <summary>Stub type of Balda.Data.ListForPlayer2DataSetTableAdapters.TableForPlayer2TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubTableForPlayer2TableAdapter.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Delete(System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.DeleteInt32StringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Delete(Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Fill(Balda.Data.ListForPlayer2DataSet.TableForPlayer2DataTable)">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Fill(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.FillListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Fill(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.GetData">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.GetData()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.GetData01">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.GetData()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.InitializeStub">
+            <summary>Initializes a new instance of type StubTableForPlayer2TableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Insert(System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.InsertStringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Insert(String Word, Nullable`1&lt;Int32&gt; Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Update(Balda.Data.ListForPlayer2DataSet)">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Update(System.Data.DataRow)">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Update(Balda.Data.ListForPlayer2DataSet.TableForPlayer2DataTable)">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Update(System.Data.DataRow[])">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="M:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Update(System.String,System.Nullable{System.Int32},System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.UpdateDataRow">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.UpdateDataRowArray">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.UpdateListForPlayer2DataSet">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(ListForPlayer2DataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.UpdateListForPlayer2DataSetTableForPlayer2DataTable">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(TableForPlayer2DataTable dataTable)</summary>
+        </member>
+        <member name="F:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.UpdateStringNullableOfInt32Int32StringNullableOfInt32">
+            <summary>Sets the stub of TableForPlayer2TableAdapter.Update(String Word, Nullable`1&lt;Int32&gt; Value, Int32 Original_Код, String Original_Word, Nullable`1&lt;Int32&gt; Original_Value)</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+    </members>
+</doc>

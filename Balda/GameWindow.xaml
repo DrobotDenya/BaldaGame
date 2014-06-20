@@ -3,11 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="GameWindow" Height="300" Width="431.955" Loaded="Window_Loaded">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" Height="160" Margin="99,37,99,72" Width="226" VerticalAlignment="Center"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="160" Margin="152,37,158,72" VerticalAlignment="Center"/>
         <Label x:Name="lblPlayer1" Content="Label" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,1.455"/>
         <Label x:Name="lblPlayer2" Content="Label" HorizontalAlignment="Left" Margin="376,66,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="10,97,0,0" VerticalAlignment="Top" Width="74"/>
-        <ListBox Height="100" Margin="340,92,10,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBoxP1" HorizontalAlignment="Left" Height="100" Margin="10,97,0,0" VerticalAlignment="Top" Width="48" MouseDown="listBoxP1_MouseDown"/>
+        <ListBox x:Name="listBoxP2" Height="100" Margin="340,92,10,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" Margin="10,43,0,0"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="340,43,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="btnAddWord" Content="Add " HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Width="48" Click="btnAddWord_Click"/>
+        <Button x:Name="btnAddButton2" Content="Add word" HorizontalAlignment="Left" Margin="340,212,0,0" VerticalAlignment="Top" Width="74" Click="btnAddButton2_Click"/>
+        <ListBox x:Name="listBoxValue1" HorizontalAlignment="Left" Height="100" Margin="80,97,0,0" VerticalAlignment="Top" Width="67" MouseDown="listBoxValue1_MouseDown"/>
+        <ListBox x:Name="listBoxValue2" HorizontalAlignment="Left" Height="100" Margin="306,92,0,0" VerticalAlignment="Top" Width="29" MouseDown="listBoxValue2_MouseDown"/>
 
     </Grid>
 </Window>
