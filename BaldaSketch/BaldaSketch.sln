@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaldaSketch", "BaldaSketch\BaldaSketch.csproj", "{E97EFB09-CA90-407E-9671-3F29566B5C13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaldaSketchScreens", "BaldaSketch\BaldaSketchScreens\BaldaSketchScreens.csproj", "{C7B6E490-D9B4-4752-A4DC-63102A3AF177}"
@@ -19,5 +19,8 @@ Global
 		{C7B6E490-D9B4-4752-A4DC-63102A3AF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B6E490-D9B4-4752-A4DC-63102A3AF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7B6E490-D9B4-4752-A4DC-63102A3AF177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

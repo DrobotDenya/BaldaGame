@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Data.OleDb;
+using System.Data;
 
 namespace Balda
 {
@@ -25,7 +27,7 @@ namespace Balda
             InitializeComponent();
             textBoxLogin.Text = "Denya";
         }
-
+        
         private void textBoxLogin_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -33,6 +35,7 @@ namespace Balda
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           // connectionToDataBase();
             if (textBoxLogin.Text == "Denya")
             {
                 MenuWindow menu = new MenuWindow();
@@ -52,5 +55,49 @@ namespace Balda
             }
 
         }
+
+        //void connectionToDataBase()
+
+        //{
+        //    OleDbConnection connect = new OleDbConnection();
+        //    string word = "Wordddddd";
+        //    int value = 4;
+
+        //    connect.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda\Database1\Dictionary.accdb";
+        //    connect.Open();
+
+        //    OleDbCommand cmd = new OleDbCommand("INSERT INTO [Dictionary] ([Word], [Value])" + "values(?,?)", connect);
+        //    OleDbCommand cmdremove = new OleDbCommand("DELETE FROM [Dictionary] where id = 1", connect);
+                       
+        //    if (connect.State == ConnectionState.Open)
+        //    {
+
+                
+        //        cmd.Parameters.Add("", OleDbType.VarChar).Value = word;
+        //        cmd.Parameters.Add("", OleDbType.Integer).Value = value;
+        //        //adapter.SelectCommand = cmd;
+        //        try
+        //        {
+        //            cmdremove.ExecuteNonQuery();
+        //            cmd.ExecuteNonQuery();
+        //            MessageBox.Show(@"Data Added To DataBase");
+        //            connect.Close();
+        //        }
+        //        catch (Exception expe)
+        //        {
+        //            MessageBox.Show(expe.Source);
+        //            connect.Close();
+        //        }
+        //    }
+        //    else 
+        //    {
+        //        MessageBox.Show("Connection Failed");
+        //    }
+        
+            
+
+
+        //}
+
     }
 }
