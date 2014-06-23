@@ -1042,6 +1042,42 @@
         <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances.RowGet">
             <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Row()</summary>
         </member>
+        <member name="T:Balda.Data.Fakes.ShimWord">
+            <summary>Shim type of Balda.Data.Word</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimWord.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimWord.#ctor(Balda.Data.Word)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimWord.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimWord.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.ConstructorStringInt32Int32">
+            <summary>Sets the shim of Word.Word(String word, Int32 value, Int32 player)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.insert">
+            <summary>Sets the shim of Word.insert()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.remove">
+            <summary>Sets the shim of Word.remove()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimWord.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.insert">
+            <summary>Sets the shim of Word.insert()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
+            <summary>Sets the shim of Word.remove()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.StubDictionary">
             <summary>Stub type of Balda.Data.Dictionary</summary>
         </member>
@@ -1365,6 +1401,24 @@
         </member>
         <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.Site">
             <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubWord">
+            <summary>Stub type of Balda.Data.Word</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubWord.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubWord.InitializeStub">
+            <summary>Initializes a new instance of type StubWord</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubWord.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubWord.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubWord.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.ListForPlayer1DataSetTableAdapters.Fakes.ShimTableAdapterManager">
             <summary>Shim type of Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager</summary>

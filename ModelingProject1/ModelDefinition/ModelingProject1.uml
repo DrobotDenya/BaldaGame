@@ -1,0 +1,1161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="281249fd-b010-4d7b-80b4-f27a13834471"
+  name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="9cb1c94f-0a72-4b6a-84ad-1443cc68e1f9"
+        name="bot"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9ff43b94-7481-41e0-9ed8-f9658948afa1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="1c9df4d4-885b-4d69-80a6-20d63e11e2bc"
+              LastKnownName="Player"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="a72f922f-fd26-4e53-a419-35744ff5efa2"
+            name="levelOfComplexity"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fd02d3ac-80be-4d82-8a1a-1838b612a5c1"
+            name="Bot"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="61dd7e90-1e61-4370-a4d8-1c58821ccff9"
+                  name="String name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a54b2988-360c-4bb6-b225-ca267fcad891"
+                  name="int level"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d7f2030-7cf5-4ff3-8329-0a679ac8db20"
+                  name="WordAi alg"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="720d93c6-fda0-40c3-81dd-c79280fba733"
+            name="int solution"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="93ad021c-5924-42cb-af5d-528a9897b8eb"
+            name="String findWord"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1c9df4d4-885b-4d69-80a6-20d63e11e2bc"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a771ea90-ce10-4d38-860f-d124508b48b3"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="GameModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="93586a83-be7e-4988-8360-7da8623823c0"
+              LastKnownName="GameModel"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed683dda-a4ee-4d8b-b0d7-4d3ac4572c8a"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="201e1bb4-d6b2-4d83-8509-b6456f914e2d"
+                  name="GameModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="afa38fde-db2e-4210-84da-ea478417c64f"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="ManegerPlayers"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="be0dd224-787b-49d0-8b4c-9fc38c2491dc"
+              LastKnownName="ManegerPlayers"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4dc2772-4b1b-4844-a24b-3ba37b1f3838"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="58faecba-278a-4a0c-b03e-e495f24f66cf"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c2a3d02d-8f61-45a6-b2b0-bff41428ab83"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89f60c5c-558e-4075-97ae-e9c2ace4f807"
+                  name="ManegerPlayers"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="48b1b70f-3b89-424c-b967-997fd0a39153"
+            name="name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9332b3e9-3ad6-433c-b3aa-dc1826ff3416"
+            name="isSurrender"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="56d0d6e5-5fff-48d1-bad7-89feeeb57668"
+            name="Player"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1391eb06-4a22-4a6f-9e92-4b34812f83e6"
+                  name="String name/*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5cf67082-f1ee-4116-a810-823e6a9b5463"
+                  name="GameField field*/"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="987d19a1-61a9-40c0-b04c-700427e5a2ba"
+            name="setName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c50d924-c95c-4a83-a513-7cc25558a119"
+                  name="String name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0c30e63d-9c55-430a-b5c6-bc250946543a"
+            name="String getName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="092391c8-5fa3-4b2b-a0c6-5582cf7aff1d"
+            name="addWord"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bde5f192-3ce4-4080-832e-74a5cd4478e3"
+                  name="String word"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a7f114f3-81f7-4a5d-8a9d-b754261ec720"
+            name="String getWords"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7b576e0d-18c0-4517-b63a-e290f3e3c9d6"
+            name="int getPoints"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="281ad4c8-230b-4e55-a250-56504e5c09d1"
+            name="void surrender"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7c78caae-ecb2-44c2-a10c-40b8a0853e3f"
+            name="boolean isSurrender"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c2dc9e8d-b983-4d54-bd45-0a9277ce4a39"
+        name="GameKeys"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f5d64b78-0f7c-4a2d-bf98-da2b669daebf"
+            isDerived="false"
+            sourceEndRoleName="GameKeys"
+            targetEndRoleName="GameModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="93586a83-be7e-4988-8360-7da8623823c0"
+              LastKnownName="GameModel"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="163bcc13-35aa-4570-88ca-be35cf8c434d"
+                  name="GameKeys"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1397598-1b8e-42e1-ac6f-f0335dd8fbf5"
+                  name="GameModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f5df7ea7-34bd-4add-a0ad-6e702fafd261"
+            name="width"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="260854fe-6525-4c07-bec4-e0fc8d8d2357"
+            name="height"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c1c27980-172d-418e-ada7-4bc152efd382"
+            name="keys[]"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="da09cc91-aec7-402c-8501-1b8f4ed9ec15"
+            name="GameKeys"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2c1415f1-c24d-4a0f-a5da-4a8dde076af4"
+            name="setSize"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6665638c-d12d-4f14-9e7a-f6a9d50e3015"
+                  name="int width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="783680b5-29e2-4bb6-891f-a4346fda007d"
+                  name="int height"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ea6bbcdb-1397-4ecd-874e-9008b2cdbefa"
+            name="int width"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7a7e4e1c-12be-4f4e-bc43-d20df1a4ac4c"
+            name="int height"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2d0d9c47-4925-49e8-88c3-c8f2dfbccfac"
+            name="String[] getKeys"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9d41914c-33f9-4c5e-b0c2-97d5fa549789"
+        name="GameField"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="87951686-6394-4780-b929-5dc55b084783"
+            isDerived="false"
+            sourceEndRoleName="GameField"
+            targetEndRoleName="GameModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="93586a83-be7e-4988-8360-7da8623823c0"
+              LastKnownName="GameModel"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ee9ce3c-aa15-40e2-9ebb-e0820025c00b"
+                  name="GameField"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="556d4315-3b47-410e-b879-eace8a7b599b"
+                  name="GameModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="65e83351-585e-4bdb-8f01-7149b6dc486c"
+            name="width"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="24067f39-802d-467e-8cf3-1927fbb34a1e"
+            name="height"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a27e8285-c0bc-4474-8f73-7ef15a543985"
+            name="clear"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="de145c1d-ee46-4990-9d0c-fd4c280fc5b8"
+            name="String getCellValue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7d6e3b9-d5c7-42e0-8e92-fddde0273a5c"
+                  name="int i"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="babdaa5e-7f62-4fd8-87a2-16ee923fbf9a"
+                  name="int j"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ca8f8281-d1c6-4192-b60b-c313d3ffc828"
+            name="setCellValue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a9d45b4-46dd-445d-a346-f061ece7d7a6"
+                  name="String val"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52f27cde-830e-40cc-affa-f159eb01d864"
+                  name="int i"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c9c2a99-5773-4e99-acf9-5a9d66cfc08a"
+                  name="int j"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e1b8fd5d-64b6-4ffb-bf34-0541173df258"
+            name="GameField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0f3cdda2-e730-46b0-becd-053eed494746"
+            name="GameField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ba689da-fac4-414b-bf95-36efab0062ef"
+                  name="int width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d288dca6-95e9-4d7f-a7b8-a8d013aa4d70"
+                  name="int height"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="992ed725-fd88-41ff-9fc9-b1526d350ab0"
+            name="setSize"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f8db197-98c1-4f4d-9fdd-334f47351445"
+                  name="int width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28e5bf3d-138d-428b-b8c8-351f7e149f6d"
+                  name="int height"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5237e6be-2cef-4234-98e2-744e92be7db7"
+            name="int width"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b7431e1b-08bd-480f-a287-3cf6f747303d"
+            name="int height"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="93586a83-be7e-4988-8360-7da8623823c0"
+        name="GameModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="193d74c0-b967-4920-8660-bab4ab449526"
+            name="field"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c6ac2fc2-5e24-42ee-b478-6a2e9ecc7d7d"
+            name="keys"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2c816036-1dff-4bbe-817c-dd3f3e244c04"
+            name="dictionary"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8f44286f-65b6-4aec-99a0-d16ef2cf4ece"
+            name="playersCount"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7242e854-8972-4727-8cc0-47351e98af34"
+            name="botsComplexity"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="94df58e5-f95a-4035-80ca-2a4fc6428d07"
+            name="botsCount"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1c0cd0a7-ce37-403a-a434-3cbeef8996c2"
+            name="GameModel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="634a7a60-bc3f-44ae-b610-ab924acdeb47"
+            name="Player activePlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fb3ceb95-d450-4d90-82e7-37dd2828da5d"
+            name="int getActivePlayerIndex"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="33d98289-b021-46e0-a4ae-2a828d3dea98"
+            name="GameField field"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4e58f22b-ee0a-442b-8d2e-2d1f53e9d3a5"
+            name="GameKeys keys"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5ea1fcea-7f28-49ce-bbc8-86a70796d68e"
+            name="void generateField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1bbde6a6-034d-43c2-bda1-0b90f83c1a5b"
+            name="start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="27297343-25fc-4c67-9b75-dba4f8d560e1"
+            name="generatePlayers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="62f0d5c7-0773-42f1-b973-a4e4bc2bbe25"
+            name="exchangePlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d7593ca9-3f8f-43b0-b09c-0a3bb304862e"
+            name="determineWinner"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c8356025-5915-405e-9ca3-d1964628a3c8"
+            name="boolean fieldIsFull"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a5317478-5e8a-4a50-bf5b-db8a9a018937"
+            name="int countPlayersInGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ff975afe-6a4c-4879-a4d1-fe1da1aa56e9"
+            name="getDemention"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="581ecf5b-786b-4050-9eff-fdc03cb4a205"
+            name="boolean wordIsUsed"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7615cfa5-18d3-42fa-a5c3-7b92f4fb4569"
+                  name="String word"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d860cd11-5c97-4c3d-9c84-4e5d0aa95961"
+            name="setPlayersCount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b7e53945-0606-4501-9daf-2c7f27ad4e36"
+                  name="int count"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3b6d4dd5-1d57-47f6-b89c-307fc1d2e194"
+            name="setBotsCount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3856161f-6180-4f6a-9b20-9e77c2a44623"
+                  name="int count"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8dfa5f34-6c41-4221-ad7d-1413a5888ee8"
+            name="setBotsComplexity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e453a7b2-f063-4822-9ad6-ec2e727cb0c2"
+                  name="int compl"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5214c07-a38d-4a25-8e9a-bf5b7a058c8b"
+            name="addWordToBase"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c2a55ac9-47af-4d05-a24b-5a23ba4999e2"
+        name="Word"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="79241726-da5a-4cd6-a663-bc7cd1880244"
+            isDerived="false"
+            sourceEndRoleName="Word"
+            targetEndRoleName="GameModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="93586a83-be7e-4988-8360-7da8623823c0"
+              LastKnownName="GameModel"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f4ec55ea-9108-4461-9d9a-0342f70c2a91"
+                  name="Word"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="53bc7e6d-2439-470d-8fc3-81b2d240bf96"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d4677c84-b40f-4870-a263-9cdbbccdb259"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08fc28d5-161b-4739-8937-c65da9b0c701"
+                  name="GameModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="5799cdc2-39b9-457e-81e6-c8fd5266558c"
+            name="word"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b6314295-2d00-492e-8e0d-363f34cdfbb3"
+            name="player"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4be6e749-7b4f-4b1f-ac20-8522df833989"
+            name="value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fd02e425-a25a-4aa4-858e-2174ecba84a4"
+            name="connectionString"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e9853162-4bfa-407c-9465-a3d552f1570a"
+            name="Word"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52636ad1-4ae7-4296-9b78-d1c774102cc3"
+                  name="string word"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="baef7033-78c8-4d73-825b-c6af525e676a"
+                  name="int value"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6488171-29e1-4b48-858f-472019124ba5"
+                  name="int player"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b01fecce-def8-4d99-80a2-8b701183acd9"
+            name="insert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0275e3b4-7a97-42b2-b2d7-fa824bd99b73"
+            name="delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="be0dd224-787b-49d0-8b4c-9fc38c2491dc"
+        name="ManegerPlayers"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="aed2b56a-c584-4263-a3cb-4b06448cbdc2"
+            name="addNewPlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4bdfb704-287f-4404-84de-0f60dc72bcf2"
+            name="removePlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
