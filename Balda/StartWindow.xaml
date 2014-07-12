@@ -36,7 +36,7 @@
         </Button>
         <TextBox x:Name="tbxPassword" HorizontalAlignment="Left" Height="16" Margin="93,215,0,0" TextWrapping="Wrap" Text="Password
 " VerticalAlignment="Top" Width="120" TextAlignment="Center" BorderBrush="#FFE89114" BorderThickness="3" FontSize="8"/>
-        <TextBlock x:Name="textBlockRegistration" HorizontalAlignment="Left" Margin="93,231,0,0" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Width="120" FontSize="9" TextDecorations="Underline" TextAlignment="Center" Foreground="#FF122EDE"/>
+        <TextBlock x:Name="textBlockRegistration" HorizontalAlignment="Left" Margin="93,231,0,0" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Width="120" FontSize="9" TextDecorations="Underline" TextAlignment="Center" Foreground="#FF122EDE" MouseDown="textBlockRegistration_MouseDown"/>
 
     </Grid>
 </Window>

@@ -35,7 +35,7 @@ namespace Balda
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // connectionToDataBase();
+         
             if (textBoxLogin.Text == "Denya")
             {
                 MenuWindow menu = new MenuWindow();
@@ -54,6 +54,13 @@ namespace Balda
 
             }
 
+        }
+
+        private void textBlockRegistration_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RegistrationWindows registrWindow = new RegistrationWindows();
+            registrWindow.Show();
+            this.Hide();
         }
 
         //void connectionToDataBase()

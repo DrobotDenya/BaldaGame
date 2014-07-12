@@ -1,19 +1,21 @@
 ﻿<Window x:Class="Balda.RegistrationWindows"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RegistrationWindows" Height="300" Width="300">
+        Title="RegistrationWindows" Height="394.521" Width="300">
     <Grid Background="#FFAEB52C">
-        <StackPanel HorizontalAlignment="Left" Height="195" Margin="77,10,0,0" VerticalAlignment="Top" Width="150">
+        <StackPanel HorizontalAlignment="Left" Height="282" Margin="78,23,0,0" VerticalAlignment="Top" Width="150">
+            <Label Content="Nickname"/>
+            <TextBox x:Name="tbNickname" Height="23" TextWrapping="Wrap" Text=""/>
             <Label Content="First Name"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="tbFirstName" Height="23" TextWrapping="Wrap" Text=""/>
             <Label Content="Second Name"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="tbSecondName" Height="23" TextWrapping="Wrap" Text=""/>
             <Label Content="Password"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="tbPassword" Height="23" TextWrapping="Wrap" Text=""/>
             <Label Content="ConfirmPassword"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="tbConfPassword" Height="23" TextWrapping="Wrap" Text=""/>
         </StackPanel>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="77,230,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Foreground="#FF1CF112">
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="83,309,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Foreground="#FF1CF112" Click="btnRegister_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

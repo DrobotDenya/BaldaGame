@@ -4,6 +4,36 @@
         <name>Balda.Data.Fakes</name>
     </assembly>
     <members>
+        <member name="T:Balda.Data.Fakes.ShimGameKeys">
+            <summary>Shim type of Balda.Data.GameKeys</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameKeys.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameKeys.#ctor(Balda.Data.GameKeys)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameKeys.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameKeys.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.Constructor">
+            <summary>Sets the shim of GameKeys.GameKeys()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.readKeyBoard">
+            <summary>Sets the shim of GameKeys.readKeyBoard()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimGameKeys.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.AllInstances.readKeyBoard">
+            <summary>Sets the shim of GameKeys.readKeyBoard()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet">
             <summary>Shim type of Balda.Data.ListForPlayer1DataSet</summary>
         </member>
@@ -1006,6 +1036,567 @@
         <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances.RowGet">
             <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Row()</summary>
         </member>
+        <member name="T:Balda.Data.Fakes.ShimUser">
+            <summary>Shim type of Balda.Data.User</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUser.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUser.#ctor(Balda.Data.User)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUser.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUser.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.ConstructorStringStringStringString">
+            <summary>Sets the shim of User.User(String nickname, String name, String sername, String password)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.insert">
+            <summary>Sets the shim of User.insert()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUser.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.insert">
+            <summary>Sets the shim of User.insert()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet">
+            <summary>Shim type of Balda.Data.UsersDataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.#ctor(Balda.Data.UsersDataSet)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.Clone">
+            <summary>Sets the shim of UsersDataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.Constructor">
+            <summary>Sets the shim of UsersDataSet.UsersDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of UsersDataSet.UsersDataSet(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.GetSchemaSerializable">
+            <summary>Sets the shim of UsersDataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.GetTypedDataSetSchemaXmlSchemaSet">
+            <summary>Sets the shim of UsersDataSet.GetTypedDataSetSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.InitClass">
+            <summary>Sets the shim of UsersDataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.InitVars">
+            <summary>Sets the shim of UsersDataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.InitVarsBoolean">
+            <summary>Sets the shim of UsersDataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.InitializeDerivedDataSet">
+            <summary>Sets the shim of UsersDataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of UsersDataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.RelationsGet">
+            <summary>Sets the shim of UsersDataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of UsersDataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.SchemaSerializationModeGet">
+            <summary>Sets the shim of UsersDataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of UsersDataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShouldSerializeRelations">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShouldSerializeTables">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShouldSerializeUser">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeUser()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.TablesGet">
+            <summary>Sets the shim of UsersDataSet.get_Tables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.UserGet">
+            <summary>Sets the shim of UsersDataSet.get_User()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.Clone">
+            <summary>Sets the shim of UsersDataSet.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.GetSchemaSerializable">
+            <summary>Sets the shim of UsersDataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.InitClass">
+            <summary>Sets the shim of UsersDataSet.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.InitVars">
+            <summary>Sets the shim of UsersDataSet.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.InitVarsBoolean">
+            <summary>Sets the shim of UsersDataSet.InitVars(Boolean initTable)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.InitializeDerivedDataSet">
+            <summary>Sets the shim of UsersDataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.ReadXmlSerializableXmlReader">
+            <summary>Sets the shim of UsersDataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.RelationsGet">
+            <summary>Sets the shim of UsersDataSet.get_Relations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.SchemaChangedObjectCollectionChangeEventArgs">
+            <summary>Sets the shim of UsersDataSet.SchemaChanged(Object sender, CollectionChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.SchemaSerializationModeGet">
+            <summary>Sets the shim of UsersDataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the shim of UsersDataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.ShouldSerializeRelations">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.ShouldSerializeTables">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.ShouldSerializeUser">
+            <summary>Sets the shim of UsersDataSet.ShouldSerializeUser()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.TablesGet">
+            <summary>Sets the shim of UsersDataSet.get_Tables()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.AllInstances.UserGet">
+            <summary>Sets the shim of UsersDataSet.get_User()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable">
+            <summary>Shim type of Balda.Data.UsersDataSet+UserDataTable</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.#ctor(Balda.Data.UsersDataSet.UserDataTable)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.ComponentModel.IListSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.ComponentModel.ISupportInitializeNotification)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.Xml.Serialization.IXmlSerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.Collections.Generic.IEnumerable{Balda.Data.UsersDataSet.UserRow})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AddUserRowStringStringString">
+            <summary>Sets the shim of UserDataTable.AddUserRow(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AddUserRowUsersDataSetUserRow">
+            <summary>Sets the shim of UserDataTable.AddUserRow(UserRow row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Clone">
+            <summary>Sets the shim of UserDataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.Constructor">
+            <summary>Sets the shim of UserDataTable.UserDataTable()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.ConstructorDataTable">
+            <summary>Sets the shim of UserDataTable.UserDataTable(DataTable table)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of UserDataTable.UserDataTable(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.CountGet">
+            <summary>Sets the shim of UserDataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.CreateInstance">
+            <summary>Sets the shim of UserDataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.FindByКодInt32">
+            <summary>Sets the shim of UserDataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.GetRowType">
+            <summary>Sets the shim of UserDataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.GetTypedTableSchemaXmlSchemaSet">
+            <summary>Sets the shim of UserDataTable.GetTypedTableSchema(XmlSchemaSet xs)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.InitClass">
+            <summary>Sets the shim of UserDataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.InitVars">
+            <summary>Sets the shim of UserDataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.ItemGetInt32">
+            <summary>Sets the shim of UserDataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.NameColumnGet">
+            <summary>Sets the shim of UserDataTable.get_NameColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of UserDataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.NewUserRow">
+            <summary>Sets the shim of UserDataTable.NewUserRow()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.PasswordColumnGet">
+            <summary>Sets the shim of UserDataTable.get_PasswordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.RemoveUserRowUsersDataSetUserRow">
+            <summary>Sets the shim of UserDataTable.RemoveUserRow(UserRow row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.SernameColumnGet">
+            <summary>Sets the shim of UserDataTable.get_SernameColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowChangedAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowChanged(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowChangedRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowChanged(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowChangingAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowChanging(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowChangingRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowChanging(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowDeletedAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowDeleted(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowDeletedRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowDeleted(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowDeletingAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowDeleting(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.UserRowDeletingRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowDeleting(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.КодColumnGet">
+            <summary>Sets the shim of UserDataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.AddUserRowStringStringString">
+            <summary>Sets the shim of UserDataTable.AddUserRow(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.AddUserRowUsersDataSetUserRow">
+            <summary>Sets the shim of UserDataTable.AddUserRow(UserRow row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.Clone">
+            <summary>Sets the shim of UserDataTable.Clone()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.CountGet">
+            <summary>Sets the shim of UserDataTable.get_Count()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.CreateInstance">
+            <summary>Sets the shim of UserDataTable.CreateInstance()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.FindByКодInt32">
+            <summary>Sets the shim of UserDataTable.FindByКод(Int32 Код)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.GetRowType">
+            <summary>Sets the shim of UserDataTable.GetRowType()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.InitClass">
+            <summary>Sets the shim of UserDataTable.InitClass()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.InitVars">
+            <summary>Sets the shim of UserDataTable.InitVars()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of UserDataTable.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.NameColumnGet">
+            <summary>Sets the shim of UserDataTable.get_NameColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.NewRowFromBuilderDataRowBuilder">
+            <summary>Sets the shim of UserDataTable.NewRowFromBuilder(DataRowBuilder builder)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.NewUserRow">
+            <summary>Sets the shim of UserDataTable.NewUserRow()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.OnRowChangedDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowChanged(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.OnRowChangingDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowChanging(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.OnRowDeletedDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowDeleted(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.OnRowDeletingDataRowChangeEventArgs">
+            <summary>Sets the shim of UserDataTable.OnRowDeleting(DataRowChangeEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.PasswordColumnGet">
+            <summary>Sets the shim of UserDataTable.get_PasswordColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.RemoveUserRowUsersDataSetUserRow">
+            <summary>Sets the shim of UserDataTable.RemoveUserRow(UserRow row)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.SernameColumnGet">
+            <summary>Sets the shim of UserDataTable.get_SernameColumn()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowChangedAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowChanged(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowChangedRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowChanged(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowChangingAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowChanging(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowChangingRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowChanging(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowDeletedAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowDeleted(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowDeletedRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowDeleted(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowDeletingAddUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.add_UserRowDeleting(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.UserRowDeletingRemoveUsersDataSetUserRowChangeEventHandler">
+            <summary>Sets the shim of UserDataTable.remove_UserRowDeleting(UserRowChangeEventHandler value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserDataTable.AllInstances.КодColumnGet">
+            <summary>Sets the shim of UserDataTable.get_КодColumn()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow">
+            <summary>Shim type of Balda.Data.UsersDataSet+UserRow</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.#ctor(Balda.Data.UsersDataSet.UserRow)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.ConstructorDataRowBuilder">
+            <summary>Sets the shim of UserRow.UserRow(DataRowBuilder rb)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.IsNameNull">
+            <summary>Sets the shim of UserRow.IsNameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.IsPasswordNull">
+            <summary>Sets the shim of UserRow.IsPasswordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.IsSernameNull">
+            <summary>Sets the shim of UserRow.IsSernameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.NameGet">
+            <summary>Sets the shim of UserRow.get_Name()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.NameSetString">
+            <summary>Sets the shim of UserRow.set_Name(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.PasswordGet">
+            <summary>Sets the shim of UserRow.get_Password()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.PasswordSetString">
+            <summary>Sets the shim of UserRow.set_Password(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.SernameGet">
+            <summary>Sets the shim of UserRow.get_Sername()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.SernameSetString">
+            <summary>Sets the shim of UserRow.set_Sername(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.SetNameNull">
+            <summary>Sets the shim of UserRow.SetNameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.SetPasswordNull">
+            <summary>Sets the shim of UserRow.SetPasswordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.SetSernameNull">
+            <summary>Sets the shim of UserRow.SetSernameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.КодGet">
+            <summary>Sets the shim of UserRow.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.КодSetInt32">
+            <summary>Sets the shim of UserRow.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.IsNameNull">
+            <summary>Sets the shim of UserRow.IsNameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.IsPasswordNull">
+            <summary>Sets the shim of UserRow.IsPasswordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.IsSernameNull">
+            <summary>Sets the shim of UserRow.IsSernameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.NameGet">
+            <summary>Sets the shim of UserRow.get_Name()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.NameSetString">
+            <summary>Sets the shim of UserRow.set_Name(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.PasswordGet">
+            <summary>Sets the shim of UserRow.get_Password()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.PasswordSetString">
+            <summary>Sets the shim of UserRow.set_Password(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.SernameGet">
+            <summary>Sets the shim of UserRow.get_Sername()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.SernameSetString">
+            <summary>Sets the shim of UserRow.set_Sername(String value)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.SetNameNull">
+            <summary>Sets the shim of UserRow.SetNameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.SetPasswordNull">
+            <summary>Sets the shim of UserRow.SetPasswordNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.SetSernameNull">
+            <summary>Sets the shim of UserRow.SetSernameNull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.КодGet">
+            <summary>Sets the shim of UserRow.get_Код()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRow.AllInstances.КодSetInt32">
+            <summary>Sets the shim of UserRow.set_Код(Int32 value)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent">
+            <summary>Shim type of Balda.Data.UsersDataSet+UserRowChangeEvent</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.#ctor(Balda.Data.UsersDataSet.UserRowChangeEvent)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.ActionGet">
+            <summary>Sets the shim of UserRowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.ConstructorUsersDataSetUserRowDataRowAction">
+            <summary>Sets the shim of UserRowChangeEvent.UserRowChangeEvent(UserRow row, DataRowAction action)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.RowGet">
+            <summary>Sets the shim of UserRowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.AllInstances.ActionGet">
+            <summary>Sets the shim of UserRowChangeEvent.get_Action()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUsersDataSet.ShimUserRowChangeEvent.AllInstances.RowGet">
+            <summary>Sets the shim of UserRowChangeEvent.get_Row()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimWord">
             <summary>Shim type of Balda.Data.Word</summary>
         </member>
@@ -1041,6 +1632,24 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
             <summary>Sets the shim of Word.remove()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubGameKeys">
+            <summary>Stub type of Balda.Data.GameKeys</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameKeys.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameKeys.InitializeStub">
+            <summary>Initializes a new instance of type StubGameKeys</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameKeys.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameKeys.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameKeys.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubListForPlayer1DataSet">
             <summary>Stub type of Balda.Data.ListForPlayer1DataSet</summary>
@@ -1346,6 +1955,177 @@
             <summary>Sets the stub of ListForPlayer2DataSet.get_SchemaSerializationMode()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.StubListForPlayer2DataSet.Site">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubUser">
+            <summary>Stub type of Balda.Data.User</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUser.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUser.InitializeStub">
+            <summary>Initializes a new instance of type StubUser</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUser.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUser.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUser.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubUsersDataSet">
+            <summary>Stub type of Balda.Data.UsersDataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.AttachBackingFieldToSchemaSerializationMode">
+            <summary>Attaches delegates to emulate StubUsersDataSet.SchemaSerializationMode as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubUsersDataSet.Site as a property with a backing field.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.Clone">
+            <summary>Sets the stub of UsersDataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.Clone01">
+            <summary>Sets the stub of UsersDataSet.Clone()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.ContainerGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.DesignModeGet">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.Dispose(System.Boolean)">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.DisposeBoolean">
+            <summary>Sets the stub of MarshalByValueComponent.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of DataSet.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.GetSchemaSerializable">
+            <summary>Sets the stub of UsersDataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.GetSchemaSerializable01">
+            <summary>Sets the stub of UsersDataSet.GetSchemaSerializable()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.GetService(System.Type)">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.GetServiceType">
+            <summary>Sets the stub of MarshalByValueComponent.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.InitializeDerivedDataSet">
+            <summary>Sets the stub of UsersDataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.InitializeDerivedDataSet01">
+            <summary>Sets the stub of UsersDataSet.InitializeDerivedDataSet()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.InitializeStub">
+            <summary>Initializes a new instance of type StubUsersDataSet</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.Load(System.Data.IDataReader,System.Data.LoadOption,System.Data.FillErrorEventHandler,System.Data.DataTable[])">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.LoadIDataReaderLoadOptionFillErrorEventHandlerDataTableArray">
+            <summary>Sets the stub of DataSet.Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable[] tables)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.OnPropertyChangingPropertyChangedEventArgs">
+            <summary>Sets the stub of DataSet.OnPropertyChanging(PropertyChangedEventArgs pcevent)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.OnRemoveRelation(System.Data.DataRelation)">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.OnRemoveRelationDataRelation">
+            <summary>Sets the stub of DataSet.OnRemoveRelation(DataRelation relation)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.OnRemoveTable(System.Data.DataTable)">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.OnRemoveTableDataTable">
+            <summary>Sets the stub of DataSet.OnRemoveTable(DataTable table)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.ReadXmlSerializable(System.Xml.XmlReader)">
+            <summary>Sets the stub of UsersDataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.ReadXmlSerializableXmlReader">
+            <summary>Sets the stub of UsersDataSet.ReadXmlSerializable(XmlReader reader)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.RejectChanges">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.RejectChanges01">
+            <summary>Sets the stub of DataSet.RejectChanges()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.Reset">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.Reset01">
+            <summary>Sets the stub of DataSet.Reset()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.SchemaSerializationModeGet">
+            <summary>Sets the stub of UsersDataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.SchemaSerializationModeSetSchemaSerializationMode">
+            <summary>Sets the stub of UsersDataSet.set_SchemaSerializationMode(SchemaSerializationMode value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.ShouldSerializeRelations">
+            <summary>Sets the stub of UsersDataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.ShouldSerializeRelations01">
+            <summary>Sets the stub of UsersDataSet.ShouldSerializeRelations()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.ShouldSerializeTables">
+            <summary>Sets the stub of UsersDataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.ShouldSerializeTables01">
+            <summary>Sets the stub of UsersDataSet.ShouldSerializeTables()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.SiteGet">
+            <summary>Sets the stub of DataSet.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.SiteSetISite">
+            <summary>Sets the stub of DataSet.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUsersDataSet.ToString">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubUsersDataSet.ToString01">
+            <summary>Sets the stub of MarshalByValueComponent.ToString()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.Container">
+            <summary>Sets the stub of MarshalByValueComponent.get_Container()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.DesignMode">
+            <summary>Sets the stub of MarshalByValueComponent.get_DesignMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.SchemaSerializationMode">
+            <summary>Sets the stub of UsersDataSet.get_SchemaSerializationMode()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubUsersDataSet.Site">
             <summary>Sets the stub of DataSet.get_Site()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubWord">
@@ -2276,6 +3056,462 @@
             <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="P:Balda.Data.ListForPlayer2DataSetTableAdapters.Fakes.StubTableForPlayer2TableAdapter.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager">
+            <summary>Shim type of Balda.Data.UsersDataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.#ctor(Balda.Data.UsersDataSetTableAdapters.TableAdapterManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.Constructor">
+            <summary>Sets the shim of TableAdapterManager.TableAdapterManager()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateAllUsersDataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateDeletedRowsUsersDataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateInsertedRowsUsersDataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UpdateUpdatedRowsUsersDataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UserTableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_UserTableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.UserTableAdapterSetUserTableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_UserTableAdapter(UserTableAdapter value)</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateGet">
+            <summary>Sets the shim of TableAdapterManager.get_BackupDataSetBeforeUpdate()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.BackupDataSetBeforeUpdateSetBoolean">
+            <summary>Sets the shim of TableAdapterManager.set_BackupDataSetBeforeUpdate(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionGet">
+            <summary>Sets the shim of TableAdapterManager.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.ConnectionSetIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.GetRealUpdatedRowsDataRowArrayListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.GetRealUpdatedRows(DataRow[] updatedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the shim of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the shim of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.TableAdapterInstanceCountGet">
+            <summary>Sets the shim of TableAdapterManager.get_TableAdapterInstanceCount()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateAllUsersDataSet">
+            <summary>Sets the shim of TableAdapterManager.UpdateAll(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateDeletedRowsUsersDataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateDeletedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allChangedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateInsertedRowsUsersDataSetListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateInsertedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderGet">
+            <summary>Sets the shim of TableAdapterManager.get_UpdateOrder()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateOrderSetTableAdapterManagerUpdateOrderOption">
+            <summary>Sets the shim of TableAdapterManager.set_UpdateOrder(UpdateOrderOption value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UpdateUpdatedRowsUsersDataSetListOfDataRowListOfDataRow">
+            <summary>Sets the shim of TableAdapterManager.UpdateUpdatedRows(UsersDataSet dataSet, List`1&lt;DataRow&gt; allChangedRows, List`1&lt;DataRow&gt; allAddedRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UserTableAdapterGet">
+            <summary>Sets the shim of TableAdapterManager.get_UserTableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimTableAdapterManager.AllInstances.UserTableAdapterSetUserTableAdapter">
+            <summary>Sets the shim of TableAdapterManager.set_UserTableAdapter(UserTableAdapter value)</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter">
+            <summary>Shim type of Balda.Data.UsersDataSetTableAdapters.UserTableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.#ctor(Balda.Data.UsersDataSetTableAdapters.UserTableAdapter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AdapterGet">
+            <summary>Sets the shim of UserTableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.ClearBeforeFillGet">
+            <summary>Sets the shim of UserTableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of UserTableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.CommandCollectionGet">
+            <summary>Sets the shim of UserTableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.ConnectionGet">
+            <summary>Sets the shim of UserTableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of UserTableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.Constructor">
+            <summary>Sets the shim of UserTableAdapter.UserTableAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.DeleteInt32StringStringString">
+            <summary>Sets the shim of UserTableAdapter.Delete(Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.FillUsersDataSetUserDataTable">
+            <summary>Sets the shim of UserTableAdapter.Fill(UserDataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.GetData">
+            <summary>Sets the shim of UserTableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.InitAdapter">
+            <summary>Sets the shim of UserTableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.InitCommandCollection">
+            <summary>Sets the shim of UserTableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.InitConnection">
+            <summary>Sets the shim of UserTableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.InsertStringStringString">
+            <summary>Sets the shim of UserTableAdapter.Insert(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.TransactionGet">
+            <summary>Sets the shim of UserTableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of UserTableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.UpdateDataRow">
+            <summary>Sets the shim of UserTableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.UpdateDataRowArray">
+            <summary>Sets the shim of UserTableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.UpdateStringStringStringInt32StringStringString">
+            <summary>Sets the shim of UserTableAdapter.Update(String Name, String Sername, String Password, Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.UpdateUsersDataSet">
+            <summary>Sets the shim of UserTableAdapter.Update(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.UpdateUsersDataSetUserDataTable">
+            <summary>Sets the shim of UserTableAdapter.Update(UserDataTable dataTable)</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.AdapterGet">
+            <summary>Sets the shim of UserTableAdapter.get_Adapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.ClearBeforeFillGet">
+            <summary>Sets the shim of UserTableAdapter.get_ClearBeforeFill()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.ClearBeforeFillSetBoolean">
+            <summary>Sets the shim of UserTableAdapter.set_ClearBeforeFill(Boolean value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.CommandCollectionGet">
+            <summary>Sets the shim of UserTableAdapter.get_CommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.ConnectionGet">
+            <summary>Sets the shim of UserTableAdapter.get_Connection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.ConnectionSetOleDbConnection">
+            <summary>Sets the shim of UserTableAdapter.set_Connection(OleDbConnection value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.DeleteInt32StringStringString">
+            <summary>Sets the shim of UserTableAdapter.Delete(Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.FillUsersDataSetUserDataTable">
+            <summary>Sets the shim of UserTableAdapter.Fill(UserDataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.GetData">
+            <summary>Sets the shim of UserTableAdapter.GetData()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.InitAdapter">
+            <summary>Sets the shim of UserTableAdapter.InitAdapter()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.InitCommandCollection">
+            <summary>Sets the shim of UserTableAdapter.InitCommandCollection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.InitConnection">
+            <summary>Sets the shim of UserTableAdapter.InitConnection()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.InsertStringStringString">
+            <summary>Sets the shim of UserTableAdapter.Insert(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.TransactionGet">
+            <summary>Sets the shim of UserTableAdapter.get_Transaction()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.TransactionSetOleDbTransaction">
+            <summary>Sets the shim of UserTableAdapter.set_Transaction(OleDbTransaction value)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.UpdateDataRow">
+            <summary>Sets the shim of UserTableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.UpdateDataRowArray">
+            <summary>Sets the shim of UserTableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.UpdateStringStringStringInt32StringStringString">
+            <summary>Sets the shim of UserTableAdapter.Update(String Name, String Sername, String Password, Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.UpdateUsersDataSet">
+            <summary>Sets the shim of UserTableAdapter.Update(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.ShimUserTableAdapter.AllInstances.UpdateUsersDataSetUserDataTable">
+            <summary>Sets the shim of UserTableAdapter.Update(UserDataTable dataTable)</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager">
+            <summary>Stub type of Balda.Data.UsersDataSetTableAdapters.TableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubTableAdapterManager.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.InitializeStub">
+            <summary>Initializes a new instance of type StubTableAdapterManager</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnection(System.Data.IDbConnection)">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.MatchTableAdapterConnectionIDbConnection">
+            <summary>Sets the stub of TableAdapterManager.MatchTableAdapterConnection(IDbConnection inputConnection)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRows(System.Data.DataRow[],System.Data.DataRelation,System.Boolean)">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.SortSelfReferenceRowsDataRowArrayDataRelationBoolean">
+            <summary>Sets the stub of TableAdapterManager.SortSelfReferenceRows(DataRow[] rows, DataRelation relation, Boolean childFirst)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAll(Balda.Data.UsersDataSet)">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.UpdateAllUsersDataSet">
+            <summary>Sets the stub of TableAdapterManager.UpdateAll(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubTableAdapterManager.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter">
+            <summary>Stub type of Balda.Data.UsersDataSetTableAdapters.UserTableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubUserTableAdapter.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Delete(System.Int32,System.String,System.String,System.String)">
+            <summary>Sets the stub of UserTableAdapter.Delete(Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.DeleteInt32StringStringString">
+            <summary>Sets the stub of UserTableAdapter.Delete(Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Fill(Balda.Data.UsersDataSet.UserDataTable)">
+            <summary>Sets the stub of UserTableAdapter.Fill(UserDataTable dataTable)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.FillUsersDataSetUserDataTable">
+            <summary>Sets the stub of UserTableAdapter.Fill(UserDataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.GetData">
+            <summary>Sets the stub of UserTableAdapter.GetData()</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.GetData01">
+            <summary>Sets the stub of UserTableAdapter.GetData()</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.InitializeStub">
+            <summary>Initializes a new instance of type StubUserTableAdapter</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Insert(System.String,System.String,System.String)">
+            <summary>Sets the stub of UserTableAdapter.Insert(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.InsertStringStringString">
+            <summary>Sets the stub of UserTableAdapter.Insert(String Name, String Sername, String Password)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Update(Balda.Data.UsersDataSet)">
+            <summary>Sets the stub of UserTableAdapter.Update(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Update(System.Data.DataRow)">
+            <summary>Sets the stub of UserTableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Update(Balda.Data.UsersDataSet.UserDataTable)">
+            <summary>Sets the stub of UserTableAdapter.Update(UserDataTable dataTable)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Update(System.Data.DataRow[])">
+            <summary>Sets the stub of UserTableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="M:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Update(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>Sets the stub of UserTableAdapter.Update(String Name, String Sername, String Password, Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.UpdateDataRow">
+            <summary>Sets the stub of UserTableAdapter.Update(DataRow dataRow)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.UpdateDataRowArray">
+            <summary>Sets the stub of UserTableAdapter.Update(DataRow[] dataRows)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.UpdateStringStringStringInt32StringStringString">
+            <summary>Sets the stub of UserTableAdapter.Update(String Name, String Sername, String Password, Int32 Original_Код, String Original_Name, String Original_Sername, String Original_Password)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.UpdateUsersDataSet">
+            <summary>Sets the stub of UserTableAdapter.Update(UsersDataSet dataSet)</summary>
+        </member>
+        <member name="F:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.UpdateUsersDataSetUserDataTable">
+            <summary>Sets the stub of UserTableAdapter.Update(UserDataTable dataTable)</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.UsersDataSetTableAdapters.Fakes.StubUserTableAdapter.Site">
             <summary>Sets the stub of Component.get_Site()</summary>
         </member>
     </members>
