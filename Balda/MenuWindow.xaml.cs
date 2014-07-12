@@ -35,5 +35,10 @@ namespace Balda
             settingGameWindow.Show();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
