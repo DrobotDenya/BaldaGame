@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0BA58710-04AD-4CA6-9E62-05CA46BB7864}"
 	ProjectSection(SolutionItems) = preProject
 		Resources\Keyboard.txt = Resources\Keyboard.txt
+		Resources\words.txt = Resources\words.txt
 	EndProjectSection
 EndProject
 Global

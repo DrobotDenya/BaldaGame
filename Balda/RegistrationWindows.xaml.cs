@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Balda.Data;
 
 namespace Balda
 {
@@ -22,6 +23,25 @@ namespace Balda
         public RegistrationWindows()
         {
             InitializeComponent();
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+
+            string nickname = tbNickname.Text;
+            string firstName = tbFirstName.Text;
+            string secondName = tbSecondName.Text;
+            string password = tbPassword.Text;
+            string confPassword = tbConfPassword.Text;
+
+            if (nickname != "" && firstName != ""
+                && secondName != "" && password != ""
+                && confPassword == password)
+            {
+                User user = new User(nickname , firstName, secondName, password);
+                user.insert();
+
+            }
         }
     }
 }
