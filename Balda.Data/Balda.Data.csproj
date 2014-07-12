@@ -43,6 +43,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataUserManager.cs" />
     <Compile Include="GameKeys.cs" />
     <Compile Include="ListForPlayer1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>

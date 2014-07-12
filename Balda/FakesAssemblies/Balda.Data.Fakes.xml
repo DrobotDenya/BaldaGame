@@ -4,6 +4,42 @@
         <name>Balda.Data.Fakes</name>
     </assembly>
     <members>
+        <member name="T:Balda.Data.Fakes.ShimDataUserManager">
+            <summary>Shim type of Balda.Data.DataUserManager</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDataUserManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDataUserManager.#ctor(Balda.Data.DataUserManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDataUserManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDataUserManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.Constructor">
+            <summary>Sets the shim of DataUserManager.DataUserManager()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserPasswordString">
+            <summary>Sets the shim of DataUserManager.findUserPassword(String password)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserString">
+            <summary>Sets the shim of DataUserManager.findUser(String nickname)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimDataUserManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserPasswordString">
+            <summary>Sets the shim of DataUserManager.findUserPassword(String password)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserString">
+            <summary>Sets the shim of DataUserManager.findUser(String nickname)</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimGameKeys">
             <summary>Shim type of Balda.Data.GameKeys</summary>
         </member>
@@ -1632,6 +1668,24 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
             <summary>Sets the shim of Word.remove()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubDataUserManager">
+            <summary>Stub type of Balda.Data.DataUserManager</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDataUserManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDataUserManager.InitializeStub">
+            <summary>Initializes a new instance of type StubDataUserManager</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDataUserManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDataUserManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDataUserManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubGameKeys">
             <summary>Stub type of Balda.Data.GameKeys</summary>
