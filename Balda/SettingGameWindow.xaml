@@ -8,7 +8,7 @@
         <ComboBox x:Name="listboxDifficulty" HorizontalAlignment="Left" Margin="23,142,0,0" VerticalAlignment="Top" Width="95" SelectionChanged="listboxDifficulty_SelectionChanged" SelectedIndex="1"/>
         <Label Content="Level of difficulty" HorizontalAlignment="Left" Margin="23,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.325,0.007" Width="95" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="textBoxPlayerTwoName" HorizontalAlignment="Left" Height="23" Margin="182,91,0,0" TextWrapping="Wrap" Text="Player2&#xD;&#xA;" VerticalAlignment="Top" Width="88" HorizontalScrollBarVisibility="Disabled" IsEnabled="False"/>
-        <Label Content="Player2" HorizontalAlignment="Left" Margin="181,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="47">
+        <Label Content="Player2" HorizontalAlignment="Left" Margin="181,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="55">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

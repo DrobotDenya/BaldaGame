@@ -4,42 +4,6 @@
         <name>Balda.Data.Fakes</name>
     </assembly>
     <members>
-        <member name="T:Balda.Data.Fakes.ShimDictionary">
-            <summary>Shim type of Balda.Data.Dictionary</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor">
-            <summary>Initializes a new shim instance</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor(Balda.Data.Dictionary)">
-            <summary>Initializes a new shim for the given instance</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.Constructor">
-            <summary>Sets the shim of Dictionary.Dictionary()</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.connectionToDataBaseString">
-            <summary>Sets the shim of Dictionary.connectionToDataBase(String connectionString)</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.insertWordToDataBase">
-            <summary>Sets the shim of Dictionary.insertWordToDataBase()</summary>
-        </member>
-        <member name="T:Balda.Data.Fakes.ShimDictionary.AllInstances">
-            <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.connectionToDataBaseString">
-            <summary>Sets the shim of Dictionary.connectionToDataBase(String connectionString)</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.insertWordToDataBase">
-            <summary>Sets the shim of Dictionary.insertWordToDataBase()</summary>
-        </member>
         <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet">
             <summary>Shim type of Balda.Data.ListForPlayer1DataSet</summary>
         </member>
@@ -1077,24 +1041,6 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
             <summary>Sets the shim of Word.remove()</summary>
-        </member>
-        <member name="T:Balda.Data.Fakes.StubDictionary">
-            <summary>Stub type of Balda.Data.Dictionary</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.StubDictionary.#ctor">
-            <summary>Initializes a new instance</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.StubDictionary.InitializeStub">
-            <summary>Initializes a new instance of type StubDictionary</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDictionary.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubListForPlayer1DataSet">
             <summary>Stub type of Balda.Data.ListForPlayer1DataSet</summary>
