@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Data.OleDb;
 using System.Data;
+using Balda.Data;
 
 namespace Balda
 {
@@ -22,21 +23,23 @@ namespace Balda
     /// </summary>
     public partial class StartWindow : Window
     {
+        DataUserManager userManager;
+
         public StartWindow()
         {
             InitializeComponent();
-            textBoxLogin.Text = "Denya";
+            userManager = new DataUserManager();
         }
         
         private void textBoxLogin_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
          
-            if (textBoxLogin.Text == "Denya")
+            if (userManager.findUser(textBoxLogin.Text) && userManager.findUserPassword(tbxPassword.Text))
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();
@@ -44,14 +47,16 @@ namespace Balda
             }
             else
             {
+                Brush brushes = tbxPassword.BorderBrush;
+                tbxPassword.BorderBrush = Brushes.Red;
                 DoubleAnimation myDoubleAnimation = new DoubleAnimation();
                 myDoubleAnimation.From = 1.0;
                 myDoubleAnimation.To = 0.0;
                 myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(.4));
                 myDoubleAnimation.AutoReverse = true;
                 myDoubleAnimation.RepeatBehavior = new RepeatBehavior(3);
-                textBoxLogin.BeginAnimation(TextBox.OpacityProperty, myDoubleAnimation);
-
+                tbxPassword.BeginAnimation(TextBox.OpacityProperty, myDoubleAnimation);
+                //tbxPassword.BorderBrush = brushes;
             }
 
         }
