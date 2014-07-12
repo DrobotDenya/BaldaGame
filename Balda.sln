@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balda.Data", "Balda.Data\Ba
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{F85E7E5D-54CB-4E30-81E2-B2902FABA11D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0BA58710-04AD-4CA6-9E62-05CA46BB7864}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Keyboard.txt = Resources\Keyboard.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
