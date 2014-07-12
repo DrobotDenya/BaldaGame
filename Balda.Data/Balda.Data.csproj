@@ -43,6 +43,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameKeys.cs" />
     <Compile Include="ListForPlayer1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,7 +71,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ListForPlayer1DataSet.xsc">
       <DependentUpon>ListForPlayer1DataSet.xsd</DependentUpon>
     </None>
