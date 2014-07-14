@@ -4,6 +4,81 @@
         <name>Balda.Data.Fakes</name>
     </assembly>
     <members>
+        <member name="T:Balda.Data.Fakes.ShimCell">
+            <summary>Shim type of Balda.Data.Cell</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.#ctor(Balda.Data.Cell)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.Markup.IAddChild)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.Markup.IComponentConnector)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimCell.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.Cell_MouseDownObjectMouseEventArgs">
+            <summary>Sets the shim of Cell.Cell_MouseDown(Object sender, MouseEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.Constructor">
+            <summary>Sets the shim of Cell.Cell()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.InitializeComponent">
+            <summary>Sets the shim of Cell.InitializeComponent()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of Cell.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.getText">
+            <summary>Sets the shim of Cell.getText()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.setTextString">
+            <summary>Sets the shim of Cell.setText(String s)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimCell.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.Cell_MouseDownObjectMouseEventArgs">
+            <summary>Sets the shim of Cell.Cell_MouseDown(Object sender, MouseEventArgs e)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.InitializeComponent">
+            <summary>Sets the shim of Cell.InitializeComponent()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of Cell.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.getText">
+            <summary>Sets the shim of Cell.getText()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.setTextString">
+            <summary>Sets the shim of Cell.setText(String s)</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimDataUserManager">
             <summary>Shim type of Balda.Data.DataUserManager</summary>
         </member>
@@ -40,6 +115,186 @@
         <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserString">
             <summary>Sets the shim of DataUserManager.findUser(String nickname)</summary>
         </member>
+        <member name="T:Balda.Data.Fakes.ShimDictionary">
+            <summary>Shim type of Balda.Data.Dictionary</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.#ctor(Balda.Data.Dictionary)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimDictionary.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.Constructor">
+            <summary>Sets the shim of Dictionary.Dictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.getCount">
+            <summary>Sets the shim of Dictionary.getCount()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.getDictionary">
+            <summary>Sets the shim of Dictionary.getDictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.getRandomWordInt32">
+            <summary>Sets the shim of Dictionary.getRandomWord(Int32 length)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.getWordsInt32">
+            <summary>Sets the shim of Dictionary.getWords(Int32 length)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.isCanExistString">
+            <summary>Sets the shim of Dictionary.isCanExist(String letters)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.isExistString">
+            <summary>Sets the shim of Dictionary.isExist(String word)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.possibleWordsString">
+            <summary>Sets the shim of Dictionary.possibleWords(String letters)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimDictionary.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.getCount">
+            <summary>Sets the shim of Dictionary.getCount()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.getDictionary">
+            <summary>Sets the shim of Dictionary.getDictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.getRandomWordInt32">
+            <summary>Sets the shim of Dictionary.getRandomWord(Int32 length)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.getWordsInt32">
+            <summary>Sets the shim of Dictionary.getWords(Int32 length)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.isCanExistString">
+            <summary>Sets the shim of Dictionary.isCanExist(String letters)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.isExistString">
+            <summary>Sets the shim of Dictionary.isExist(String word)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDictionary.AllInstances.possibleWordsString">
+            <summary>Sets the shim of Dictionary.possibleWords(String letters)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimFindWordAlgorithm">
+            <summary>Shim type of Balda.Data.FindWordAlgorithm</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimFindWordAlgorithm.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimFindWordAlgorithm.#ctor(Balda.Data.FindWordAlgorithm)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimFindWordAlgorithm.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimFindWordAlgorithm.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.Constructor">
+            <summary>Sets the shim of FindWordAlgorithm.FindWordAlgorithm()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.ConstructorGameBoardListOfString">
+            <summary>Sets the shim of FindWordAlgorithm.FindWordAlgorithm(GameBoard gameBoard, List`1&lt;String&gt; userWord)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.checkLetterInt32">
+            <summary>Sets the shim of FindWordAlgorithm.checkLetter(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWord">
+            <summary>Sets the shim of FindWordAlgorithm.findWord()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWords">
+            <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.getHelp">
+            <summary>Sets the shim of FindWordAlgorithm.getHelp()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.checkLetterInt32">
+            <summary>Sets the shim of FindWordAlgorithm.checkLetter(Int32 index)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWord">
+            <summary>Sets the shim of FindWordAlgorithm.findWord()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWords">
+            <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.getHelp">
+            <summary>Sets the shim of FindWordAlgorithm.getHelp()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimGameBoard">
+            <summary>Shim type of Balda.Data.GameBoard</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameBoard.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameBoard.#ctor(Balda.Data.GameBoard)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameBoard.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameBoard.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.Constructor">
+            <summary>Sets the shim of GameBoard.GameBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.ConstructorInt32Int32">
+            <summary>Sets the shim of GameBoard.GameBoard(Int32 width, Int32 heigth)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.clear">
+            <summary>Sets the shim of GameBoard.clear()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.getCellValueInt32Int32">
+            <summary>Sets the shim of GameBoard.getCellValue(Int32 row, Int32 column)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.heigth">
+            <summary>Sets the shim of GameBoard.heigth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.setCellValueStringInt32Int32">
+            <summary>Sets the shim of GameBoard.setCellValue(String value, Int32 row, Int32 column)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.setSizeInt32Int32">
+            <summary>Sets the shim of GameBoard.setSize(Int32 width, Int32 heigth)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.width">
+            <summary>Sets the shim of GameBoard.width()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimGameBoard.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.clear">
+            <summary>Sets the shim of GameBoard.clear()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.getCellValueInt32Int32">
+            <summary>Sets the shim of GameBoard.getCellValue(Int32 row, Int32 column)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.heigth">
+            <summary>Sets the shim of GameBoard.heigth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.setCellValueStringInt32Int32">
+            <summary>Sets the shim of GameBoard.setCellValue(String value, Int32 row, Int32 column)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.setSizeInt32Int32">
+            <summary>Sets the shim of GameBoard.setSize(Int32 width, Int32 heigth)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameBoard.AllInstances.width">
+            <summary>Sets the shim of GameBoard.width()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimGameKeys">
             <summary>Shim type of Balda.Data.GameKeys</summary>
         </member>
@@ -61,14 +316,92 @@
         <member name="P:Balda.Data.Fakes.ShimGameKeys.Constructor">
             <summary>Sets the shim of GameKeys.GameKeys()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.getKeys">
+            <summary>Sets the shim of GameKeys.getKeys()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimGameKeys.readKeyBoard">
             <summary>Sets the shim of GameKeys.readKeyBoard()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimGameKeys.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimGameKeys.AllInstances.getKeys">
+            <summary>Sets the shim of GameKeys.getKeys()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimGameKeys.AllInstances.readKeyBoard">
             <summary>Sets the shim of GameKeys.readKeyBoard()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimGameManager">
+            <summary>Shim type of Balda.Data.GameManager</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameManager.#ctor(Balda.Data.GameManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimGameManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.Constructor">
+            <summary>Sets the shim of GameManager.GameManager()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.genaretaBoard">
+            <summary>Sets the shim of GameManager.genaretaBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getDictionary">
+            <summary>Sets the shim of GameManager.getDictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getGameBoard">
+            <summary>Sets the shim of GameManager.getGameBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getHeigth">
+            <summary>Sets the shim of GameManager.getHeigth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getKeyBoard">
+            <summary>Sets the shim of GameManager.getKeyBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getSizeBoard">
+            <summary>Sets the shim of GameManager.getSizeBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getWidth">
+            <summary>Sets the shim of GameManager.getWidth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.wordIsUsedString">
+            <summary>Sets the shim of GameManager.wordIsUsed(String word)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimGameManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.genaretaBoard">
+            <summary>Sets the shim of GameManager.genaretaBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getDictionary">
+            <summary>Sets the shim of GameManager.getDictionary()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getGameBoard">
+            <summary>Sets the shim of GameManager.getGameBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getHeigth">
+            <summary>Sets the shim of GameManager.getHeigth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getKeyBoard">
+            <summary>Sets the shim of GameManager.getKeyBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getSizeBoard">
+            <summary>Sets the shim of GameManager.getSizeBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getWidth">
+            <summary>Sets the shim of GameManager.getWidth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.wordIsUsedString">
+            <summary>Sets the shim of GameManager.wordIsUsed(String word)</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimListForPlayer1DataSet">
             <summary>Shim type of Balda.Data.ListForPlayer1DataSet</summary>
@@ -1669,6 +2002,822 @@
         <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
             <summary>Sets the shim of Word.remove()</summary>
         </member>
+        <member name="T:Balda.Data.Fakes.StubCell">
+            <summary>Stub type of Balda.Data.Cell</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.AddChild(System.Object)">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.AddChildObject">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.AddText(System.String)">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.AddTextString">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.ArrangeOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.ArrangeOverrideSize">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.BeginInit">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.BeginInit01">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.EndInit">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.EndInit01">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.GetLayoutClip(System.Windows.Size)">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.GetLayoutClipSize">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.GetUIParentCore">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.GetUIParentCore01">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.GetVisualChild(System.Int32)">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.GetVisualChildInt32">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.HandlesScrollingGet">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.HasEffectiveKeyboardFocusGet">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.HitTestCore(System.Windows.Media.GeometryHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.HitTestCoreGeometryHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.HitTestCorePointHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.InitializeStub">
+            <summary>Initializes a new instance of type StubCell</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.IsEnabledCoreGet">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.LogicalChildrenGet">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.MeasureOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.MeasureOverrideSize">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnAccessKeyAccessKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnApplyTemplate">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnApplyTemplate01">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnChildDesiredSizeChanged(System.Windows.UIElement)">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnChildDesiredSizeChangedUIElement">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContentChanged(System.Object,System.Object)">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContentChangedObjectObject">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContentStringFormatChanged(System.String,System.String)">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContentStringFormatChangedStringString">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContentTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContentTemplateChangedDataTemplateDataTemplate">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContentTemplateSelectorChangedDataTemplateSelectorDataTemplateSelector">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContextMenuClosingContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnContextMenuOpeningContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnCreateAutomationPeer">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnCreateAutomationPeer01">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGotFocusRoutedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGotMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGotStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnGotTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnInitialized(System.EventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnInitializedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsKeyboardFocusWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsKeyboardFocusedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsMouseCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsMouseCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsMouseDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsStylusCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsStylusCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnIsStylusDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnLostFocusRoutedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnLostMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnLostStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnLostTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationBoundaryFeedbackManipulationBoundaryFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationCompletedManipulationCompletedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationDeltaManipulationDeltaEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationInertiaStartingManipulationInertiaStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationStartedManipulationStartedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnManipulationStartingManipulationStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseEnterMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseLeaveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPreviewTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnQueryCursorQueryCursorEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnRenderDrawingContext">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnRenderSizeChangedSizeChangedInfo">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStyleChanged(System.Windows.Style,System.Windows.Style)">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStyleChangedStyleStyle">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusEnter(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusEnterStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusLeave(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusLeaveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTemplateChangedControlTemplateControlTemplate">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnToolTipClosingToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnToolTipOpeningToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTouchEnter(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTouchEnterTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTouchLeave(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTouchLeaveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnVisualChildrenChangedDependencyObjectDependencyObject">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.OnVisualParentChanged(System.Windows.DependencyObject)">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.OnVisualParentChangedDependencyObject">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.ParentLayoutInvalidated(System.Windows.UIElement)">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.ParentLayoutInvalidatedUIElement">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.ShouldSerializeContent">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.ShouldSerializeContent01">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.ShouldSerializeProperty(System.Windows.DependencyProperty)">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.ShouldSerializePropertyDependencyProperty">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubCell.ToString">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.ToString01">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:Balda.Data.Fakes.StubCell.VisualChildrenCountGet">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.HasEffectiveKeyboardFocus">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.LogicalChildren">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubCell.VisualChildrenCount">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.StubDataUserManager">
             <summary>Stub type of Balda.Data.DataUserManager</summary>
         </member>
@@ -1687,6 +2836,66 @@
         <member name="P:Balda.Data.Fakes.StubDataUserManager.InstanceObserver">
             <summary>Gets or sets the instance observer.</summary>
         </member>
+        <member name="T:Balda.Data.Fakes.StubDictionary">
+            <summary>Stub type of Balda.Data.Dictionary</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDictionary.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubDictionary.InitializeStub">
+            <summary>Initializes a new instance of type StubDictionary</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubDictionary.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubFindWordAlgorithm">
+            <summary>Stub type of Balda.Data.FindWordAlgorithm</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubFindWordAlgorithm.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubFindWordAlgorithm.#ctor(Balda.Data.GameBoard,System.Collections.Generic.List{System.String})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubFindWordAlgorithm.InitializeStub">
+            <summary>Initializes a new instance of type StubFindWordAlgorithm</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubFindWordAlgorithm.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubFindWordAlgorithm.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubFindWordAlgorithm.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubGameBoard">
+            <summary>Stub type of Balda.Data.GameBoard</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameBoard.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameBoard.#ctor(System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameBoard.InitializeStub">
+            <summary>Initializes a new instance of type StubGameBoard</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameBoard.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameBoard.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameBoard.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.StubGameKeys">
             <summary>Stub type of Balda.Data.GameKeys</summary>
         </member>
@@ -1703,6 +2912,24 @@
             <summary>Gets or sets the instance behavior.</summary>
         </member>
         <member name="P:Balda.Data.Fakes.StubGameKeys.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubGameManager">
+            <summary>Stub type of Balda.Data.GameManager</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameManager.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubGameManager.InitializeStub">
+            <summary>Initializes a new instance of type StubGameManager</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubGameManager.InstanceObserver">
             <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubListForPlayer1DataSet">

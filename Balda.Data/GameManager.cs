@@ -24,11 +24,13 @@ namespace Balda.Data
             algorithm = new FindWordAlgorithm(_board, usedWords);
         }
 
+        //Return ширину словарь
         public Dictionary getDictionary()
         {
             return _dictionary;
         }
 
+        //Генерирует стартовое поле
         public void genaretaBoard()
         {
             _board.clear();
@@ -56,11 +58,13 @@ namespace Balda.Data
             }
         }
 
+        //Return поле
         public GameBoard getGameBoard()
         {
             return _board;
         }
 
+        //Return клавиатуру
         public GameKeys getKeyBoard()
         {
             return _keyBoard;
@@ -71,14 +75,22 @@ namespace Balda.Data
             return size;
         }
 
+        //Return ширину клавиатуры
         public int getWidth()
         {
             return width;
         }
 
+        //Return висоту клавиатуры
         public int getHeigth()
         {
             return heigth;
+        }
+
+        //Определяет, было ли слово использовано в игре
+        public bool wordIsUsed(string word)
+        {
+            return usedWords.Contains(word);
         }
 
     }
