@@ -36,23 +36,10 @@ namespace Balda
             InitializeComponent();
 
             createCellForBoard();
+            //setEnableBoard(false);
+
             createKeysForKeyBoard();
-
-            for (int i = 0; i < gameManager.getSizeBoard(); i++)
-            {
-                for (int j = 0; j < gameManager.getSizeBoard(); j++)
-                {
-                    board.Children.Add(cellArray[i, j]);
-
-                }
-            }
-
-            foreach (Cell cell in keysList)
-            {
-                keyboard.Children.Add(cell);
-            }
-
-
+            //setEnableKeyboard(false);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -74,6 +61,7 @@ namespace Balda
                     cell = new Cell();
                     cellArray[i, j] = cell;
                     cell.MouseDown += Cell_MouseDown;
+                    board.Children.Add(cellArray[i, j]);
 
                 }
             }
@@ -84,6 +72,7 @@ namespace Balda
             {
                 Cell cell = new Cell();
                 keysList.Add(cell);
+                keyboard.Children.Add(cell);
             }
         }
         void reloadKeyBoard()
@@ -163,7 +152,7 @@ namespace Balda
                     {
                         lastCell = cell;
                         lastCell.setText(lastKey);
-                        lastCell.Background = Brushes.Purple;
+                        //lastCell.Background = Brushes.Purple;
                         lastKey = "";
 
                         setEnableKeyboard(false);
@@ -184,7 +173,7 @@ namespace Balda
                     {
                         cell.IsEnabled = false; ;
                         currentWord += cell.getText();
-                        cell.BorderBrush = Brushes.Purple;
+                        //cell.BorderBrush = Brushes.Purple;
                     }
 
                     //if (!lastCell.IsEnabled)
@@ -195,7 +184,7 @@ namespace Balda
             }
         }
      
-
+        
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             if (!gameManager.wordIsUsed(currentWord))
@@ -204,15 +193,60 @@ namespace Balda
                 {
                     listBoxP1.Items.Add(currentWord);
 
+                    createKeysForKeyBoard();
                     currentWord = "";
 
-                    MessageBox.Show("+");
+                    if (lastCell != null)
+                    {
+                        for (int i = 0; i < gameManager.getSizeBoard(); i++)
+                        {
+                            for (int j = 0; j < gameManager.getSizeBoard(); j++)
+                            {
+                                gameManager.getGameBoard().setCellValue(cellArray[i, j].getText(), i, j);
+
+                            }
+                        }
+                        lastCell = null;
+                    }
+                    MessageBox.Show("Конец хода!");
 
                 }
+                else
+                {
+                    if (currentWord.Equals(""))
+                    {
+                        MessageBox.Show("Слово не выделено!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Слово " + "'" + currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
+                    }
+                    undoWindow();
+                }
+                undoWindow();
+            }else
+            {
+                MessageBox.Show("Слово " + currentWord + " уже использувалось в игре! Попробуйте еще раз!");
+                undoWindow();
             }
             
         }
 
+        /*Возвращает окно в состояние начала хода игрока */
+        private void undoWindow()
+        {
+            setEnableBoard(true);
+            setEnableKeyboard(true);
+            createKeysForKeyBoard();
+            //createButtons();
+            currentWord = "";
+            if (lastCell != null)
+            {
+               // lastButton.setBackground(keysPanel.getComponent(0).getBackground());
+                lastCell.setText("");
+                lastCell = null;
+            }
+        }
         //Активирует/деактевирует клавиатуру
         void setEnableKeyboard(bool a)
         {
@@ -230,7 +264,7 @@ namespace Balda
             {
                 for (int j = 0; j < gameManager.getSizeBoard(); j++)
                 {
-                    cellArray[i, j].IsEnabled = false;
+                    cellArray[i, j].IsEnabled = a;
 
                 }
             }
@@ -286,6 +320,7 @@ namespace Balda
                         if (!enableCellOnBoard(i, j))
                         {
                             cellArray[i, j].IsEnabled = false;
+                            //cellArray[i, j].BorderBrush = Brushes.Red;
 
                         }
                     }
