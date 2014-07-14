@@ -1,0 +1,304 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace Balda.Data
+{
+    public class FindWordAlgorithm
+    {
+
+        GameBoard gameBoard = new GameBoard();
+        List<string> userWord = new List<string>();
+        Dictionary dictionary = new Dictionary();
+        string[][] temp;
+        int[][] pr;
+        int ai = 0;
+        int aj = 0;
+        int p, t;
+        int curr = 0;
+        string word;
+        bool tl;
+        bool bl;
+
+
+
+        public FindWordAlgorithm(GameBoard gameBoard, List<string> userWord)
+        {
+            this.gameBoard = gameBoard;
+            this.userWord = userWord;
+        }
+
+        public FindWordAlgorithm()
+        {
+           
+        }
+
+        public string findWords()
+        {
+            List<string> res = new List<string>();
+            ///////////////////////////
+            temp = new string[gameBoard.width()][];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    temp[row][column] = "";
+                }
+            }
+            //////////////////////////////
+            pr = new int[gameBoard.width()][];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    pr[row][column] = 0;
+                }
+            }
+            //////////////////////////////////
+            while (curr < dictionary.getCount())
+            {
+                word = dictionary.getDictionary()[curr];
+                if (!userWord.Contains(word))
+                {
+                    for (int row = 0; row < gameBoard.width(); row++)
+                    {
+                        for (int column = 0; column < gameBoard.heigth(); column++)
+                        {
+                            pr[row][column] = 0;
+                        }
+                    }
+
+
+                    tl = true;
+
+                    for (int k = 0; k < word.Length; k++) //Цикл по слову из словаря
+                    {
+                        for (int i = 0; i < gameBoard.width(); i++) // Цикл по самому массиву.
+                        {
+                            for (int j = 0; j < gameBoard.heigth(); j++)
+                            {
+                                if (gameBoard.getCellValue(i, j) == "")
+                                {
+
+                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    {
+                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        {
+                                            // сохранили массив, для возврата в предыдущее состояние.
+                                            temp[ai][aj] = gameBoard.getCellValue(ai, aj);
+                                        }
+                                    }
+
+                                    gameBoard.setCellValue(word.Substring(k, k + 1), i, j);
+                                    bl = true;
+                                    p = k; // С какой буквы подставляли для поиска в конец слова
+                                    t = k; // С какой буквы подставляли для поиска в начало слова
+                                    ai = i;
+                                    aj = j;
+
+                                    for (int i1 = 0; i1 < gameBoard.width(); ++i1)
+                                    {
+                                        for (int j1 = 0; j1 < gameBoard.heigth(); ++j1)
+                                        {
+                                            pr[i1][j1] = 0;
+                                        }
+                                    }
+
+                                    pr[i][j] = 1;
+                                    for (p = p + 1; p < word.Length; p++)
+                                    {
+                                        if (checkLetter(p))
+                                        {
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+                                    ai = i;
+                                    aj = j;
+                                    if (bl)
+                                    {
+                                        for (t = t - 1; t >= 0; t--)
+                                        {
+                                            if (checkLetter(t))
+                                            {
+                                                continue;
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+
+                                        if (bl)
+                                        {
+                                            res.Add(word);
+                                            for (ai = 0; ai < 5; ai++)
+                                            {
+                                                for (aj = 0; aj < 5; aj++)
+                                                {
+                                                    gameBoard.setCellValue(temp[ai][aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                                }
+                                            }
+                                            tl = false;
+                                            break;   // Слово подошло переходим к следующему слову*/
+                                        }
+                                    }
+
+                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    {
+                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        {
+                                            gameBoard.setCellValue(temp[ai][aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (!tl)
+                            {
+                                break;
+                            }
+
+                        }
+                    }
+                    curr++;
+
+                }
+                else
+                {
+                    curr++;
+                }
+            }
+            return "";
+        }
+
+        public string findWord()
+        {
+            ////////////////
+            temp = new string[gameBoard.width()][];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    temp[row][column] = "";
+                }
+            }
+            ////////////////
+            pr = new int[gameBoard.width()][];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    pr[row][column] = 0;
+                }
+            }
+            //////////////////////////
+
+            while (curr < dictionary.getCount())//Цикл по словарю
+            {
+                word = dictionary.getDictionary()[curr];
+                if (! userWord.Contains(word))
+                {
+
+                    for (int i = 0; i < gameBoard.width(); ++i)
+                    {
+                        for (int j = 0; j < gameBoard.heigth(); ++j)
+                        {
+                            pr[i][j] = 0;
+                        }
+                    }
+
+                    tl = true;
+                    for (int k = 0; k < word.Length; k++) //Цикл по слову из словаря
+                    {
+                        for (int i = 0; i < gameBoard.width(); i++) // Цикл по самому массиву.
+                        {
+
+                        }
+                    }
+                    curr++;
+                }
+                else
+                {
+                    curr++;
+                }
+            }
+
+            return "";
+        }
+
+        public bool checkLetter(int index)
+        {
+            String letter = word.Substring(index, index + 1);
+
+            if (ai + 1 != gameBoard.width())
+            {
+                if ((gameBoard.getCellValue(ai + 1, aj) == letter)
+                        && (pr[ai + 1][aj] != 1))
+                {
+                    pr[ai + 1][aj] = 1;
+                    ai++;
+                    return true;
+                }
+            }
+            if (ai - 1 != -1)
+            {
+                if ((gameBoard.getCellValue(ai - 1, aj) == letter)
+                        && (pr[ai - 1][aj] != 1))
+                {
+                    pr[ai - 1][aj] = 1;
+                    ai--;
+                    return true;
+                }
+            }
+            if (aj + 1 != gameBoard.heigth())
+            {
+                if ((gameBoard.getCellValue(ai, aj + 1) == letter)
+                        && (pr[ai][aj + 1] != 1))
+                {
+                    pr[ai][aj + 1] = 1;
+                    aj++;
+                    return true;
+                }
+            }
+            if (aj - 1 != -1)
+            {
+                if ((gameBoard.getCellValue(ai, aj - 1) ==  letter)
+                        && (pr[ai][aj - 1] != 1))
+                {
+                    pr[ai][aj - 1] = 1;
+                    aj--;
+                    return true;
+                }
+            }
+
+            bl = false; // Если не совпало ни одно условие выше то это слово не подходит.
+            return false;
+ 
+        }
+
+        public string getHelp()
+        {
+            string s = findWord();
+
+            for (ai = 0; ai < gameBoard.width(); ai++)
+            {
+                for (aj = 0; aj < gameBoard.heigth(); aj++)
+                {
+                    gameBoard.setCellValue(temp[ai][aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                }
+            }
+            return s;
+        }
+    }
+}

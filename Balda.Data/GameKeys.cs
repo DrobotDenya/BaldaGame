@@ -11,6 +11,7 @@ namespace Balda.Data
     public class GameKeys
     {
         ArrayList keys = new ArrayList();
+        
         string path = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Keyboard.txt";
         
         public GameKeys()
@@ -28,6 +29,14 @@ namespace Balda.Data
             }
             file.Close();
         }
+
+        public ArrayList getKeys()
+        {
+            return keys;
+ 
+        }
+
+       
         
 
 
