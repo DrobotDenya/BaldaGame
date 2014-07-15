@@ -10,7 +10,7 @@ namespace Balda.Data
 {
     public class User
     {
-        string nickname;
+        protected string nickname;
         string firstName;
         string secondName;
         string password;
@@ -67,6 +67,14 @@ namespace Balda.Data
             cmd.Connection = connect;
 
         }
+
+        public User(string nickname)
+        {
+            this.nickname = nickname;
+        }
+
+        public User()
+        { }
 
         public void insert()
         {
