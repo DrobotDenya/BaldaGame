@@ -31,7 +31,7 @@ namespace Balda.Data
 
             playersCount = 1;
             botsCount = 1;
-            botComplexity = 1;
+            botComplexity = 2;
 
             
         }

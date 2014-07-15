@@ -28,11 +28,27 @@ namespace Balda.Data
         public int solution()
         {
             //alho.findWords();
-            string findedWord = alho.findWord();
-            if (findedWord.Equals("") == false)
+            string findedWord;
+            if (levelOfComplexity == 1)
             {
-                addWord(findedWord);
-                return 1;
+                findedWord = alho.findWord();
+                if (findedWord.Equals("") == false)
+                {
+                    addWord(findedWord);
+                    return 1;
+ 
+                }
+            }
+
+            if (levelOfComplexity == 2)
+            {
+                findedWord = alho.findWordWithMaxLength();
+                if (findedWord.Equals("") == false)
+                {
+                    addWord(findedWord);
+                    return 1;
+
+                }
             }
             //Если слово не найдено и бот легкий, то он сдается
             if (levelOfComplexity == 0)

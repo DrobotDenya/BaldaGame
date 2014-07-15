@@ -47,7 +47,7 @@ namespace Balda.Data
             {
                 for (int column = 0; column < gameBoard.heigth(); column++)
                 {
-                    temp[row,column] = "";
+                    temp[row, column] = "";
                 }
             }
             //////////////////////////////
@@ -57,7 +57,7 @@ namespace Balda.Data
             {
                 for (int column = 0; column < gameBoard.heigth(); column++)
                 {
-                    pr[row,column] = 0;
+                    pr[row, column] = 0;
                 }
             }
             //////////////////////////////////
@@ -70,7 +70,7 @@ namespace Balda.Data
                     {
                         for (int column = 0; column < gameBoard.heigth(); column++)
                         {
-                            pr[row,column] = 0;
+                            pr[row, column] = 0;
                         }
                     }
 
@@ -91,7 +91,7 @@ namespace Balda.Data
                                         for (aj = 0; aj < gameBoard.heigth(); aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            temp[ai,aj] = gameBoard.getCellValue(ai, aj);
+                                            temp[ai, aj] = gameBoard.getCellValue(ai, aj);
                                         }
                                     }
 
@@ -145,7 +145,7 @@ namespace Balda.Data
                                             {
                                                 for (aj = 0; aj < 5; aj++)
                                                 {
-                                                    gameBoard.setCellValue(temp[ai,aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                                    gameBoard.setCellValue(temp[ai, aj], ai, aj);  // восстановили массив, в текущем состоянии.
                                                 }
                                             }
                                             tl = false;
@@ -178,16 +178,30 @@ namespace Balda.Data
                     curr++;
                 }
             }
-            
+
             return res;
         }
 
-        public string getRandomWordWithDicctionary()
+        //public string getWordWithDictionary()
+        //{
+        //    List<string> words = findWords();
+        //    return wordWithMaxLength(words);
+        //}
+
+        public int maxLength(List<string> words)
         {
-            List<string> words = findWords();
-            Random rand = new Random();
-            int r = rand.Next(words.Count);
-            return words[r];
+            int length = 0;
+            
+            foreach (string w in words)
+            {
+                if (length < w.Length)
+                {
+                    length = w.Length;
+                    
+                }
+ 
+            }
+            return length;
         }
 
         //Возворащает первое подходящие слово из словаря
@@ -325,6 +339,146 @@ namespace Balda.Data
 
             return "";
         }
+
+        public string findWordWithMaxLength()
+        {
+            ////////////////
+            temp = new string[gameBoard.width(), gameBoard.heigth()];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    temp[row, column] = "";
+                }
+            }
+            ////////////////
+            pr = new int[gameBoard.width(), gameBoard.heigth()];
+
+            for (int row = 0; row < gameBoard.width(); row++)
+            {
+                for (int column = 0; column < gameBoard.heigth(); column++)
+                {
+                    pr[row, column] = 0;
+                }
+            }
+            //////////////////////////
+            
+            List<string> dict = findWords();
+            curr = 0;
+            while (curr < dict.Count)//Цикл по словарю
+            {
+                word = dict[curr];
+                if (!userWord.Contains(word) && word.Length == maxLength(dict))
+                {
+
+                    for (int i = 0; i < gameBoard.width(); ++i)
+                    {
+                        for (int j = 0; j < gameBoard.heigth(); ++j)
+                        {
+                            pr[i, j] = 0;
+                        }
+                    }
+
+                    tl = true;
+
+                    for (int k = 0; k < word.Length; k++) //Цикл по слову из словаря
+                    {
+                        for (int i = 0; i < gameBoard.width(); i++) // Цикл по самому массиву.
+                        {
+                            for (int j = 0; j < gameBoard.heigth(); j++)
+                            {
+                                if (gameBoard.getCellValue(i, j) == "")
+                                {
+
+                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    {
+                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        {
+                                            // сохранили массив, для возврата в предыдущее состояние.
+                                            temp[ai, aj] = gameBoard.getCellValue(ai, aj);
+                                        }
+                                    }
+
+                                    gameBoard.setCellValue(word.Substring(k, 1), i, j);
+
+                                    bl = true;
+                                    p = k; // С какой буквы подставляли для поиска в конец слова
+                                    t = k; // С какой буквы подставляли для поиска в начало слова
+                                    ai = i;
+                                    aj = j;
+
+                                    for (int i1 = 0; i1 < gameBoard.width(); ++i1)
+                                    {
+                                        for (int j1 = 0; j1 < gameBoard.heigth(); ++j1)
+                                        {
+                                            pr[i1, j1] = 0;
+                                        }
+                                    }
+
+                                    pr[i, j] = 1;
+                                    for (p = p + 1; p < word.Length; p++)
+                                    {
+                                        if (checkLetter(p))
+                                        {
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    }
+                                    ai = i;
+                                    aj = j;
+                                    if (bl)
+                                    {
+                                        for (t = t - 1; t >= 0; t--)
+                                        {
+                                            if (checkLetter(t))
+                                            {
+                                                continue;
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+
+                                        if (bl)
+                                        {
+                                            
+                                            return word;
+                                        }
+                                    }
+
+                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    {
+                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        {
+                                            gameBoard.setCellValue(temp[ai, aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                        }
+                                    }
+                                }
+                            }
+                            if (!tl)
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    curr++;
+                }
+                else
+                {
+                    curr++;
+                }
+            }
+ return "";
+        }
+
+        
+
 
         //Определяет, есть ли буква на поле сверху или снизу или влева или справа текущей ячейки
         public bool checkLetter(int index)
