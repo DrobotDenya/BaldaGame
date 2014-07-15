@@ -19,6 +19,8 @@ namespace Balda.Data
         OleDbConnection connect = new OleDbConnection();
         OleDbDataReader dr;
 
+
+        
         List<string> words = new List<string>();
         bool _isSurrender = false;
         

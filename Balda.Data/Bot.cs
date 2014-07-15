@@ -59,14 +59,6 @@ namespace Balda.Data
             //Иначе пропускает ход
             return 0;           
         }
-
-       // public string findWord()
-        //{
-        //    string res = alho.findWord();
-        //    addWord(res);
-        //    return res;
-        //}
-        
             
     }
 }

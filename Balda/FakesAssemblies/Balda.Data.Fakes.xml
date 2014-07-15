@@ -130,6 +130,9 @@
         <member name="P:Balda.Data.Fakes.ShimDataUserManager.Constructor">
             <summary>Sets the shim of DataUserManager.DataUserManager()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.DataUserGet">
+            <summary>Sets the shim of DataUserManager.get_DataUser()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserPasswordString">
             <summary>Sets the shim of DataUserManager.findUserPassword(String password)</summary>
         </member>
@@ -2997,24 +3000,6 @@
         </member>
         <member name="P:Balda.Data.Fakes.StubCell.VisualChildrenCount">
             <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
-        </member>
-        <member name="T:Balda.Data.Fakes.StubDataUserManager">
-            <summary>Stub type of Balda.Data.DataUserManager</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.StubDataUserManager.#ctor">
-            <summary>Initializes a new instance</summary>
-        </member>
-        <member name="M:Balda.Data.Fakes.StubDataUserManager.InitializeStub">
-            <summary>Initializes a new instance of type StubDataUserManager</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDataUserManager.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDataUserManager.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
-        </member>
-        <member name="P:Balda.Data.Fakes.StubDataUserManager.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubDictionary">
             <summary>Stub type of Balda.Data.Dictionary</summary>

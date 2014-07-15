@@ -182,12 +182,6 @@ namespace Balda.Data
             return res;
         }
 
-        //public string getWordWithDictionary()
-        //{
-        //    List<string> words = findWords();
-        //    return wordWithMaxLength(words);
-        //}
-
         public int maxLength(List<string> words)
         {
             int length = 0;
@@ -477,9 +471,6 @@ namespace Balda.Data
  return "";
         }
 
-        
-
-
         //Определяет, есть ли буква на поле сверху или снизу или влева или справа текущей ячейки
         public bool checkLetter(int index)
         {
@@ -531,18 +522,5 @@ namespace Balda.Data
  
         }
 
-        //public string getHelp()
-        //{
-        //    string s = findWord();
-
-        //    for (ai = 0; ai < gameBoard.width(); ai++)
-        //    {
-        //        for (aj = 0; aj < gameBoard.heigth(); aj++)
-        //        {
-        //            gameBoard.setCellValue(temp[ai,aj], ai, aj);  // восстановили массив, в текущем состоянии.
-        //        }
-        //    }
-        //    return s;
-        //}
     }
 }
