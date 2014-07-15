@@ -29,6 +29,8 @@ namespace Balda
         {
             InitializeComponent();
             userManager = new DataUserManager();
+            textBoxLogin.Text = "qwe";
+            tbxPassword.Text = "qwe";
         }
         
         private void textBoxLogin_TextChanged(object sender, TextChangedEventArgs e)

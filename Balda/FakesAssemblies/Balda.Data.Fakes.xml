@@ -4,6 +4,36 @@
         <name>Balda.Data.Fakes</name>
     </assembly>
     <members>
+        <member name="T:Balda.Data.Fakes.ShimBot">
+            <summary>Shim type of Balda.Data.Bot</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimBot.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimBot.#ctor(Balda.Data.Bot)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimBot.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimBot.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimBot.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimBot.ConstructorStringInt32FindWordAlgorithm">
+            <summary>Sets the shim of Bot.Bot(String name, Int32 level, FindWordAlgorithm alho)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimBot.solution">
+            <summary>Sets the shim of Bot.solution()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimBot.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimBot.AllInstances.solution">
+            <summary>Sets the shim of Bot.solution()</summary>
+        </member>
         <member name="T:Balda.Data.Fakes.ShimCell">
             <summary>Shim type of Balda.Data.Cell</summary>
         </member>
@@ -214,8 +244,8 @@
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWords">
             <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.getHelp">
-            <summary>Sets the shim of FindWordAlgorithm.getHelp()</summary>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.getRandomWordWithDicctionary">
+            <summary>Sets the shim of FindWordAlgorithm.getRandomWordWithDicctionary()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances">
             <summary>Define shims for all instances members</summary>
@@ -229,8 +259,8 @@
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWords">
             <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.getHelp">
-            <summary>Sets the shim of FindWordAlgorithm.getHelp()</summary>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.getRandomWordWithDicctionary">
+            <summary>Sets the shim of FindWordAlgorithm.getRandomWordWithDicctionary()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimGameBoard">
             <summary>Shim type of Balda.Data.GameBoard</summary>
@@ -352,8 +382,29 @@
         <member name="P:Balda.Data.Fakes.ShimGameManager.Constructor">
             <summary>Sets the shim of GameManager.GameManager()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimGameManager.genaretaBoard">
-            <summary>Sets the shim of GameManager.genaretaBoard()</summary>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.activePlayer">
+            <summary>Sets the shim of GameManager.activePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.countPlayersInGame">
+            <summary>Sets the shim of GameManager.countPlayersInGame()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.determineWinner">
+            <summary>Sets the shim of GameManager.determineWinner()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.exchangePlayer">
+            <summary>Sets the shim of GameManager.exchangePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.fieldIsFull">
+            <summary>Sets the shim of GameManager.fieldIsFull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.generatePalyers">
+            <summary>Sets the shim of GameManager.generatePalyers()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.generetaBoard">
+            <summary>Sets the shim of GameManager.generetaBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getActivePlayerIndex">
+            <summary>Sets the shim of GameManager.getActivePlayerIndex()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.getDictionary">
             <summary>Sets the shim of GameManager.getDictionary()</summary>
@@ -370,8 +421,29 @@
         <member name="P:Balda.Data.Fakes.ShimGameManager.getSizeBoard">
             <summary>Sets the shim of GameManager.getSizeBoard()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.getUsedWord">
+            <summary>Sets the shim of GameManager.getUsedWord()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.getWidth">
             <summary>Sets the shim of GameManager.getWidth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.players">
+            <summary>Sets the shim of GameManager.players()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.setBotsComplexityInt32">
+            <summary>Sets the shim of GameManager.setBotsComplexity(Int32 compl)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.setBotsCountInt32">
+            <summary>Sets the shim of GameManager.setBotsCount(Int32 count)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.setPlayerCOuntInt32">
+            <summary>Sets the shim of GameManager.setPlayerCOunt(Int32 count)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.start">
+            <summary>Sets the shim of GameManager.start()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.updateUsedWords">
+            <summary>Sets the shim of GameManager.updateUsedWords()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.wordIsUsedString">
             <summary>Sets the shim of GameManager.wordIsUsed(String word)</summary>
@@ -379,8 +451,29 @@
         <member name="T:Balda.Data.Fakes.ShimGameManager.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.genaretaBoard">
-            <summary>Sets the shim of GameManager.genaretaBoard()</summary>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.activePlayer">
+            <summary>Sets the shim of GameManager.activePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.countPlayersInGame">
+            <summary>Sets the shim of GameManager.countPlayersInGame()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.determineWinner">
+            <summary>Sets the shim of GameManager.determineWinner()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.exchangePlayer">
+            <summary>Sets the shim of GameManager.exchangePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.fieldIsFull">
+            <summary>Sets the shim of GameManager.fieldIsFull()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.generatePalyers">
+            <summary>Sets the shim of GameManager.generatePalyers()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.generetaBoard">
+            <summary>Sets the shim of GameManager.generetaBoard()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getActivePlayerIndex">
+            <summary>Sets the shim of GameManager.getActivePlayerIndex()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getDictionary">
             <summary>Sets the shim of GameManager.getDictionary()</summary>
@@ -397,8 +490,29 @@
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getSizeBoard">
             <summary>Sets the shim of GameManager.getSizeBoard()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getUsedWord">
+            <summary>Sets the shim of GameManager.getUsedWord()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.getWidth">
             <summary>Sets the shim of GameManager.getWidth()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.players">
+            <summary>Sets the shim of GameManager.players()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.setBotsComplexityInt32">
+            <summary>Sets the shim of GameManager.setBotsComplexity(Int32 compl)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.setBotsCountInt32">
+            <summary>Sets the shim of GameManager.setBotsCount(Int32 count)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.setPlayerCOuntInt32">
+            <summary>Sets the shim of GameManager.setPlayerCOunt(Int32 count)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.start">
+            <summary>Sets the shim of GameManager.start()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.updateUsedWords">
+            <summary>Sets the shim of GameManager.updateUsedWords()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.wordIsUsedString">
             <summary>Sets the shim of GameManager.wordIsUsed(String word)</summary>
@@ -1423,6 +1537,12 @@
         <member name="P:Balda.Data.Fakes.ShimUser.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.Constructor">
+            <summary>Sets the shim of User.User()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.ConstructorString">
+            <summary>Sets the shim of User.User(String nickname)</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimUser.ConstructorStringStringStringString">
             <summary>Sets the shim of User.User(String nickname, String name, String sername, String password)</summary>
         </member>
@@ -2037,6 +2157,24 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimWord.AllInstances.remove">
             <summary>Sets the shim of Word.remove()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.StubBot">
+            <summary>Stub type of Balda.Data.Bot</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubBot.#ctor(System.String,System.Int32,Balda.Data.FindWordAlgorithm)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubBot.InitializeStub">
+            <summary>Initializes a new instance of type StubBot</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubBot.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubBot.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.StubBot.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:Balda.Data.Fakes.StubCell">
             <summary>Stub type of Balda.Data.Cell</summary>
@@ -3276,6 +3414,12 @@
         </member>
         <member name="T:Balda.Data.Fakes.StubUser">
             <summary>Stub type of Balda.Data.User</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUser.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.StubUser.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
         </member>
         <member name="M:Balda.Data.Fakes.StubUser.#ctor(System.String,System.String,System.String,System.String)">
             <summary>Initializes a new instance</summary>

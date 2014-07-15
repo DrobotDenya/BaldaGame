@@ -46,6 +46,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bot.cs" />
     <Compile Include="Cell.xaml.cs">
       <DependentUpon>Cell.xaml</DependentUpon>
     </Compile>

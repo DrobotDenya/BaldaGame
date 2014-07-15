@@ -25,7 +25,6 @@ namespace Balda
         GameManager gameManager = new GameManager();
         Cell[,] cellArray;
         List<Cell> keysList = new List<Cell>();
-        List<Cell> newWord = new List<Cell>();
         string lastKey = "";
         Cell lastCell = null;
         bool isCurrentPlayerMove = false;
@@ -35,16 +34,19 @@ namespace Balda
         {
             InitializeComponent();
 
+            gameManager.start();
+
             createCellForBoard();
             //setEnableBoard(false);
 
             createKeysForKeyBoard();
             //setEnableKeyboard(false);
+
+           
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            gameManager.genaretaBoard();
             reloadDataBoard();
             reloadKeyBoard();
 
@@ -96,7 +98,7 @@ namespace Balda
                 for (int j = 0; j < gameManager.getSizeBoard(); j++)
                 {
                     cellArray[i, j].setText(gameManager.getGameBoard().getCellValue(i, j));
-
+                    Console.WriteLine(i + " " + j + " " + cellArray[i, j].getText());
                 }
             }
 
@@ -235,12 +237,14 @@ namespace Balda
         {
             setEnableBoard(true);
             undoWindow();
+            exchangePlayer();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             setEnableBoard(true);
             undoWindow();
+            
         }
 
         public void Cell_MouseDown(object sender, MouseEventArgs e)
@@ -302,7 +306,7 @@ namespace Balda
             {
                 if (gameManager.getDictionary().isExist(currentWord))
                 {
-                    listBoxP1.Items.Add(currentWord);
+                    gameManager.activePlayer().addWord(currentWord);
 
                     createKeysForKeyBoard();
                     currentWord = "";
@@ -319,7 +323,9 @@ namespace Balda
                         }
                         lastCell = null;
                     }
+                    exchangePlayer();
                     MessageBox.Show("Конец хода!");
+                    
 
                 }
                 else
@@ -344,5 +350,50 @@ namespace Balda
 
         }
 
+
+        void exchangePlayer()
+        {
+            if (gameManager.determineWinner() != null)
+            {
+                MessageBox.Show("Выиграл игрок " + gameManager.determineWinner().getNickname() + " Конец игры!");
+            }
+            else
+            {
+                gameManager.exchangePlayer();
+                updateListBox();
+            }
+
+            reloadDataBoard();
+        }
+
+        void updateListBox()
+        {
+
+            
+                listBoxP1.Items.Clear();
+                List<string> words = gameManager.players()[0].getWordsList();
+                foreach (string word in words)
+                {
+                    if (word != gameManager.getUsedWord()[0])
+                    {
+                        listBoxP1.Items.Add(word);
+                    }
+                }
+
+
+                    listBoxP2.Items.Clear();
+                    List<string> wordss = gameManager.players()[1].getWordsList();
+                    foreach (string word in wordss)
+                    {
+                        if (word != gameManager.getUsedWord()[0])
+                        {
+                            listBoxP2.Items.Add(word);
+                        }
+                    }
+                
+ 
+           
+ 
+        }
     }   
 }
