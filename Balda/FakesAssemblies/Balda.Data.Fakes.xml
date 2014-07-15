@@ -241,11 +241,14 @@
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWord">
             <summary>Sets the shim of FindWordAlgorithm.findWord()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWordWithMaxLength">
+            <summary>Sets the shim of FindWordAlgorithm.findWordWithMaxLength()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.findWords">
             <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.getRandomWordWithDicctionary">
-            <summary>Sets the shim of FindWordAlgorithm.getRandomWordWithDicctionary()</summary>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.maxLengthListOfString">
+            <summary>Sets the shim of FindWordAlgorithm.maxLength(List`1&lt;String&gt; words)</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances">
             <summary>Define shims for all instances members</summary>
@@ -256,11 +259,14 @@
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWord">
             <summary>Sets the shim of FindWordAlgorithm.findWord()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWordWithMaxLength">
+            <summary>Sets the shim of FindWordAlgorithm.findWordWithMaxLength()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.findWords">
             <summary>Sets the shim of FindWordAlgorithm.findWords()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.getRandomWordWithDicctionary">
-            <summary>Sets the shim of FindWordAlgorithm.getRandomWordWithDicctionary()</summary>
+        <member name="P:Balda.Data.Fakes.ShimFindWordAlgorithm.AllInstances.maxLengthListOfString">
+            <summary>Sets the shim of FindWordAlgorithm.maxLength(List`1&lt;String&gt; words)</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimGameBoard">
             <summary>Shim type of Balda.Data.GameBoard</summary>

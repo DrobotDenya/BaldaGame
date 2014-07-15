@@ -12,7 +12,7 @@ namespace Balda.Data
         int _width;
         int _heigth;
 
-        string [,] cellPool;
+        public string [,] cellPool;
         public GameBoard(int width, int heigth)
         {
             setSize(width, heigth);
