@@ -132,105 +132,7 @@ namespace Balda
         //    }
         //    return false;
         //}
-        public void Cell_MouseDown(object sender, MouseEventArgs e)
-        {
-            Cell cell = (Cell)sender;
-            if (keyboard.Children.Contains(cell))
-            {
-                lastKey = cell.getText();
-                disableBoardCell();
-                //disableBoardCellWithLetter();
-
-            }
-
-           
-            if (board.Children.Contains(cell))
-            {
-                if (lastKey.Equals("") == false)
-                {
-                    if (cell.getText().Equals(""))
-                    {
-                        lastCell = cell;
-                        lastCell.setText(lastKey);
-                        //lastCell.Background = Brushes.Purple;
-                        lastKey = "";
-
-                        setEnableKeyboard(false);
-
-                        isCurrentPlayerMove = true;
-
-                        //Активация/деактивация необходимых кнопок игрока
-                        //setEnabledButtons(true);
-                        //buttonsPanel.getComponent(1).setEnabled(false);
-                        // TODO: Активация/деактивация нужных ячеек поля
-                    }
-
-                }
-                else if (isCurrentPlayerMove)
-                { // Иначе если игрок выделяет слово
-                    
-                    if (!cell.getText().Equals(""))
-                    {
-                        cell.IsEnabled = false; ;
-                        currentWord += cell.getText();
-                        //cell.BorderBrush = Brushes.Purple;
-                    }
-
-                    //if (!lastCell.IsEnabled)
-                    //{
-                    //    buttonsPanel.getComponent(1).setEnabled(true);
-                    //}
-                }
-            }
-        }
-     
-        
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            if (!gameManager.wordIsUsed(currentWord))
-            {
-                if (gameManager.getDictionary().isExist(currentWord))
-                {
-                    listBoxP1.Items.Add(currentWord);
-
-                    createKeysForKeyBoard();
-                    currentWord = "";
-
-                    if (lastCell != null)
-                    {
-                        for (int i = 0; i < gameManager.getSizeBoard(); i++)
-                        {
-                            for (int j = 0; j < gameManager.getSizeBoard(); j++)
-                            {
-                                gameManager.getGameBoard().setCellValue(cellArray[i, j].getText(), i, j);
-
-                            }
-                        }
-                        lastCell = null;
-                    }
-                    MessageBox.Show("Конец хода!");
-
-                }
-                else
-                {
-                    if (currentWord.Equals(""))
-                    {
-                        MessageBox.Show("Слово не выделено!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Слово " + "'" + currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
-                    }
-                    undoWindow();
-                }
-                undoWindow();
-            }else
-            {
-                MessageBox.Show("Слово " + currentWord + " уже использувалось в игре! Попробуйте еще раз!");
-                undoWindow();
-            }
-            
-        }
+       
 
         /*Возвращает окно в состояние начала хода игрока */
         private void undoWindow()
@@ -329,7 +231,118 @@ namespace Balda
             }
         }
 
-        
+        private void btnMiss_Click(object sender, RoutedEventArgs e)
+        {
+            setEnableBoard(true);
+            undoWindow();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            setEnableBoard(true);
+            undoWindow();
+        }
+
+        public void Cell_MouseDown(object sender, MouseEventArgs e)
+        {
+            Cell cell = (Cell)sender;
+            if (keyboard.Children.Contains(cell))
+            {
+                lastKey = cell.getText();
+                disableBoardCell();
+                //disableBoardCellWithLetter();
+
+            }
+
+
+            if (board.Children.Contains(cell))
+            {
+                if (lastKey.Equals("") == false)
+                {
+                    if (cell.getText().Equals(""))
+                    {
+                        lastCell = cell;
+                        lastCell.setText(lastKey);
+                        //lastCell.Background = Brushes.Purple;
+                        lastKey = "";
+
+                        setEnableKeyboard(false);
+
+                        isCurrentPlayerMove = true;
+
+                        //Активация/деактивация необходимых кнопок игрока
+                        //setEnabledButtons(true);
+                        //buttonsPanel.getComponent(1).setEnabled(false);
+                        // TODO: Активация/деактивация нужных ячеек поля
+                    }
+
+                }
+                else if (isCurrentPlayerMove)
+                { // Иначе если игрок выделяет слово
+
+                    if (!cell.getText().Equals(""))
+                    {
+                        cell.IsEnabled = false; ;
+                        currentWord += cell.getText();
+                        //cell.BorderBrush = Brushes.Purple;
+                    }
+
+                    //if (!lastCell.IsEnabled)
+                    //{
+                    //    buttonsPanel.getComponent(1).setEnabled(true);
+                    //}
+                }
+            }
+        }
+
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            if (!gameManager.wordIsUsed(currentWord))
+            {
+                if (gameManager.getDictionary().isExist(currentWord))
+                {
+                    listBoxP1.Items.Add(currentWord);
+
+                    createKeysForKeyBoard();
+                    currentWord = "";
+
+                    if (lastCell != null)
+                    {
+                        for (int i = 0; i < gameManager.getSizeBoard(); i++)
+                        {
+                            for (int j = 0; j < gameManager.getSizeBoard(); j++)
+                            {
+                                gameManager.getGameBoard().setCellValue(cellArray[i, j].getText(), i, j);
+
+                            }
+                        }
+                        lastCell = null;
+                    }
+                    MessageBox.Show("Конец хода!");
+
+                }
+                else
+                {
+                    if (currentWord.Equals(""))
+                    {
+                        MessageBox.Show("Слово не выделено!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Слово " + "'" + currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
+                    }
+                    undoWindow();
+                }
+                undoWindow();
+            }
+            else
+            {
+                MessageBox.Show("Слово " + currentWord + " уже использувалось в игре! Попробуйте еще раз!");
+                undoWindow();
+            }
+
+        }
 
     }   
 }

@@ -1426,14 +1426,50 @@
         <member name="P:Balda.Data.Fakes.ShimUser.ConstructorStringStringStringString">
             <summary>Sets the shim of User.User(String nickname, String name, String sername, String password)</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.addWordString">
+            <summary>Sets the shim of User.addWord(String word)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.getNickname">
+            <summary>Sets the shim of User.getNickname()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.getPoints">
+            <summary>Sets the shim of User.getPoints()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.getWordsList">
+            <summary>Sets the shim of User.getWordsList()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimUser.insert">
             <summary>Sets the shim of User.insert()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.isSurrender">
+            <summary>Sets the shim of User.isSurrender()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.surrender">
+            <summary>Sets the shim of User.surrender()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimUser.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.addWordString">
+            <summary>Sets the shim of User.addWord(String word)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.getNickname">
+            <summary>Sets the shim of User.getNickname()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.getPoints">
+            <summary>Sets the shim of User.getPoints()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.getWordsList">
+            <summary>Sets the shim of User.getWordsList()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.insert">
             <summary>Sets the shim of User.insert()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.isSurrender">
+            <summary>Sets the shim of User.isSurrender()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.surrender">
+            <summary>Sets the shim of User.surrender()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimUsersDataSet">
             <summary>Shim type of Balda.Data.UsersDataSet</summary>
