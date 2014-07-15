@@ -103,38 +103,7 @@ namespace Balda
             }
 
         }
-
-       // void enableBoardCell()
-        //{
-
-        //    for (int i = 0; i < gameManager.getGameBoard().width(); i++)
-        //    { // Цикл по самому массиву.
-        //        for (int j = 0; j < gameManager.getGameBoard().heigth(); j++)
-        //        {
-        //            if (gameManager.getGameBoard().getCellValue(i, j) == "")
-        //            {
-        //                if (!enableCellOnBoard(i, j))
-        //                {
-        //                    cellArray[i, j].IsEnabled = false;
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //}
-
-        //bool isExistEmptyCell()
-        //{
-        //    foreach (Cell cell in newWord)
-        //    {
-        //        if (cell.getText() == "")
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-       
+     
 
         /*Возвращает окно в состояние начала хода игрока */
         private void undoWindow()
@@ -307,7 +276,9 @@ namespace Balda
                 if (gameManager.getDictionary().isExist(currentWord))
                 {
                     gameManager.activePlayer().addWord(currentWord);
-
+                    gameManager.updateUsedWords();
+                    updateListBox();
+                    updateValue();
                     createKeysForKeyBoard();
                     currentWord = "";
 
@@ -323,8 +294,9 @@ namespace Balda
                         }
                         lastCell = null;
                     }
-                    exchangePlayer();
                     MessageBox.Show("Конец хода!");
+                    exchangePlayer();
+                   
                     
 
                 }
@@ -359,8 +331,11 @@ namespace Balda
             }
             else
             {
+                
                 gameManager.exchangePlayer();
                 updateListBox();
+                updateValue();
+
             }
 
             reloadDataBoard();
@@ -394,6 +369,13 @@ namespace Balda
  
            
  
+        }
+
+        void updateValue()
+        {
+            
+            value1.Content = gameManager.players()[0].getPoints();
+            value2.Content = gameManager.players()[1].getPoints();
         }
     }   
 }

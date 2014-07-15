@@ -59,7 +59,6 @@ namespace Balda.Data
             
         }
 
-
         void remove()
         {
             connect.Open();
