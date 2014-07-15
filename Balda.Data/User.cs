@@ -19,6 +19,44 @@ namespace Balda.Data
         OleDbConnection connect = new OleDbConnection();
         OleDbDataReader dr;
 
+        List<string> words = new List<string>();
+        bool _isSurrender = false;
+        
+        public string getNickname()
+        {
+            return this.nickname;
+        }
+
+        public void addWord(string word)
+        {
+            words.Add(word);
+        }
+
+        public List<string> getWordsList()
+        {
+            return words;
+        }
+
+        public int getPoints()
+        {
+            int points = 0;
+            foreach (string word in words)
+            {
+                points += word.Length;
+            }
+            return points;
+        }
+
+        public void surrender()
+        {
+            _isSurrender = true;
+        }
+
+        public bool isSurrender()
+        {
+            return _isSurrender;
+        }
+
         public User(string nickname, string name, string sername, string password)
         {
             this.nickname = nickname;

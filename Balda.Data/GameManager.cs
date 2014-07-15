@@ -12,6 +12,7 @@ namespace Balda.Data
         GameKeys _keyBoard = new GameKeys();
         Dictionary _dictionary = new Dictionary();
         List<string> usedWords = new List<string>();
+        List<User> playerList = new List<User>();
         int size = 5;
         int width = 11;
         int heigth = 3;
