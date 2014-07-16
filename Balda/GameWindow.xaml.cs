@@ -49,7 +49,8 @@ namespace Balda
         {
             reloadDataBoard();
             reloadKeyBoard();
-
+            titleP1.Text = DataUserManager.DataUser.getCurrentUser().getNickname();
+            titleP2.Text = gameManager.players()[1].getNickname();
         }
 
         void createCellForBoard()
@@ -103,6 +104,7 @@ namespace Balda
             }
 
         }
+        
      
 
         /*Возвращает окно в состояние начала хода игрока */

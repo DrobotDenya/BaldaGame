@@ -10,64 +10,76 @@ namespace Balda.Data
 {
     public class DataUserManager
     {
+        //SingleTon
+        private static DataUserManager dataUser;
+
+        private DataUserManager() 
+        {
+          connect.ConnectionString = connectionString;
+          cmd.Connection = connect;
+          readAllUser();
+        }
+
+        public static DataUserManager DataUser
+        {
+            get
+            {
+                if (dataUser == null)
+                {
+                    dataUser = new DataUserManager();
+                }
+                return dataUser;
+            }
+        }
+
+
+        List<User> userList = new List<User>();
+        User currentUser;
+
         string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
         OleDbCommand cmd = new OleDbCommand();
         OleDbConnection connect = new OleDbConnection();
         OleDbDataReader dr;
 
-        public DataUserManager()
+        private void readAllUser()
         {
-            connect.ConnectionString = connectionString;
-            cmd.Connection = connect;
+            if (connect.State == ConnectionState.Closed)
+            {
+                connect.Open();
+            }
+            string q = "select * from [User]";
+            cmd.CommandText = q;
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                User user;
+                while (dr.Read())
+                {
+                    user = new User((string)dr[0], (string)dr[1], (string)dr[2], (string)dr[3]);
+                    userList.Add(user);
+                }
+            }
+            dr.Close();
+ 
         }
 
-        public bool findUser(string nickname)
+        //Проверяет существует ли пользователь с таким ником и паролем
+        public bool findUser(string nickname, string password)
         {
-            if (connect.State == ConnectionState.Closed)
+            foreach (User user in userList)
             {
-                connect.Open();
-            }
-            string q = "select * from [User]";
-            cmd.CommandText = q;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read())
+                if (user.getNickname() == nickname && user.confirmPassword(password))
                 {
-                    if (nickname == dr[0].ToString())
-                    {
-                        dr.Close();
-                        connect.Close();
-                        return true;
-                    }
+                    currentUser = user;
+                    return true;
                 }
             }
-            dr.Close();
             return false;
         }
-        public bool findUserPassword(string password)
+
+        public User getCurrentUser()
         {
-            if (connect.State == ConnectionState.Closed)
-            {
-                connect.Open();
-            }
-            string q = "select * from [User]";
-            cmd.CommandText = q;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read())
-                {
-                    if (password == dr[3].ToString())
-                    {
-                        dr.Close();
-                        connect.Close();
-                        return true;
-                    }
-                }
-            }
-            dr.Close();
-            return false;
+            return currentUser;
         }
     }
 }

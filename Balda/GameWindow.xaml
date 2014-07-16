@@ -15,8 +15,8 @@
         </Grid.Background>
         <ListBox x:Name="listBoxP1" Margin="163,96,0,0" HorizontalAlignment="Left" Width="140" Height="300" Background="#FF6370C7" BorderBrush="#FF001C72" BorderThickness="5" VerticalAlignment="Top"/>
         <ListBox x:Name="listBoxP2" Margin="613,96,0,0" Background="#FF72EA6C" BorderBrush="#FF046100" Width="140" Height="300" BorderThickness="5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="608,66,184,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF72EA6C" FontSize="18" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Center" Margin="163,66,629,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF6370C7" FontSize="18" TextAlignment="Center" FontWeight="Bold"><Run Text="Player1"/></TextBlock>
+        <TextBlock x:Name="titleP2" HorizontalAlignment="Center" Margin="608,66,184,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF72EA6C" FontSize="18" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock x:Name="titleP1" HorizontalAlignment="Center" Margin="163,66,629,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF6370C7" FontSize="18" TextAlignment="Center" FontWeight="Bold"><Run Text="Player1"/></TextBlock>
         <Label Content="Time" Margin="373,25,397,0" VerticalAlignment="Top" Foreground="#FFDE9007" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Width="162" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="39"/>
         <Rectangle Fill="#FF6370C7" HorizontalAlignment="Left" Height="68" Margin="303,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5"/>
         <Label x:Name="value1" Content="12" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C"/>

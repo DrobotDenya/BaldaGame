@@ -8,21 +8,21 @@ namespace Balda.Data
 {
     public class GameManager
     {
-        GameBoard _board = new GameBoard();
-        GameKeys _keyBoard = new GameKeys();
-        Dictionary _dictionary = new Dictionary();
-        List<string> usedWords = new List<string>();
-        List<User> playersList = new List<User>();
-        int size = 5;
-        int width = 11;
-        int heigth = 3;
-        int playersCount;
-        int botComplexity;
-        int botsCount;
-        int _activePlayer;
+        private GameBoard _board = new GameBoard();
+        private GameKeys _keyBoard = new GameKeys();
+        private Dictionary _dictionary = new Dictionary();
+        private List<string> usedWords = new List<string>();
+        private List<User> playersList = new List<User>();
+        private int size = 5;
+        private int width = 11;
+        private int heigth = 3;
+        private int playersCount;
+        private int botComplexity;
+        private int botsCount;
+        private int _activePlayer;
 
 
-        FindWordAlgorithm algorithm;
+        private FindWordAlgorithm algorithm;
 
         public GameManager()
         {
@@ -109,15 +109,9 @@ namespace Balda.Data
         public void generatePalyers()
         {
             playersList.Clear();
-            for (int i = 0; i < playersCount; ++i)
-            {
-                playersList.Add(new User("Player " + i));
-            }
-
-            for (int i = 0; i < botsCount; ++i)
-            {
-                playersList.Add(new Bot("Bot " + i, botComplexity, algorithm));
-            }
+            playersList.Add(DataUserManager.DataUser.getCurrentUser());
+            playersList.Add(new Bot("Bot ", botComplexity, algorithm));
+            
 
         }
 
@@ -288,7 +282,6 @@ namespace Balda.Data
         {
             return playersList[_activePlayer];
         }
-
 
         public List<User> players()
         {

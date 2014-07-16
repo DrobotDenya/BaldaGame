@@ -109,5 +109,14 @@ namespace Balda.Data
                 connect.Close();
             }
         }
+
+        public bool confirmPassword(string pswd)
+        {
+            if (pswd == this.password)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

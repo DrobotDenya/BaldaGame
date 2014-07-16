@@ -23,12 +23,11 @@ namespace Balda
     /// </summary>
     public partial class StartWindow : Window
     {
-        DataUserManager userManager;
+        
 
         public StartWindow()
         {
             InitializeComponent();
-            userManager = new DataUserManager();
             textBoxLogin.Text = "qwe";
             tbxPassword.Text = "qwe";
         }
@@ -41,7 +40,7 @@ namespace Balda
         private void Button_Click(object sender, RoutedEventArgs e)
         {
          
-            if (userManager.findUser(textBoxLogin.Text) && userManager.findUserPassword(tbxPassword.Text))
+            if (DataUserManager.DataUser.findUser(textBoxLogin.Text, tbxPassword.Text))
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();
