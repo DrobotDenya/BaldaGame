@@ -14,6 +14,7 @@ namespace Balda.Data
 
         public Bot(string name, int level, FindWordAlgorithm alho)
         {
+            nickname = name;
             this.alho = alho;
             if (level >= 0 && level <= 2)
             {

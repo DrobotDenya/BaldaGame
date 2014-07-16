@@ -133,20 +133,26 @@
         <member name="P:Balda.Data.Fakes.ShimDataUserManager.DataUserGet">
             <summary>Sets the shim of DataUserManager.get_DataUser()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserPasswordString">
-            <summary>Sets the shim of DataUserManager.findUserPassword(String password)</summary>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserStringString">
+            <summary>Sets the shim of DataUserManager.findUser(String nickname, String password)</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimDataUserManager.findUserString">
-            <summary>Sets the shim of DataUserManager.findUser(String nickname)</summary>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.getCurrentUser">
+            <summary>Sets the shim of DataUserManager.getCurrentUser()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.readAllUser">
+            <summary>Sets the shim of DataUserManager.readAllUser()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimDataUserManager.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserPasswordString">
-            <summary>Sets the shim of DataUserManager.findUserPassword(String password)</summary>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserStringString">
+            <summary>Sets the shim of DataUserManager.findUser(String nickname, String password)</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.findUserString">
-            <summary>Sets the shim of DataUserManager.findUser(String nickname)</summary>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.getCurrentUser">
+            <summary>Sets the shim of DataUserManager.getCurrentUser()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimDataUserManager.AllInstances.readAllUser">
+            <summary>Sets the shim of DataUserManager.readAllUser()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimDictionary">
             <summary>Shim type of Balda.Data.Dictionary</summary>
@@ -1558,6 +1564,9 @@
         <member name="P:Balda.Data.Fakes.ShimUser.addWordString">
             <summary>Sets the shim of User.addWord(String word)</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.confirmPasswordString">
+            <summary>Sets the shim of User.confirmPassword(String pswd)</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimUser.getNickname">
             <summary>Sets the shim of User.getNickname()</summary>
         </member>
@@ -1581,6 +1590,9 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.addWordString">
             <summary>Sets the shim of User.addWord(String word)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.confirmPasswordString">
+            <summary>Sets the shim of User.confirmPassword(String pswd)</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimUser.AllInstances.getNickname">
             <summary>Sets the shim of User.getNickname()</summary>
