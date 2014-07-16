@@ -30,7 +30,7 @@ namespace Balda.Data
         {
             //alho.findWords();
             string findedWord;
-            if (levelOfComplexity == 1)
+            if (levelOfComplexity == 1 || levelOfComplexity == 0)
             {
                 findedWord = alho.findWord();
                 if (findedWord.Equals("") == false)

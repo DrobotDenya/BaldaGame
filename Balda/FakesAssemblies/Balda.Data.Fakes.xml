@@ -400,6 +400,9 @@
         <member name="P:Balda.Data.Fakes.ShimGameManager.activePlayer">
             <summary>Sets the shim of GameManager.activePlayer()</summary>
         </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.clearUsedWords">
+            <summary>Sets the shim of GameManager.clearUsedWords()</summary>
+        </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.countPlayersInGame">
             <summary>Sets the shim of GameManager.countPlayersInGame()</summary>
         </member>
@@ -468,6 +471,9 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.activePlayer">
             <summary>Sets the shim of GameManager.activePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.clearUsedWords">
+            <summary>Sets the shim of GameManager.clearUsedWords()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimGameManager.AllInstances.countPlayersInGame">
             <summary>Sets the shim of GameManager.countPlayersInGame()</summary>
@@ -1533,6 +1539,69 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimListForPlayer2DataSet.ShimTableForPlayer2RowChangeEvent.AllInstances.RowGet">
             <summary>Sets the shim of TableForPlayer2RowChangeEvent.get_Row()</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimSettings">
+            <summary>Shim type of Balda.Data.Settings</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimSettings.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimSettings.#ctor(Balda.Data.Settings)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimSettings.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Balda.Data.Fakes.ShimSettings.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.Constructor">
+            <summary>Sets the shim of Settings.Settings()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.SettingGet">
+            <summary>Sets the shim of Settings.get_Setting()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.getBotComplexity">
+            <summary>Sets the shim of Settings.getBotComplexity()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.getIsBot">
+            <summary>Sets the shim of Settings.getIsBot()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.getNamePlayer">
+            <summary>Sets the shim of Settings.getNamePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.setBotComplexityInt32">
+            <summary>Sets the shim of Settings.setBotComplexity(Int32 complexity)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.setIsBotBoolean">
+            <summary>Sets the shim of Settings.setIsBot(Boolean b)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.setPlayerNameString">
+            <summary>Sets the shim of Settings.setPlayerName(String name)</summary>
+        </member>
+        <member name="T:Balda.Data.Fakes.ShimSettings.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.getBotComplexity">
+            <summary>Sets the shim of Settings.getBotComplexity()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.getIsBot">
+            <summary>Sets the shim of Settings.getIsBot()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.getNamePlayer">
+            <summary>Sets the shim of Settings.getNamePlayer()</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.setBotComplexityInt32">
+            <summary>Sets the shim of Settings.setBotComplexity(Int32 complexity)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.setIsBotBoolean">
+            <summary>Sets the shim of Settings.setIsBot(Boolean b)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.AllInstances.setPlayerNameString">
+            <summary>Sets the shim of Settings.setPlayerName(String name)</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimUser">
             <summary>Shim type of Balda.Data.User</summary>

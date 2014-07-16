@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Balda.Data;
 
 namespace Balda
 {
@@ -19,6 +20,7 @@ namespace Balda
     /// </summary>
     public partial class SettingGameWindow : Window
     {
+       
         public SettingGameWindow()
         {
             InitializeComponent();
@@ -35,25 +37,31 @@ namespace Balda
 
         private void listboxDifficulty_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
 
         private void checkBoxPalyers_Checked(object sender, RoutedEventArgs e)
         {
            
-                textBoxPlayerTwoName.IsEnabled = true;
+            textBoxPlayerTwoName.IsEnabled = true;
             listboxDifficulty.IsEnabled = false;
         }
 
         private void checkBoxPalyers_Unchecked(object sender, RoutedEventArgs e)
         {
-            textBoxPlayerTwoName.IsEnabled = false;
+            textBoxPlayerTwoName.IsEnabled = true;
         }
 
-        private void buttonStart_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
+            Settings.Setting.setBotComplexity(listboxDifficulty.SelectedIndex);
+            Settings.Setting.setIsBot(!checkBoxPalyers.IsChecked.Value);
+            Settings.Setting.setPlayerName(textBoxPlayerTwoName.Text);
+            this.Close();
+
+            
         }
+
+        
     }
 }

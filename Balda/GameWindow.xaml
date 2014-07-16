@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:custom="clr-namespace:Balda"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Data="clr-namespace:Balda.Data" xmlns:Data1="clr-namespace:Balda.Data;assembly=Balda.Data" mc:Ignorable="d" x:Class="Balda.GameWindow"
-        Title="GameWindow" Height="750" Width="940.455" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" MinWidth="940.455" MaxWidth="940.455" MinHeight="750" MaxHeight="750">
+        Title="GameWindow" Height="750" Width="940.455" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" MinWidth="940.455" MaxWidth="940.455" MinHeight="750" MaxHeight="750" Closed="Window_Closed">
     <Grid RenderTransformOrigin="0.421,0.528">
 
         <Grid.Background>
