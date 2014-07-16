@@ -27,6 +27,12 @@ namespace Balda
             listboxDifficulty.Items.Add("Easy");
             listboxDifficulty.Items.Add("Normal");
             listboxDifficulty.Items.Add("Hard");
+            listboxDifficulty.SelectedIndex = Settings.Setting.getBotComplexity();
+            checkBoxPalyers.IsChecked = !Settings.Setting.getIsBot();
+            if (checkBoxPalyers.IsChecked.Value)
+            {
+                textBoxPlayerTwoName.Text = Settings.Setting.getNamePlayer();
+           }
            
         }
 
@@ -49,7 +55,9 @@ namespace Balda
 
         private void checkBoxPalyers_Unchecked(object sender, RoutedEventArgs e)
         {
-            textBoxPlayerTwoName.IsEnabled = true;
+            textBoxPlayerTwoName.IsEnabled = false;
+            textBoxPlayerTwoName.Text = "Player2";
+            listboxDifficulty.IsEnabled = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,6 +70,5 @@ namespace Balda
             
         }
 
-        
     }
 }
