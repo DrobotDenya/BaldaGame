@@ -34,6 +34,8 @@ namespace Balda
         {
             InitializeComponent();
 
+            gameManager.setBotsComplexity(Settings.Setting.getBotComplexity());
+
             gameManager.start();
 
             createCellForBoard();
@@ -378,6 +380,12 @@ namespace Balda
             
             value1.Content = gameManager.players()[0].getPoints();
             value2.Content = gameManager.players()[1].getPoints();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            gameManager.clearUsedWords();
         }
     }   
 }

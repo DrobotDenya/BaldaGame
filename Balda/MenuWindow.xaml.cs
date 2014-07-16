@@ -31,14 +31,15 @@ namespace Balda
 
         private void buttonNewGame_Click(object sender, RoutedEventArgs e)
         {
-            SettingGameWindow settingGameWindow = new SettingGameWindow();
-            settingGameWindow.Show();
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.Show();
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            SettingGameWindow settingGameWindow = new SettingGameWindow();
+            settingGameWindow.Show();
         }
     }
 }

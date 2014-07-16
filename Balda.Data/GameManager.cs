@@ -27,13 +27,7 @@ namespace Balda.Data
         public GameManager()
         {
             _board.setSize(size, size);
-            algorithm = new FindWordAlgorithm(_board, usedWords);
-
-            playersCount = 1;
-            botsCount = 1;
-            botComplexity = 2;
-
-            
+            algorithm = new FindWordAlgorithm(_board, usedWords);           
         }
 
         //Return ширину словарь
@@ -110,7 +104,15 @@ namespace Balda.Data
         {
             playersList.Clear();
             playersList.Add(DataUserManager.DataUser.getCurrentUser());
-            playersList.Add(new Bot("Bot ", botComplexity, algorithm));
+            if (Settings.Setting.getIsBot())
+            {
+                playersList.Add(new Bot("Bot ", botComplexity, algorithm));
+            }
+            else
+            {
+                playersList.Add(new User(Settings.Setting.getNamePlayer()));
+            }
+            
             
 
         }
@@ -196,7 +198,7 @@ namespace Balda.Data
             
                 foreach (User user in playersList)
                 {
-                    if (!user.isSurrender() && (user is Bot))//!!!!!!!!!!!!!!!!!
+                    if (!user.isSurrender() && !(user is Bot))
                     {
                         humanInGame = true;
  
@@ -271,7 +273,7 @@ namespace Balda.Data
         //Задаёт сложность ботов
         public void setBotsComplexity(int compl)
         {
-            if (compl == 0 || compl == 1)
+            if (compl == 0 || compl == 1 || compl == 2)
             {
                 botComplexity = compl;
             }
@@ -299,6 +301,16 @@ namespace Balda.Data
         public int getActivePlayerIndex()
         {
             return _activePlayer;
+        }
+
+        public void clearUsedWords()
+        {
+            usedWords.Clear();
+            foreach (User user in playersList)
+            {
+                user.getWordsList().Clear();
+            }
+            
         }
     }
 }

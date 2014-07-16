@@ -18,16 +18,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="buttonStart" Content="Start Game" HorizontalAlignment="Left" Margin="78,212,0,0" VerticalAlignment="Top" Width="140" Height="29" RenderTransformOrigin="0.5,0.5" FontSize="20" Background="{x:Null}" Foreground="#FFE4810A" BorderThickness="1" BorderBrush="#FFD46F0A" Click="buttonStart_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-8.603"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="95,223,0,0" VerticalAlignment="Top" Width="116" FontSize="24" Click="Button_Click"/>
 
     </Grid>
 </Window>

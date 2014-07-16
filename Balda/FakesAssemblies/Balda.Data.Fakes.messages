@@ -1,5 +1,6 @@
 C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate stub for Balda.Data.DataUserManager: type has no family visible contructors.
 C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate stub for Balda.Data.Properties.Settings: type is sealed.
+C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate stub for Balda.Data.Settings: type has no family visible contructors.
 C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate shim for Balda.Data.ListForPlayer1DataSet+TableForPlayer1RowChangeEventHandler: type is a delegate.
 C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate shim for Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager+SelfReferenceComparer: type is not visible to exported or assembly(Balda.Data.Fakes).
 C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Balda\Fakes\Balda.Data.fakes : warning : Cannot generate shim for Balda.Data.ListForPlayer1DataSetTableAdapters.TableAdapterManager+UpdateOrderOption: type is an enum.
