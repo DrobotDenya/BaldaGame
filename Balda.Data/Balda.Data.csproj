@@ -56,16 +56,6 @@
     <Compile Include="GameBoard.cs" />
     <Compile Include="GameKeys.cs" />
     <Compile Include="GameManager.cs" />
-    <Compile Include="ListForPlayer1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ListForPlayer1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ListForPlayer2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ListForPlayer2DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,38 +72,8 @@
     <Compile Include="Word.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ListForPlayer1.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ListForPlayer2.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="ListForPlayer1DataSet.xsc">
-      <DependentUpon>ListForPlayer1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ListForPlayer1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ListForPlayer1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ListForPlayer1DataSet.xss">
-      <DependentUpon>ListForPlayer1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ListForPlayer2DataSet.xsc">
-      <DependentUpon>ListForPlayer2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ListForPlayer2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ListForPlayer2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ListForPlayer2DataSet.xss">
-      <DependentUpon>ListForPlayer2DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
