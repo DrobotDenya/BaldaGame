@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="281249fd-b010-4d7b-80b4-f27a13834471"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1136,6 +1136,99 @@
             isQuery="false" />
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="8b239a9c-478c-49d1-86ef-1ab05cdc5ced"
+        name="User.accdb"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="a0946679-898d-4f71-8575-56eef0928892"
+        name="Keyboard.txt"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="1f9890cd-6255-43cc-be5e-aab40a6b900b"
+        name="words.txt"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="213c42a1-f462-402a-aa22-3a12d9c2c5ca"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="74215344-892d-49e0-b392-a69335297931"
+        name="Balda.exe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a5d76b4e-c66b-46eb-a775-c0753b4dd54f">
+            <componentMoniker
+              Id="1f9890cd-6255-43cc-be5e-aab40a6b900b"
+              LastKnownName="words.txt"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="03ee64dd-97ba-43a0-8f51-920de41d9c19">
+            <componentMoniker
+              Id="42082b20-e764-4d6a-b615-7cd4d48f54e0"
+              LastKnownName="Balda.dll"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="3c7dacdd-770a-4bd0-bb85-4aaa52d0f09d">
+            <componentMoniker
+              Id="16b05397-03df-48f4-88a4-e7aa90c0cbe9"
+              LastKnownName="Balda.data.dll"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="19ea083e-e3ba-47b3-8b3d-3e84b8e958af">
+            <componentMoniker
+              Id="a0946679-898d-4f71-8575-56eef0928892"
+              LastKnownName="Keyboard.txt"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="337f3f0b-4155-4db6-bd2d-71482e5d38dc">
+            <componentMoniker
+              Id="8b239a9c-478c-49d1-86ef-1ab05cdc5ced"
+              LastKnownName="User.accdb"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="42082b20-e764-4d6a-b615-7cd4d48f54e0"
+        name="Balda.dll"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="16b05397-03df-48f4-88a4-e7aa90c0cbe9"
+        name="Balda.data.dll"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
