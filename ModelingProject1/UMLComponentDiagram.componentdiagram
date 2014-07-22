@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1e2e91f0-c357-4940-aaab-b85c5a7c35d5" name="UMLComponentDiagram" linkedPackageId="79c42924-cca0-45f4-9bec-be6112afbdb3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0cc1d4ee-6578-4eb9-b724-81d816fc407e">
+      <profileInstance Id="0d3e3489-dd2e-4816-bcfb-13bb3eea8a79" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="99b43dcf-2279-441e-bd51-f0a9b181560a">
+      <profileInstance Id="4ed84557-7213-42a6-9b84-5dd14fa35839" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="b827c52c-b19b-4d32-8459-0c43dee9d70b" name="User.accdb" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8b239a9c-478c-49d1-86ef-1ab05cdc5ced" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f84eb9ee-972e-47f3-8ddb-30c04bb3a699" name="Keyboard.txt" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a0946679-898d-4f71-8575-56eef0928892" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1ee82b5b-fa0a-459b-b675-1366f86bfe30" name="words.txt" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f9890cd-6255-43cc-be5e-aab40a6b900b" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="7243706d-606e-4137-b166-be662d53f219" name="Balda.exe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="74215344-892d-49e0-b392-a69335297931" />
+        <suppliersInternal>
+          <dependency Id="3afb4d7f-5c9d-4c55-884a-653371959f45">
+            <componentMoniker Id="1ee82b5b-fa0a-459b-b675-1366f86bfe30" LastKnownName="words.txt" />
+            <elementDefinition Id="a5d76b4e-c66b-46eb-a775-c0753b4dd54f" />
+          </dependency>
+          <dependency Id="231bd571-bd01-43ab-a6d9-5d0e2f356b90">
+            <componentMoniker Id="4013f164-d580-4802-aa94-3207412ac975" LastKnownName="Balda.dll" />
+            <elementDefinition Id="03ee64dd-97ba-43a0-8f51-920de41d9c19" />
+          </dependency>
+          <dependency Id="ead74384-13e0-458c-b12d-b9c0fedd3b87">
+            <componentMoniker Id="a531cae6-4e13-4332-adf2-dc879f554e9a" LastKnownName="Balda.data.dll" />
+            <elementDefinition Id="3c7dacdd-770a-4bd0-bb85-4aaa52d0f09d" />
+          </dependency>
+          <dependency Id="7e14e447-d45a-4ca2-bb43-dcdb3cdd3b2f">
+            <componentMoniker Id="f84eb9ee-972e-47f3-8ddb-30c04bb3a699" LastKnownName="Keyboard.txt" />
+            <elementDefinition Id="19ea083e-e3ba-47b3-8b3d-3e84b8e958af" />
+          </dependency>
+          <dependency Id="60f561ad-5e34-4fef-859b-7c29a47201d2">
+            <componentMoniker Id="b827c52c-b19b-4d32-8459-0c43dee9d70b" LastKnownName="User.accdb" />
+            <elementDefinition Id="337f3f0b-4155-4db6-bd2d-71482e5d38dc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4013f164-d580-4802-aa94-3207412ac975" name="Balda.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="42082b20-e764-4d6a-b615-7cd4d48f54e0" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a531cae6-4e13-4332-adf2-dc879f554e9a" name="Balda.data.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="16b05397-03df-48f4-88a4-e7aa90c0cbe9" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="79c42924-cca0-45f4-9bec-be6112afbdb3" name="ModelingProject1">
+    <elementDefinition Id="281249fd-b010-4d7b-80b4-f27a13834471" />
+  </package>
+</componentModel>
