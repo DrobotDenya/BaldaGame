@@ -101,7 +101,6 @@ namespace Balda
                 for (int j = 0; j < gameManager.getSizeBoard(); j++)
                 {
                     cellArray[i, j].setText(gameManager.getGameBoard().getCellValue(i, j));
-                    Console.WriteLine(i + " " + j + " " + cellArray[i, j].getText());
                 }
             }
 
