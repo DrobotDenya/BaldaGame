@@ -1,7 +1,33 @@
-﻿<Window x:Class="Balda.SettingGameWindow"
+﻿
+<Window x:Class="Balda.SettingGameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SettingGameWindow" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <!--A Style that extends the previous TextBlock Style-->
+        <!--This is a "named style" with an x:Key of TitleText-->
+        <Style BasedOn="{StaticResource {x:Type TextBlock}}"
+TargetType="TextBlock"
+x:Key="TitleText">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="#90DDDD" />
+                            <GradientStop Offset="1.0" Color="#5BFFFF" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
     <Grid>
         <CheckBox x:Name="checkBoxPalyers" Content="Two player" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.231,-0.839" Checked="checkBoxPalyers_Checked" Unchecked="checkBoxPalyers_Unchecked"/>
         <Label Content="Game Settings" Margin="0,0,0,221" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" FontStyle="Italic" Background="#4CE89114" Width="292" HorizontalContentAlignment="Center" Height="48"/>
@@ -18,7 +44,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="95,223,0,0" VerticalAlignment="Top" Width="116" FontSize="24" Click="Button_Click"/>
+        
+        <Button Content="Back" HorizontalAlignment="Left" Margin="95,223,0,0" VerticalAlignment="Top" Width="116" FontSize="24" Click="Button_Click" ForceCursor="True"/>
 
     </Grid>
 </Window>

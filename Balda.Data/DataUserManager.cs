@@ -10,14 +10,14 @@ namespace Balda.Data
 {
     public class DataUserManager
     {
-        //SingleTon
+        
         private static DataUserManager dataUser;
 
         private DataUserManager() 
         {
           connect.ConnectionString = connectionString;
           cmd.Connection = connect;
-          readAllUser();
+          //readAllUser();
         }
 
         public static DataUserManager DataUser
@@ -31,9 +31,7 @@ namespace Balda.Data
                 return dataUser;
             }
         }
-
-
-        List<User> userList = new List<User>();
+     
         User currentUser;
 
         string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
@@ -41,7 +39,7 @@ namespace Balda.Data
         OleDbConnection connect = new OleDbConnection();
         OleDbDataReader dr;
 
-        private void readAllUser()
+        public bool findUser(string nickname, string password)
         {
             if (connect.State == ConnectionState.Closed)
             {
@@ -52,31 +50,20 @@ namespace Balda.Data
             dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
-                User user;
                 while (dr.Read())
                 {
-                    user = new User((string)dr[0], (string)dr[1], (string)dr[2], (string)dr[3]);
-                    userList.Add(user);
+                    if ((string)dr[0] == nickname && (string)dr[3] == password)
+                    {
+                        currentUser = new User((string)dr[0], (string)dr[1], (string)dr[2], (string)dr[3]);
+                        return true;
+                    }
+                    //userList.Add(user);
                 }
             }
             dr.Close();
- 
-        }
-
-        //Проверяет существует ли пользователь с таким ником и паролем
-        public bool findUser(string nickname, string password)
-        {
-            foreach (User user in userList)
-            {
-                if (user.getNickname() == nickname && user.confirmPassword(password))
-                {
-                    currentUser = user;
-                    return true;
-                }
-            }
             return false;
         }
-
+ 
         public User getCurrentUser()
         {
             return currentUser;
