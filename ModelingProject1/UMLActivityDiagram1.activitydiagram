@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d79255a4-80d8-4493-b8e0-bbec6e33862b" name="Activity1" linkedPackageId="178772b9-aafe-48cf-a479-7511e9b8ddcf" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b8b0bbb7-234d-41e9-abe4-82e11f6ba0b6">
+      <elementDefinition Id="df131b42-49db-4845-a6e6-f6ce287abe07" />
+      <body>Существует ли выделеное слово?</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="9478672c-88d1-44b8-a187-e3c9efc0d3ec" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="59b6ce56-8bcf-4d7f-9e4d-e725ede218f1">
+      <profileInstance Id="6b97356a-74a3-4639-9d9a-a972107f9d27" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e48a2e75-3ecb-45ab-9f7d-fef8c8d735e7">
+      <profileInstance Id="b47335a1-078d-4ccf-895d-59d94c7f03e1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="cc26952c-e2c2-43a5-a4d9-c549975c955b" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="a4f7a005-bb5a-4a63-bd08-f250edf5cd4b" />
+        <nodes>
+          <opaqueAction Id="23009dbc-67c6-4c6b-854a-b7afbb897c07" name="Выделить слово" isLeaf="false">
+            <elementDefinition Id="d63fbfba-a422-451c-9169-62c972456b9c" />
+            <flowNodeTargets>
+              <controlFlow Id="77da0f3c-8c4f-4d09-b8bb-fa2558222025" isLeaf="false">
+                <forkNodeMoniker Id="2f848918-675a-4186-bca5-383f42b7a85a" LastKnownName="Fork1" />
+                <elementDefinition Id="104d89e5-57d8-4d84-9007-97e301fb95fe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="53b7dba2-aff0-4308-bdd7-59842f3a109f" name="Отменить выделение" isLeaf="false">
+            <elementDefinition Id="58b96246-4ec9-4a80-8053-5e34716d0304" />
+            <flowNodeTargets>
+              <controlFlow Id="8ce267fa-803f-4071-b456-5977f0f58914" isLeaf="false">
+                <opaqueActionMoniker Id="ae21ea6c-b6d3-4791-8003-bcc628c4aa8b" LastKnownName="Получение права на ход" />
+                <elementDefinition Id="57943978-e302-4c5f-a149-352ae5835cbb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3f8f1c9f-4bd4-4836-abf4-09fd26dc8628" name="Отправить слово" isLeaf="false">
+            <elementDefinition Id="e1dee453-db03-4162-8a3e-d454c1f430f5" />
+            <flowNodeTargets>
+              <controlFlow Id="b99e0ea4-5dbe-4d1d-b30f-4eac60c456f3" isLeaf="false">
+                <decisionNodeMoniker Id="9478672c-88d1-44b8-a187-e3c9efc0d3ec" LastKnownName="Decision1" />
+                <elementDefinition Id="465aeb2d-1abd-4f55-9123-bba88297d798" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="2f848918-675a-4186-bca5-383f42b7a85a" name="Fork1" isLeaf="false">
+            <elementDefinition Id="04df76ce-b3b7-41ed-a79e-804006194de3" />
+            <flowNodeTargets>
+              <controlFlow Id="f2b19bbf-1906-47b2-acee-77fff0cfd034" isLeaf="false">
+                <opaqueActionMoniker Id="53b7dba2-aff0-4308-bdd7-59842f3a109f" LastKnownName="Отменить выделение" />
+                <elementDefinition Id="cb9e6edb-439a-4015-bee7-a5f2fe663d3a" />
+              </controlFlow>
+              <controlFlow Id="2b4f3234-bed6-4295-8e6e-2e949d42b6ea" isLeaf="false">
+                <opaqueActionMoniker Id="3f8f1c9f-4bd4-4836-abf4-09fd26dc8628" LastKnownName="Отправить слово" />
+                <elementDefinition Id="0003a224-2296-4f0f-a5c0-1ef574d9998b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode Id="9478672c-88d1-44b8-a187-e3c9efc0d3ec" name="Decision1" isLeaf="false">
+            <elementDefinition Id="109eac01-9844-49d7-90e1-d6231101a676" />
+            <flowNodeTargets>
+              <controlFlow Id="a270ba58-c921-476a-a8b8-c48d1fd33557" isLeaf="false">
+                <opaqueActionMoniker Id="53b7dba2-aff0-4308-bdd7-59842f3a109f" LastKnownName="Отменить выделение" />
+                <elementDefinition Id="6b06a52f-6dad-4d53-aadf-32c589c4bca2" />
+              </controlFlow>
+              <controlFlow Id="719e0a88-bfe0-40da-b84e-014fe3683bd3" isLeaf="false">
+                <joinNodeMoniker Id="bed2c804-9fdd-4ebb-b8d8-8231b068af74" LastKnownName="Join1" />
+                <elementDefinition Id="062ed3ff-336b-49d3-bbab-60aa6a01dd4d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="ae21ea6c-b6d3-4791-8003-bcc628c4aa8b" name="Получение права на ход" isLeaf="false">
+            <elementDefinition Id="dcabbe39-09a2-4426-80b5-5487d377e56a" />
+            <flowNodeTargets>
+              <controlFlow Id="8ee3b372-d879-4f71-9872-18482e260c6e" isLeaf="false">
+                <forkNodeMoniker Id="49856f2b-6e6e-4233-8cbe-10f82df53a3b" LastKnownName="Fork2" />
+                <elementDefinition Id="472a13c2-eea4-49d5-af3d-58db12b6a420" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="db5cd52c-03f7-4de5-b968-eff03aea53ed" name="Initial1" isLeaf="false">
+            <elementDefinition Id="4fc6d0a6-fc20-4792-95e6-49bb9948e55d" />
+            <flowNodeTargets>
+              <controlFlow Id="1e448ef7-63ab-4005-8124-0bb9eb7196e6" isLeaf="false">
+                <opaqueActionMoniker Id="ae21ea6c-b6d3-4791-8003-bcc628c4aa8b" LastKnownName="Получение права на ход" />
+                <elementDefinition Id="580df3a8-5427-496a-9d94-955261023754" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <forkNode Id="49856f2b-6e6e-4233-8cbe-10f82df53a3b" name="Fork2" isLeaf="false">
+            <elementDefinition Id="8bb94784-3173-4a13-b83c-b340fcc5b054" />
+            <flowNodeTargets>
+              <controlFlow Id="b62edc4c-18b2-4f61-8ad4-ef385010db64" isLeaf="false">
+                <opaqueActionMoniker Id="23009dbc-67c6-4c6b-854a-b7afbb897c07" LastKnownName="Выделить слово" />
+                <elementDefinition Id="44106289-1169-4c49-85cb-68622f582d51" />
+              </controlFlow>
+              <controlFlow Id="4b01573f-707b-447e-beaf-0e06bacb50b6" isLeaf="false">
+                <opaqueActionMoniker Id="446e418a-a744-4db6-a616-b794f73079f5" LastKnownName="Пропустить ход" />
+                <elementDefinition Id="e2558b6e-0fd5-4d4d-a46e-cdaf878a46e8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="446e418a-a744-4db6-a616-b794f73079f5" name="Пропустить ход" isLeaf="false">
+            <elementDefinition Id="8f8de7dd-5b6c-418f-a706-717fd8218e1c" />
+            <flowNodeTargets>
+              <controlFlow Id="a8cf6fe5-aac4-4005-9f69-15f186b1ea9b" isLeaf="false">
+                <joinNodeMoniker Id="bed2c804-9fdd-4ebb-b8d8-8231b068af74" LastKnownName="Join1" />
+                <elementDefinition Id="fe15bdbc-c94c-4720-ad93-05bcc5210293" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c297d507-f307-46cb-8494-884bab5c15be" name="Передача хода другому игроку" isLeaf="false">
+            <elementDefinition Id="d7235865-12ae-44b6-9cdb-3622a2e75bd8" />
+            <flowNodeTargets>
+              <controlFlow Id="978f7e9e-4231-4f8e-9bf8-51933680cf47" isLeaf="false">
+                <activityFinalNodeMoniker Id="7a92983c-8a6b-4fbe-b5f0-97663a269b0b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ba0f1593-669b-4d63-9999-c132769047e9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="bed2c804-9fdd-4ebb-b8d8-8231b068af74" name="Join1" isLeaf="false">
+            <elementDefinition Id="b82b1de6-3a64-4060-a32e-49160cde61a0" />
+            <flowNodeTargets>
+              <controlFlow Id="0728af97-9eff-42aa-870e-4d8b977492dc" isLeaf="false">
+                <opaqueActionMoniker Id="c297d507-f307-46cb-8494-884bab5c15be" LastKnownName="Передача хода другому игроку" />
+                <elementDefinition Id="0ba3fb1b-0c1b-419b-9e83-41aa19bc667a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <activityFinalNode Id="7a92983c-8a6b-4fbe-b5f0-97663a269b0b" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="44753708-216a-4d4f-871f-39bebaba66fc" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="178772b9-aafe-48cf-a479-7511e9b8ddcf" name="ModelingProject1">
+    <elementDefinition Id="281249fd-b010-4d7b-80b4-f27a13834471" />
+  </package>
+</activityRootModel>

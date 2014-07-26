@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="281249fd-b010-4d7b-80b4-f27a13834471"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="df131b42-49db-4845-a6e6-f6ce287abe07">
+      <body>Существует ли выделеное слово?</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="109eac01-9844-49d7-90e1-d6231101a676"
+          LastKnownName="Decision1"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -1229,6 +1241,213 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="a4f7a005-bb5a-4a63-bd08-f250edf5cd4b"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="d63fbfba-a422-451c-9169-62c972456b9c"
+            name="Выделить слово"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="104d89e5-57d8-4d84-9007-97e301fb95fe"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="04df76ce-b3b7-41ed-a79e-804006194de3"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="58b96246-4ec9-4a80-8053-5e34716d0304"
+            name="Отменить выделение"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="57943978-e302-4c5f-a149-352ae5835cbb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
+                  LastKnownName="Получение права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e1dee453-db03-4162-8a3e-d454c1f430f5"
+            name="Отправить слово"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="465aeb2d-1abd-4f55-9123-bba88297d798"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="109eac01-9844-49d7-90e1-d6231101a676"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="04df76ce-b3b7-41ed-a79e-804006194de3"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cb9e6edb-439a-4015-bee7-a5f2fe663d3a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="58b96246-4ec9-4a80-8053-5e34716d0304"
+                  LastKnownName="Отменить выделение"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0003a224-2296-4f0f-a5c0-1ef574d9998b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e1dee453-db03-4162-8a3e-d454c1f430f5"
+                  LastKnownName="Отправить слово"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode
+            Id="109eac01-9844-49d7-90e1-d6231101a676"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6b06a52f-6dad-4d53-aadf-32c589c4bca2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="58b96246-4ec9-4a80-8053-5e34716d0304"
+                  LastKnownName="Отменить выделение"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="062ed3ff-336b-49d3-bbab-60aa6a01dd4d"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
+            name="Получение права на ход"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="472a13c2-eea4-49d5-af3d-58db12b6a420"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="8bb94784-3173-4a13-b83c-b340fcc5b054"
+                  LastKnownName="Fork2"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="4fc6d0a6-fc20-4792-95e6-49bb9948e55d"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="580df3a8-5427-496a-9d94-955261023754"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
+                  LastKnownName="Получение права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <forkNode
+            Id="8bb94784-3173-4a13-b83c-b340fcc5b054"
+            name="Fork2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="44106289-1169-4c49-85cb-68622f582d51"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d63fbfba-a422-451c-9169-62c972456b9c"
+                  LastKnownName="Выделить слово"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e2558b6e-0fd5-4d4d-a46e-cdaf878a46e8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8f8de7dd-5b6c-418f-a706-717fd8218e1c"
+                  LastKnownName="Пропустить ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="8f8de7dd-5b6c-418f-a706-717fd8218e1c"
+            name="Пропустить ход"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fe15bdbc-c94c-4720-ad93-05bcc5210293"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d7235865-12ae-44b6-9cdb-3622a2e75bd8"
+            name="Передача хода другому игроку"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ba0f1593-669b-4d63-9999-c132769047e9"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="44753708-216a-4d4f-871f-39bebaba66fc"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0ba3fb1b-0c1b-419b-9e83-41aa19bc667a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d7235865-12ae-44b6-9cdb-3622a2e75bd8"
+                  LastKnownName="Передача хода другому игроку"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <activityFinalNode
+            Id="44753708-216a-4d4f-871f-39bebaba66fc"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
