@@ -21,22 +21,21 @@ namespace Balda.Data
         private int botsCount;
         private int _activePlayer;
 
-
         private FindWordAlgorithm algorithm;
 
         public GameManager()
         {
             _board.setSize(size, size);
-            algorithm = new FindWordAlgorithm(_board, usedWords);           
+            algorithm = new FindWordAlgorithm(_board, usedWords);
         }
 
-        //Return ширину словарь
+        ////Return ширину словарь
         public Dictionary getDictionary()
         {
             return _dictionary;
         }
 
-        //Генерирует стартовое поле
+        ////Генерирует стартовое поле
         public void generetaBoard()
         {
             _board.clear();
@@ -46,7 +45,7 @@ namespace Balda.Data
             {
                 for (int col = 0; col < _board.width(); col++)
                 {
-                    _board.setCellValue("", row, col);
+                    _board.setCellValue(string.Empty, row, col);
                 }
             }
 
@@ -64,13 +63,13 @@ namespace Balda.Data
             }
         }
 
-        //Return поле
+        ////Return поле
         public GameBoard getGameBoard()
         {
             return _board;
         }
 
-        //Return клавиатуру
+        ////Return клавиатуру
         public GameKeys getKeyBoard()
         {
             return _keyBoard;
@@ -81,92 +80,86 @@ namespace Balda.Data
             return size;
         }
 
-        //Return ширину клавиатуры
+        ////Return ширину клавиатуры
         public int getWidth()
         {
             return width;
         }
 
-        //Return висоту клавиатуры
+        ////Return висоту клавиатуры
         public int getHeigth()
         {
             return heigth;
         }
 
-        //Определяет, было ли слово использовано в игре
+        ////Определяет, было ли слово использовано в игре
         public bool wordIsUsed(string word)
         {
             return usedWords.Contains(word);
         }
 
-        //Генерируем игроков
+        ////Генерируем игроков
         public void generatePalyers()
         {
             playersList.Clear();
             playersList.Add(DataUserManager.DataUser.getCurrentUser());
-            if (Settings.Setting.getIsBot())
+            if (Settings.setting.getIsBot())
             {
                 playersList.Add(new Bot("Bot ", botComplexity, algorithm));
             }
             else
             {
-                playersList.Add(new User(Settings.Setting.getNamePlayer()));
+                playersList.Add(new User(Settings.setting.getNamePlayer()));
             }
-            
-            
-
         }
 
-        //Передает управление между игроками
+        ////Передает управление между игроками
         public void exchangePlayer()
         {
-            if(determineWinner() != null)
+            if (determineWinner() != null)
             {
                 return;
             }
-        
-        updateUsedWords();
 
-        // Сменить игрока
-        _activePlayer++;
-        if(_activePlayer >= playersList.Count) {
-            _activePlayer = 0;
-        }
-        
-        // Если следующий игрок сдался, переходим к ещё следующему
-        if(activePlayer().isSurrender()) {
-            exchangePlayer();
-        }
-        
-        // Если текущий игрок бот, то он сразу делает ход 
-        // и переходим к следующему игроку
-        if(activePlayer() is Bot) {
-            ((Bot)activePlayer()).solution();
-            exchangePlayer();
-        }
- 
+            updateUsedWords();
+
+            //// Сменить игрока
+            _activePlayer++;
+            if (_activePlayer >= playersList.Count)
+            {
+                _activePlayer = 0;
+            }
+
+            //// Если следующий игрок сдался, переходим к ещё следующему
+            if (activePlayer().isSurrender())
+            {
+                exchangePlayer();
+            }
+
+            //// Если текущий игрок бот, то он сразу делает ход
+            //// и переходим к следующему игроку
+            if (activePlayer() is Bot)
+            {
+                ((Bot)activePlayer()).solution();
+                exchangePlayer();
+            }
         }
 
-        //Обновляет список использованых слов
+        ////Обновляет список использованых слов
         public void updateUsedWords()
         {
             string firstWord = usedWords[0];
             usedWords.Clear();
             usedWords.Add(firstWord);
             foreach (User user in players())
-            {
                 foreach (string word in user.getWordsList())
-                {
-
                     usedWords.Add(word);
-                }
-            }
         }
 
-        //Определяет победителя
+        ////Определяет победителя
         public User determineWinner()
         {
-            //Игра закончена, если поле заполнено
+            ////Игра закончена, если поле заполнено
             if (fieldIsFull() == true)
             {
                 User winner = new User();
@@ -182,7 +175,7 @@ namespace Balda.Data
                 }
                 return winner;
             }
-            //Игра закончена, если в игре остался только один игрок
+            ////Игра закончена, если в игре остался только один игрок
             if (countPlayersInGame() < 2)
             {
                 foreach (User user in playersList)
@@ -193,75 +186,46 @@ namespace Balda.Data
                     }
                 }
             }
-            //Игра закончена, если все оставшиеся игроки боты
+            ////Игра закончена, если все оставшиеся игроки боты
             bool humanInGame = false;
-            
+
+            foreach (User user in playersList)
+            {
+                if (!user.isSurrender() && !(user is Bot))
+                {
+                    humanInGame = true;
+                }
+            }
+
+            if (!humanInGame)
+            {
                 foreach (User user in playersList)
                 {
-                    if (!user.isSurrender() && !(user is Bot))
+                    if (!user.isSurrender())
                     {
-                        humanInGame = true;
- 
-                    }
-                }
-                if (!humanInGame)
-                {
-                    foreach (User user in playersList)
-                    {
-                        if (!user.isSurrender())
-                        {
-                            return user;
-                        }
-                    }
- 
-                }
-                return null;
-        }
-
-        //Определяет, заполнено или нет игровое поле
-        bool fieldIsFull()
-        {
-            for (int row = 0; row < _board.heigth(); row++)
-            {
-                for (int col = 0; col < _board.width(); col++)
-                {
-                    if (_board.getCellValue(row, col).Equals(""))
-                    {
-                        return false;
+                        return user;
                     }
                 }
             }
-            return true;
+            return null;
         }
 
-        //Возвращает к-во играющих игроков
-        int countPlayersInGame() {
-        int countPlayers = 0;
-        foreach(User p in playersList) {
-            if(!p.isSurrender()) {
-                countPlayers++;
-            }
-        }
-        return countPlayers;
-    }
-
-        //Возвращает список использованых слов в игре
+        ////Возвращает список использованых слов в игре
         public List<string> getUsedWord()
         {
             return usedWords;
         }
 
-        //Задаёт количество игроков-людей
+        ////Задаёт количество игроков-людей
         public void setPlayerCOunt(int count)
         {
             if (count > 0 && count < 6)
             {
                 playersCount = count;
             }
- 
         }
 
-        //Задаёт количество игроков-ботов
+        ////Задаёт количество игроков-ботов
         public void setBotsCount(int count)
         {
             if (count > 0 && count < 3)
@@ -270,7 +234,7 @@ namespace Balda.Data
             }
         }
 
-        //Задаёт сложность ботов
+        ////Задаёт сложность ботов
         public void setBotsComplexity(int compl)
         {
             if (compl == 0 || compl == 1 || compl == 2)
@@ -279,7 +243,7 @@ namespace Balda.Data
             }
         }
 
-        //Возвращает текущего игрока
+        ////Возвращает текущего игрока
         public User activePlayer()
         {
             return playersList[_activePlayer];
@@ -310,7 +274,36 @@ namespace Balda.Data
             {
                 user.getWordsList().Clear();
             }
-            
+        }
+
+        ////Определяет, заполнено или нет игровое поле
+        private bool fieldIsFull()
+        {
+            for (int row = 0; row < _board.heigth(); row++)
+            {
+                for (int col = 0; col < _board.width(); col++)
+                {
+                    if (_board.getCellValue(row, col).Equals(string.Empty))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        ////Возвращает к-во играющих игроков
+        private int countPlayersInGame()
+        {
+            int countPlayers = 0;
+            foreach (User p in playersList)
+            {
+                if (!p.isSurrender())
+                {
+                    countPlayers++;
+                }
+            }
+            return countPlayers;
         }
     }
 }

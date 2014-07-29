@@ -1,29 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.OleDb;
+﻿using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 
 namespace Balda.Data
 {
     public class User
     {
         protected string nickname;
-        string firstName;
-        string secondName;
-        string password;
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbConnection connect = new OleDbConnection();
-        OleDbDataReader dr;
+        private string firstName;
+        private string secondName;
+        private string password;
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
+        private OleDbCommand cmd = new OleDbCommand();
+        private OleDbConnection connect = new OleDbConnection();
+        private OleDbDataReader dr;
+        private List<string> words = new List<string>();
+        private bool _isSurrender = false;
 
+        public User(string nickname, string name, string sername, string password)
+        {
+            this.nickname = nickname;
+            this.firstName = name;
+            this.secondName = sername;
+            this.password = password;
+            connect.ConnectionString = connectionString;
+            cmd.Connection = connect;
+        }
 
-        
-        List<string> words = new List<string>();
-        bool _isSurrender = false;
-        
+        public User(string nickname)
+        {
+            this.nickname = nickname;
+        }
+
+        public User()
+        {
+        }
+
         public string getNickname()
         {
             return this.nickname;
@@ -59,25 +71,6 @@ namespace Balda.Data
             return _isSurrender;
         }
 
-        public User(string nickname, string name, string sername, string password)
-        {
-            this.nickname = nickname;
-            this.firstName = name;
-            this.secondName = sername;
-            this.password = password;
-            connect.ConnectionString = connectionString;
-            cmd.Connection = connect;
-
-        }
-
-        public User(string nickname)
-        {
-            this.nickname = nickname;
-        }
-
-        public User()
-        { }
-
         public void insert()
         {
             connect.Open();
@@ -101,10 +94,10 @@ namespace Balda.Data
             {
                 cmd.CommandText = "INSERT INTO [User] ([Nickname], [Name], [Sername], [Password]) values (?,?,?,?)";
 
-                cmd.Parameters.Add("", OleDbType.VarChar).Value = nickname;
-                cmd.Parameters.Add("", OleDbType.VarChar).Value = firstName;
-                cmd.Parameters.Add("", OleDbType.VarChar).Value = secondName;
-                cmd.Parameters.Add("", OleDbType.VarChar).Value = password;
+                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = nickname;
+                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = firstName;
+                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = secondName;
+                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = password;
                 cmd.ExecuteNonQuery();
                 connect.Close();
             }

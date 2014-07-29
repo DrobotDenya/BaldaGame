@@ -9,13 +9,15 @@ namespace Balda.Data
     public class Settings
     {
         private static Settings settings;
+        private int botComplexity = 1;
+        private bool isBot = true;
+        private string playerName;
 
-        private Settings() 
+        private Settings()
         {
-          
         }
 
-        public static Settings Setting
+        public static Settings setting
         {
             get
             {
@@ -26,10 +28,6 @@ namespace Balda.Data
                 return settings;
             }
         }
-
-        private int botComplexity = 1;
-        private bool isBot = true;
-        private string playerName;
 
         public void setBotComplexity(int complexity)
         {
@@ -44,7 +42,6 @@ namespace Balda.Data
         public void setPlayerName(string name)
         {
             playerName = name;
- 
         }
 
         public int getBotComplexity()

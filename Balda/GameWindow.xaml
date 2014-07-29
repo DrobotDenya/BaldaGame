@@ -5,6 +5,19 @@
         xmlns:custom="clr-namespace:Balda"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Data="clr-namespace:Balda.Data" xmlns:Data1="clr-namespace:Balda.Data;assembly=Balda.Data" mc:Ignorable="d" x:Class="Balda.GameWindow"
         Title="GameWindow" Height="750" Width="940.455" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" MinWidth="940.455" MaxWidth="940.455" MinHeight="750" MaxHeight="750" Closed="Window_Closed">
+    
+    
+    
+    
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Solaris"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Background" Value="LightGreen"/>
+        </Style>
+    </Window.Resources>
     <Grid RenderTransformOrigin="0.421,0.528">
 
         <Grid.Background>
@@ -22,11 +35,10 @@
         <Label x:Name="value1" Content="0" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C"/>
         <Rectangle Fill="#FF72EA6C" HorizontalAlignment="Left" Height="68" Margin="540,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5"/>
         <Label x:Name="value2" Content="0" HorizontalAlignment="Left" Margin="540,10,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="395,400,0,0" VerticalAlignment="Top" Width="140" Height="50" Background="#FF72EA6C" FontSize="22" Foreground="#FF6370C7" Click="btnSubmit_Click"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="395,400,0,0" VerticalAlignment="Top" Width="140" Height="50" FontSize="22"  Click="btnSubmit_Click"/>
         <WrapPanel x:Name="board" HorizontalAlignment="Left" Height="300" Margin="308,96,0,0" VerticalAlignment="Top" Width="300" Background="White"/>
         <WrapPanel x:Name="keyboard" HorizontalAlignment="Left" Height="180" Margin="141,455,0,0" VerticalAlignment="Top" Width="660" Background="White"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="250,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Background="#FF72EA6C" FontSize="22" Foreground="#FF6370C7" Click="btnCancel_Click"/>
-        <Button x:Name="btnMiss" Content="Miss" HorizontalAlignment="Left" Margin="540,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Background="#FF72EA6C" FontSize="22" Foreground="#FF6370C7" Click="btnMiss_Click"/>
-
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="250,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="btnCancel_Click"/>
+        <Button x:Name="btnMiss" Content="Miss" HorizontalAlignment="Left" Margin="540,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="btnMiss_Click"/>
     </Grid>
 </Window>
