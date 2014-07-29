@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.OleDb;
-using System.Data;
 
 namespace Balda.Data
 {
     public class Word
     {
-        string word;
-        int value;
-        int player;
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\DataBase.accdb";
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbConnection connect = new OleDbConnection();
-        OleDbDataReader dr;
+        private string word;
+        private int value;
+        private int player;
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\DataBase.accdb";
+        private OleDbCommand cmd = new OleDbCommand();
+        private OleDbConnection connect = new OleDbConnection();
+        private OleDbDataReader dr;
 
         public Word(string word, int value, int player)
         {
@@ -25,13 +25,13 @@ namespace Balda.Data
             this.player = player;
             connect.ConnectionString = connectionString;
             cmd.Connection = connect;
-      }
+        }
 
         public void insert()
         {
             connect.Open();
             string q = "select * from [TABLE]";
-            cmd.CommandText = q;          
+            cmd.CommandText = q;
             dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -50,16 +50,15 @@ namespace Balda.Data
             {
                 cmd.CommandText = "INSERT INTO [TABLE] ([Word], [Value], [Player]) values (?,?,?)";
 
-                cmd.Parameters.Add("", OleDbType.VarChar).Value = word;
-                cmd.Parameters.Add("", OleDbType.Integer).Value = value;
-                cmd.Parameters.Add("", OleDbType.Integer).Value = player;
+                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = word;
+                cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = value;
+                cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = player;
                 cmd.ExecuteNonQuery();
                 connect.Close();
             }
-            
         }
 
-        void remove()
+        private void remove()
         {
             connect.Open();
             string q = "select * from [TABLE]";
@@ -73,13 +72,11 @@ namespace Balda.Data
                     {
                         cmd.CommandText = "DELETE FROM [TABLE] WHERE [Word]=" + this.word;
                         cmd.ExecuteNonQuery();
-                        
                     }
                 }
             }
             dr.Close();
-                connect.Close();;
-           
+            connect.Close();
         }
     }
 }

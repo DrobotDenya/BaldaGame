@@ -34,7 +34,7 @@ namespace Balda
         {
             InitializeComponent();
 
-            gameManager.setBotsComplexity(Settings.Setting.getBotComplexity());
+            gameManager.setBotsComplexity(Settings.setting.getBotComplexity());
 
             gameManager.start();
 

@@ -11,30 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Balda.Data
 {
-    /// <summary>
-    /// Interaction logic for Cell.xaml
-    /// </summary>
-    
     public partial class Cell : UserControl
     {
+       //// public event MouseButtonEventHandler MouseDownn;
 
-       // public event MouseButtonEventHandler MouseDownn;
-
-       
         public bool isSelected = false;
-        
+
         public Cell()
         {
             InitializeComponent();
-            
-            
-            
         }
-      
 
         public void setText(string s)
         {
@@ -46,19 +35,8 @@ namespace Balda.Data
             return (string)mainLabel.Content;
         }
 
-
-        public void Cell_MouseDown(object sender, MouseEventArgs e)
+        public void cell_MouseDown(object sender, MouseEventArgs e)
         {
-            //if (isSelected == true)
-            //{
-            //    isSelected = false;
-            //    cell.BorderBrush = Brushes.White;
-            //}
-            //else {
-
-            //    isSelected = true;
-            //    cell.BorderBrush = Brushes.Red;
-            //}
         }
     }
 }

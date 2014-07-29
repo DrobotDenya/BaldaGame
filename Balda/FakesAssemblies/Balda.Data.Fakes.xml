@@ -73,9 +73,6 @@
         <member name="P:Balda.Data.Fakes.ShimCell.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimCell.Cell_MouseDownObjectMouseEventArgs">
-            <summary>Sets the shim of Cell.Cell_MouseDown(Object sender, MouseEventArgs e)</summary>
-        </member>
         <member name="P:Balda.Data.Fakes.ShimCell.Constructor">
             <summary>Sets the shim of Cell.Cell()</summary>
         </member>
@@ -84,6 +81,9 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimCell.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
             <summary>Sets the shim of Cell.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.cell_MouseDownObjectMouseEventArgs">
+            <summary>Sets the shim of Cell.cell_MouseDown(Object sender, MouseEventArgs e)</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimCell.getText">
             <summary>Sets the shim of Cell.getText()</summary>
@@ -94,14 +94,14 @@
         <member name="T:Balda.Data.Fakes.ShimCell.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.Cell_MouseDownObjectMouseEventArgs">
-            <summary>Sets the shim of Cell.Cell_MouseDown(Object sender, MouseEventArgs e)</summary>
-        </member>
         <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.InitializeComponent">
             <summary>Sets the shim of Cell.InitializeComponent()</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
             <summary>Sets the shim of Cell.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.cell_MouseDownObjectMouseEventArgs">
+            <summary>Sets the shim of Cell.cell_MouseDown(Object sender, MouseEventArgs e)</summary>
         </member>
         <member name="P:Balda.Data.Fakes.ShimCell.AllInstances.getText">
             <summary>Sets the shim of Cell.getText()</summary>
@@ -553,9 +553,6 @@
         <member name="P:Balda.Data.Fakes.ShimSettings.Constructor">
             <summary>Sets the shim of Settings.Settings()</summary>
         </member>
-        <member name="P:Balda.Data.Fakes.ShimSettings.SettingGet">
-            <summary>Sets the shim of Settings.get_Setting()</summary>
-        </member>
         <member name="P:Balda.Data.Fakes.ShimSettings.getBotComplexity">
             <summary>Sets the shim of Settings.getBotComplexity()</summary>
         </member>
@@ -573,6 +570,9 @@
         </member>
         <member name="P:Balda.Data.Fakes.ShimSettings.setPlayerNameString">
             <summary>Sets the shim of Settings.setPlayerName(String name)</summary>
+        </member>
+        <member name="P:Balda.Data.Fakes.ShimSettings.settingGet">
+            <summary>Sets the shim of Settings.get_setting()</summary>
         </member>
         <member name="T:Balda.Data.Fakes.ShimSettings.AllInstances">
             <summary>Define shims for all instances members</summary>

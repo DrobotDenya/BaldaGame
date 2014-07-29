@@ -2,6 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="StartWindow" Height="321.053" Width="306.578" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Solaris"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="BorderBrush" Value="Orange"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Label Content="Балда&#xD;&#xA;" HorizontalAlignment="Center" Margin="21,42,43,135" VerticalAlignment="Center" Width="235" Height="106" RenderTransformOrigin="0.5,0.5" FontSize="72" Background="{x:Null}" Foreground="#FFE89114" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <Label.RenderTransform>
@@ -24,7 +33,7 @@
             </Label.RenderTransform>
         </Label>
         <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="23" Margin="93,187,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.416,-0.094" BorderThickness="3" BorderBrush="#FFE89114" TextChanged="textBoxLogin_TextChanged" TextAlignment="Center"/>
-        <Button Content="Play" HorizontalAlignment="Left" Margin="216,245,0,0" VerticalAlignment="Top" Width="69" Background="{x:Null}" BorderBrush="Black" BorderThickness="2" Foreground="#FFE89114" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Play" HorizontalAlignment="Left" Margin="216,245,0,0" VerticalAlignment="Top" Width="69" Background="{x:Null}" Foreground="#FFE89114" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,6 +46,5 @@
         <TextBox x:Name="tbxPassword" HorizontalAlignment="Left" Height="16" Margin="93,215,0,0" TextWrapping="Wrap" Text="Password
 " VerticalAlignment="Top" Width="120" TextAlignment="Center" BorderBrush="#FFE89114" BorderThickness="3" FontSize="8"/>
         <TextBlock x:Name="textBlockRegistration" HorizontalAlignment="Left" Margin="93,231,0,0" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Width="120" FontSize="9" TextDecorations="Underline" TextAlignment="Center" Foreground="#FF122EDE" MouseDown="textBlockRegistration_MouseDown"/>
-
     </Grid>
 </Window>

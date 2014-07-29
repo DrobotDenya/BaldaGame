@@ -27,11 +27,11 @@ namespace Balda
             listboxDifficulty.Items.Add("Easy");
             listboxDifficulty.Items.Add("Normal");
             listboxDifficulty.Items.Add("Hard");
-            listboxDifficulty.SelectedIndex = Settings.Setting.getBotComplexity();
-            checkBoxPalyers.IsChecked = !Settings.Setting.getIsBot();
+            listboxDifficulty.SelectedIndex = Settings.setting.getBotComplexity();
+            checkBoxPalyers.IsChecked = !Settings.setting.getIsBot();
             if (checkBoxPalyers.IsChecked.Value)
             {
-                textBoxPlayerTwoName.Text = Settings.Setting.getNamePlayer();
+                textBoxPlayerTwoName.Text = Settings.setting.getNamePlayer();
            }
            
         }
@@ -62,9 +62,9 @@ namespace Balda
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Settings.Setting.setBotComplexity(listboxDifficulty.SelectedIndex);
-            Settings.Setting.setIsBot(!checkBoxPalyers.IsChecked.Value);
-            Settings.Setting.setPlayerName(textBoxPlayerTwoName.Text);
+            Settings.setting.setBotComplexity(listboxDifficulty.SelectedIndex);
+            Settings.setting.setIsBot(!checkBoxPalyers.IsChecked.Value);
+            Settings.setting.setPlayerName(textBoxPlayerTwoName.Text);
             this.Close();
 
             

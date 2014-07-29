@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Balda.Data
 {
     public class Bot : User
     {
-        int levelOfComplexity = 0;
-        FindWordAlgorithm alho = new FindWordAlgorithm();
-
+        private int levelOfComplexity = 0;
+        private FindWordAlgorithm alho = new FindWordAlgorithm();
 
         public Bot(string name, int level, FindWordAlgorithm alho)
         {
@@ -28,38 +22,35 @@ namespace Balda.Data
 
         public int solution()
         {
-            //alho.findWords();
+            ////alho.findWords();
             string findedWord;
             if (levelOfComplexity == 1 || levelOfComplexity == 0)
             {
                 findedWord = alho.findWord();
-                if (findedWord.Equals("") == false)
+                if (findedWord.Equals(string.Empty) == false)
                 {
                     addWord(findedWord);
                     return 1;
- 
                 }
             }
 
             if (levelOfComplexity == 2)
             {
                 findedWord = alho.findWordWithMaxLength();
-                if (findedWord.Equals("") == false)
+                if (findedWord.Equals(string.Empty) == false)
                 {
                     addWord(findedWord);
                     return 1;
-
                 }
             }
-            //Если слово не найдено и бот легкий, то он сдается
+            ////Если слово не найдено и бот легкий, то он сдается
             if (levelOfComplexity == 0)
             {
                 surrender();
                 return 0;
             }
-            //Иначе пропускает ход
-            return 0;           
+            ////Иначе пропускает ход
+            return 0;
         }
-            
     }
 }

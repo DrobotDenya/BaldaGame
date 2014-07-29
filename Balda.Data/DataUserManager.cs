@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Data.OleDb;
-using System.Data;
 
 namespace Balda.Data
 {
     public class DataUserManager
     {
-        
         private static DataUserManager dataUser;
+        private OleDbDataReader dr;
+        private User currentUser;
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
+        private OleDbCommand cmd = new OleDbCommand();
+        private OleDbConnection connect = new OleDbConnection();
 
-        private DataUserManager() 
+        private DataUserManager()
         {
-          connect.ConnectionString = connectionString;
-          cmd.Connection = connect;
-          //readAllUser();
+            connect.ConnectionString = connectionString;
+            cmd.Connection = connect;
+            ////readAllUser();
         }
 
         public static DataUserManager DataUser
@@ -28,16 +27,10 @@ namespace Balda.Data
                 {
                     dataUser = new DataUserManager();
                 }
+
                 return dataUser;
             }
         }
-     
-        User currentUser;
-
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbConnection connect = new OleDbConnection();
-        OleDbDataReader dr;
 
         public bool findUser(string nickname, string password)
         {
@@ -45,6 +38,7 @@ namespace Balda.Data
             {
                 connect.Open();
             }
+
             string q = "select * from [User]";
             cmd.CommandText = q;
             dr = cmd.ExecuteReader();
@@ -57,13 +51,14 @@ namespace Balda.Data
                         currentUser = new User((string)dr[0], (string)dr[1], (string)dr[2], (string)dr[3]);
                         return true;
                     }
-                    //userList.Add(user);
+                    ////userList.Add(user);
                 }
             }
+
             dr.Close();
             return false;
         }
- 
+
         public User getCurrentUser()
         {
             return currentUser;

@@ -1,31 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace Balda.Data
 {
     public class Dictionary
     {
-        List<string> words = new List<string>();
+        private List<string> words = new List<string>();
 
         public Dictionary()
         {
             string word;
             string fileName = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\words.txt";
             StreamReader file = new StreamReader(fileName);
-            while((word = file.ReadLine()) != null)
-            {
-                if (!words.Contains(word))
-                {
+            while ((word = file.ReadLine()) != null)
+            {               
                     words.Add(word);
- 
-                }
             }
-            file.Close();
 
+            file.Close();
         }
 
         public int getCount()
@@ -44,11 +40,11 @@ namespace Balda.Data
             if (listwords.Count > 0)
             {
                 Random rand = new Random();
-                int randomNumb = rand.Next(0 ,listwords.Count);
-                return listwords[randomNumb];                 
+                int randomNumb = rand.Next(0, listwords.Count);
+                return listwords[randomNumb];
             }
+
             return null;
- 
         }
 
         public List<string> getWords(int length)
@@ -62,6 +58,7 @@ namespace Balda.Data
                     listWords.Add(word);
                 }
             }
+
             return listWords;
         }
 
@@ -74,11 +71,12 @@ namespace Balda.Data
         {
             foreach (string word in words)
             {
-                if (word.IndexOf(letters) != -1)//????????
+                if (word.IndexOf(letters) != -1)
                 {
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -95,13 +93,10 @@ namespace Balda.Data
                 if (word.Substring(0, word.Length - 2).IndexOf(word) != -1)
                 {
                     words.Add(word);
- 
                 }
             }
+
             return words;
         }
-
-
-        
     }
 }
