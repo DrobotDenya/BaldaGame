@@ -9,7 +9,7 @@ namespace Balda.Data
 {
     public class Dictionary
     {
-        private List<string> words = new List<string>();
+        private List<string> _words = new List<string>();
 
         public Dictionary()
         {
@@ -18,25 +18,25 @@ namespace Balda.Data
             StreamReader file = new StreamReader(fileName);
             while ((word = file.ReadLine()) != null)
             {               
-                    words.Add(word);
+                    _words.Add(word);
             }
 
             file.Close();
         }
 
-        public int getCount()
+        public int GetCount()
         {
-            return words.Count;
+            return _words.Count;
         }
 
-        public List<string> getDictionary()
+        public List<string> GetDictionary()
         {
-            return words;
+            return _words;
         }
 
-        public string getRandomWord(int length)
+        public string GetRandomWord(int length)
         {
-            List<string> listwords = getWords(length);
+            List<string> listwords = GetWords(length);
             if (listwords.Count > 0)
             {
                 Random rand = new Random();
@@ -47,11 +47,11 @@ namespace Balda.Data
             return null;
         }
 
-        public List<string> getWords(int length)
+        public List<string> GetWords(int length)
         {
             List<string> listWords = new List<string>();
 
-            foreach (string word in words)
+            foreach (string word in _words)
             {
                 if (word.Length == length)
                 {
@@ -62,14 +62,14 @@ namespace Balda.Data
             return listWords;
         }
 
-        public bool isExist(string word)
+        public bool IsExist(string word)
         {
-            return words.Contains(word);
+            return _words.Contains(word);
         }
 
-        public bool isCanExist(string letters)
+        public bool IsCanExist(string letters)
         {
-            foreach (string word in words)
+            foreach (string word in _words)
             {
                 if (word.IndexOf(letters) != -1)
                 {
@@ -80,7 +80,7 @@ namespace Balda.Data
             return false;
         }
 
-        public List<string> possibleWords(string letters)
+        public List<string> PossibleWords(string letters)
         {
             List<string> words = new List<string>();
             foreach (string word in words)

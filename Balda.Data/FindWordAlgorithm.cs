@@ -9,23 +9,23 @@ namespace Balda.Data
 {
     public class FindWordAlgorithm
     {
-        private GameBoard gameBoard = new GameBoard();
-        private List<string> userWord = new List<string>();
-        private Dictionary dictionary = new Dictionary();
-        private string[,] temp;
-        private int[,] pr;
-        private int ai = 0;
-        private int aj = 0;
-        private int p, t;
-        private int curr = 0;
-        private string word;
-        private bool tl;
-        private bool bl;
+        private GameBoard _gameBoard = new GameBoard();
+        private List<string> _userWord = new List<string>();
+        private Dictionary _dictionary = new Dictionary();
+        private string[,] _strings;
+        private int[,] _pr;
+        private int _ai = 0;
+        private int _aj = 0;
+        private int _p, _t;
+        private int _curr = 0;
+        private string _word;
+        private bool _tl;
+        private bool _bl;
 
         public FindWordAlgorithm(GameBoard gameBoard, List<string> userWord)
         {
-            this.gameBoard = gameBoard;
-            this.userWord = userWord;
+            this._gameBoard = gameBoard;
+            this._userWord = userWord;
         }
 
         public FindWordAlgorithm()
@@ -33,58 +33,58 @@ namespace Balda.Data
         }
 
         ////Ищет все подходящие слова в словаре
-        public List<string> findWords()
+        public List<string> FindWords()
         {
             List<string> res = new List<string>();
-            temp = new string[gameBoard.width(), gameBoard.heigth()];
-            for (int row = 0; row < gameBoard.width(); row++)
-                for (int column = 0; column < gameBoard.heigth(); column++)
-                    temp[row, column] = string.Empty;
+            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
+            for (int row = 0; row < _gameBoard.Width(); row++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                    _strings[row, column] = string.Empty;
 
-            pr = new int[gameBoard.width(), gameBoard.heigth()];
-            for (int row = 0; row < gameBoard.width(); row++)
-                for (int column = 0; column < gameBoard.heigth(); column++)
-                    pr[row, column] = 0;
+            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
+            for (int row = 0; row < _gameBoard.Width(); row++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                    _pr[row, column] = 0;
 
-            while (curr < dictionary.getCount())
+            while (_curr < _dictionary.GetCount())
             {
-                word = dictionary.getDictionary()[curr];
-                if (!userWord.Contains(word))
+                _word = _dictionary.GetDictionary()[_curr];
+                if (!_userWord.Contains(_word))
                 {
-                    for (int row = 0; row < gameBoard.width(); row++)
-                        for (int column = 0; column < gameBoard.heigth(); column++)
-                            pr[row, column] = 0;
+                    for (int row = 0; row < _gameBoard.Width(); row++)
+                        for (int column = 0; column < _gameBoard.Heigth(); column++)
+                            _pr[row, column] = 0;
 
-                    tl = true;
+                    _tl = true;
                     ////Цикл по слову из словаря
-                    for (int k = 0; k < word.Length; k++)
+                    for (int k = 0; k < _word.Length; k++)
                     {
                         //// Цикл по самому массиву.
-                        for (int i = 0; i < gameBoard.width(); i++)
+                        for (int i = 0; i < _gameBoard.Width(); i++)
                         {
-                            for (int j = 0; j < gameBoard.heigth(); j++)
+                            for (int j = 0; j < _gameBoard.Heigth(); j++)
                             {
-                                if (gameBoard.getCellValue(i, j) == string.Empty)
+                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
                                 {
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
-                                            temp[ai, aj] = gameBoard.getCellValue(ai, aj);
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
 
-                                    gameBoard.setCellValue(word.Substring(k, 1), i, j);
-                                    bl = true;
-                                    p = k; // С какой буквы подставляли для поиска в конец слова
-                                    t = k; // С какой буквы подставляли для поиска в начало слова
-                                    ai = i;
-                                    aj = j;
+                                    _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
+                                    _bl = true;
+                                    _p = k; // С какой буквы подставляли для поиска в конец слова
+                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _ai = i;
+                                    _aj = j;
 
-                                    for (int i1 = 0; i1 < gameBoard.width(); ++i1)
-                                        for (int j1 = 0; j1 < gameBoard.heigth(); ++j1)
-                                            pr[i1, j1] = 0;
+                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
+                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
+                                            _pr[i1, j1] = 0;
 
-                                    pr[i, j] = 1;
-                                    for (p = p + 1; p < word.Length; p++)
+                                    _pr[i, j] = 1;
+                                    for (_p = _p + 1; _p < _word.Length; _p++)
                                     {
-                                        if (checkLetter(p))
+                                        if (CheckLetter(_p))
                                             continue;
                                         else
                                         {
@@ -92,54 +92,54 @@ namespace Balda.Data
                                         }
                                     }
 
-                                    ai = i;
-                                    aj = j;
-                                    if (bl)
+                                    _ai = i;
+                                    _aj = j;
+                                    if (_bl)
                                     {
-                                        for (t = t - 1; t >= 0; t--)
-                                            if (checkLetter(t))
+                                        for (_t = _t - 1; _t >= 0; _t--)
+                                            if (CheckLetter(_t))
                                                 continue;
                                             else
                                             {
                                                 break;
                                             }
 
-                                        if (bl)
+                                        if (_bl)
                                         {
-                                            res.Add(word);
-                                            for (ai = 0; ai < 5; ai++)
-                                                for (aj = 0; aj < 5; aj++)
-                                                    gameBoard.setCellValue(temp[ai, aj], ai, aj);
+                                            res.Add(_word);
+                                            for (_ai = 0; _ai < 5; _ai++)
+                                                for (_aj = 0; _aj < 5; _aj++)
+                                                    _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);
 
-                                            tl = false;
+                                            _tl = false;
                                             break;   //// Слово подошло переходим к следующему слову
                                         }
                                     }
 
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
-                                            gameBoard.setCellValue(temp[ai, aj], ai, aj);  //// восстановили массив, в текущем состоянии.
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  //// восстановили массив, в текущем состоянии.
                                 }
                             }
 
-                            if (!tl)
+                            if (!_tl)
                             {
                                 break;
                             }
                         }
                     }
 
-                    curr++;
+                    _curr++;
                 }
                 else
                 {
-                    curr++;
+                    _curr++;
                 }
             }
             return res;
         }
 
-        public int maxLength(List<string> words)
+        public int MaxLength(List<string> words)
         {
             int length = 0;
 
@@ -154,72 +154,72 @@ namespace Balda.Data
         }
 
         ////Возворащает первое подходящие слово из словаря
-        public string findWord()
+        public string FindWord()
         {
-            temp = new string[gameBoard.width(), gameBoard.heigth()];
-            for (int row = 0; row < gameBoard.width(); row++)
+            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
+            for (int row = 0; row < _gameBoard.Width(); row++)
             {
-                for (int column = 0; column < gameBoard.heigth(); column++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
                 {
-                    temp[row, column] = string.Empty;
+                    _strings[row, column] = string.Empty;
                 }
             }
-            pr = new int[gameBoard.width(), gameBoard.heigth()];
+            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
 
-            for (int row = 0; row < gameBoard.width(); row++)
+            for (int row = 0; row < _gameBoard.Width(); row++)
             {
-                for (int column = 0; column < gameBoard.heigth(); column++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
                 {
-                    pr[row, column] = 0;
+                    _pr[row, column] = 0;
                 }
             }
 
-            while (curr < dictionary.getCount())
+            while (_curr < _dictionary.GetCount())
             {
-                word = dictionary.getDictionary()[curr];
-                if (!userWord.Contains(word))
+                _word = _dictionary.GetDictionary()[_curr];
+                if (!_userWord.Contains(_word))
                 {
-                    for (int i = 0; i < gameBoard.width(); ++i)
+                    for (int i = 0; i < _gameBoard.Width(); ++i)
                     {
-                        for (int j = 0; j < gameBoard.heigth(); ++j)
+                        for (int j = 0; j < _gameBoard.Heigth(); ++j)
                         {
-                            pr[i, j] = 0;
+                            _pr[i, j] = 0;
                         }
                     }
-                    tl = true;
-                    for (int k = 0; k < word.Length; k++)
+                    _tl = true;
+                    for (int k = 0; k < _word.Length; k++)
                     {
-                        for (int i = 0; i < gameBoard.width(); i++)
+                        for (int i = 0; i < _gameBoard.Width(); i++)
                         {
-                            for (int j = 0; j < gameBoard.heigth(); j++)
+                            for (int j = 0; j < _gameBoard.Heigth(); j++)
                             {
-                                if (gameBoard.getCellValue(i, j) == string.Empty)
+                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
                                 {
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
                                     {
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            temp[ai, aj] = gameBoard.getCellValue(ai, aj);
+                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
                                         }
                                     }
-                                    gameBoard.setCellValue(word.Substring(k, 1), i, j);
-                                    bl = true;
-                                    p = k; // С какой буквы подставляли для поиска в конец слова
-                                    t = k; // С какой буквы подставляли для поиска в начало слова
-                                    ai = i;
-                                    aj = j;
-                                    for (int i1 = 0; i1 < gameBoard.width(); ++i1)
+                                    _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
+                                    _bl = true;
+                                    _p = k; // С какой буквы подставляли для поиска в конец слова
+                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _ai = i;
+                                    _aj = j;
+                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
                                     {
-                                        for (int j1 = 0; j1 < gameBoard.heigth(); ++j1)
+                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
                                         {
-                                            pr[i1, j1] = 0;
+                                            _pr[i1, j1] = 0;
                                         }
                                     }
-                                    pr[i, j] = 1;
-                                    for (p = p + 1; p < word.Length; p++)
+                                    _pr[i, j] = 1;
+                                    for (_p = _p + 1; _p < _word.Length; _p++)
                                     {
-                                        if (checkLetter(p))
+                                        if (CheckLetter(_p))
                                         {
                                             continue;
                                         }
@@ -228,13 +228,13 @@ namespace Balda.Data
                                             break;
                                         }
                                     }
-                                    ai = i;
-                                    aj = j;
-                                    if (bl)
+                                    _ai = i;
+                                    _aj = j;
+                                    if (_bl)
                                     {
-                                        for (t = t - 1; t >= 0; t--)
+                                        for (_t = _t - 1; _t >= 0; _t--)
                                         {
-                                            if (checkLetter(t))
+                                            if (CheckLetter(_t))
                                             {
                                                 continue;
                                             }
@@ -244,118 +244,118 @@ namespace Balda.Data
                                             }
                                         }
 
-                                        if (bl)
+                                        if (_bl)
                                         {
-                                            return word;
+                                            return _word;
                                         }
                                     }
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
                                     {
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
                                         {
-                                            gameBoard.setCellValue(temp[ai, aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
                                     }
                                 }
                             }
-                            if (!tl)
+                            if (!_tl)
                             {
                                 break;
                             }
                         }
                     }
-                    curr++;
+                    _curr++;
                 }
                 else
                 {
-                    curr++;
+                    _curr++;
                 }
             }
             return string.Empty;
         }
 
-        public string findWordWithMaxLength()
+        public string FindWordWithMaxLength()
         {
-            temp = new string[gameBoard.width(), gameBoard.heigth()];
+            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
 
-            for (int row = 0; row < gameBoard.width(); row++)
+            for (int row = 0; row < _gameBoard.Width(); row++)
             {
-                for (int column = 0; column < gameBoard.heigth(); column++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
                 {
-                    temp[row, column] = string.Empty;
+                    _strings[row, column] = string.Empty;
                 }
             }
-            pr = new int[gameBoard.width(), gameBoard.heigth()];
+            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
 
-            for (int row = 0; row < gameBoard.width(); row++)
+            for (int row = 0; row < _gameBoard.Width(); row++)
             {
-                for (int column = 0; column < gameBoard.heigth(); column++)
+                for (int column = 0; column < _gameBoard.Heigth(); column++)
                 {
-                    pr[row, column] = 0;
+                    _pr[row, column] = 0;
                 }
             }
-            List<string> dict = findWords();
-            curr = 0;
-            while (curr < dict.Count)
+            List<string> dict = FindWords();
+            _curr = 0;
+            while (_curr < dict.Count)
             {
-                word = dict[curr];
-                if (!userWord.Contains(word) && word.Length == maxLength(dict))
+                _word = dict[_curr];
+                if (!_userWord.Contains(_word) && _word.Length == MaxLength(dict))
                 {
-                    for (int i = 0; i < gameBoard.width(); ++i)
+                    for (int i = 0; i < _gameBoard.Width(); ++i)
                     {
-                        for (int j = 0; j < gameBoard.heigth(); ++j)
+                        for (int j = 0; j < _gameBoard.Heigth(); ++j)
                         {
-                            pr[i, j] = 0;
+                            _pr[i, j] = 0;
                         }
                     }
 
-                    tl = true;
-                    for (int k = 0; k < word.Length; k++)
+                    _tl = true;
+                    for (int k = 0; k < _word.Length; k++)
                     {
-                        for (int i = 0; i < gameBoard.width(); i++)
+                        for (int i = 0; i < _gameBoard.Width(); i++)
                         {
-                            for (int j = 0; j < gameBoard.heigth(); j++)
+                            for (int j = 0; j < _gameBoard.Heigth(); j++)
                             {
-                                if (gameBoard.getCellValue(i, j) == string.Empty)
+                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
                                 {
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
                                     {
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            temp[ai, aj] = gameBoard.getCellValue(ai, aj);
+                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
                                         }
                                     }
-                                    gameBoard.setCellValue(word.Substring(k, 1), i, j);
-                                    bl = true;
-                                    p = k; // С какой буквы подставляли для поиска в конец слова
-                                    t = k; // С какой буквы подставляли для поиска в начало слова
-                                    ai = i;
-                                    aj = j;
-                                    for (int i1 = 0; i1 < gameBoard.width(); ++i1)
+                                    _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
+                                    _bl = true;
+                                    _p = k; // С какой буквы подставляли для поиска в конец слова
+                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _ai = i;
+                                    _aj = j;
+                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
                                     {
-                                        for (int j1 = 0; j1 < gameBoard.heigth(); ++j1)
+                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
                                         {
-                                            pr[i1, j1] = 0;
+                                            _pr[i1, j1] = 0;
                                         }
                                     }
-                                    pr[i, j] = 1;
-                                    for (p = p + 1; p < word.Length; p++)
+                                    _pr[i, j] = 1;
+                                    for (_p = _p + 1; _p < _word.Length; _p++)
                                     {
-                                        if (checkLetter(p))
+                                        if (CheckLetter(_p))
                                             continue;
                                         else
                                         {
                                             break;
                                         }
                                     }
-                                    ai = i;
-                                    aj = j;
-                                    if (bl)
+                                    _ai = i;
+                                    _aj = j;
+                                    if (_bl)
                                     {
-                                        for (t = t - 1; t >= 0; t--)
+                                        for (_t = _t - 1; _t >= 0; _t--)
                                         {
-                                            if (checkLetter(t))
+                                            if (CheckLetter(_t))
                                             {
                                                 continue;
                                             }
@@ -364,83 +364,83 @@ namespace Balda.Data
                                                 break;
                                             }
                                         }
-                                        if (bl)
+                                        if (_bl)
                                         {
-                                            return word;
+                                            return _word;
                                         }
                                     }
-                                    for (ai = 0; ai < gameBoard.width(); ai++)
+                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
                                     {
-                                        for (aj = 0; aj < gameBoard.heigth(); aj++)
+                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
                                         {
-                                            gameBoard.setCellValue(temp[ai, aj], ai, aj);  // восстановили массив, в текущем состоянии.
+                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
                                     }
                                 }
                             }
-                            if (!tl)
+                            if (!_tl)
                             {
                                 break;
                             }
                         }
                     }
-                    curr++;
+                    _curr++;
                 }
                 else
                 {
-                    curr++;
+                    _curr++;
                 }
             }
             return string.Empty;
         }
 
         ////Определяет, есть ли буква на поле сверху или снизу или влева или справа текущей ячейки
-        public bool checkLetter(int index)
+        public bool CheckLetter(int index)
         {
-            string letter = word.Substring(index, 1);
+            string letter = _word.Substring(index, 1);
 
-            if (ai + 1 != gameBoard.width())
+            if (_ai + 1 != _gameBoard.Width())
             {
-                if ((gameBoard.getCellValue(ai + 1, aj) == letter)
-                        && (pr[ai + 1, aj] != 1))
+                if ((_gameBoard.GetCellValue(_ai + 1, _aj) == letter)
+                        && (_pr[_ai + 1, _aj] != 1))
                 {
-                    pr[ai + 1, aj] = 1;
-                    ai++;
+                    _pr[_ai + 1, _aj] = 1;
+                    _ai++;
                     return true;
                 }
             }
-            if (ai - 1 != -1)
+            if (_ai - 1 != -1)
             {
-                if ((gameBoard.getCellValue(ai - 1, aj) == letter)
-                        && (pr[ai - 1, aj] != 1))
+                if ((_gameBoard.GetCellValue(_ai - 1, _aj) == letter)
+                        && (_pr[_ai - 1, _aj] != 1))
                 {
-                    pr[ai - 1, aj] = 1;
-                    ai--;
+                    _pr[_ai - 1, _aj] = 1;
+                    _ai--;
                     return true;
                 }
             }
-            if (aj + 1 != gameBoard.heigth())
+            if (_aj + 1 != _gameBoard.Heigth())
             {
-                if ((gameBoard.getCellValue(ai, aj + 1) == letter)
-                        && (pr[ai, aj + 1] != 1))
+                if ((_gameBoard.GetCellValue(_ai, _aj + 1) == letter)
+                        && (_pr[_ai, _aj + 1] != 1))
                 {
-                    pr[ai, aj + 1] = 1;
-                    aj++;
+                    _pr[_ai, _aj + 1] = 1;
+                    _aj++;
                     return true;
                 }
             }
-            if (aj - 1 != -1)
+            if (_aj - 1 != -1)
             {
-                if ((gameBoard.getCellValue(ai, aj - 1) == letter)
-                        && (pr[ai, aj - 1] != 1))
+                if ((_gameBoard.GetCellValue(_ai, _aj - 1) == letter)
+                        && (_pr[_ai, _aj - 1] != 1))
                 {
-                    pr[ai, aj - 1] = 1;
-                    aj--;
+                    _pr[_ai, _aj - 1] = 1;
+                    _aj--;
                     return true;
                 }
             }
 
-            bl = false; // Если не совпало ни одно условие выше то это слово не подходит.
+            _bl = false; // Если не совпало ни одно условие выше то это слово не подходит.
             return false;
         }
     }

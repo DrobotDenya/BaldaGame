@@ -6,106 +6,106 @@ namespace Balda.Data
 {
     public class User
     {
-        protected string nickname;
-        private string firstName;
-        private string secondName;
-        private string password;
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
-        private OleDbCommand cmd = new OleDbCommand();
-        private OleDbConnection connect = new OleDbConnection();
-        private OleDbDataReader dr;
-        private List<string> words = new List<string>();
+        protected string _nickname;
+        private string _firstName;
+        private string _secondName;
+        private string _password;
+        private string _connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Users.accdb";
+        private OleDbCommand _cmd = new OleDbCommand();
+        private OleDbConnection _connect = new OleDbConnection();
+        private OleDbDataReader _dr;
+        private List<string> _words = new List<string>();
         private bool _isSurrender = false;
 
         public User(string nickname, string name, string sername, string password)
         {
-            this.nickname = nickname;
-            this.firstName = name;
-            this.secondName = sername;
-            this.password = password;
-            connect.ConnectionString = connectionString;
-            cmd.Connection = connect;
+            this._nickname = nickname;
+            this._firstName = name;
+            this._secondName = sername;
+            this._password = password;
+            _connect.ConnectionString = _connectionString;
+            _cmd.Connection = _connect;
         }
 
         public User(string nickname)
         {
-            this.nickname = nickname;
+            this._nickname = nickname;
         }
 
         public User()
         {
         }
 
-        public string getNickname()
+        public string GetNickname()
         {
-            return this.nickname;
+            return this._nickname;
         }
 
-        public void addWord(string word)
+        public void AddWord(string word)
         {
-            words.Add(word);
+            _words.Add(word);
         }
 
-        public List<string> getWordsList()
+        public List<string> GetWordsList()
         {
-            return words;
+            return _words;
         }
 
-        public int getPoints()
+        public int GetPoints()
         {
             int points = 0;
-            foreach (string word in words)
+            foreach (string word in _words)
             {
                 points += word.Length;
             }
             return points;
         }
 
-        public void surrender()
+        public void Surrender()
         {
             _isSurrender = true;
         }
 
-        public bool isSurrender()
+        public bool IsSurrender()
         {
             return _isSurrender;
         }
 
-        public void insert()
+        public void Insert()
         {
-            connect.Open();
+            _connect.Open();
             string q = "select * from [User]";
-            cmd.CommandText = q;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            _cmd.CommandText = q;
+            _dr = _cmd.ExecuteReader();
+            if (_dr.HasRows)
             {
-                while (dr.Read())
+                while (_dr.Read())
                 {
-                    if (this.nickname == dr[0].ToString())
+                    if (this._nickname == _dr[0].ToString())
                     {
-                        dr.Close();
-                        connect.Close();
+                        _dr.Close();
+                        _connect.Close();
                         break;
                     }
                 }
             }
-            dr.Close();
-            if (connect.State == ConnectionState.Open)
+            _dr.Close();
+            if (_connect.State == ConnectionState.Open)
             {
-                cmd.CommandText = "INSERT INTO [User] ([Nickname], [Name], [Sername], [Password]) values (?,?,?,?)";
+                _cmd.CommandText = "INSERT INTO [User] ([Nickname], [Name], [Sername], [Password]) values (?,?,?,?)";
 
-                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = nickname;
-                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = firstName;
-                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = secondName;
-                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = password;
-                cmd.ExecuteNonQuery();
-                connect.Close();
+                _cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = _nickname;
+                _cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = _firstName;
+                _cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = _secondName;
+                _cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = _password;
+                _cmd.ExecuteNonQuery();
+                _connect.Close();
             }
         }
 
-        public bool confirmPassword(string pswd)
+        public bool ConfirmPassword(string pswd)
         {
-            if (pswd == this.password)
+            if (pswd == this._password)
             {
                 return true;
             }

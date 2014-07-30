@@ -31,11 +31,10 @@
             </Button.RenderTransform>
         </Button>
         <DockPanel Height="269" LastChildFill="False" Margin="253,0,0,0" VerticalAlignment="Top">
-            <Button Style="{StaticResource VerticalButton}" Margin="10,30,10,10" Content="H&#xA;i&#xA;g&#xA;h&#xA;s&#xA;c&#xA;o&#xA;r&#xA;e" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="208" Click="Button_Click" Foreground="#FFECE32E"/>
+            <Button Style="{StaticResource VerticalButton}" Margin="10,30,10,10" Content="H&#xA;i&#xA;g&#xA;h&#xA;s&#xA;c&#xA;o&#xA;r&#xA;e" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="208" Click="Button_Click" Foreground="#FFECE32E" FontWeight="Thin"/>
         </DockPanel>
         <DockPanel Height="269" LastChildFill="False" VerticalAlignment="Top" Margin="0,0,248,0" FlowDirection="RightToLeft">
-            <Button Style="{StaticResource VerticalButton}" Margin="10,30,10,10" Content="S&#xA;e&#xA;t&#xA;t&#xA;i&#xA;n&#xA;g&#xA;s" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="208" Click="Button_Click"  Foreground="#FFD4CD2C"/>
+            <Button Style="{StaticResource VerticalButton}" Margin="10,30,10,10" Content="S&#xA;e&#xA;t&#xA;t&#xA;i&#xA;n&#xA;g&#xA;s" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="208" Click="Button_Click"  Foreground="#FFD4CD2C" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </DockPanel>
-
     </Grid>
 </Window>

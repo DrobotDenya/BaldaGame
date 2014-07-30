@@ -82,21 +82,21 @@
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
+                    <xs:MaxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Sername" msprop:Generator_ColumnVarNameInTable="columnSername" msprop:Generator_ColumnPropNameInRow="Sername" msprop:Generator_ColumnPropNameInTable="SernameColumn" msprop:Generator_UserColumnName="Sername" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
+                    <xs:MaxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
+                    <xs:MaxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

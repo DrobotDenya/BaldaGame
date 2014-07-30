@@ -10,73 +10,73 @@ namespace Balda.Data
 {
     public class Word
     {
-        private string word;
-        private int value;
-        private int player;
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\DataBase.accdb";
-        private OleDbCommand cmd = new OleDbCommand();
-        private OleDbConnection connect = new OleDbConnection();
-        private OleDbDataReader dr;
+        private string _word;
+        private int _value;
+        private int _player;
+        private string _connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\DataBase.accdb";
+        private OleDbCommand _cmd = new OleDbCommand();
+        private OleDbConnection _connect = new OleDbConnection();
+        private OleDbDataReader _dr;
 
         public Word(string word, int value, int player)
         {
-            this.word = word;
-            this.value = value;
-            this.player = player;
-            connect.ConnectionString = connectionString;
-            cmd.Connection = connect;
+            this._word = word;
+            this._value = value;
+            this._player = player;
+            _connect.ConnectionString = _connectionString;
+            _cmd.Connection = _connect;
         }
 
-        public void insert()
+        public void Insert()
         {
-            connect.Open();
+            _connect.Open();
             string q = "select * from [TABLE]";
-            cmd.CommandText = q;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            _cmd.CommandText = q;
+            _dr = _cmd.ExecuteReader();
+            if (_dr.HasRows)
             {
-                while (dr.Read())
+                while (_dr.Read())
                 {
-                    if (this.word == dr[0].ToString())
+                    if (this._word == _dr[0].ToString())
                     {
-                        dr.Close();
-                        connect.Close();
+                        _dr.Close();
+                        _connect.Close();
                         break;
                     }
                 }
             }
-            dr.Close();
-            if (connect.State == ConnectionState.Open)
+            _dr.Close();
+            if (_connect.State == ConnectionState.Open)
             {
-                cmd.CommandText = "INSERT INTO [TABLE] ([Word], [Value], [Player]) values (?,?,?)";
+                _cmd.CommandText = "INSERT INTO [TABLE] ([Word], [Value], [Player]) values (?,?,?)";
 
-                cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = word;
-                cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = value;
-                cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = player;
-                cmd.ExecuteNonQuery();
-                connect.Close();
+                _cmd.Parameters.Add(string.Empty, OleDbType.VarChar).Value = _word;
+                _cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = _value;
+                _cmd.Parameters.Add(string.Empty, OleDbType.Integer).Value = _player;
+                _cmd.ExecuteNonQuery();
+                _connect.Close();
             }
         }
 
-        private void remove()
+        private void Remove()
         {
-            connect.Open();
+            _connect.Open();
             string q = "select * from [TABLE]";
-            cmd.CommandText = q;
-            dr = cmd.ExecuteReader();
-            if (dr.HasRows)
+            _cmd.CommandText = q;
+            _dr = _cmd.ExecuteReader();
+            if (_dr.HasRows)
             {
-                while (dr.Read())
+                while (_dr.Read())
                 {
-                    if (this.word == dr[0].ToString())
+                    if (this._word == _dr[0].ToString())
                     {
-                        cmd.CommandText = "DELETE FROM [TABLE] WHERE [Word]=" + this.word;
-                        cmd.ExecuteNonQuery();
+                        _cmd.CommandText = "DELETE FROM [TABLE] WHERE [Word]=" + this._word;
+                        _cmd.ExecuteNonQuery();
                     }
                 }
             }
-            dr.Close();
-            connect.Close();
+            _dr.Close();
+            _connect.Close();
         }
     }
 }
