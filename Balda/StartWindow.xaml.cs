@@ -40,7 +40,7 @@ namespace Balda
         private void Button_Click(object sender, RoutedEventArgs e)
         {
          
-            if (DataUserManager.DataUser.findUser(textBoxLogin.Text, tbxPassword.Text))
+            if (DataUserManager.DataUser.FindUser(textBoxLogin.Text, tbxPassword.Text))
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();

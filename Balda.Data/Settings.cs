@@ -8,55 +8,55 @@ namespace Balda.Data
 {
     public class Settings
     {
-        private static Settings settings;
-        private int botComplexity = 1;
-        private bool isBot = true;
-        private string playerName;
+        private static Settings _settings;
+        private int _botComplexity = 1;
+        private bool _isBot = true;
+        private string _playerName;
 
         private Settings()
         {
         }
 
-        public static Settings setting
+        public static Settings Setting
         {
             get
             {
-                if (settings == null)
+                if (_settings == null)
                 {
-                    settings = new Settings();
+                    _settings = new Settings();
                 }
-                return settings;
+                return _settings;
             }
         }
 
-        public void setBotComplexity(int complexity)
+        public void SetBotComplexity(int complexity)
         {
-            botComplexity = complexity;
+            _botComplexity = complexity;
         }
 
-        public void setIsBot(bool b)
+        public void SetIsBot(bool b)
         {
-            isBot = b;
+            _isBot = b;
         }
 
-        public void setPlayerName(string name)
+        public void SetPlayerName(string name)
         {
-            playerName = name;
+            _playerName = name;
         }
 
-        public int getBotComplexity()
+        public int GetBotComplexity()
         {
-            return botComplexity;
+            return _botComplexity;
         }
 
-        public bool getIsBot()
+        public bool GetIsBot()
         {
-            return isBot;
+            return _isBot;
         }
 
-        public string getNamePlayer()
+        public string GetNamePlayer()
         {
-            return playerName;
+            return _playerName;
         }
     }
 }

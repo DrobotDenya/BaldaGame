@@ -10,27 +10,27 @@ namespace Balda.Data
 {
     public class GameKeys
     {
-        private ArrayList keys = new ArrayList();
+        private ArrayList _keys = new ArrayList();
 
-        private string path = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Keyboard.txt";
+        private string _path = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Keyboard.txt";
 
         public GameKeys()
         {
-            readKeyBoard();
+            ReadKeyBoard();
         }
 
-        public ArrayList getKeys()
+        public ArrayList GetKeys()
         {
-            return keys;
+            return _keys;
         }
 
-        private void readKeyBoard()
+        private void ReadKeyBoard()
         {
             string line;
-            StreamReader file = new StreamReader(path);
+            StreamReader file = new StreamReader(_path);
             while ((line = file.ReadLine()) != null)
             {
-                keys.Add(line);
+                _keys.Add(line);
             }
             file.Close();
         }

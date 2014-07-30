@@ -1,52 +1,51 @@
-﻿
-namespace Balda.Data
+﻿namespace Balda.Data
 {
     public class Bot : User
     {
-        private int levelOfComplexity = 0;
-        private FindWordAlgorithm alho = new FindWordAlgorithm();
+        private int _levelOfComplexity = 0;
+        private FindWordAlgorithm _alho = new FindWordAlgorithm();
 
         public Bot(string name, int level, FindWordAlgorithm alho)
         {
-            nickname = name;
-            this.alho = alho;
+            _nickname = name;
+            this._alho = alho;
             if (level >= 0 && level <= 2)
             {
-                levelOfComplexity = level;
+                _levelOfComplexity = level;
             }
             else
             {
-                levelOfComplexity = 0;
+                _levelOfComplexity = 0;
             }
         }
 
-        public int solution()
+        public int Solution()
         {
-            ////alho.findWords();
+            ////_alho.FindWords();
             string findedWord;
-            if (levelOfComplexity == 1 || levelOfComplexity == 0)
+            if (_levelOfComplexity == 1 || _levelOfComplexity == 0)
             {
-                findedWord = alho.findWord();
+                findedWord = _alho.FindWord();
                 if (findedWord.Equals(string.Empty) == false)
                 {
-                    addWord(findedWord);
+                    AddWord(findedWord);
                     return 1;
                 }
             }
 
-            if (levelOfComplexity == 2)
+            if (_levelOfComplexity == 2)
             {
-                findedWord = alho.findWordWithMaxLength();
+                findedWord = _alho.FindWordWithMaxLength();
                 if (findedWord.Equals(string.Empty) == false)
                 {
-                    addWord(findedWord);
+                    AddWord(findedWord);
                     return 1;
                 }
             }
             ////Если слово не найдено и бот легкий, то он сдается
-            if (levelOfComplexity == 0)
+            if (_levelOfComplexity == 0)
             {
-                surrender();
+                Surrender();
                 return 0;
             }
             ////Иначе пропускает ход

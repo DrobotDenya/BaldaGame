@@ -39,7 +39,7 @@ namespace Balda
                 && confPassword == password)
             {
                 User user = new User(nickname , firstName, secondName, password);
-                user.insert();
+                user.Insert();
 
             }
         }

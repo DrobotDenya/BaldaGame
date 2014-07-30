@@ -9,62 +9,62 @@ namespace Balda.Data
 {
     public class GameBoard
     {
-        public string[,] cellPool;
+        public string[,] CellPool;
         private int _width;
         private int _heigth;
 
         public GameBoard(int width, int heigth)
         {
-            setSize(width, heigth);
+            SetSize(width, heigth);
         }
 
         public GameBoard()
         {
         }
         ////set size for board
-        public void setSize(int width, int heigth)
+        public void SetSize(int width, int heigth)
         {
             this._width = width;
             this._heigth = heigth;
 
-            cellPool = new string[width, heigth];
+            CellPool = new string[width, heigth];
             for (int row = 0; row < heigth; row++)
             {
                 for (int column = 0; column < width; column++)
                 {
-                    cellPool[row, column] = string.Empty;
+                    CellPool[row, column] = string.Empty;
                 }
             }
         }
 
-        ////Retutn width
-        public int width()
+        ////Retutn Width
+        public int Width()
         {
             return this._width;
         }
 
-        ////Return heigth
-        public int heigth()
+        ////Return Heigth
+        public int Heigth()
         {
             return this._heigth;
         }
 
         ////Clear gameBoard
-        public void clear()
+        public void Clear()
         {
-            cellPool = new string[_width, _heigth];
+            CellPool = new string[_width, _heigth];
         }
 
         ////Return value cell
-        public string getCellValue(int row, int column)
+        public string GetCellValue(int row, int column)
         {
-            return cellPool[row, column];
+            return CellPool[row, column];
         }
 
         ////Set value for cell
-        public void setCellValue(string value, int row, int column)
+        public void SetCellValue(string value, int row, int column)
         {
-            cellPool[row, column] = value;
+            CellPool[row, column] = value;
         }
     }
 }

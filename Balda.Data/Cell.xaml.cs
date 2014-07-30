@@ -18,24 +18,24 @@ namespace Balda.Data
     {
        //// public event MouseButtonEventHandler MouseDownn;
 
-        public bool isSelected = false;
+        public bool IsSelected = false;
 
         public Cell()
         {
             InitializeComponent();
         }
 
-        public void setText(string s)
+        public void SetText(string s)
         {
             mainLabel.Content = s;
         }
 
-        public string getText()
+        public string GetText()
         {
             return (string)mainLabel.Content;
         }
 
-        public void cell_MouseDown(object sender, MouseEventArgs e)
+        public void CellMouseDown(object sender, MouseEventArgs e)
         {
         }
     }
