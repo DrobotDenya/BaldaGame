@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:custom="clr-namespace:Balda"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Data="clr-namespace:Balda.Data" xmlns:Data1="clr-namespace:Balda.Data;assembly=Balda.Data" mc:Ignorable="d" x:Class="Balda.GameWindow"
-        Title="GameWindow" Height="750" Width="940.455" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" MinWidth="940.455" MaxWidth="940.455" MinHeight="750" MaxHeight="750" Closed="Window_Closed">
-    
-    
-    
-    
+        Title="GameWindow" Height="759" Width="951.955" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
+
+
+
+
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -18,27 +18,86 @@
             <Setter Property="Background" Value="LightGreen"/>
         </Style>
     </Window.Resources>
-    <Grid RenderTransformOrigin="0.421,0.528">
+    <Grid RenderTransformOrigin="0.421,0.528" ShowGridLines="True" Margin="0,0,-8,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="384*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
 
-        <Grid.Background>
+
+        <!--<Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0.142"/>
                 <GradientStop Color="White" Offset="0.996"/>
             </LinearGradientBrush>
-        </Grid.Background>
-        <ListBox x:Name="listBoxP1" Margin="163,96,0,0" HorizontalAlignment="Left" Width="140" Height="300" Background="#FF6370C7" BorderBrush="#FF001C72" BorderThickness="5" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBoxP2" Margin="613,96,0,0" Background="#FF72EA6C" BorderBrush="#FF046100" Width="140" Height="300" BorderThickness="5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock x:Name="titleP2" HorizontalAlignment="Center" Margin="608,66,184,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF72EA6C" FontSize="18" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock x:Name="titleP1" HorizontalAlignment="Center" Margin="163,66,629,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF6370C7" FontSize="18" TextAlignment="Center" FontWeight="Bold"><Run Text="Player1"/></TextBlock>
-        <Label Content="Time" Margin="373,25,397,0" VerticalAlignment="Top" Foreground="#FFDE9007" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Width="162" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="39"/>
-        <Rectangle Fill="#FF6370C7" HorizontalAlignment="Left" Height="68" Margin="303,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5"/>
-        <Label x:Name="value1" Content="0" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C"/>
-        <Rectangle Fill="#FF72EA6C" HorizontalAlignment="Left" Height="68" Margin="540,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5"/>
-        <Label x:Name="value2" Content="0" HorizontalAlignment="Left" Margin="540,10,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="395,400,0,0" VerticalAlignment="Top" Width="140" Height="50" FontSize="22"  Click="btnSubmit_Click"/>
-        <WrapPanel x:Name="board" HorizontalAlignment="Left" Height="300" Margin="308,96,0,0" VerticalAlignment="Top" Width="300" Background="White"/>
-        <WrapPanel x:Name="keyboard" HorizontalAlignment="Left" Height="180" Margin="141,455,0,0" VerticalAlignment="Top" Width="660" Background="White"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="250,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="btnCancel_Click"/>
-        <Button x:Name="btnMiss" Content="Miss" HorizontalAlignment="Left" Margin="540,401,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="btnMiss_Click"/>
+        </Grid.Background>-->
+        <Grid ShowGridLines="True" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.142"/>
+                <GradientStop Color="White" Offset="0.996"/>
+            </LinearGradientBrush>
+        </Grid.Background>-->
+        <Label Content="Time" Margin="338,35,334,0" VerticalAlignment="Top" Foreground="#FFDE9007" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Width="280" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="39" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FF6370C7" HorizontalAlignment="Left" Height="68" Margin="338,19,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5" Grid.RowSpan="2"/>
+        <Label x:Name="value1" Content="0" HorizontalAlignment="Left" Margin="338,19,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FF72EA6C" HorizontalAlignment="Left" Height="68" Margin="550,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5" Grid.RowSpan="2"/>
+        <Label x:Name="value2" Content="0" HorizontalAlignment="Left" Margin="550,20,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7" Grid.RowSpan="2"/>
+        <Grid x:Name="BottomGrid" Grid.Row="3" Margin="0,5,0,-5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <WrapPanel x:Name="keyboard" Grid.ColumnSpan="6" Grid.Column="1" Background="#FFC13939" Margin="0,0,0,36"/>
+        </Grid>
+        <Grid x:Name="MiddleGrid" Grid.Row="2" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <WrapPanel x:Name="board" Margin="8,30,6,0" Height="288" VerticalAlignment="Top" Background="#FFAC3434" Grid.Column="1"/>
+            <Grid Margin="0,325,0,0" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel HorizontalAlignment="Left" Width="318" Grid.Column="1">
+                    <Button x:Name="btnCancel" Content="Cancel" Margin="10,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="50" Click="btnCancel_Click"/>
+                    <Button x:Name="btnMiss" Content="Miss" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="50" Click="btnMiss_Click"/>
+                    <Button x:Name="btnSubmit" Content="Submit" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Height="50" FontSize="22"  Click="btnSubmit_Click"/>
+                </WrapPanel>
+            </Grid>
+            <DockPanel x:Name="LeftDockPanel" LastChildFill="False" Margin="0,0,0,69">
+                <StackPanel Width="286" DockPanel.Dock="Right" FlowDirection="RightToLeft">
+                    <TextBlock x:Name="titleP1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF6370C7" FontSize="18" TextAlignment="Center" FontWeight="Bold"><Run Text="Player1"/></TextBlock>
+                    <ListBox x:Name="listBoxP1" Height="288" Background="#FF6370C7" BorderBrush="#FF001C72" BorderThickness="5" VerticalAlignment="Top" Margin="0,0,146,0"/>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="RigthDockPanel" Grid.Column="2" LastChildFill="False" Margin="0,0,0,69">
+                <StackPanel Width="244">
+                    <TextBlock x:Name="titleP2" HorizontalAlignment="Center" Margin="0,0,104,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Height="30" Width="140" Foreground="#FF72EA6C" FontSize="18" TextAlignment="Center" FontWeight="Bold"/>
+                    <ListBox x:Name="listBoxP2" Background="#FF72EA6C" BorderBrush="#FF046100" Height="288" BorderThickness="5" VerticalAlignment="Top" Margin="0,0,104,0"/>
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+
     </Grid>
 </Window>

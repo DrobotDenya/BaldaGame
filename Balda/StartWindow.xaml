@@ -32,8 +32,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="23" Margin="93,187,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.416,-0.094" BorderThickness="3" BorderBrush="#FFE89114" TextChanged="textBoxLogin_TextChanged" TextAlignment="Center"/>
-        <Button Content="Play" HorizontalAlignment="Left" Margin="216,245,0,0" VerticalAlignment="Top" Width="69" Background="{x:Null}" Foreground="#FFE89114" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Play" HorizontalAlignment="Left" Margin="217,252,0,0" VerticalAlignment="Top" Width="69" Background="{x:Null}" Foreground="#FFE89114" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -43,8 +42,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBox x:Name="tbxPassword" HorizontalAlignment="Left" Height="16" Margin="93,215,0,0" TextWrapping="Wrap" Text="Password
-" VerticalAlignment="Top" Width="120" TextAlignment="Center" BorderBrush="#FFE89114" BorderThickness="3" FontSize="8"/>
-        <TextBlock x:Name="textBlockRegistration" HorizontalAlignment="Left" Margin="93,231,0,0" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Width="120" FontSize="9" TextDecorations="Underline" TextAlignment="Center" Foreground="#FF122EDE" MouseDown="textBlockRegistration_MouseDown"/>
+        <StackPanel HorizontalAlignment="Left" Height="79" Margin="96,175,0,0" VerticalAlignment="Top" Width="133">
+            <TextBox x:Name="textBoxLogin" Margin="5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.416,-0.094" BorderThickness="3" BorderBrush="#FFE89114" TextChanged="textBoxLogin_TextChanged" TextAlignment="Center"/>
+            <TextBox x:Name="tbxPassword" Margin="5" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" Text="Password " VerticalAlignment="Top" Width="120" TextAlignment="Center" BorderBrush="#FFE89114" BorderThickness="3" FontSize="8"/>
+            <TextBlock x:Name="textBlockRegistration" Margin="5" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" Width="120" FontSize="9" TextDecorations="Underline" TextAlignment="Center" Foreground="#FF122EDE" MouseDown="textBlockRegistration_MouseDown"/>
+        </StackPanel>
     </Grid>
 </Window>
