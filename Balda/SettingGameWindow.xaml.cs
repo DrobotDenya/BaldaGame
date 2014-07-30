@@ -24,14 +24,14 @@ namespace Balda
         public SettingGameWindow()
         {
             InitializeComponent();
-            listboxDifficulty.Items.Add("Easy");
-            listboxDifficulty.Items.Add("Normal");
-            listboxDifficulty.Items.Add("Hard");
-            listboxDifficulty.SelectedIndex = Settings.setting.getBotComplexity();
-            checkBoxPalyers.IsChecked = !Settings.setting.getIsBot();
-            if (checkBoxPalyers.IsChecked.Value)
+            ListboxDifficulty.Items.Add("Easy");
+            ListboxDifficulty.Items.Add("Normal");
+            ListboxDifficulty.Items.Add("Hard");
+            ListboxDifficulty.SelectedIndex = Settings.setting.getBotComplexity();
+            CheckBoxPalyers.IsChecked = !Settings.setting.getIsBot();
+            if (CheckBoxPalyers.IsChecked.Value)
             {
-                textBoxPlayerTwoName.Text = Settings.setting.getNamePlayer();
+                TextBoxPlayerTwoName.Text = Settings.setting.getNamePlayer();
            }
            
         }
@@ -49,22 +49,22 @@ namespace Balda
         private void checkBoxPalyers_Checked(object sender, RoutedEventArgs e)
         {
            
-            textBoxPlayerTwoName.IsEnabled = true;
-            listboxDifficulty.IsEnabled = false;
+            TextBoxPlayerTwoName.IsEnabled = true;
+            ListboxDifficulty.IsEnabled = false;
         }
 
         private void checkBoxPalyers_Unchecked(object sender, RoutedEventArgs e)
         {
-            textBoxPlayerTwoName.IsEnabled = false;
-            textBoxPlayerTwoName.Text = "Player2";
-            listboxDifficulty.IsEnabled = true;
+            TextBoxPlayerTwoName.IsEnabled = false;
+            TextBoxPlayerTwoName.Text = "Player2";
+            ListboxDifficulty.IsEnabled = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Settings.setting.setBotComplexity(listboxDifficulty.SelectedIndex);
-            Settings.setting.setIsBot(!checkBoxPalyers.IsChecked.Value);
-            Settings.setting.setPlayerName(textBoxPlayerTwoName.Text);
+            Settings.setting.setBotComplexity(ListboxDifficulty.SelectedIndex);
+            Settings.setting.setIsBot(!CheckBoxPalyers.IsChecked.Value);
+            Settings.setting.setPlayerName(TextBoxPlayerTwoName.Text);
             this.Close();
 
             
