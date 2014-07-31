@@ -8,24 +8,24 @@
                x:Key="VerticalButton">
             <Setter Property="Background" Value="Purple"/>
         </Style>
+        <Style BasedOn="{StaticResource {x:Type Button}}"
+               TargetType="Button"
+               x:Key="NewGameBtn">
+            <Setter Property="Background" Value="#FFD0F00F"/>
+            <Setter Property="Content" Value="New Game"/>
+            <Setter Property="Margin" Value="77,91,64,133"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Foreground" Value="#FFE89114"/>
+        </Style>
     </Window.Resources>
     <Grid Background="#FF908A87">
-        <Button x:Name="buttonNewGame" Content="New Game" Margin="70,65,71,168" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="20" Height="36" Background="#FFD0F00F" Foreground="#FFE89114" BorderBrush="{x:Null}" Click="buttonNewGame_Click">
+        <Button Style="{StaticResource NewGameBtn}" Name="ButtonNewGame" Click="buttonNewGame_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="10.864"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="buttonLoadGame" Content="Load Game" Margin="81,158,75,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="18" Foreground="#FFE20B11" Background="#FF2896E0" BorderBrush="{x:Null}" Click="buttonLoadGame_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-9.777"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
