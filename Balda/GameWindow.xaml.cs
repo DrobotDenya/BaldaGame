@@ -1,21 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Drawing;
-using System.Collections;
 using Balda.Data;
-
-
 
 namespace Balda
 {
@@ -38,24 +25,24 @@ namespace Balda
 
             gameManager.Start();
 
-            createCellForBoard();
-            //setEnableBoard(false);
+            CreateCellForBoard();
+            //SetEnableBoard(false);
 
-            createKeysForKeyBoard();
-            //setEnableKeyboard(false);
+            CreateKeysForKeyBoard();
+            //SetEnableKeyboard(false);
 
-           
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            reloadDataBoard();
-            reloadKeyBoard();
-            titleP1.Text = User.SharedUser.GetNickname();
-            titleP2.Text = gameManager.Players()[1].GetNickname();
+            ReloadDataBoard();
+            ReloadKeyBoard();
+            TitleP1.Text = User.SharedUser.GetNickname();
+            TitleP2.Text = gameManager.Players()[1].GetNickname();
         }
 
-        void createCellForBoard()
+        void CreateCellForBoard()
         {
             Cell cell;
             cellArray = new Cell[gameManager.GetSizeBoard(), gameManager.GetSizeBoard()];
@@ -71,16 +58,16 @@ namespace Balda
                 }
             }
         }
-        void createKeysForKeyBoard()
+        void CreateKeysForKeyBoard()
         {
             for (int i = 0; i < gameManager.GetKeyBoard().GetKeys().Count; i++)
             {
                 Cell cell = new Cell();
                 keysList.Add(cell);
-                keyboard.Children.Add(cell);
+                Keyboard.Children.Add(cell);
             }
         }
-        void reloadKeyBoard()
+        void ReloadKeyBoard()
         {
             int i = 0;
             foreach (Cell cell in keysList)
@@ -94,7 +81,7 @@ namespace Balda
             }
 
         }
-        void reloadDataBoard()
+        void ReloadDataBoard()
         {
             for (int i = 0; i < gameManager.GetSizeBoard(); i++)
             {
@@ -105,26 +92,26 @@ namespace Balda
             }
 
         }
-        
-     
+
+
 
         /*Возвращает окно в состояние начала хода игрока */
-        private void undoWindow()
+        private void UndoWindow()
         {
-            setEnableBoard(true);
-            setEnableKeyboard(true);
-            createKeysForKeyBoard();
+            SetEnableBoard(true);
+            SetEnableKeyboard(true);
+            CreateKeysForKeyBoard();
             //createButtons();
             currentWord = "";
             if (lastCell != null)
             {
-               // lastButton.setBackground(keysPanel.getComponent(0).getBackground());
+                // lastButton.setBackground(keysPanel.getComponent(0).getBackground());
                 lastCell.SetText("");
                 lastCell = null;
             }
         }
         //Активирует/деактевирует клавиатуру
-        void setEnableKeyboard(bool a)
+        void SetEnableKeyboard(bool a)
         {
             foreach (Cell cell in keysList)
             {
@@ -134,7 +121,7 @@ namespace Balda
         }
 
         //Активирует/деактевирует поле
-        void setEnableBoard(bool a)
+        void SetEnableBoard(bool a)
         {
             for (int i = 0; i < gameManager.GetSizeBoard(); i++)
             {
@@ -148,7 +135,7 @@ namespace Balda
 
         /* Определяет существует ли сверху, снизу, 
         слева, справа ячейка с буквой*/
-        private bool enableCellOnBoard(int i, int j)
+        private bool EnableCellOnBoard(int i, int j)
         {
             if (i + 1 != gameManager.GetGameBoard().Width())
             {
@@ -185,7 +172,7 @@ namespace Balda
 
         /* Деактивирует ячейки, которые не содержат 
         буквы и в соседних клетках нет буквы*/
-        private void disableBoardCell()
+        private void DisableBoardCell()
         {
             for (int i = 0; i < gameManager.GetGameBoard().Width(); i++)
             { // Цикл по самому массиву.
@@ -193,7 +180,7 @@ namespace Balda
                 {
                     if (gameManager.GetGameBoard().GetCellValue(i, j) == "")
                     {
-                        if (!enableCellOnBoard(i, j))
+                        if (!EnableCellOnBoard(i, j))
                         {
                             cellArray[i, j].IsEnabled = false;
                             //cellArray[i, j].BorderBrush = Brushes.Red;
@@ -207,25 +194,25 @@ namespace Balda
 
         private void btnMiss_Click(object sender, RoutedEventArgs e)
         {
-            setEnableBoard(true);
-            undoWindow();
-            exchangePlayer();
+            SetEnableBoard(true);
+            UndoWindow();
+            ExchangePlayer();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            setEnableBoard(true);
-            undoWindow();
-            
+            SetEnableBoard(true);
+            UndoWindow();
+
         }
 
         public void Cell_MouseDown(object sender, MouseEventArgs e)
         {
             Cell cell = (Cell)sender;
-            if (keyboard.Children.Contains(cell))
+            if (Keyboard.Children.Contains(cell))
             {
                 lastKey = cell.GetText();
-                disableBoardCell();
+                DisableBoardCell();
                 //disableBoardCellWithLetter();
 
             }
@@ -242,7 +229,7 @@ namespace Balda
                         //lastCell.Background = Brushes.Purple;
                         lastKey = "";
 
-                        setEnableKeyboard(false);
+                        SetEnableKeyboard(false);
 
                         isCurrentPlayerMove = true;
 
@@ -280,9 +267,9 @@ namespace Balda
                 {
                     gameManager.ActivePlayer().AddWord(currentWord);
                     gameManager.UpdateUsedWords();
-                    updateListBox();
-                    updateValue();
-                    createKeysForKeyBoard();
+                    UpdateListBox();
+                    UpdateValue();
+                    CreateKeysForKeyBoard();
                     currentWord = "";
 
                     if (lastCell != null)
@@ -298,9 +285,9 @@ namespace Balda
                         lastCell = null;
                     }
                     MessageBox.Show("Конец хода!");
-                    exchangePlayer();
-                   
-                    
+                    ExchangePlayer();
+
+
 
                 }
                 else
@@ -313,20 +300,20 @@ namespace Balda
                     {
                         MessageBox.Show("Слово " + "'" + currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
                     }
-                    undoWindow();
+                    UndoWindow();
                 }
-                undoWindow();
+                UndoWindow();
             }
             else
             {
                 MessageBox.Show("Слово " + currentWord + " уже использувалось в игре! Попробуйте еще раз!");
-                undoWindow();
+                UndoWindow();
             }
 
         }
 
 
-        void exchangePlayer()
+        void ExchangePlayer()
         {
             if (gameManager.DetermineWinner() != null)
             {
@@ -334,51 +321,51 @@ namespace Balda
             }
             else
             {
-                
+
                 gameManager.ExchangePlayer();
-                updateListBox();
-                updateValue();
+                UpdateListBox();
+                UpdateValue();
 
             }
 
-            reloadDataBoard();
+            ReloadDataBoard();
         }
 
-        void updateListBox()
+        void UpdateListBox()
         {
 
-            
-                listBoxP1.Items.Clear();
-                List<string> words = gameManager.Players()[0].GetWordsList();
-                foreach (string word in words)
+
+            ListBoxP1.Items.Clear();
+            List<string> words = gameManager.Players()[0].GetWordsList();
+            foreach (string word in words)
+            {
+                if (word != gameManager.GetUsedWord()[0])
                 {
-                    if (word != gameManager.GetUsedWord()[0])
-                    {
-                        listBoxP1.Items.Add(word);
-                    }
+                    ListBoxP1.Items.Add(word);
                 }
+            }
 
 
-                    listBoxP2.Items.Clear();
-                    List<string> wordss = gameManager.Players()[1].GetWordsList();
-                    foreach (string word in wordss)
-                    {
-                        if (word != gameManager.GetUsedWord()[0])
-                        {
-                            listBoxP2.Items.Add(word);
-                        }
-                    }
-                
- 
-           
- 
+            ListBoxP2.Items.Clear();
+            List<string> wordss = gameManager.Players()[1].GetWordsList();
+            foreach (string word in wordss)
+            {
+                if (word != gameManager.GetUsedWord()[0])
+                {
+                    ListBoxP2.Items.Add(word);
+                }
+            }
+
+
+
+
         }
 
-        void updateValue()
+        void UpdateValue()
         {
-            
-            value1.Content = gameManager.Players()[0].GetPoints();
-            value2.Content = gameManager.Players()[1].GetPoints();
+
+            Value1.Content = gameManager.Players()[0].GetPoints();
+            Value2.Content = gameManager.Players()[1].GetPoints();
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -386,5 +373,5 @@ namespace Balda
             this.Close();
             gameManager.ClearUsedWords();
         }
-    }   
+    }
 }

@@ -27,7 +27,6 @@ namespace Balda
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
             string nickname = tbNickname.Text;
             string firstName = tbFirstName.Text;
             string secondName = tbSecondName.Text;
@@ -39,8 +38,7 @@ namespace Balda
                 && confPassword == password)
             {
                 User user = new User(nickname , firstName, secondName, password);
-                user.Insert();
-
+                user.UsingInsert();
             }
         }
     }

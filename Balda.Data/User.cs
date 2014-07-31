@@ -95,7 +95,7 @@ namespace Balda.Data
             return _isSurrender;
         }
 
-        public void Insert()
+        public void UsingInsert()
         {
             _connect.Open();
             string q = "select * from [User]";
@@ -127,7 +127,7 @@ namespace Balda.Data
             }
         }
 
-        public bool Select()
+        public bool UsingSelect()
         {
             _connect.Open();
             string q = "select * from [User] where Nickname = Nickname";

@@ -43,7 +43,7 @@ namespace Balda
             User.SharedUser.Password = tbxPassword.Text;
             User.SharedUser.Nickname = textBoxLogin.Text;
            
-            if ( User.SharedUser.Select())
+            if ( User.SharedUser.UsingSelect())
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();
