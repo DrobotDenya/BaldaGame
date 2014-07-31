@@ -22,14 +22,9 @@ namespace Balda
         public MenuWindow()
         {
             InitializeComponent();
-            
-        }
-        private void buttonLoadGame_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
-        private void buttonNewGame_Click(object sender, RoutedEventArgs e)
+        private void ButtonNewGameClick(object sender, RoutedEventArgs e)
         {
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();

@@ -9,29 +9,74 @@ namespace Balda
     public partial class GameWindow : Window
     {
 
-        GameManager gameManager = new GameManager();
-        Cell[,] cellArray;
-        List<Cell> keysList = new List<Cell>();
-        string lastKey = "";
-        Cell lastCell = null;
-        bool isCurrentPlayerMove = false;
-        string currentWord = "";
+        private GameManager _gameManager = new GameManager();
+        private Cell[,] _cellArray;
+        private List<Cell> _keysList = new List<Cell>();
+        private string _lastKey = "";
+        private Cell _lastCell = null;
+        private bool _isCurrentPlayerMove = false;
+        private string _currentWord = "";
 
         public GameWindow()
         {
             InitializeComponent();
 
-            gameManager.SetBotsComplexity(Settings.Setting.GetBotComplexity());
+            _gameManager.SetBotsComplexity(Settings.Setting.GetBotComplexity());
 
-            gameManager.Start();
+            _gameManager.Start();
 
             CreateCellForBoard();
-            //SetEnableBoard(false);
+            ////SetEnableBoard(false);
 
             CreateKeysForKeyBoard();
-            //SetEnableKeyboard(false);
+            ////SetEnableKeyboard(false);
+        }
 
+        public void CellMouseDown(object sender, MouseEventArgs e)
+        {
+            Cell cell = (Cell)sender;
+            if (Keyboard.Children.Contains(cell))
+            {
+                _lastKey = cell.GetText();
+                DisableBoardCell();
+                ////disableBoardCellWithLetter();
 
+            }
+
+            if (board.Children.Contains(cell))
+            {
+                if (_lastKey.Equals("") == false)
+                {
+                    if (cell.GetText().Equals(""))
+                    {
+                        _lastCell = cell;
+                        _lastCell.SetText(_lastKey);
+                        //_lastCell.Background = Brushes.Purple;
+                        _lastKey = string.Empty;
+
+                        SetEnableKeyboard(false);
+
+                        _isCurrentPlayerMove = true;
+                        //setEnabledButtons(true);
+                        //buttonsPanel.getComponent(1).setEnabled(false);
+                    }
+                }
+                else if (_isCurrentPlayerMove)
+                { //// Иначе если игрок выделяет слово
+
+                    if (!cell.GetText().Equals(""))
+                    {
+                        cell.IsEnabled = false;
+                        _currentWord += cell.GetText();
+                        ////cell.BorderBrush = Brushes.Purple;
+                    }
+
+                    ////if (!_lastCell.IsEnabled)
+                    ////{
+                    ////    buttonsPanel.getComponent(1).setEnabled(true);
+                    ////}
+                }
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -39,95 +84,92 @@ namespace Balda
             ReloadDataBoard();
             ReloadKeyBoard();
             TitleP1.Text = User.SharedUser.GetNickname();
-            TitleP2.Text = gameManager.Players()[1].GetNickname();
+            TitleP2.Text = _gameManager.Players()[1].GetNickname();
         }
 
-        void CreateCellForBoard()
+        private void CreateCellForBoard()
         {
             Cell cell;
-            cellArray = new Cell[gameManager.GetSizeBoard(), gameManager.GetSizeBoard()];
-            for (int i = 0; i < gameManager.GetSizeBoard(); i++)
+            _cellArray = new Cell[_gameManager.GetSizeBoard(), _gameManager.GetSizeBoard()];
+            for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
             {
-                for (int j = 0; j < gameManager.GetSizeBoard(); j++)
+                for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
                     cell = new Cell();
-                    cellArray[i, j] = cell;
-                    cell.MouseDown += Cell_MouseDown;
-                    board.Children.Add(cellArray[i, j]);
-
+                    _cellArray[i, j] = cell;
+                    cell.MouseDown += CellMouseDown;
+                    board.Children.Add(_cellArray[i, j]);
                 }
             }
         }
-        void CreateKeysForKeyBoard()
+
+        private void CreateKeysForKeyBoard()
         {
-            for (int i = 0; i < gameManager.GetKeyBoard().GetKeys().Count; i++)
+            for (int i = 0; i < _gameManager.GetKeyBoard().GetKeys().Count; i++)
             {
                 Cell cell = new Cell();
-                keysList.Add(cell);
+                _keysList.Add(cell);
                 Keyboard.Children.Add(cell);
             }
         }
-        void ReloadKeyBoard()
+
+        private void ReloadKeyBoard()
         {
             int i = 0;
-            foreach (Cell cell in keysList)
+            foreach (Cell cell in _keysList)
             {
-                string a = (string)(gameManager.GetKeyBoard().GetKeys())[i];
+                string a = (string)(_gameManager.GetKeyBoard().GetKeys())[i];
                 cell.SetText(a);
                 i++;
-                cell.MouseDown += Cell_MouseDown;
-
-
+                cell.MouseDown += CellMouseDown;
             }
 
         }
-        void ReloadDataBoard()
+
+        private void ReloadDataBoard()
         {
-            for (int i = 0; i < gameManager.GetSizeBoard(); i++)
+            for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
             {
-                for (int j = 0; j < gameManager.GetSizeBoard(); j++)
+                for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
-                    cellArray[i, j].SetText(gameManager.GetGameBoard().GetCellValue(i, j));
+                    _cellArray[i, j].SetText(_gameManager.GetGameBoard().GetCellValue(i, j));
                 }
             }
 
         }
-
-
-
         /*Возвращает окно в состояние начала хода игрока */
         private void UndoWindow()
         {
             SetEnableBoard(true);
             SetEnableKeyboard(true);
             CreateKeysForKeyBoard();
-            //createButtons();
-            currentWord = "";
-            if (lastCell != null)
+            ////createButtons();
+            _currentWord = "";
+            if (_lastCell != null)
             {
-                // lastButton.setBackground(keysPanel.getComponent(0).getBackground());
-                lastCell.SetText("");
-                lastCell = null;
+                //// lastButton.setBackground(keysPanel.getComponent(0).getBackground());
+                _lastCell.SetText("");
+                _lastCell = null;
             }
         }
-        //Активирует/деактевирует клавиатуру
-        void SetEnableKeyboard(bool a)
+        ////Активирует/деактевирует клавиатуру
+        private void SetEnableKeyboard(bool a)
         {
-            foreach (Cell cell in keysList)
+            foreach (Cell cell in _keysList)
             {
                 cell.IsEnabled = a;
             }
 
         }
 
-        //Активирует/деактевирует поле
-        void SetEnableBoard(bool a)
+        ////Активирует/деактевирует поле
+        private void SetEnableBoard(bool a)
         {
-            for (int i = 0; i < gameManager.GetSizeBoard(); i++)
+            for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
             {
-                for (int j = 0; j < gameManager.GetSizeBoard(); j++)
+                for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
-                    cellArray[i, j].IsEnabled = a;
+                    _cellArray[i, j].IsEnabled = a;
 
                 }
             }
@@ -137,30 +179,30 @@ namespace Balda
         слева, справа ячейка с буквой*/
         private bool EnableCellOnBoard(int i, int j)
         {
-            if (i + 1 != gameManager.GetGameBoard().Width())
+            if (i + 1 != _gameManager.GetGameBoard().Width())
             {
-                if (gameManager.GetGameBoard().GetCellValue(i + 1, j) != "")
+                if (_gameManager.GetGameBoard().GetCellValue(i + 1, j) != "")
                 {
                     return true;
                 }
             }
             if (i - 1 != -1)
             {
-                if (gameManager.GetGameBoard().GetCellValue(i - 1, j) != "")
+                if (_gameManager.GetGameBoard().GetCellValue(i - 1, j) != "")
                 {
                     return true;
                 }
             }
-            if (j + 1 != gameManager.GetGameBoard().Heigth())
+            if (j + 1 != _gameManager.GetGameBoard().Heigth())
             {
-                if (gameManager.GetGameBoard().GetCellValue(i, j + 1) != "")
+                if (_gameManager.GetGameBoard().GetCellValue(i, j + 1) != "")
                 {
                     return true;
                 }
             }
             if (j - 1 != -1)
             {
-                if (gameManager.GetGameBoard().GetCellValue(i, j - 1) != "")
+                if (_gameManager.GetGameBoard().GetCellValue(i, j - 1) != "")
                 {
                     return true;
                 }
@@ -174,16 +216,16 @@ namespace Balda
         буквы и в соседних клетках нет буквы*/
         private void DisableBoardCell()
         {
-            for (int i = 0; i < gameManager.GetGameBoard().Width(); i++)
-            { // Цикл по самому массиву.
-                for (int j = 0; j < gameManager.GetGameBoard().Heigth(); j++)
+            for (int i = 0; i < _gameManager.GetGameBoard().Width(); i++)
+            {
+                for (int j = 0; j < _gameManager.GetGameBoard().Heigth(); j++)
                 {
-                    if (gameManager.GetGameBoard().GetCellValue(i, j) == "")
+                    if (_gameManager.GetGameBoard().GetCellValue(i, j) == "")
                     {
                         if (!EnableCellOnBoard(i, j))
                         {
-                            cellArray[i, j].IsEnabled = false;
-                            //cellArray[i, j].BorderBrush = Brushes.Red;
+                            _cellArray[i, j].IsEnabled = false;
+                            ////_cellArray[i, j].BorderBrush = Brushes.Red;
 
                         }
                     }
@@ -192,113 +234,57 @@ namespace Balda
             }
         }
 
-        private void btnMiss_Click(object sender, RoutedEventArgs e)
+        private void BtnMissClick(object sender, RoutedEventArgs e)
         {
             SetEnableBoard(true);
             UndoWindow();
             ExchangePlayer();
         }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        private void BtnCancelClick(object sender, RoutedEventArgs e)
         {
             SetEnableBoard(true);
             UndoWindow();
 
         }
 
-        public void Cell_MouseDown(object sender, MouseEventArgs e)
+        private void BtnSubmitClick(object sender, RoutedEventArgs e)
         {
-            Cell cell = (Cell)sender;
-            if (Keyboard.Children.Contains(cell))
+            if (!_gameManager.WordIsUsed(_currentWord))
             {
-                lastKey = cell.GetText();
-                DisableBoardCell();
-                //disableBoardCellWithLetter();
-
-            }
-
-
-            if (board.Children.Contains(cell))
-            {
-                if (lastKey.Equals("") == false)
+                if (_gameManager.GetDictionary().IsExist(_currentWord))
                 {
-                    if (cell.GetText().Equals(""))
-                    {
-                        lastCell = cell;
-                        lastCell.SetText(lastKey);
-                        //lastCell.Background = Brushes.Purple;
-                        lastKey = "";
-
-                        SetEnableKeyboard(false);
-
-                        isCurrentPlayerMove = true;
-
-                        //Активация/деактивация необходимых кнопок игрока
-                        //setEnabledButtons(true);
-                        //buttonsPanel.getComponent(1).setEnabled(false);
-                        // TODO: Активация/деактивация нужных ячеек поля
-                    }
-
-                }
-                else if (isCurrentPlayerMove)
-                { // Иначе если игрок выделяет слово
-
-                    if (!cell.GetText().Equals(""))
-                    {
-                        cell.IsEnabled = false; ;
-                        currentWord += cell.GetText();
-                        //cell.BorderBrush = Brushes.Purple;
-                    }
-
-                    //if (!lastCell.IsEnabled)
-                    //{
-                    //    buttonsPanel.getComponent(1).setEnabled(true);
-                    //}
-                }
-            }
-        }
-
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            if (!gameManager.WordIsUsed(currentWord))
-            {
-                if (gameManager.GetDictionary().IsExist(currentWord))
-                {
-                    gameManager.ActivePlayer().AddWord(currentWord);
-                    gameManager.UpdateUsedWords();
+                    _gameManager.ActivePlayer().AddWord(_currentWord);
+                    _gameManager.UpdateUsedWords();
                     UpdateListBox();
                     UpdateValue();
                     CreateKeysForKeyBoard();
-                    currentWord = "";
+                    _currentWord = "";
 
-                    if (lastCell != null)
+                    if (_lastCell != null)
                     {
-                        for (int i = 0; i < gameManager.GetSizeBoard(); i++)
+                        for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
                         {
-                            for (int j = 0; j < gameManager.GetSizeBoard(); j++)
+                            for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                             {
-                                gameManager.GetGameBoard().SetCellValue(cellArray[i, j].GetText(), i, j);
+                                _gameManager.GetGameBoard().SetCellValue(_cellArray[i, j].GetText(), i, j);
 
                             }
                         }
-                        lastCell = null;
+                        _lastCell = null;
                     }
                     MessageBox.Show("Конец хода!");
                     ExchangePlayer();
-
-
-
                 }
                 else
                 {
-                    if (currentWord.Equals(""))
+                    if (_currentWord.Equals(""))
                     {
                         MessageBox.Show("Слово не выделено!");
                     }
                     else
                     {
-                        MessageBox.Show("Слово " + "'" + currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
+                        MessageBox.Show("Слово " + "'" + _currentWord + "'" + " не найдено в словаре! Попробуйте еще раз!");
                     }
                     UndoWindow();
                 }
@@ -306,72 +292,59 @@ namespace Balda
             }
             else
             {
-                MessageBox.Show("Слово " + currentWord + " уже использувалось в игре! Попробуйте еще раз!");
+                MessageBox.Show("Слово " + _currentWord + " уже использувалось в игре! Попробуйте еще раз!");
                 UndoWindow();
             }
-
         }
 
-
-        void ExchangePlayer()
+        private void ExchangePlayer()
         {
-            if (gameManager.DetermineWinner() != null)
+            if (_gameManager.DetermineWinner() != null)
             {
-                MessageBox.Show("Выиграл игрок " + gameManager.DetermineWinner().GetNickname() + " Конец игры!");
+                MessageBox.Show("Выиграл игрок " + _gameManager.DetermineWinner().GetNickname() + " Конец игры!");
             }
             else
             {
-
-                gameManager.ExchangePlayer();
+                _gameManager.ExchangePlayer();
                 UpdateListBox();
                 UpdateValue();
-
             }
 
             ReloadDataBoard();
         }
 
-        void UpdateListBox()
+        private void UpdateListBox()
         {
-
-
             ListBoxP1.Items.Clear();
-            List<string> words = gameManager.Players()[0].GetWordsList();
+            List<string> words = _gameManager.Players()[0].GetWordsList();
             foreach (string word in words)
             {
-                if (word != gameManager.GetUsedWord()[0])
+                if (word != _gameManager.GetUsedWord()[0])
                 {
                     ListBoxP1.Items.Add(word);
                 }
             }
-
-
             ListBoxP2.Items.Clear();
-            List<string> wordss = gameManager.Players()[1].GetWordsList();
+            List<string> wordss = _gameManager.Players()[1].GetWordsList();
             foreach (string word in wordss)
             {
-                if (word != gameManager.GetUsedWord()[0])
+                if (word != _gameManager.GetUsedWord()[0])
                 {
                     ListBoxP2.Items.Add(word);
                 }
             }
-
-
-
-
         }
 
-        void UpdateValue()
+        private void UpdateValue()
         {
-
-            Value1.Content = gameManager.Players()[0].GetPoints();
-            Value2.Content = gameManager.Players()[1].GetPoints();
+            Value1.Content = _gameManager.Players()[0].GetPoints();
+            Value2.Content = _gameManager.Players()[1].GetPoints();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Close();
-            gameManager.ClearUsedWords();
+            _gameManager.ClearUsedWords();
         }
     }
 }

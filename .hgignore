@@ -2,5 +2,5 @@ syntax: glob
 *.suo
 bin/*
 obj/*
-Balda.Data/StyleCop.Cache
-Balda.Data/Settings.StyleCop
+*.StyleCop
+*.Cache

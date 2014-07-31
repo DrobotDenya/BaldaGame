@@ -91,9 +91,9 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <WrapPanel HorizontalAlignment="Left" Width="318" Grid.Column="1">
-                    <Button x:Name="btnCancel" Content="Cancel" Margin="10,0,5,0" Width="92" Height="50" Click="btnCancel_Click"/>
-                    <Button x:Name="btnMiss" Content="Miss" Margin="5,0,5,0" Width="92" Height="50" Click="btnMiss_Click"/>
-                    <Button x:Name="btnSubmit" Content="Submit" Margin="5,0,5,0" Width="92" Height="50" Click="btnSubmit_Click"/>
+                    <Button x:Name="btnCancel" Content="Cancel" Margin="10,0,5,0" Width="92" Height="50" Click="BtnCancelClick"/>
+                    <Button x:Name="btnMiss" Content="Miss" Margin="5,0,5,0" Width="92" Height="50" Click="BtnMissClick"/>
+                    <Button x:Name="btnSubmit" Content="Submit" Margin="5,0,5,0" Width="92" Height="50" Click="BtnSubmitClick"/>
                 </WrapPanel>
             </Grid>
             <DockPanel x:Name="LeftDockPanel" LastChildFill="False" Margin="0,0,0,69">

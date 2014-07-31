@@ -20,7 +20,7 @@
         </Style>
     </Window.Resources>
     <Grid Background="#FF908A87">
-        <Button Style="{StaticResource NewGameBtn}" Name="ButtonNewGame" Click="buttonNewGame_Click">
+        <Button Style="{StaticResource NewGameBtn}" Name="ButtonNewGame" Click="ButtonNewGameClick">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
