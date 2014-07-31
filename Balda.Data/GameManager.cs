@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Balda.Data
 {
@@ -102,7 +98,7 @@ namespace Balda.Data
         public void GeneratePalyers()
         {
             _playersList.Clear();
-            _playersList.Add(DataUserManager.DataUser.GetCurrentUser());
+            _playersList.Add(User.SharedUser);
             if (Settings.Setting.GetIsBot())
             {
                 _playersList.Add(new Bot("Bot ", _botComplexity, _algorithm));

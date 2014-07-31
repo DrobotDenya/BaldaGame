@@ -39,8 +39,11 @@ namespace Balda
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-         
-            if (DataUserManager.DataUser.FindUser(textBoxLogin.Text, tbxPassword.Text))
+
+            User.SharedUser.Password = tbxPassword.Text;
+            User.SharedUser.Nickname = textBoxLogin.Text;
+           
+            if ( User.SharedUser.Select())
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();
@@ -56,7 +59,7 @@ namespace Balda
                 myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(.4));
                 myDoubleAnimation.AutoReverse = true;
                 myDoubleAnimation.RepeatBehavior = new RepeatBehavior(3);
-                tbxPassword.BeginAnimation(TextBox.OpacityProperty, myDoubleAnimation);
+                tbxPassword.BeginAnimation(OpacityProperty, myDoubleAnimation);
                 //tbxPassword.BorderBrush = brushes;
             }
 

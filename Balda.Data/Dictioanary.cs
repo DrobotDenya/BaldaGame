@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Balda.Data
 {
@@ -14,7 +11,7 @@ namespace Balda.Data
         public Dictionary()
         {
             string word;
-            string fileName = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\words.txt";
+            string fileName = @"..\..\..\Resources\words.txt";
             StreamReader file = new StreamReader(fileName);
             while ((word = file.ReadLine()) != null)
             {               

@@ -12,7 +12,7 @@ namespace Balda.Data
     {
         private ArrayList _keys = new ArrayList();
 
-        private string _path = @"C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\Resources\Keyboard.txt";
+        private string _path = @"..\..\..\Resources\Keyboard.txt";
 
         public GameKeys()
         {
