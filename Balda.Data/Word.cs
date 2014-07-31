@@ -13,7 +13,7 @@ namespace Balda.Data
         private string _word;
         private int _value;
         private int _player;
-        private string _connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\drobo_000\Documents\HG\Balda-clone\ia23-09-Balda\DataBase.accdb";
+        private string _connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\..\..\Resources\Users.accdb";
         private OleDbCommand _cmd = new OleDbCommand();
         private OleDbConnection _connect = new OleDbConnection();
         private OleDbDataReader _dr;

@@ -51,7 +51,7 @@ namespace Balda
         {
             reloadDataBoard();
             reloadKeyBoard();
-            titleP1.Text = DataUserManager.DataUser.GetCurrentUser().GetNickname();
+            titleP1.Text = User.SharedUser.GetNickname();
             titleP2.Text = gameManager.Players()[1].GetNickname();
         }
 

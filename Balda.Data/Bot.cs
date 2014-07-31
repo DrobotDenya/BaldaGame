@@ -7,7 +7,7 @@
 
         public Bot(string name, int level, FindWordAlgorithm alho)
         {
-            _nickname = name;
+            Nickname = name;
             this._alho = alho;
             if (level >= 0 && level <= 2)
             {

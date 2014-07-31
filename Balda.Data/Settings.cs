@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Balda.Data
+﻿namespace Balda.Data
 {
     public class Settings
     {
@@ -21,7 +15,7 @@ namespace Balda.Data
         {
             get
             {
-                if (_settings == null)
+                if(_settings == null)
                 {
                     _settings = new Settings();
                 }
