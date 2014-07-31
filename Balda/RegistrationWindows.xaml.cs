@@ -25,7 +25,7 @@ namespace Balda
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        private void BtnRegisterClick(object sender, RoutedEventArgs e)
         {
             string nickname = tbNickname.Text;
             string firstName = tbFirstName.Text;
@@ -37,7 +37,7 @@ namespace Balda
                 && secondName != "" && password != ""
                 && confPassword == password)
             {
-                User user = new User(nickname , firstName, secondName, password);
+                User user = new User(nickname, firstName, secondName, password);
                 user.UsingInsert();
             }
         }

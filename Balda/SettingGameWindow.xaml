@@ -47,9 +47,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="1,0,0,0" Grid.Row="1">
-                <CheckBox x:Name="CheckBoxPalyers" Content="Two player" Margin="10,10,24,10" Checked="checkBoxPalyers_Checked" Unchecked="checkBoxPalyers_Unchecked"/>
+                <CheckBox x:Name="CheckBoxPalyers" Content="Two player" Margin="10,10,24,10" Checked="CheckBoxPalyersChecked" Unchecked="CheckBoxPalyersUnchecked"/>
                 <Label Content="Level of difficulty" Margin="10,10,10,0" HorizontalContentAlignment="Center"/>
-                <ComboBox x:Name="ListboxDifficulty" SelectionChanged="listboxDifficulty_SelectionChanged"/>
+                <ComboBox x:Name="ListboxDifficulty" SelectionChanged="ListboxDifficultySelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="2" Margin="1,0,0,0" Grid.Row="1">
                 <Label Content="Player2" Margin="0,10,0,0"/>
@@ -59,7 +59,7 @@
                 <Label Style="{StaticResource TitleLabel}" Content="Game Settings" DockPanel.Dock="Top"/>
             </DockPanel>
             <DockPanel Grid.Column="1" LastChildFill="False" Margin="0,1,0,0" Grid.Row="2">
-                <Button Content="Back" Click="Button_Click" DockPanel.Dock="Bottom"/>
+                <Button Content="Back" Click="ButtonClick" DockPanel.Dock="Bottom"/>
             </DockPanel>
         </Grid>
     </Grid>
