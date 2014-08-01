@@ -16,9 +16,9 @@ namespace Balda.Data
         private OleDbDataReader _dr;
         private DataSet _dataSet = new DataSet();
         private List<string> _words = new List<string>();
+
         private bool _isSurrender = false;
         private static User _user;
-
         public static User SharedUser 
         { 
            get

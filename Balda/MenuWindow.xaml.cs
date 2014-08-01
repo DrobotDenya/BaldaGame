@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Balda.Data;
 
 namespace Balda
 {
@@ -26,8 +27,13 @@ namespace Balda
 
         private void ButtonNewGameClick(object sender, RoutedEventArgs e)
         {
+
             GameWindow gameWindow = new GameWindow();
+            GameViewModel viewViewModel = new GameViewModel(gameWindow);
+            gameWindow.DataContext = viewViewModel;
+            //viewViewModel.ShowMessage("123123");
             gameWindow.Show();
+
 
         }
 
@@ -36,5 +42,7 @@ namespace Balda
             SettingGameWindow settingGameWindow = new SettingGameWindow();
             settingGameWindow.Show();
         }
+
+
     }
 }

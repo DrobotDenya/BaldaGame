@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" x:Class="Balda.GameWindow"
-        Title="GameWindow" Height="759" Width="951.955" Loaded="Window_Loaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
+        Title="GameWindow" Height="759" Width="951.955"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -83,7 +83,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <WrapPanel x:Name="board" Margin="8,30,6,0" Height="288" VerticalAlignment="Top" Grid.Column="1"/>
+            <WrapPanel x:Name="Board" Margin="8,30,6,0" Height="288" VerticalAlignment="Top" Grid.Column="1"/>
             <Grid Margin="0,325,0,0" Grid.ColumnSpan="3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -91,21 +91,21 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <WrapPanel HorizontalAlignment="Left" Width="318" Grid.Column="1">
-                    <Button x:Name="btnCancel" Content="Cancel" Margin="10,0,5,0" Width="92" Height="50" Click="BtnCancelClick"/>
-                    <Button x:Name="btnMiss" Content="Miss" Margin="5,0,5,0" Width="92" Height="50" Click="BtnMissClick"/>
-                    <Button x:Name="btnSubmit" Content="Submit" Margin="5,0,5,0" Width="92" Height="50" Click="BtnSubmitClick"/>
+                    <Button x:Name="BtnCancel" Content="Cancel" Margin="10,0,5,0" Width="92" Height="50" Command="{Binding CancelbtnCommand}"/>
+                    <Button x:Name="BtnMiss" Content="Miss" Margin="5,0,5,0" Width="92" Height="50" Command="{Binding MissbtnCommand}"/>
+                    <Button x:Name="BtnSubmit" Content="Submit" Margin="5,0,5,0" Width="92" Height="50" Command="{Binding SubmitbtnCommand}"/>
                 </WrapPanel>
             </Grid>
             <DockPanel x:Name="LeftDockPanel" LastChildFill="False" Margin="0,0,0,69">
                 <StackPanel Width="286" DockPanel.Dock="Right" FlowDirection="RightToLeft">
                     <TextBlock Style="{StaticResource TextBlockRight}" Name="TitleP1" Text="Player1" Height="30" Width="140" Margin="0,0,146,0"/>
-                    <ListBox Style="{StaticResource ListBox1}" Name="ListBoxP1" Height="280" Margin="0,0,146,0"/>
+                    <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" Name="ListBoxP1" Height="280" Margin="0,0,146,0"/>
                 </StackPanel>
             </DockPanel>
             <DockPanel x:Name="RigthDockPanel" Grid.Column="2" LastChildFill="False" Margin="0,0,0,69">
                 <StackPanel Width="244">
-                    <TextBlock Style="{StaticResource TextBlockLeft}" Name="TitleP2" Margin="0,0,104,0" Text="Player 2" Height="30" Width="140"/>
-                    <ListBox Style="{StaticResource ListBox2}" Name="ListBoxP2" Height="280" Margin="0,0,104,0"/>
+                    <TextBlock Style="{StaticResource TextBlockLeft}" Name="TitleP2" Margin="0,0,104,0" Text="{Binding NamePlayer1}" Height="30" Width="140"/>
+                    <ListBox Style="{StaticResource ListBox2}" ItemsSource="{Binding ListWord}" Name="ListBoxP2" Height="280" Margin="0,0,104,0"/>
                 </StackPanel>
             </DockPanel>
         </Grid>

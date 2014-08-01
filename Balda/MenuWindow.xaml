@@ -1,8 +1,9 @@
 ﻿<Window x:Class="Balda.MenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MenuWindow" Height="300" Width="325">
+        Title="MenuWindow" Height="300" Width="325" >
     <Window.Resources>
+
         <Style BasedOn="{StaticResource {x:Type Button}}"
                TargetType="Button"
                x:Key="VerticalButton">
