@@ -10,55 +10,59 @@
   </profileInstances>
   <packagedElements>
     <componentModelHasComponents>
-      <component Id="b827c52c-b19b-4d32-8459-0c43dee9d70b" name="User.accdb" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="8b239a9c-478c-49d1-86ef-1ab05cdc5ced" />
-      </component>
-    </componentModelHasComponents>
-    <componentModelHasComponents>
-      <component Id="f84eb9ee-972e-47f3-8ddb-30c04bb3a699" name="Keyboard.txt" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="a0946679-898d-4f71-8575-56eef0928892" />
-      </component>
-    </componentModelHasComponents>
-    <componentModelHasComponents>
-      <component Id="1ee82b5b-fa0a-459b-b675-1366f86bfe30" name="words.txt" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="1f9890cd-6255-43cc-be5e-aab40a6b900b" />
-      </component>
-    </componentModelHasComponents>
-    <componentModelHasComponents>
-      <component Id="7243706d-606e-4137-b166-be662d53f219" name="Balda.exe" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="74215344-892d-49e0-b392-a69335297931" />
+      <component Id="1aa766f3-625c-4199-b306-7ce71c33565e" name="Управление пользователями" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="41bd320d-ad32-4bf8-995a-3fbb8b7b026b" />
         <suppliersInternal>
-          <dependency Id="3afb4d7f-5c9d-4c55-884a-653371959f45">
-            <componentMoniker Id="1ee82b5b-fa0a-459b-b675-1366f86bfe30" LastKnownName="words.txt" />
-            <elementDefinition Id="a5d76b4e-c66b-46eb-a775-c0753b4dd54f" />
-          </dependency>
-          <dependency Id="231bd571-bd01-43ab-a6d9-5d0e2f356b90">
-            <componentMoniker Id="4013f164-d580-4802-aa94-3207412ac975" LastKnownName="Balda.dll" />
-            <elementDefinition Id="03ee64dd-97ba-43a0-8f51-920de41d9c19" />
-          </dependency>
-          <dependency Id="ead74384-13e0-458c-b12d-b9c0fedd3b87">
-            <componentMoniker Id="a531cae6-4e13-4332-adf2-dc879f554e9a" LastKnownName="Balda.data.dll" />
-            <elementDefinition Id="3c7dacdd-770a-4bd0-bb85-4aaa52d0f09d" />
-          </dependency>
-          <dependency Id="7e14e447-d45a-4ca2-bb43-dcdb3cdd3b2f">
-            <componentMoniker Id="f84eb9ee-972e-47f3-8ddb-30c04bb3a699" LastKnownName="Keyboard.txt" />
-            <elementDefinition Id="19ea083e-e3ba-47b3-8b3d-3e84b8e958af" />
-          </dependency>
-          <dependency Id="60f561ad-5e34-4fef-859b-7c29a47201d2">
-            <componentMoniker Id="b827c52c-b19b-4d32-8459-0c43dee9d70b" LastKnownName="User.accdb" />
-            <elementDefinition Id="337f3f0b-4155-4db6-bd2d-71482e5d38dc" />
+          <dependency Id="a04488da-1489-4316-9010-4caf9db4708b">
+            <componentMoniker Id="da034185-5114-4b9f-8084-69e9bf5d3889" LastKnownName="База данных" />
+            <elementDefinition Id="26e3773d-e45e-47ba-a7c4-0d022538548c" />
           </dependency>
         </suppliersInternal>
       </component>
     </componentModelHasComponents>
     <componentModelHasComponents>
-      <component Id="4013f164-d580-4802-aa94-3207412ac975" name="Balda.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="42082b20-e764-4d6a-b615-7cd4d48f54e0" />
+      <component Id="5a6f0168-98a7-46cf-a1c2-83d710b6926c" name="Пользователь" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="94a91a7a-b1b3-4916-9d80-ce7426b2550f" />
+        <generalsInternal>
+          <generalization Id="522cc9ea-3d69-4e08-bac4-9d0b1f63d72d" isSubstitutable="false">
+            <componentMoniker Id="1aa766f3-625c-4199-b306-7ce71c33565e" LastKnownName="Управление пользователями" />
+            <elementDefinition Id="3a0cebcc-4840-4673-b78a-bd3b3b28d9f2" />
+          </generalization>
+          <generalization Id="60ecdca2-a78a-44c1-a9c5-c0861ff8c74e" isSubstitutable="false">
+            <componentMoniker Id="ad1ab95f-13ff-45da-9dc0-9193ea400a3f" LastKnownName="Игровой движок" />
+            <elementDefinition Id="ebcc76b7-706a-4f53-991f-5dcadc719c2c" />
+          </generalization>
+          <generalization Id="5010616c-2e9d-40dd-bb01-d7bf7b7a9b2b" isSubstitutable="false">
+            <componentMoniker Id="bd628929-a4ee-44e4-86d0-019fa6118549" LastKnownName="Искуственный интелект для бота" />
+            <elementDefinition Id="5fcb45e2-434c-4a9e-9491-0cf971abac74" />
+          </generalization>
+        </generalsInternal>
       </component>
     </componentModelHasComponents>
     <componentModelHasComponents>
-      <component Id="a531cae6-4e13-4332-adf2-dc879f554e9a" name="Balda.data.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="16b05397-03df-48f4-88a4-e7aa90c0cbe9" />
+      <component Id="ad1ab95f-13ff-45da-9dc0-9193ea400a3f" name="Игровой движок" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3f024188-06ab-45ba-b742-ba842f08b14c" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="da034185-5114-4b9f-8084-69e9bf5d3889" name="База данных" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="015866bd-54ee-402d-8b00-b4373daa576a" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="bd628929-a4ee-44e4-86d0-019fa6118549" name="Искуственный интелект для бота" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="55dadc50-c2ff-41e6-8f0b-c85042eea0d1" />
+        <suppliersInternal>
+          <dependency Id="f3b77422-b143-4be2-98e4-d8e6bfe82a3c">
+            <componentMoniker Id="d6c46129-9228-4ad4-a283-481e0a01254d" LastKnownName="Алгоритм поиска слова" />
+            <elementDefinition Id="76998d55-8f1a-4938-9079-911dc1024af8" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="d6c46129-9228-4ad4-a283-481e0a01254d" name="Алгоритм поиска слова" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ca82f9d6-4567-4e8d-8705-820cbb96ae49" />
       </component>
     </componentModelHasComponents>
   </packagedElements>
