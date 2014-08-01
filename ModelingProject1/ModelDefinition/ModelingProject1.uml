@@ -1,16 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="281249fd-b010-4d7b-80b4-f27a13834471"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="df131b42-49db-4845-a6e6-f6ce287abe07">
+      Id="e90dadf7-97aa-4697-9d17-b91ea8b61863">
+      <body>Противник человек или компьютер?</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="2241aa72-e79a-4793-98b8-2b7188e65e84"
+          LastKnownName="Decision11"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a0c85a1a-e3b8-4fec-81eb-46472642d640">
       <body>Существует ли выделеное слово?</body>
       <annotatedElements>
         <decisionNodeMoniker
-          Id="109eac01-9844-49d7-90e1-d6231101a676"
-          LastKnownName="Decision1"
+          Id="dd33af08-8b2a-41ab-8649-0487f30373de"
+          LastKnownName="Decision12"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="cdf1b8ee-0a7f-4d44-8211-f83793a61a19">
+      <body>Есть пустые
+ ячейки?</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="2e0611dd-1d48-47fd-b4c2-3ca340c69165"
+          LastKnownName="Decision13"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="07faa8da-764a-44ac-abaf-43eb7f001081">
+      <body>Найдено ли слово?</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="7f9a9e3c-fa32-4f71-9d07-6eaaa904b383"
+          LastKnownName="Decision14"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="54fd94bd-5aa5-49b9-910b-8af422e1e253">
+      <body>Есть  пустые 
+ячейки?</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="b7b58323-02a4-4a08-bf12-c8b889dfec23"
+          LastKnownName="Decision131"
           LastKnownLocation="ModelingProject1.uml" />
       </annotatedElements>
     </comment>
@@ -27,6 +69,12 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="240c0982-118d-4a16-8b86-e108c7c82522">
+      <profileInstance
+        Id="3e0e7e36-6680-4e15-8a4d-0bf942bd7e27"
+        name="TextTemplateBindings" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -1253,199 +1301,655 @@
         isReadOnly="false"
         isSingleExecution="false">
         <nodes>
-          <opaqueAction
-            Id="d63fbfba-a422-451c-9169-62c972456b9c"
-            name="Выделить слово"
+          <initialNode
+            Id="b46d84bf-239a-40ed-bd49-38abf7e635fb"
+            name="Initial11"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="104d89e5-57d8-4d84-9007-97e301fb95fe"
-                isLeaf="false">
-                <forkNodeMoniker
-                  Id="04df76ce-b3b7-41ed-a79e-804006194de3"
-                  LastKnownName="Fork1"
-                  LastKnownLocation="ModelingProject1.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="58b96246-4ec9-4a80-8053-5e34716d0304"
-            name="Отменить выделение"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="57943978-e302-4c5f-a149-352ae5835cbb"
+                Id="ed6ceb89-0c57-4bea-9a6a-cd383d1ca742"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
-                  LastKnownName="Получение права на ход"
+                  Id="29428928-eea6-45a0-be72-be2ec7381079"
+                  LastKnownName="Аутентификация"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5744a697-04f3-4ebb-96a6-f0f9b1a5ff20"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d9d50c54-c2da-4b8f-8820-5f8da51a9543"
+                  LastKnownName="Регистрация"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="29428928-eea6-45a0-be72-be2ec7381079"
+            name="Аутентификация"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e9bc9286-97a3-4aa9-b4e5-c480efb60e4b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="64859fb0-5828-452e-b4a2-08b1e97c61f9"
+                  LastKnownName="Переход в меню"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
-            Id="e1dee453-db03-4162-8a3e-d454c1f430f5"
-            name="Отправить слово"
+            Id="d9d50c54-c2da-4b8f-8820-5f8da51a9543"
+            name="Регистрация"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="465aeb2d-1abd-4f55-9123-bba88297d798"
+                Id="ab89bf00-4b1c-433c-a4cc-01b69d938eef"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="29428928-eea6-45a0-be72-be2ec7381079"
+                  LastKnownName="Аутентификация"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode
+            Id="33679f41-11f1-42af-b3a5-7994463f21a2"
+            name="Вход в игру"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="9790594f-8ec8-4e2d-b8fd-3476d1f75755"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="7ab610db-3ce0-4f92-a3b5-b72474a1a9aa"
+            name="Выбор противника"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ed278065-3fd7-4ec2-a7a4-03043a1e9ce2"
                 isLeaf="false">
                 <decisionNodeMoniker
-                  Id="109eac01-9844-49d7-90e1-d6231101a676"
-                  LastKnownName="Decision1"
+                  Id="2241aa72-e79a-4793-98b8-2b7188e65e84"
+                  LastKnownName="Decision11"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <forkNode
-            Id="04df76ce-b3b7-41ed-a79e-804006194de3"
-            name="Fork1"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="cb9e6edb-439a-4015-bee7-a5f2fe663d3a"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="58b96246-4ec9-4a80-8053-5e34716d0304"
-                  LastKnownName="Отменить выделение"
-                  LastKnownLocation="ModelingProject1.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="0003a224-2296-4f0f-a5c0-1ef574d9998b"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="e1dee453-db03-4162-8a3e-d454c1f430f5"
-                  LastKnownName="Отправить слово"
-                  LastKnownLocation="ModelingProject1.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </forkNode>
           <decisionNode
-            Id="109eac01-9844-49d7-90e1-d6231101a676"
-            name="Decision1"
+            Id="2241aa72-e79a-4793-98b8-2b7188e65e84"
+            name="Decision11"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="6b06a52f-6dad-4d53-aadf-32c589c4bca2"
+                Id="2b85bf48-418c-4263-ad55-8bfdbe8648bc"
+                guard="Комп"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="58b96246-4ec9-4a80-8053-5e34716d0304"
-                  LastKnownName="Отменить выделение"
+                  Id="c7076cee-5936-4ab6-9c75-a36467d26a1f"
+                  LastKnownName="Выбор сложности компьютера"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
               <controlFlow
-                Id="062ed3ff-336b-49d3-bbab-60aa6a01dd4d"
+                Id="9b9afa74-ac14-456c-92f5-d3fac34f0e09"
+                guard="Человек"
                 isLeaf="false">
-                <joinNodeMoniker
-                  Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
-                  LastKnownName="Join1"
+                <opaqueActionMoniker
+                  Id="6eca842d-37a7-4aa1-8cbc-b1c35f61a692"
+                  LastKnownName="Ввод имени второго игрока"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction
-            Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
-            name="Получение права на ход"
+            Id="c7076cee-5936-4ab6-9c75-a36467d26a1f"
+            name="Выбор сложности компьютера"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="472a13c2-eea4-49d5-af3d-58db12b6a420"
+                Id="a30cdbda-b81e-434d-965f-931540917aa3"
                 isLeaf="false">
-                <forkNodeMoniker
-                  Id="8bb94784-3173-4a13-b83c-b340fcc5b054"
-                  LastKnownName="Fork2"
+                <opaqueActionMoniker
+                  Id="7354a56c-2428-4b57-b723-189cb9dc3391"
+                  LastKnownName="Сохранение настроек"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <initialNode
-            Id="4fc6d0a6-fc20-4792-95e6-49bb9948e55d"
-            name="Initial1"
+          <opaqueAction
+            Id="6eca842d-37a7-4aa1-8cbc-b1c35f61a692"
+            name="Ввод имени второго игрока"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="580df3a8-5427-496a-9d94-955261023754"
+                Id="20fb681b-4105-4a11-a472-4118d3ddc351"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="dcabbe39-09a2-4426-80b5-5487d377e56a"
-                  LastKnownName="Получение права на ход"
+                  Id="7354a56c-2428-4b57-b723-189cb9dc3391"
+                  LastKnownName="Сохранение настроек"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
-          </initialNode>
-          <forkNode
-            Id="8bb94784-3173-4a13-b83c-b340fcc5b054"
-            name="Fork2"
+          </opaqueAction>
+          <objectNode
+            Id="842f2616-a8e4-4a83-ba76-21c9399b7946"
+            name="Меню"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="d1a2174e-5ec1-4b91-9a1c-9c70a59abddb"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="2a0e4e5a-ec04-4f55-a83b-61dfc2e9b20b"
+            name="Начать новую игру"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="44106289-1169-4c49-85cb-68622f582d51"
+                Id="0e414b8c-abf0-4513-ab3b-2f6e84b975f0"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="d63fbfba-a422-451c-9169-62c972456b9c"
+                  Id="c5b0f97b-cc13-45f1-bb94-4a70dc8a23fa"
+                  LastKnownName="Получения права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8061fbcb-1ead-4d99-a18e-1ee178f2d5fd"
+            name="Настроить игру"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="650dd51c-ed75-403a-8662-0f051145e2b1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7ab610db-3ce0-4f92-a3b5-b72474a1a9aa"
+                  LastKnownName="Выбор противника"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode
+            Id="ee8fe8d8-2d4c-48eb-8a1b-067c7f38aed7"
+            name="Настройка игры"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="1ca9b2af-6c9e-48af-bc26-a2be636b56c2"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="09bc1c7e-6c42-4c38-b14d-c80f819dff7e"
+            name="Игра"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="4710c09e-8a48-4df3-a8e5-3a074db40196"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="c5b0f97b-cc13-45f1-bb94-4a70dc8a23fa"
+            name="Получения права на ход"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e1b098e5-e87b-4743-a48d-ec7010e8e546"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="029d4ade-5377-4d64-996d-d3eb3645c0c8"
                   LastKnownName="Выделить слово"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
               <controlFlow
-                Id="e2558b6e-0fd5-4d4d-a46e-cdaf878a46e8"
+                Id="47e70db5-c796-4caf-92fb-670578b591cb"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="8f8de7dd-5b6c-418f-a706-717fd8218e1c"
+                  Id="19aabe9a-950d-491c-8099-a2028b7bca3e"
                   LastKnownName="Пропустить ход"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
+              <controlFlow
+                Id="bd0ed5fa-e0c7-4e38-9a47-1c6bbb06b527"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7d763c27-ff0d-4128-bfc1-41454938742c"
+                  LastKnownName="Сдаться"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
             </flowNodeTargets>
-          </forkNode>
+          </opaqueAction>
+          <objectNode
+            Id="99a49ff5-e553-474d-ada8-28fd87a70c82"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="69e5580a-c8eb-4f3b-96e1-fb601ce0671c"
+                name="TextTemplateBindings"
+                profile="TextTemplateBindings">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5abf2ba-395b-4628-baa3-62e2aa0c2dc8">
+                    <propertyInstance
+                      Id="0763c505-0468-4542-849b-b2811522a807"
+                      name="Alias" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca961334-9cfa-4008-af62-ef60d95180c3">
+                    <propertyInstance
+                      Id="6d644e27-8f44-4887-a3e1-be673ae585ad"
+                      name="TemplateFilePath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="081fa91c-bf67-4085-9c05-807a8a2d77ff">
+                    <propertyInstance
+                      Id="cbb89b78-aab7-4be2-894b-8340ac9c377c"
+                      name="ProjectPath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c88e58e2-2026-4f69-8a04-17548bb9deac">
+                    <propertyInstance
+                      Id="4f48ce54-924c-44f3-b3d5-6e57ae227da6"
+                      name="TargetDirectory" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c17362f-dade-4888-950c-1e3a5278b912">
+                    <propertyInstance
+                      Id="947897fc-edc3-40f0-842f-7befc80af140"
+                      name="TargetName" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8306e482-7482-4109-b259-319cc24d8c9e">
+                    <propertyInstance
+                      Id="4200f77a-cfbd-436d-a1dc-8eab510f48cf"
+                      name="Overwrite" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c6f086a-ce00-4b5d-a712-4bd09763aed6">
+                    <propertyInstance
+                      Id="be4f1705-2605-4d57-9588-5ee39faf08a7"
+                      name="Parameters" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <upperBound>
+              <literalInteger
+                Id="5f1e1cee-d1ff-4a3c-80b3-a9284bb6cb07"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="b9dbf748-4d8e-4847-abbe-cec91fa501df"
+            name="Бот"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="9069f9a7-5401-4a8a-a8ec-4f4c3d24f011"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
           <opaqueAction
-            Id="8f8de7dd-5b6c-418f-a706-717fd8218e1c"
+            Id="029d4ade-5377-4d64-996d-d3eb3645c0c8"
+            name="Выделить слово"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bdf518e6-ed54-4b1a-9b41-3b4ec77132de"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="755d9bf1-2408-4f84-964a-850f587281b7"
+                  LastKnownName="Отменить выделение"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="2682b263-f21b-415a-ae48-ac0eb5cd7671"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="869d7552-6693-46b8-af79-ea8952881e32"
+                  LastKnownName="Отправить слово"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="19aabe9a-950d-491c-8099-a2028b7bca3e"
             name="Пропустить ход"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="fe15bdbc-c94c-4720-ad93-05bcc5210293"
+                Id="e2dccd96-adb7-40db-9cde-ba764b0077f8"
                 isLeaf="false">
-                <joinNodeMoniker
-                  Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
-                  LastKnownName="Join1"
+                <opaqueActionMoniker
+                  Id="02a2db26-e534-4bbb-ad41-2e895b555110"
+                  LastKnownName="Передача хода другому игроку"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
-            Id="d7235865-12ae-44b6-9cdb-3622a2e75bd8"
-            name="Передача хода другому игроку"
+            Id="869d7552-6693-46b8-af79-ea8952881e32"
+            name="Отправить слово"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="ba0f1593-669b-4d63-9999-c132769047e9"
+                Id="2eacce44-f9eb-4d88-9b10-f7ab0817adcc"
                 isLeaf="false">
-                <activityFinalNodeMoniker
-                  Id="44753708-216a-4d4f-871f-39bebaba66fc"
-                  LastKnownName="ActivityFinal1"
+                <decisionNodeMoniker
+                  Id="dd33af08-8b2a-41ab-8649-0487f30373de"
+                  LastKnownName="Decision12"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <joinNode
-            Id="b82b1de6-3a64-4060-a32e-49160cde61a0"
-            name="Join1"
+          <opaqueAction
+            Id="755d9bf1-2408-4f84-964a-850f587281b7"
+            name="Отменить выделение"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="0ba3fb1b-0c1b-419b-9e83-41aa19bc667a"
+                Id="8245e9e3-5d57-438b-9835-6088ab8b9038"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="d7235865-12ae-44b6-9cdb-3622a2e75bd8"
-                  LastKnownName="Передача хода другому игроку"
+                  Id="c5b0f97b-cc13-45f1-bb94-4a70dc8a23fa"
+                  LastKnownName="Получения права на ход"
                   LastKnownLocation="ModelingProject1.uml" />
               </controlFlow>
             </flowNodeTargets>
-          </joinNode>
+          </opaqueAction>
+          <decisionNode
+            Id="dd33af08-8b2a-41ab-8649-0487f30373de"
+            name="Decision12"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="669a9ac8-2929-4f5a-80c7-291ac35d37b2"
+                guard="Нет"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="755d9bf1-2408-4f84-964a-850f587281b7"
+                  LastKnownName="Отменить выделение"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ef9c25e0-63e7-44ac-a37c-13b66e3fde91"
+                guard="Да"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="2e0611dd-1d48-47fd-b4c2-3ca340c69165"
+                  LastKnownName="Decision13"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="2e0611dd-1d48-47fd-b4c2-3ca340c69165"
+            name="Decision13"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f3fedb74-6581-4ea3-90d3-8b1a2fde430a"
+                guard="Нет"
+                name="Нет"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ec573378-cbb3-4312-afa5-49e49d2f2917"
+                  LastKnownName="Обьявление победителя"
+                  LastKnownLocation="ModelingProject1.uml" />
+                <description>Нет</description>
+              </controlFlow>
+              <controlFlow
+                Id="e5234893-a32f-41aa-875a-b5dfdd4e4df5"
+                guard="Да"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="02a2db26-e534-4bbb-ad41-2e895b555110"
+                  LastKnownName="Передача хода другому игроку"
+                  LastKnownLocation="ModelingProject1.uml" />
+                <description>Да</description>
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="64859fb0-5828-452e-b4a2-08b1e97c61f9"
+            name="Переход в меню"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="90502669-0eb3-487d-bb1c-76c7c47dc7a4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2a0e4e5a-ec04-4f55-a83b-61dfc2e9b20b"
+                  LastKnownName="Начать новую игру"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="99ef58fe-b28e-44b9-91e7-8ebffc8af476"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8061fbcb-1ead-4d99-a18e-1ee178f2d5fd"
+                  LastKnownName="Настроить игру"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="02a2db26-e534-4bbb-ad41-2e895b555110"
+            name="Передача хода другому игроку"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62b057e8-bd8e-4321-b12b-285d14ee875b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="676135af-7627-43bc-a03b-640d4dd31c42"
+                  LastKnownName="Получения права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5e53d3b6-b6ea-48b4-96e5-35cf87e802f5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c5b0f97b-cc13-45f1-bb94-4a70dc8a23fa"
+                  LastKnownName="Получения права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="676135af-7627-43bc-a03b-640d4dd31c42"
+            name="Получения права на ход"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3127fa77-8898-4cc3-8f98-2c86c457d650"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="99ca7341-89d9-4c83-924c-bcc35aa3cbe3"
+                  LastKnownName="Поиск слова"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="99ca7341-89d9-4c83-924c-bcc35aa3cbe3"
+            name="Поиск слова"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a8833a20-d4e1-4702-b0ec-a3a5ff0dc201"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="7f9a9e3c-fa32-4f71-9d07-6eaaa904b383"
+                  LastKnownName="Decision14"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="7f9a9e3c-fa32-4f71-9d07-6eaaa904b383"
+            name="Decision14"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="86e0d536-cdf4-4a43-a134-bf270563c135"
+                guard="Нет"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="93d09223-3bc4-40ff-a837-73e29ed688ff"
+                  LastKnownName="Сдаться"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4679f9b4-596e-47d8-940e-9c4f8a99be8d"
+                guard="Да"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b7b58323-02a4-4a08-bf12-c8b889dfec23"
+                  LastKnownName="Decision131"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="93d09223-3bc4-40ff-a837-73e29ed688ff"
+            name="Сдаться"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9c6be2e4-4898-4d94-a198-7ce143699495"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ec573378-cbb3-4312-afa5-49e49d2f2917"
+                  LastKnownName="Обьявление победителя"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ec573378-cbb3-4312-afa5-49e49d2f2917"
+            name="Обьявление победителя"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b0b2793d-8cd4-4962-8720-951ea0434b98"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="bc83c2e7-fea0-4c5d-8dbf-8e1a96c8e971"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
           <activityFinalNode
-            Id="44753708-216a-4d4f-871f-39bebaba66fc"
-            name="ActivityFinal1"
+            Id="bc83c2e7-fea0-4c5d-8dbf-8e1a96c8e971"
+            name="ActivityFinal2"
             isLeaf="false" />
+          <opaqueAction
+            Id="7354a56c-2428-4b57-b723-189cb9dc3391"
+            name="Сохранение настроек"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a41f81b1-f6f0-4982-8a0f-72c5feafc19e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="64859fb0-5828-452e-b4a2-08b1e97c61f9"
+                  LastKnownName="Переход в меню"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="7d763c27-ff0d-4128-bfc1-41454938742c"
+            name="Сдаться"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2b327ce3-e7dd-45dd-838a-5a37b6cbb094"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ec573378-cbb3-4312-afa5-49e49d2f2917"
+                  LastKnownName="Обьявление победителя"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="b7b58323-02a4-4a08-bf12-c8b889dfec23"
+            name="Decision131"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ad718316-6f1b-4629-aadb-a7c048ade090"
+                guard="Нет"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ec573378-cbb3-4312-afa5-49e49d2f2917"
+                  LastKnownName="Обьявление победителя"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="cd29c2b2-ec24-4d8f-8312-2edeead76da5"
+                guard="Да"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c5b0f97b-cc13-45f1-bb94-4a70dc8a23fa"
+                  LastKnownName="Получения права на ход"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode
+            Id="659d8c70-51d8-43a2-92a9-dedeaafef861"
+            name="Игрок2"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="4940c8ec-08dc-46c4-966e-5617ace5c640"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="231214ef-3c10-44d2-a02d-3c34ae633a39"
+            name="Игрок"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="c36af1cc-44e8-431d-8819-bad4deecfb17"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
         </nodes>
       </activity>
     </packageHasNamedElement>

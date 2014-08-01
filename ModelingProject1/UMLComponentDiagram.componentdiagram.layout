@@ -17,7 +17,7 @@
     <componentShape Id="0347eb7f-88db-458f-a3ff-3c6994ce2ae7" absoluteBounds="1.125, 1.875, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
       <componentMoniker Id="4013f164-d580-4802-aa94-3207412ac975" LastKnownName="Balda.dll" />
     </componentShape>
-    <componentShape Id="a7091517-e72f-47ef-b570-28c8d69f8098" absoluteBounds="6.25, 1.875, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+    <componentShape Id="a7091517-e72f-47ef-b570-28c8d69f8098" absoluteBounds="6.375, 1.75, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
       <componentMoniker Id="a531cae6-4e13-4332-adf2-dc879f554e9a" LastKnownName="Balda.data.dll" />
     </componentShape>
     <dependencyConnector edgePoints="[(4.01923076923077 : 4.075); (4.01923076923077 : 4.7875); (2.5 : 4.7875)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
@@ -36,7 +36,7 @@
         <componentShapeMoniker Id="0347eb7f-88db-458f-a3ff-3c6994ce2ae7" />
       </nodes>
     </dependencyConnector>
-    <dependencyConnector edgePoints="[(4.77186098654708 : 3.125); (4.77186098654708 : 2.33285714285714); (6.25 : 2.33285714285714)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+    <dependencyConnector edgePoints="[(4.77186098654708 : 3.125); (4.77186098654708 : 2.20785714285714); (6.375 : 2.20785714285714)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
       <dependencyMoniker Id="ead74384-13e0-458c-b12d-b9c0fedd3b87" />
       <relativeChildShapes />
       <nodes>
