@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="281249fd-b010-4d7b-80b4-f27a13834471"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1952,6 +1952,101 @@
           </objectNode>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="41bd320d-ad32-4bf8-995a-3fbb8b7b026b"
+        name="Управление пользователями"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="26e3773d-e45e-47ba-a7c4-0d022538548c">
+            <componentMoniker
+              Id="015866bd-54ee-402d-8b00-b4373daa576a"
+              LastKnownName="База данных"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="94a91a7a-b1b3-4916-9d80-ce7426b2550f"
+        name="Пользователь"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="3a0cebcc-4840-4673-b78a-bd3b3b28d9f2"
+            isSubstitutable="false">
+            <componentMoniker
+              Id="41bd320d-ad32-4bf8-995a-3fbb8b7b026b"
+              LastKnownName="Управление пользователями"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+          <generalization
+            Id="ebcc76b7-706a-4f53-991f-5dcadc719c2c"
+            isSubstitutable="false">
+            <componentMoniker
+              Id="3f024188-06ab-45ba-b742-ba842f08b14c"
+              LastKnownName="Игровой движок"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+          <generalization
+            Id="5fcb45e2-434c-4a9e-9491-0cf971abac74"
+            isSubstitutable="false">
+            <componentMoniker
+              Id="55dadc50-c2ff-41e6-8f0b-c85042eea0d1"
+              LastKnownName="Искуственный интелект для бота"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="3f024188-06ab-45ba-b742-ba842f08b14c"
+        name="Игровой движок"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="015866bd-54ee-402d-8b00-b4373daa576a"
+        name="База данных"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="55dadc50-c2ff-41e6-8f0b-c85042eea0d1"
+        name="Искуственный интелект для бота"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="76998d55-8f1a-4938-9079-911dc1024af8">
+            <componentMoniker
+              Id="ca82f9d6-4567-4e8d-8705-820cbb96ae49"
+              LastKnownName="Алгоритм поиска слова"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ca82f9d6-4567-4e8d-8705-820cbb96ae49"
+        name="Алгоритм поиска слова"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
