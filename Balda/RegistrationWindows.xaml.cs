@@ -20,9 +20,11 @@ namespace Balda
     /// </summary>
     public partial class RegistrationWindows : Window
     {
-        public RegistrationWindows()
+        private StartWindow startWindow;
+        public RegistrationWindows(StartWindow window)
         {
             InitializeComponent();
+            startWindow = window;
         }
 
         private void BtnRegisterClick(object sender, RoutedEventArgs e)
@@ -39,7 +41,16 @@ namespace Balda
             {
                 User user = new User(nickname, firstName, secondName, password);
                 user.UsingInsert();
+                
+               startWindow.Show();
+               this.Close();
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            startWindow.Show();
+            //this.Close();
         }
     }
 }

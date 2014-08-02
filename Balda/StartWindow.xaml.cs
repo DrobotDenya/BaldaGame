@@ -28,7 +28,7 @@ namespace Balda
             {
                 MenuWindow menu = new MenuWindow();
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
             else
             {
@@ -48,7 +48,7 @@ namespace Balda
 
         private void TextBlockRegistrationMouseDown(object sender, MouseButtonEventArgs e)
         {
-            RegistrationWindows registrWindow = new RegistrationWindows();
+            RegistrationWindows registrWindow = new RegistrationWindows(this);
             registrWindow.Show();
             this.Hide();
         }
