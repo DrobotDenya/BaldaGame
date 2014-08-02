@@ -21,11 +21,15 @@ namespace Balda.Data
         private string _word;
         private bool _tl;
         private bool _bl;
+        private int _width;
+        private int _heigth;
 
         public FindWordAlgorithm(GameBoard gameBoard, List<string> userWord)
         {
             this._gameBoard = gameBoard;
             this._userWord = userWord;
+            _width = _gameBoard.Width();
+            _heigth = _gameBoard.Heigth();
         }
 
         public FindWordAlgorithm()
@@ -36,14 +40,14 @@ namespace Balda.Data
         public List<string> FindWords()
         {
             List<string> res = new List<string>();
-            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
-            for (int row = 0; row < _gameBoard.Width(); row++)
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+            _strings = new string[_width, _heigth];
+            for (int row = 0; row < _width; row++)
+                for (int column = 0; column < _heigth; column++)
                     _strings[row, column] = string.Empty;
 
-            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
-            for (int row = 0; row < _gameBoard.Width(); row++)
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+            _pr = new int[_width, _heigth];
+            for (int row = 0; row < _width; row++)
+                for (int column = 0; column < _heigth; column++)
                     _pr[row, column] = 0;
 
             while (_curr < _dictionary.GetCount())
@@ -51,8 +55,8 @@ namespace Balda.Data
                 _word = _dictionary.GetDictionary()[_curr];
                 if (!_userWord.Contains(_word))
                 {
-                    for (int row = 0; row < _gameBoard.Width(); row++)
-                        for (int column = 0; column < _gameBoard.Heigth(); column++)
+                    for (int row = 0; row < _width; row++)
+                        for (int column = 0; column < _heigth; column++)
                             _pr[row, column] = 0;
 
                     _tl = true;
@@ -60,15 +64,15 @@ namespace Balda.Data
                     for (int k = 0; k < _word.Length; k++)
                     {
                         //// Цикл по самому массиву.
-                        for (int i = 0; i < _gameBoard.Width(); i++)
+                        for (int i = 0; i < _width; i++)
                         {
-                            for (int j = 0; j < _gameBoard.Heigth(); j++)
+                            for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
+                                if (_gameBoard.CellPool[i, j] == string.Empty)
                                 {
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
-                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
+                                    for (_ai = 0; _ai < _width; _ai++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
+                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai, _aj];
 
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
                                     _bl = true;
@@ -77,8 +81,8 @@ namespace Balda.Data
                                     _ai = i;
                                     _aj = j;
 
-                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
-                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
+                                    for (int i1 = 0; i1 < _width; ++i1)
+                                        for (int j1 = 0; j1 < _heigth; ++j1)
                                             _pr[i1, j1] = 0;
 
                                     _pr[i, j] = 1;
@@ -116,8 +120,8 @@ namespace Balda.Data
                                         }
                                     }
 
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                    for (_ai = 0; _ai < _width; _ai++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
                                             _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  //// восстановили массив, в текущем состоянии.
                                 }
                             }
@@ -156,19 +160,19 @@ namespace Balda.Data
         ////Возворащает первое подходящие слово из словаря
         public string FindWord()
         {
-            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
-            for (int row = 0; row < _gameBoard.Width(); row++)
+            _strings = new string[_width, _heigth];
+            for (int row = 0; row < _width; row++)
             {
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                for (int column = 0; column < _heigth; column++)
                 {
                     _strings[row, column] = string.Empty;
                 }
             }
-            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
+            _pr = new int[_width, _heigth];
 
-            for (int row = 0; row < _gameBoard.Width(); row++)
+            for (int row = 0; row < _width; row++)
             {
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                for (int column = 0; column < _heigth; column++)
                 {
                     _pr[row, column] = 0;
                 }
@@ -179,9 +183,9 @@ namespace Balda.Data
                 _word = _dictionary.GetDictionary()[_curr];
                 if (!_userWord.Contains(_word))
                 {
-                    for (int i = 0; i < _gameBoard.Width(); ++i)
+                    for (int i = 0; i < _width; ++i)
                     {
-                        for (int j = 0; j < _gameBoard.Heigth(); ++j)
+                        for (int j = 0; j < _heigth; ++j)
                         {
                             _pr[i, j] = 0;
                         }
@@ -189,18 +193,18 @@ namespace Balda.Data
                     _tl = true;
                     for (int k = 0; k < _word.Length; k++)
                     {
-                        for (int i = 0; i < _gameBoard.Width(); i++)
+                        for (int i = 0; i < _width; i++)
                         {
-                            for (int j = 0; j < _gameBoard.Heigth(); j++)
+                            for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
+                                if (_gameBoard.CellPool[i,j] == string.Empty)
                                 {
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                    for (_ai = 0; _ai < _width; _ai++)
                                     {
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
+                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai,_aj];
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
@@ -209,9 +213,9 @@ namespace Balda.Data
                                     _t = k; // С какой буквы подставляли для поиска в начало слова
                                     _ai = i;
                                     _aj = j;
-                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
+                                    for (int i1 = 0; i1 < _width; ++i1)
                                     {
-                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
+                                        for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
                                             _pr[i1, j1] = 0;
                                         }
@@ -249,9 +253,9 @@ namespace Balda.Data
                                             return _word;
                                         }
                                     }
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                    for (_ai = 0; _ai < _width; _ai++)
                                     {
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
@@ -276,20 +280,20 @@ namespace Balda.Data
 
         public string FindWordWithMaxLength()
         {
-            _strings = new string[_gameBoard.Width(), _gameBoard.Heigth()];
+            _strings = new string[_width, _heigth];
 
-            for (int row = 0; row < _gameBoard.Width(); row++)
+            for (int row = 0; row < _width; row++)
             {
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                for (int column = 0; column < _heigth; column++)
                 {
                     _strings[row, column] = string.Empty;
                 }
             }
-            _pr = new int[_gameBoard.Width(), _gameBoard.Heigth()];
+            _pr = new int[_width, _heigth];
 
-            for (int row = 0; row < _gameBoard.Width(); row++)
+            for (int row = 0; row < _width; row++)
             {
-                for (int column = 0; column < _gameBoard.Heigth(); column++)
+                for (int column = 0; column < _heigth; column++)
                 {
                     _pr[row, column] = 0;
                 }
@@ -301,9 +305,9 @@ namespace Balda.Data
                 _word = dict[_curr];
                 if (!_userWord.Contains(_word) && _word.Length == MaxLength(dict))
                 {
-                    for (int i = 0; i < _gameBoard.Width(); ++i)
+                    for (int i = 0; i < _width; ++i)
                     {
-                        for (int j = 0; j < _gameBoard.Heigth(); ++j)
+                        for (int j = 0; j < _heigth; ++j)
                         {
                             _pr[i, j] = 0;
                         }
@@ -312,18 +316,18 @@ namespace Balda.Data
                     _tl = true;
                     for (int k = 0; k < _word.Length; k++)
                     {
-                        for (int i = 0; i < _gameBoard.Width(); i++)
+                        for (int i = 0; i < _width; i++)
                         {
-                            for (int j = 0; j < _gameBoard.Heigth(); j++)
+                            for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.GetCellValue(i, j) == string.Empty)
+                                if (_gameBoard.CellPool[i,j]== string.Empty)
                                 {
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                    for (_ai = 0; _ai < _width; _ai++)
                                     {
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            _strings[_ai, _aj] = _gameBoard.GetCellValue(_ai, _aj);
+                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai,_aj];
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
@@ -332,9 +336,9 @@ namespace Balda.Data
                                     _t = k; // С какой буквы подставляли для поиска в начало слова
                                     _ai = i;
                                     _aj = j;
-                                    for (int i1 = 0; i1 < _gameBoard.Width(); ++i1)
+                                    for (int i1 = 0; i1 < _width; ++i1)
                                     {
-                                        for (int j1 = 0; j1 < _gameBoard.Heigth(); ++j1)
+                                        for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
                                             _pr[i1, j1] = 0;
                                         }
@@ -369,9 +373,9 @@ namespace Balda.Data
                                             return _word;
                                         }
                                     }
-                                    for (_ai = 0; _ai < _gameBoard.Width(); _ai++)
+                                    for (_ai = 0; _ai < _width; _ai++)
                                     {
-                                        for (_aj = 0; _aj < _gameBoard.Heigth(); _aj++)
+                                        for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
@@ -399,9 +403,9 @@ namespace Balda.Data
         {
             string letter = _word.Substring(index, 1);
 
-            if (_ai + 1 != _gameBoard.Width())
+            if (_ai + 1 != _width)
             {
-                if ((_gameBoard.GetCellValue(_ai + 1, _aj) == letter)
+                if ((_gameBoard.CellPool[_ai + 1, _aj] == letter)
                         && (_pr[_ai + 1, _aj] != 1))
                 {
                     _pr[_ai + 1, _aj] = 1;
@@ -411,7 +415,7 @@ namespace Balda.Data
             }
             if (_ai - 1 != -1)
             {
-                if ((_gameBoard.GetCellValue(_ai - 1, _aj) == letter)
+                if ((_gameBoard.CellPool[_ai - 1, _aj] == letter)
                         && (_pr[_ai - 1, _aj] != 1))
                 {
                     _pr[_ai - 1, _aj] = 1;
@@ -419,9 +423,9 @@ namespace Balda.Data
                     return true;
                 }
             }
-            if (_aj + 1 != _gameBoard.Heigth())
+            if (_aj + 1 != _heigth)
             {
-                if ((_gameBoard.GetCellValue(_ai, _aj + 1) == letter)
+                if ((_gameBoard.CellPool[_ai, _aj + 1] == letter)
                         && (_pr[_ai, _aj + 1] != 1))
                 {
                     _pr[_ai, _aj + 1] = 1;
@@ -431,7 +435,7 @@ namespace Balda.Data
             }
             if (_aj - 1 != -1)
             {
-                if ((_gameBoard.GetCellValue(_ai, _aj - 1) == letter)
+                if ((_gameBoard.CellPool[_ai, _aj - 1] == letter)
                         && (_pr[_ai, _aj - 1] != 1))
                 {
                     _pr[_ai, _aj - 1] = 1;
