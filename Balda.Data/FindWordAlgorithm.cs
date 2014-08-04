@@ -13,14 +13,13 @@ namespace Balda.Data
         private List<string> _userWord = new List<string>();
         private Dictionary _dictionary = new Dictionary();
         private string[,] _strings;
-        private int[,] _pr;
+        private int[,] _binaryMatrixLetters;
         private int _ai = 0;
         private int _aj = 0;
-        private int _p, _t;
-        private int _curr = 0;
+        private int _bottomNumber, _topNumber;
+        private int _currentWordInDict = 0;
         private string _word;
-        private bool _tl;
-        private bool _bl;
+        private bool _isAcceptWord;
         private int _width;
         private int _heigth;
 
@@ -45,21 +44,21 @@ namespace Balda.Data
                 for (int column = 0; column < _heigth; column++)
                     _strings[row, column] = string.Empty;
 
-            _pr = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width, _heigth];
             for (int row = 0; row < _width; row++)
                 for (int column = 0; column < _heigth; column++)
-                    _pr[row, column] = 0;
+                    _binaryMatrixLetters[row, column] = 0;
 
-            while (_curr < _dictionary.GetCount())
+            while (_currentWordInDict < _dictionary.GetCount())
             {
-                _word = _dictionary.GetDictionary()[_curr];
+                _word = _dictionary.GetDictionary()[_currentWordInDict];
                 if (!_userWord.Contains(_word))
                 {
                     for (int row = 0; row < _width; row++)
                         for (int column = 0; column < _heigth; column++)
-                            _pr[row, column] = 0;
+                            _binaryMatrixLetters[row, column] = 0;
 
-                    _tl = true;
+                    bool tl = true;
                     ////Цикл по слову из словаря
                     for (int k = 0; k < _word.Length; k++)
                     {
@@ -75,20 +74,20 @@ namespace Balda.Data
                                             _strings[_ai, _aj] = _gameBoard.CellPool[_ai, _aj];
 
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
-                                    _bl = true;
-                                    _p = k; // С какой буквы подставляли для поиска в конец слова
-                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _isAcceptWord = true;
+                                    _bottomNumber = k; // С какой буквы подставляли для поиска в конец слова
+                                    _topNumber = k; // С какой буквы подставляли для поиска в начало слова
                                     _ai = i;
                                     _aj = j;
 
                                     for (int i1 = 0; i1 < _width; ++i1)
                                         for (int j1 = 0; j1 < _heigth; ++j1)
-                                            _pr[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1, j1] = 0;
 
-                                    _pr[i, j] = 1;
-                                    for (_p = _p + 1; _p < _word.Length; _p++)
+                                    _binaryMatrixLetters[i, j] = 1;
+                                    for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
-                                        if (CheckLetter(_p))
+                                        if (CheckLetter(_bottomNumber))
                                             continue;
                                         else
                                         {
@@ -98,24 +97,24 @@ namespace Balda.Data
 
                                     _ai = i;
                                     _aj = j;
-                                    if (_bl)
+                                    if (_isAcceptWord)
                                     {
-                                        for (_t = _t - 1; _t >= 0; _t--)
-                                            if (CheckLetter(_t))
+                                        for (_topNumber = _topNumber - 1; _topNumber >= 0; _topNumber--)
+                                            if (CheckLetter(_topNumber))
                                                 continue;
                                             else
                                             {
                                                 break;
                                             }
 
-                                        if (_bl)
+                                        if (_isAcceptWord)
                                         {
                                             res.Add(_word);
                                             for (_ai = 0; _ai < 5; _ai++)
                                                 for (_aj = 0; _aj < 5; _aj++)
                                                     _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);
 
-                                            _tl = false;
+                                            tl = false;
                                             break;   //// Слово подошло переходим к следующему слову
                                         }
                                     }
@@ -126,18 +125,18 @@ namespace Balda.Data
                                 }
                             }
 
-                            if (!_tl)
+                            if (!tl)
                             {
                                 break;
                             }
                         }
                     }
 
-                    _curr++;
+                    _currentWordInDict++;
                 }
                 else
                 {
-                    _curr++;
+                    _currentWordInDict++;
                 }
             }
             return res;
@@ -168,29 +167,29 @@ namespace Balda.Data
                     _strings[row, column] = string.Empty;
                 }
             }
-            _pr = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width, _heigth];
 
             for (int row = 0; row < _width; row++)
             {
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _pr[row, column] = 0;
+                    _binaryMatrixLetters[row, column] = 0;
                 }
             }
 
-            while (_curr < _dictionary.GetCount())
+            while (_currentWordInDict < _dictionary.GetCount())
             {
-                _word = _dictionary.GetDictionary()[_curr];
+                _word = _dictionary.GetDictionary()[_currentWordInDict];
                 if (!_userWord.Contains(_word))
                 {
                     for (int i = 0; i < _width; ++i)
                     {
                         for (int j = 0; j < _heigth; ++j)
                         {
-                            _pr[i, j] = 0;
+                            _binaryMatrixLetters[i, j] = 0;
                         }
                     }
-                    _tl = true;
+                    bool tl = true;
                     for (int k = 0; k < _word.Length; k++)
                     {
                         for (int i = 0; i < _width; i++)
@@ -208,22 +207,22 @@ namespace Balda.Data
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
-                                    _bl = true;
-                                    _p = k; // С какой буквы подставляли для поиска в конец слова
-                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _isAcceptWord = true;
+                                    _bottomNumber = k; // С какой буквы подставляли для поиска в конец слова
+                                    _topNumber = k; // С какой буквы подставляли для поиска в начало слова
                                     _ai = i;
                                     _aj = j;
                                     for (int i1 = 0; i1 < _width; ++i1)
                                     {
                                         for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
-                                            _pr[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1, j1] = 0;
                                         }
                                     }
-                                    _pr[i, j] = 1;
-                                    for (_p = _p + 1; _p < _word.Length; _p++)
+                                    _binaryMatrixLetters[i, j] = 1;
+                                    for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
-                                        if (CheckLetter(_p))
+                                        if (CheckLetter(_bottomNumber))
                                         {
                                             continue;
                                         }
@@ -234,11 +233,11 @@ namespace Balda.Data
                                     }
                                     _ai = i;
                                     _aj = j;
-                                    if (_bl)
+                                    if (_isAcceptWord)
                                     {
-                                        for (_t = _t - 1; _t >= 0; _t--)
+                                        for (_topNumber = _topNumber - 1; _topNumber >= 0; _topNumber--)
                                         {
-                                            if (CheckLetter(_t))
+                                            if (CheckLetter(_topNumber))
                                             {
                                                 continue;
                                             }
@@ -248,7 +247,7 @@ namespace Balda.Data
                                             }
                                         }
 
-                                        if (_bl)
+                                        if (_isAcceptWord)
                                         {
                                             return _word;
                                         }
@@ -262,17 +261,17 @@ namespace Balda.Data
                                     }
                                 }
                             }
-                            if (!_tl)
+                            if (!tl)
                             {
                                 break;
                             }
                         }
                     }
-                    _curr++;
+                    _currentWordInDict++;
                 }
                 else
                 {
-                    _curr++;
+                    _currentWordInDict++;
                 }
             }
             return string.Empty;
@@ -289,31 +288,31 @@ namespace Balda.Data
                     _strings[row, column] = string.Empty;
                 }
             }
-            _pr = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width, _heigth];
 
             for (int row = 0; row < _width; row++)
             {
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _pr[row, column] = 0;
+                    _binaryMatrixLetters[row, column] = 0;
                 }
             }
             List<string> dict = FindWords();
-            _curr = 0;
-            while (_curr < dict.Count)
+            _currentWordInDict = 0;
+            while (_currentWordInDict < dict.Count)
             {
-                _word = dict[_curr];
+                _word = dict[_currentWordInDict];
                 if (!_userWord.Contains(_word) && _word.Length == MaxLength(dict))
                 {
                     for (int i = 0; i < _width; ++i)
                     {
                         for (int j = 0; j < _heigth; ++j)
                         {
-                            _pr[i, j] = 0;
+                            _binaryMatrixLetters[i, j] = 0;
                         }
                     }
 
-                    _tl = true;
+                    bool tl = true;
                     for (int k = 0; k < _word.Length; k++)
                     {
                         for (int i = 0; i < _width; i++)
@@ -331,22 +330,22 @@ namespace Balda.Data
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
-                                    _bl = true;
-                                    _p = k; // С какой буквы подставляли для поиска в конец слова
-                                    _t = k; // С какой буквы подставляли для поиска в начало слова
+                                    _isAcceptWord = true;
+                                    _bottomNumber = k; // С какой буквы подставляли для поиска в конец слова
+                                    _topNumber = k; // С какой буквы подставляли для поиска в начало слова
                                     _ai = i;
                                     _aj = j;
                                     for (int i1 = 0; i1 < _width; ++i1)
                                     {
                                         for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
-                                            _pr[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1, j1] = 0;
                                         }
                                     }
-                                    _pr[i, j] = 1;
-                                    for (_p = _p + 1; _p < _word.Length; _p++)
+                                    _binaryMatrixLetters[i, j] = 1;
+                                    for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
-                                        if (CheckLetter(_p))
+                                        if (CheckLetter(_bottomNumber))
                                             continue;
                                         else
                                         {
@@ -355,11 +354,11 @@ namespace Balda.Data
                                     }
                                     _ai = i;
                                     _aj = j;
-                                    if (_bl)
+                                    if (_isAcceptWord)
                                     {
-                                        for (_t = _t - 1; _t >= 0; _t--)
+                                        for (_topNumber = _topNumber - 1; _topNumber >= 0; _topNumber--)
                                         {
-                                            if (CheckLetter(_t))
+                                            if (CheckLetter(_topNumber))
                                             {
                                                 continue;
                                             }
@@ -368,7 +367,7 @@ namespace Balda.Data
                                                 break;
                                             }
                                         }
-                                        if (_bl)
+                                        if (_isAcceptWord)
                                         {
                                             return _word;
                                         }
@@ -382,17 +381,17 @@ namespace Balda.Data
                                     }
                                 }
                             }
-                            if (!_tl)
+                            if (!tl)
                             {
                                 break;
                             }
                         }
                     }
-                    _curr++;
+                    _currentWordInDict++;
                 }
                 else
                 {
-                    _curr++;
+                    _currentWordInDict++;
                 }
             }
             return string.Empty;
@@ -406,9 +405,9 @@ namespace Balda.Data
             if (_ai + 1 != _width)
             {
                 if ((_gameBoard.CellPool[_ai + 1, _aj] == letter)
-                        && (_pr[_ai + 1, _aj] != 1))
+                        && (_binaryMatrixLetters[_ai + 1, _aj] != 1))
                 {
-                    _pr[_ai + 1, _aj] = 1;
+                    _binaryMatrixLetters[_ai + 1, _aj] = 1;
                     _ai++;
                     return true;
                 }
@@ -416,9 +415,9 @@ namespace Balda.Data
             if (_ai - 1 != -1)
             {
                 if ((_gameBoard.CellPool[_ai - 1, _aj] == letter)
-                        && (_pr[_ai - 1, _aj] != 1))
+                        && (_binaryMatrixLetters[_ai - 1, _aj] != 1))
                 {
-                    _pr[_ai - 1, _aj] = 1;
+                    _binaryMatrixLetters[_ai - 1, _aj] = 1;
                     _ai--;
                     return true;
                 }
@@ -426,9 +425,9 @@ namespace Balda.Data
             if (_aj + 1 != _heigth)
             {
                 if ((_gameBoard.CellPool[_ai, _aj + 1] == letter)
-                        && (_pr[_ai, _aj + 1] != 1))
+                        && (_binaryMatrixLetters[_ai, _aj + 1] != 1))
                 {
-                    _pr[_ai, _aj + 1] = 1;
+                    _binaryMatrixLetters[_ai, _aj + 1] = 1;
                     _aj++;
                     return true;
                 }
@@ -436,15 +435,15 @@ namespace Balda.Data
             if (_aj - 1 != -1)
             {
                 if ((_gameBoard.CellPool[_ai, _aj - 1] == letter)
-                        && (_pr[_ai, _aj - 1] != 1))
+                        && (_binaryMatrixLetters[_ai, _aj - 1] != 1))
                 {
-                    _pr[_ai, _aj - 1] = 1;
+                    _binaryMatrixLetters[_ai, _aj - 1] = 1;
                     _aj--;
                     return true;
                 }
             }
 
-            _bl = false; // Если не совпало ни одно условие выше то это слово не подходит.
+            _isAcceptWord = false; // Если не совпало ни одно условие выше то это слово не подходит.
             return false;
         }
     }
