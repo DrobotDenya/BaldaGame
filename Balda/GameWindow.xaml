@@ -6,22 +6,59 @@
         mc:Ignorable="d" x:Class="Balda.GameWindow"
         Title="GameWindow" Height="759" Width="917.627"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
     <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Content" Value="0"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Height" Value="68"/>
+            <Setter Property="Width" Value="68"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FF6370C7"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+        </Style>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="FontFamily" Value="Solaris"/>
             <Setter Property="FontSize" Value="22"/>
             <Setter Property="Foreground" Value="Blue"/>
             <Setter Property="Background" Value="LightGreen"/>
+            <Setter Property="Width" Value="91"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="5,5,5,0"/>
+        </Style>
+        <Style BasedOn="{StaticResource {x:Type Button}}"
+            TargetType="Button"
+               x:Key="MissBtn">
+            <Setter Property="Content" Value="Miss"/>
+        </Style>
+        <Style BasedOn="{StaticResource {x:Type Button}}"
+            TargetType="Button"
+               x:Key="CancelBtnn">
+            <Setter Property="Content" Value="Cancel"/>
+            
+        </Style>
+        <Style BasedOn="{StaticResource {x:Type Button}}"
+            TargetType="Button"
+               x:Key="SubmitBtn">
+            <Setter Property="Content" Value="Submit"/>
+
         </Style>
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Solaris"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
         <Style TargetType="ListBox">
             <Setter Property="BorderBrush" Value="#FF001C72"/>
             <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="Height" Value="280"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
         <Style BasedOn="{StaticResource {x:Type TextBlock}}"
             TargetType="TextBlock"
@@ -43,9 +80,11 @@
                x:Key="ListBox1">
             <Setter Property="Background" Value="#FF6370C7"/>
             <Setter Property="BorderBrush" Value="#FF046100"/>
+            <Setter Property="BorderBrush" Value="#FF046100"/>
+            <Setter Property="BorderBrush" Value="#FF046100"/>
         </Style>
-    </Window.Resources>
-    <Grid RenderTransformOrigin="0.421,0.528" ShowGridLines="True">
+      </Window.Resources>
+    <Grid RenderTransformOrigin="0.421,0.528" >
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition Height="89*"/>
@@ -59,8 +98,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <DockPanel Grid.Column="1" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label x:Name="Value2" Content="0" VerticalAlignment="Center" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7" DockPanel.Dock="Left" HorizontalAlignment="Center"/>
-                <Label x:Name="Value1" Content="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C" DockPanel.Dock="Right"/>
+                <Label x:Name="Value2"/>
+                <Label x:Name="Value1" DockPanel.Dock="Right"/>
             </DockPanel>
         </Grid>
         <Grid x:Name="BottomGrid" Grid.Row="3">
@@ -76,7 +115,7 @@
             </Grid.ColumnDefinitions>
             <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Width="683" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="MiddleGrid" Grid.Row="2" ShowGridLines="True">
+        <Grid x:Name="MiddleGrid" Grid.Row="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="156*"/>
                 <RowDefinition Height="35*"/>
@@ -86,24 +125,20 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <WrapPanel HorizontalAlignment="Center" Width="314" Grid.Column="1" VerticalAlignment="Center" Height="69" Grid.Row="1">
-                <Button x:Name="BtnCancel" Content="Cancel" Margin="10,5,5,0" Width="92" Height="50" Command="{Binding CancelbtnCommand}"/>
-                <Button x:Name="BtnMiss" Content="Miss" Margin="5,5,5,0" Width="92" Height="50" Command="{Binding MissbtnCommand}"/>
-                <Button x:Name="BtnSubmit" Content="Submit" Margin="5,5,5,0" Width="92" Height="50" Command="{Binding SubmitbtnCommand}" VerticalAlignment="Center"/>
+            <WrapPanel HorizontalAlignment="Center" Width="304" VerticalAlignment="Center" Height="70" Grid.Row="1" Grid.Column="1">
+                <Button Style="{StaticResource CancelBtnn}" x:Name="BtnCancel" Command="{Binding CancelbtnCommand}"/>
+                <Button Style="{StaticResource MissBtn}" x:Name="BtnMiss" Command="{Binding MissbtnCommand}"/>
+                <Button Style="{StaticResource SubmitBtn}" x:Name="BtnSubmit" Command="{Binding SubmitbtnCommand}" />
             </WrapPanel>
-            <WrapPanel x:Name="Board" Height="300" Grid.Column="1" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-            <DockPanel x:Name="LeftDockPanel" LastChildFill="False">
-                <StackPanel Width="268" DockPanel.Dock="Right" FlowDirection="RightToLeft" HorizontalAlignment="Right">
-                    <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" Height="30" Width="140" HorizontalAlignment="Left" />
-                    <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1" Height="280" HorizontalAlignment="Left" Width="140" />
-                </StackPanel>
-            </DockPanel>
-            <DockPanel x:Name="RigthDockPanel" Grid.Column="2" LastChildFill="False" Height="312" VerticalAlignment="Top">
-                <StackPanel Width="244">
-                    <TextBlock Style="{StaticResource TextBlockLeft}" x:Name="TitleP2" Text="Player2" Height="30" Width="140" HorizontalAlignment="Left"/>
-                    <ListBox Style="{StaticResource ListBox2}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP2" Height="280" HorizontalAlignment="Left" Width="140"/>
-                </StackPanel>
-            </DockPanel>
+            <WrapPanel x:Name="Board" Height="300" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1"/>
+            <StackPanel Width="141" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,1">
+                <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" />
+                <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Grid.Column="2">
+                <TextBlock Style="{StaticResource TextBlockLeft}" x:Name="TitleP2" Text="Player2"/>
+                <ListBox Style="{StaticResource ListBox2}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP2" />
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

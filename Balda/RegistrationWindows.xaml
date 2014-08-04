@@ -7,6 +7,14 @@
             <Setter Property="Height" Value="23"/>
             <Setter Property="Text" Value=""/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="Foreground" Value="#FF1CF112"/>
+            <Setter Property="Content" Value="Register"/>
+        </Style>
     </Window.Resources>
     <Grid Background="#FFAEB52C">
         <Grid.RowDefinitions>
@@ -28,7 +36,7 @@
             <Label Content="ConfirmPassword"/>
             <TextBox x:Name="tbConfPassword"/>
         </StackPanel>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" RenderTransformOrigin="0.5,0.5" Foreground="#FF1CF112" Click="BtnRegisterClick" Grid.Row="4">
+        <Button x:Name="btnRegister" Click="BtnRegisterClick" Grid.Row="4">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

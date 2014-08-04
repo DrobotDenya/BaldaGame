@@ -20,16 +20,19 @@
         <Style TargetType="ComboBox">
             <Setter Property="SelectedIndex" Value="1" />           
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
         <Style BasedOn="{StaticResource {x:Type Label}}"
             TargetType="Label"
                x:Key="TitleLabel">
             <Setter Property="Background" Value="#4CE89114"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="Height" Value="55"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="20"/>
-            <Setter Property="Background" Value="#4CE89114"/>
+            <Setter Property="DockPanel.Dock" Value="Top"/>
+            <Setter Property="Content" Value="Game Settings"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -46,15 +49,15 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Row="1">
                 <CheckBox x:Name="CheckBoxPalyers" Content="Two player" Checked="CheckBoxPalyersChecked" Unchecked="CheckBoxPalyersUnchecked"/>
-                <Label Content="Level of difficulty" HorizontalContentAlignment="Center"/>
+                <Label Content="Level of difficulty"/>
                 <ComboBox x:Name="ListboxDifficulty" SelectionChanged="ListboxDifficultySelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="2" Grid.Row="1">
                 <Label Content="Player2" />
                 <TextBox x:Name="TextBoxPlayerTwoName"/>
             </StackPanel>
-            <DockPanel Height="101" LastChildFill="False" VerticalAlignment="Top" Grid.ColumnSpan="3">
-                <Label Style="{StaticResource TitleLabel}" Content="Game Settings" DockPanel.Dock="Top"/>
+            <DockPanel LastChildFill="False" VerticalAlignment="Top" Grid.ColumnSpan="3">
+                <Label Style="{StaticResource TitleLabel}"/>
             </DockPanel>
             <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="2">
                 <Button Content="Back" Click="ButtonClick" DockPanel.Dock="Bottom"/>
