@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" x:Class="Balda.GameWindow"
-        Title="GameWindow" Height="759" Width="951.955"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
+        Title="GameWindow" Height="759" Width="917.627"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -45,7 +45,7 @@
             <Setter Property="BorderBrush" Value="#FF046100"/>
         </Style>
     </Window.Resources>
-    <Grid RenderTransformOrigin="0.421,0.528" ShowGridLines="True" Margin="0,0,-8,0">
+    <Grid RenderTransformOrigin="0.421,0.528" ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition Height="89*"/>
@@ -58,13 +58,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <DockPanel Grid.Column="1" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="Value2" Content="0" VerticalAlignment="Center" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7" DockPanel.Dock="Left" HorizontalAlignment="Center"/>
+                <Label x:Name="Value1" Content="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C" DockPanel.Dock="Right"/>
+            </DockPanel>
         </Grid>
-        <Label Content="Time" Margin="338,39,334,10" Foreground="#FFDE9007" FontSize="22" FontWeight="Bold" Width="280" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="39" Grid.RowSpan="2"/>
-        <Rectangle Fill="#FF6370C7" HorizontalAlignment="Left" Height="68" Margin="338,19,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5" Grid.RowSpan="2"/>
-        <Label x:Name="Value1" Content="0" HorizontalAlignment="Left" Margin="338,19,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF72EA6C" Grid.RowSpan="2"/>
-        <Rectangle Fill="#FF72EA6C" HorizontalAlignment="Left" Height="68" Margin="550,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" RadiusY="49.5" RadiusX="49.5" Grid.RowSpan="2"/>
-        <Label x:Name="Value2" Content="0" HorizontalAlignment="Left" Margin="550,20,0,0" VerticalAlignment="Top" FontSize="24" Height="68" Width="68" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF6370C7" Grid.RowSpan="2"/>
-        <Grid x:Name="BottomGrid" Grid.Row="3" Margin="0,5,0,-5">
+        <Grid x:Name="BottomGrid" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -75,37 +74,34 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" Margin="0,0,0,36"/>
+            <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Width="683" VerticalAlignment="Center"/>
         </Grid>
         <Grid x:Name="MiddleGrid" Grid.Row="2" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="156*"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <WrapPanel x:Name="Board" Margin="8,30,6,0" Height="288" VerticalAlignment="Top" Grid.Column="1"/>
-            <Grid Margin="0,325,0,0" Grid.ColumnSpan="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <WrapPanel HorizontalAlignment="Left" Width="318" Grid.Column="1">
-                    <Button x:Name="BtnCancel" Content="Cancel" Margin="10,0,5,0" Width="92" Height="50" Command="{Binding CancelbtnCommand}"/>
-                    <Button x:Name="BtnMiss" Content="Miss" Margin="5,0,5,0" Width="92" Height="50" Command="{Binding MissbtnCommand}"/>
-                    <Button x:Name="BtnSubmit" Content="Submit" Margin="5,0,5,0" Width="92" Height="50" Command="{Binding SubmitbtnCommand}"/>
-                </WrapPanel>
-            </Grid>
-            <DockPanel x:Name="LeftDockPanel" LastChildFill="False" Margin="0,0,0,69">
-                <StackPanel Width="286" DockPanel.Dock="Right" FlowDirection="RightToLeft">
-                    <TextBlock Style="{StaticResource TextBlockRight}" Name="TitleP1" Text="Player1" Height="30" Width="140" Margin="0,0,146,0"/>
-                    <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" Name="ListBoxP1" Height="280" Margin="0,0,146,0"/>
+            <WrapPanel HorizontalAlignment="Center" Width="314" Grid.Column="1" VerticalAlignment="Center" Height="69" Grid.Row="1">
+                <Button x:Name="BtnCancel" Content="Cancel" Margin="10,5,5,0" Width="92" Height="50" Command="{Binding CancelbtnCommand}"/>
+                <Button x:Name="BtnMiss" Content="Miss" Margin="5,5,5,0" Width="92" Height="50" Command="{Binding MissbtnCommand}"/>
+                <Button x:Name="BtnSubmit" Content="Submit" Margin="5,5,5,0" Width="92" Height="50" Command="{Binding SubmitbtnCommand}" VerticalAlignment="Center"/>
+            </WrapPanel>
+            <WrapPanel x:Name="Board" Height="300" Grid.Column="1" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <DockPanel x:Name="LeftDockPanel" LastChildFill="False">
+                <StackPanel Width="268" DockPanel.Dock="Right" FlowDirection="RightToLeft" HorizontalAlignment="Right">
+                    <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" Height="30" Width="140" HorizontalAlignment="Left" />
+                    <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1" Height="280" HorizontalAlignment="Left" Width="140" />
                 </StackPanel>
             </DockPanel>
-            <DockPanel x:Name="RigthDockPanel" Grid.Column="2" LastChildFill="False" Margin="0,0,0,69">
+            <DockPanel x:Name="RigthDockPanel" Grid.Column="2" LastChildFill="False" Height="312" VerticalAlignment="Top">
                 <StackPanel Width="244">
-                    <TextBlock Style="{StaticResource TextBlockLeft}" Name="TitleP2" Margin="0,0,104,0" Text="{Binding NamePlayer1}" Height="30" Width="140"/>
-                    <ListBox Style="{StaticResource ListBox2}" ItemsSource="{Binding ListWord}" Name="ListBoxP2" Height="280" Margin="0,0,104,0"/>
+                    <TextBlock Style="{StaticResource TextBlockLeft}" x:Name="TitleP2" Text="Player2" Height="30" Width="140" HorizontalAlignment="Left"/>
+                    <ListBox Style="{StaticResource ListBox2}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP2" Height="280" HorizontalAlignment="Left" Width="140"/>
                 </StackPanel>
             </DockPanel>
         </Grid>

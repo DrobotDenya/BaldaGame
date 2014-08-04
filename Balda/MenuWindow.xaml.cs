@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Balda.Data;
@@ -41,6 +42,17 @@ namespace Balda
         {
             SettingGameWindow settingGameWindow = new SettingGameWindow();
             settingGameWindow.Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //TranslateTransform trans = new TranslateTransform();
+            //ButtonNewGame.RenderTransform = trans;
+            //var animation = new DoubleAnimation();
+            //animation.From = 0;
+            //animation.To = 1000;
+            //animation.Duration = TimeSpan.FromSeconds(10);
+            //ButtonNewGame.BeginAnimation(TranslateTransform.YProperty, animation);
         }
 
 
