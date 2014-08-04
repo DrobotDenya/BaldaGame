@@ -1,6 +1,6 @@
 ﻿<Window x:Class="Balda.MenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib"
         Title="MenuWindow" Height="297" Width="333" Loaded="Window_Loaded" >
     <Window.Resources>
         <Style BasedOn="{StaticResource {x:Type Button}}"
@@ -38,6 +38,7 @@
         <Style TargetType="Grid">
             <Setter Property="Background" Value="#FF908A87"/>
         </Style>
+
     </Window.Resources>
     <Grid>
         <Button Style="{StaticResource NewGameBtn}" Name="ButtonNewGame" Click="ButtonNewGameClick">
@@ -61,23 +62,33 @@
             </Button.Triggers>
         </Button>
         <DockPanel Style="{StaticResource RightDockPanel}" LastChildFill="False">
-            <Button Style="{StaticResource VerticalButton}" x:Name="RightVerticalButton" Content="H&#xA;i&#xA;g&#xA;h&#xA;s&#xA;c&#xA;o&#xA;r&#xA;e" Click="Button_Click">
-                <Button.Triggers>
-                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetName="ButtonNewGame" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
-                                <DoubleAnimation Storyboard.TargetName="rotBut" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="11" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="LeftVerticalButton" Storyboard.TargetProperty="Width" From="0" To="25" Duration="0:0:1"/>
-                                <DoubleAnimation Storyboard.TargetName="RightVerticalButton" Storyboard.TargetProperty="Width" From="0" To="25" Duration="0:0:1"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Button.Triggers>
+            <Button Style="{StaticResource VerticalButton}" x:Name="RightVerticalButton" Click="Button_Click">
+                <ItemsControl>
+                    <system:String>H</system:String>
+                    <system:String>I</system:String>
+                    <system:String>G</system:String>
+                    <system:String>H</system:String>
+                    <system:String>S</system:String>
+                    <system:String>C</system:String>
+                    <system:String>O</system:String>
+                    <system:String>R</system:String>
+                    <system:String>E</system:String>
+                </ItemsControl>
             </Button>
         </DockPanel>
         <DockPanel >
-            <Button Style="{StaticResource VerticalButton}" Name="LeftVerticalButton" Content="S&#xA;e&#xA;t&#xA;t&#xA;i&#xA;n&#xA;g&#xA;s" Click="Button_Click"/>
+            <Button Style="{StaticResource VerticalButton}" Name="LeftVerticalButton" Click="Button_Click">
+                <ItemsControl FlowDirection="LeftToRight" >
+                    <system:String>S</system:String>
+                    <system:String>E</system:String>
+                    <system:String>T</system:String>
+                    <system:String>T</system:String>
+                    <system:String>I</system:String>
+                    <system:String>N</system:String>
+                    <system:String>G</system:String>
+                </ItemsControl>
+            </Button>
+
         </DockPanel>
     </Grid>
 </Window>
