@@ -1,17 +1,24 @@
 ﻿<Window x:Class="Balda.RegistrationWindows"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RegistrationWindows" Height="394.521" Width="300" Closed="Window_Closed">
+        Title="RegistrationWindows" Height="394.521" Width="275.651" Closed="Window_Closed">
     <Window.Resources>
-        <Style TargetType="TextBox">            
+        <Style TargetType="TextBox">
             <Setter Property="Height" Value="23"/>
             <Setter Property="Text" Value=""/>
         </Style>
     </Window.Resources>
     <Grid Background="#FFAEB52C">
-        <StackPanel HorizontalAlignment="Left" Height="282" Margin="78,23,0,0" VerticalAlignment="Top" Width="150">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Height="292" Width="150" Grid.RowSpan="4">
             <Label Content="Nickname"/>
-            <TextBox x:Name="tbNickname"/>
+            <TextBox x:Name="tbNickname" BorderThickness="3"/>
             <Label Content="First Name"/>
             <TextBox x:Name="tbFirstName" />
             <Label Content="Second Name"/>
@@ -21,12 +28,12 @@
             <Label Content="ConfirmPassword"/>
             <TextBox x:Name="tbConfPassword"/>
         </StackPanel>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="83,309,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Foreground="#FF1CF112" Click="BtnRegisterClick">
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" RenderTransformOrigin="0.5,0.5" Foreground="#FF1CF112" Click="BtnRegisterClick" Grid.Row="4">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-8.751"/>
+                    <RotateTransform Angle="-8.803"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
