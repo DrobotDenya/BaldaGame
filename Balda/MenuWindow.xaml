@@ -29,6 +29,16 @@
             <Setter Property="LastChildFill" Value="False"/>
             <Setter Property="FlowDirection" Value="RightToLeft"/>
         </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="IsHitTestVisible" Value="False"/>
+        </Style>
         <Style BasedOn="{StaticResource {x:Type DockPanel}}"
                TargetType="DockPanel"
                x:Key="RightDockPanel">
@@ -63,7 +73,7 @@
         </Button>
         <DockPanel Style="{StaticResource RightDockPanel}" LastChildFill="False">
             <Button Style="{StaticResource VerticalButton}" x:Name="RightVerticalButton" Click="Button_Click">
-                <ListBox HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderThickness="0" Focusable="False" IsHitTestVisible="False" IsTextSearchEnabled="False">
+                <ListBox>
                     <ListBoxItem>H</ListBoxItem>
                     <ListBoxItem>i</ListBoxItem>
                     <ListBoxItem>g</ListBoxItem>
@@ -78,10 +88,7 @@
         </DockPanel>
         <DockPanel >
             <Button Style="{StaticResource VerticalButton}" Name="LeftVerticalButton" Click="Button_Click">
-                <ListBox HorizontalContentAlignment="Center" Focusable="False" IsHitTestVisible="False" IsTextSearchEnabled="False" BorderThickness="0">
-                    <ListBox.Background>
-                        <SolidColorBrush Color="White" Opacity="0"/>
-                    </ListBox.Background>
+                <ListBox >
                     <ListBoxItem>S</ListBoxItem>
                     <ListBoxItem>e</ListBoxItem>
                     <ListBoxItem>t</ListBoxItem>
