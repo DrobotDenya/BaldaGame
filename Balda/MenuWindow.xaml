@@ -8,7 +8,7 @@
                x:Key="VerticalButton">
             <Setter Property="Background" Value="Purple"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Width" Value="25"/>
+            <Setter Property="Width" Value="27"/>
             <Setter Property="Height" Value="208"/>
             <Setter Property="Height" Value="208"/>
         </Style>
@@ -63,30 +63,33 @@
         </Button>
         <DockPanel Style="{StaticResource RightDockPanel}" LastChildFill="False">
             <Button Style="{StaticResource VerticalButton}" x:Name="RightVerticalButton" Click="Button_Click">
-                <ItemsControl>
-                    <system:String>H</system:String>
-                    <system:String>I</system:String>
-                    <system:String>G</system:String>
-                    <system:String>H</system:String>
-                    <system:String>S</system:String>
-                    <system:String>C</system:String>
-                    <system:String>O</system:String>
-                    <system:String>R</system:String>
-                    <system:String>E</system:String>
-                </ItemsControl>
+                <ListBox HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderThickness="0" Focusable="False" IsHitTestVisible="False" IsTextSearchEnabled="False">
+                    <ListBoxItem>H</ListBoxItem>
+                    <ListBoxItem>i</ListBoxItem>
+                    <ListBoxItem>g</ListBoxItem>
+                    <ListBoxItem>h</ListBoxItem>
+                    <ListBoxItem>s</ListBoxItem>
+                    <ListBoxItem>c</ListBoxItem>
+                    <ListBoxItem>o</ListBoxItem>
+                    <ListBoxItem>r</ListBoxItem>
+                    <ListBoxItem>e</ListBoxItem>
+                </ListBox>
             </Button>
         </DockPanel>
         <DockPanel >
             <Button Style="{StaticResource VerticalButton}" Name="LeftVerticalButton" Click="Button_Click">
-                <ItemsControl FlowDirection="LeftToRight" >
-                    <system:String>S</system:String>
-                    <system:String>E</system:String>
-                    <system:String>T</system:String>
-                    <system:String>T</system:String>
-                    <system:String>I</system:String>
-                    <system:String>N</system:String>
-                    <system:String>G</system:String>
-                </ItemsControl>
+                <ListBox HorizontalContentAlignment="Center" Focusable="False" IsHitTestVisible="False" IsTextSearchEnabled="False" BorderThickness="0">
+                    <ListBox.Background>
+                        <SolidColorBrush Color="White" Opacity="0"/>
+                    </ListBox.Background>
+                    <ListBoxItem>S</ListBoxItem>
+                    <ListBoxItem>e</ListBoxItem>
+                    <ListBoxItem>t</ListBoxItem>
+                    <ListBoxItem>t</ListBoxItem>
+                    <ListBoxItem>i</ListBoxItem>
+                    <ListBoxItem>n</ListBoxItem>
+                    <ListBoxItem>g</ListBoxItem>
+                </ListBox>
             </Button>
 
         </DockPanel>

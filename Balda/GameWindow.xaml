@@ -133,7 +133,7 @@
             <WrapPanel x:Name="Board" Height="300" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1"/>
             <StackPanel Width="141" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,1">
                 <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" />
-                <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1"/>
+                <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" Grid.Column="2">
                 <TextBlock Style="{StaticResource TextBlockLeft}" x:Name="TitleP2" Text="Player2"/>

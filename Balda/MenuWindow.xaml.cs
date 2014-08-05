@@ -53,6 +53,7 @@ namespace Balda
             //animation.To = 1000;
             //animation.Duration = TimeSpan.FromSeconds(10);
             //ButtonNewGame.BeginAnimation(TranslateTransform.YProperty, animation);
+           
         }
 
 
