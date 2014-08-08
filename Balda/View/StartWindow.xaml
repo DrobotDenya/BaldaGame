@@ -1,7 +1,8 @@
-﻿<Window x:Class="Balda.StartWindow"
+﻿<Window x:Class="Balda.View.StartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="StartWindow" Height="323.053" Width="348.578">
+    
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -51,10 +52,15 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="TextBoxLogin" Text="Login"/>
+            <TextBox x:Name="TextBoxLogin" Text="{Binding Path=Login, Mode=TwoWay}"/>
             <Rectangle Height="8" Width="114"/>
-            <TextBox x:Name="TbxPassword" Text="Password "/>
-            <TextBlock x:Name="TextBlockRegistration" MouseDown="TextBlockRegistrationMouseDown"/>
+            <TextBox x:Name="TbxPassword" Text="{Binding Path=Password, Mode=TwoWay}"/>
+            <TextBlock x:Name="TextBlockRegistration">
+            <TextBlock.InputBindings>
+                    <MouseBinding  Command="{Binding RegistrationbtnCommand, Mode=TwoWay}"
+                        MouseAction="LeftClick"/>
+            </TextBlock.InputBindings>
+            </TextBlock>
         </StackPanel>
         <Grid Grid.RowSpan="2" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
@@ -86,7 +92,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="Play" Click="Button_Click" Grid.Row="1">
+            <Button Content="Play" Command="{Binding LoginBtnCommand}" Grid.Row="1">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

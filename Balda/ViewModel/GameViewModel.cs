@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Balda.Data;
+using Balda.View;
 
-namespace Balda
+namespace Balda.ViewModel
 {
-    internal class GameViewModel
+    public class GameViewModel
     {
         private readonly GameManager _gameManager = new GameManager();
         private readonly GameWindow _gameWindow;
@@ -24,9 +25,9 @@ namespace Balda
 
         public GameViewModel(GameWindow gameWindow)
         {
-            MissbtnCommand = new BtnCommand(new Action<object>(Miss));
-            CancelbtnCommand = new BtnCommand(new Action<object>(Cancel));
-            SubmitbtnCommand = new BtnCommand(new Action<object>(Submit));
+            MissbtnCommand = new Command(new Action<object>(Miss));
+            CancelbtnCommand = new Command(new Action<object>(Cancel));
+            SubmitbtnCommand = new Command(new Action<object>(Submit));
             _gameWindow = gameWindow;
             StartGame();
         }

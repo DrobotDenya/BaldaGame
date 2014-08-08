@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Balda
+namespace Balda.ViewModel
 {
-    public class BtnCommand : ICommand
+    public class Command : ICommand
     {
         private Action<object> _action;
-        public BtnCommand(Action<object> action)
+        public Command(Action<object> action)
         {
             _action = action;
         }

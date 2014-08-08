@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Input;
 using Balda.Data;
 
-namespace Balda
+namespace Balda.View
 {
     public partial class GameWindow : Window
     {
@@ -64,12 +63,6 @@ namespace Balda
         public void UpdateValueP2(int value)
         {
             Value2.Content = value;
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            //this.Close();
-            //_gameManager.ClearUsedWords();
         }
     }
 }
