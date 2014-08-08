@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" x:Class="Balda.GameWindow"
-        Title="GameWindow" Height="759" Width="917.627"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" Closed="Window_Closed">
+        mc:Ignorable="d" x:Class="Balda.View.GameWindow"
+        Title="GameWindow" Height="759" Width="917.627"  ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" >
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="Content" Value="0"/>
@@ -36,7 +36,7 @@
             TargetType="Button"
                x:Key="CancelBtnn">
             <Setter Property="Content" Value="Cancel"/>
-            
+
         </Style>
         <Style BasedOn="{StaticResource {x:Type Button}}"
             TargetType="Button"
@@ -83,7 +83,7 @@
             <Setter Property="BorderBrush" Value="#FF046100"/>
             <Setter Property="BorderBrush" Value="#FF046100"/>
         </Style>
-      </Window.Resources>
+    </Window.Resources>
     <Grid RenderTransformOrigin="0.421,0.528" >
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
@@ -113,7 +113,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Width="683" VerticalAlignment="Center"/>
+            <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Width="683" VerticalAlignment="Center"
+                       x:FieldModifier="public" />
         </Grid>
         <Grid x:Name="MiddleGrid" Grid.Row="2" >
             <Grid.RowDefinitions>
@@ -130,7 +131,8 @@
                 <Button Style="{StaticResource MissBtn}" x:Name="BtnMiss" Command="{Binding MissbtnCommand}"/>
                 <Button Style="{StaticResource SubmitBtn}" x:Name="BtnSubmit" Command="{Binding SubmitbtnCommand}" />
             </WrapPanel>
-            <WrapPanel x:Name="Board" Height="300" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1"/>
+            <WrapPanel x:Name="Board" Height="285" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1"
+                       x:FieldModifier="public" />
             <StackPanel Width="141" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,1">
                 <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" />
                 <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1" HorizontalContentAlignment="Center"/>
