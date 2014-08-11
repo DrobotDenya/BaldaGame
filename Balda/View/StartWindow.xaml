@@ -1,10 +1,11 @@
-﻿<Window x:Class="Balda.View.StartWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Balda="clr-namespace:Balda" x:Class="Balda.View.StartWindow"
         Title="StartWindow" Height="323.053" Width="348.578" Loaded="Window_Loaded">
 
     <Window.Resources>
-        <Style TargetType="Button">
+        <Style TargetType="{x:Type Button}">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -19,20 +20,20 @@
             <Setter Property="Height" Value="20"/>
             <Setter Property="Width" Value="69"/>
         </Style>
-        <Style TargetType="TextBlock">
+        <Style TargetType="{x:Type TextBlock}">
             <Setter Property="Text" Value="Registration"/>
             <Setter Property="TextDecorations" Value="Underline"/>
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="9"/>
             <Setter Property="Foreground" Value="#FF122EDE"/>
         </Style>
-        <Style TargetType="TextBox">
+        <Style TargetType="{x:Type TextBox}">
             <Setter Property="BorderBrush" Value="Orange"/>
             <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="FontSize" Value="10"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
-        <Style TargetType="Label">
+        <Style TargetType="{x:Type Label}">
             <Setter Property="FontSize" Value="72"/>
             <Setter Property="Foreground" Value="#FFE89114"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -52,40 +53,36 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="TextBoxLogin" Text="{Binding Path=Login, Mode=TwoWay}">
+            <TextBox x:Name="TextBoxLogin" Text="{Binding Login, Mode=TwoWay}">
                 <TextBox.Triggers>
-                    <EventTrigger RoutedEvent="Window.Loaded">
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimationUsingKeyFrames
-                                     Storyboard.TargetName="TextBoxLogin" Storyboard.TargetProperty="Width" Duration="0:0:10">
+									Storyboard.TargetName="TextBoxLogin" Storyboard.TargetProperty="Width" Duration="0:0:10">
                                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
                                     <LinearDoubleKeyFrame Value="110" KeyTime="0:0:2" />
                                     <LinearDoubleKeyFrame Value="80" KeyTime="0:0:4" />
                                     <LinearDoubleKeyFrame Value="110" KeyTime="0:0:6" />
                                 </DoubleAnimationUsingKeyFrames>
                                 <DoubleAnimationUsingKeyFrames
-                                     Storyboard.TargetName="TbxPassword" Storyboard.TargetProperty="Width" Duration="0:0:10">
+									Storyboard.TargetName="TbxPassword" Storyboard.TargetProperty="Width" Duration="0:0:10">
                                     <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0" />
                                     <LinearDoubleKeyFrame Value="90" KeyTime="0:0:2" />
                                     <LinearDoubleKeyFrame Value="60" KeyTime="0:0:4" />
                                     <LinearDoubleKeyFrame Value="110" KeyTime="0:0:6" />
                                 </DoubleAnimationUsingKeyFrames>
-                                <ColorAnimation
-                Storyboard.TargetName="TbxPassword"
-                Storyboard.TargetProperty="Background"
-                To="Gray" Duration="0:0:5" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </TextBox.Triggers>
             </TextBox>
             <Rectangle Height="8" Width="114"/>
-            <TextBox x:Name="TbxPassword" Text="{Binding Path=Password, Mode=TwoWay}"/>
+            <TextBox x:Name="TbxPassword" Text="{Binding Password, Mode=TwoWay}"/>
             <TextBlock x:Name="TextBlockRegistration">
                 <TextBlock.InputBindings>
                     <MouseBinding  Command="{Binding RegistrationbtnCommand, Mode=TwoWay}"
-                        MouseAction="LeftClick"/>
+						MouseAction="LeftClick"/>
                 </TextBlock.InputBindings>
             </TextBlock>
         </StackPanel>
@@ -102,9 +99,9 @@
                 <RowDefinition Height="32*"/>
                 <RowDefinition Height="65*"/>
             </Grid.RowDefinitions>
-            <Label Name="Title" Content="Балда" Grid.RowSpan="3" Grid.ColumnSpan="4" Padding="0,5,5,0">
+            <Label x:Name="Title" Content="Балда" Grid.RowSpan="3" Grid.ColumnSpan="4" Padding="0,5,5,0">
                 <Label.Triggers>
-                    <EventTrigger RoutedEvent="Window.Loaded">
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetName="rotLbl" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="-18" Duration="0:0:1"/>
@@ -128,9 +125,9 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Name="PlayBtn" Content="Play" Command="{Binding LoginBtnCommand}" Grid.Row="1">
+            <Button x:Name="PlayBtn" Content="Play" Command="{Binding LoginBtnCommand}" Grid.Row="1">
                 <Button.Triggers>
-                    <EventTrigger RoutedEvent="Window.Loaded">
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetName="rotPlayBtn" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="12.074" Duration="0:0:1"/>
