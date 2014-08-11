@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="281249fd-b010-4d7b-80b4-f27a13834471"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2047,6 +2047,317 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="d827fa88-9980-4690-902b-5482eef832fb"
+        name="Activity2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="cc908c7f-7537-4fe8-8234-b78c5deebd65"
+            name="Action1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="11b1d47b-43fb-43d7-8250-8244586e8549"
+            name="Action2"
+            isLeaf="false" />
+          <opaqueAction
+            Id="b2374b11-2e33-42cb-a07b-cd958171ec95"
+            name="Action3"
+            isLeaf="false" />
+          <opaqueAction
+            Id="92170ff0-9a6f-4f5b-b32b-903338953aba"
+            name="Action4"
+            isLeaf="false" />
+          <opaqueAction
+            Id="ee4681cf-8ef6-45fa-9533-ac4f93ae3803"
+            name="Action5"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="e2bd77f5-f07f-47ce-9047-011c177bd0a9"
+        name="Activity2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="ebd8934d-7ba2-4997-8344-b36531ac7c02"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c4424013-6143-440d-96df-3ff7d7655b98"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7d1830b0-1a3d-4e55-a6ce-1bf1b4fea6cf"
+                  LastKnownName="Ожидание ввода логина и пароля"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="7d1830b0-1a3d-4e55-a6ce-1bf1b4fea6cf"
+            name="Ожидание ввода логина и пароля"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2d1f884-ac23-4a58-9c0d-bb3036b232a1"
+                guard="Введен пароль и логин"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6b64d278-4f44-4ee6-82a6-812a1183b420"
+                  LastKnownName="Проверка логина и пароля"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6b64d278-4f44-4ee6-82a6-812a1183b420"
+            name="Проверка логина и пароля"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1c2b2749-b995-4339-b6cf-f7dc0ad8efc4"
+                guard="Неверный логин или пароль"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7d1830b0-1a3d-4e55-a6ce-1bf1b4fea6cf"
+                  LastKnownName="Ожидание ввода логина и пароля"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="44b68395-d9e2-4bb8-a343-9fac0e84ab5b"
+                guard="Логин и пароль подошли"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8071930b-37a6-4537-9708-9dcd13c1125f"
+                  LastKnownName="Ожидание выбора игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9faa0681-d693-41bb-bcec-1fa6687e9db1"
+            name="Ожидание действия игрока"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="44caf29a-ac05-4056-b58d-0e5069ca8491"
+                guard="Отмена выделения"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="789ca447-a1d6-42db-8f07-d970e64dc576"
+                  LastKnownName="Ожидание выделения слова игроком"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="878e0697-5727-4ed0-8d4b-685489c83874"
+                guard="Слово введено"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="058dc5c4-c66b-4823-bfde-61d6dd4d80ff"
+                  LastKnownName="Проверка слова "
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="789ca447-a1d6-42db-8f07-d970e64dc576"
+            name="Ожидание выделения слова игроком"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9dfe803d-ae8f-434f-9ba9-377e8d76283b"
+                guard="Слово выделено"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9faa0681-d693-41bb-bcec-1fa6687e9db1"
+                  LastKnownName="Ожидание действия игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="a4bb231f-ee96-4690-a6ea-eaf088a4de68"
+            name="Генерация игрового поля"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8df3951f-1368-4f4a-a63b-418b7eb6783a"
+                guard="Ход игрока"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5300d215-dc88-43f7-b361-9747004addfa"
+                  LastKnownName="Ожидание действия игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8071930b-37a6-4537-9708-9dcd13c1125f"
+            name="Ожидание выбора игрока"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4c2425c1-ca15-4d9f-9f5e-9eed936e4b36"
+                guard="Переход к настройкам"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="74854fa7-13a5-486b-93de-f610bc17ef3b"
+                  LastKnownName="Ожидание выбора параметров игры "
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4ab1038d-1f42-4859-bd00-a266846682aa"
+                guard="начало новой игры"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a4bb231f-ee96-4690-a6ea-eaf088a4de68"
+                  LastKnownName="Генерация игрового поля"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="31c42ec5-a3fb-497d-8e6a-58eafb8dcaba"
+                guard="Выход"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="412923fb-ba36-4c3f-b43d-977c27684b44"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="74854fa7-13a5-486b-93de-f610bc17ef3b"
+            name="Ожидание выбора параметров игры "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d74ab0cc-9c98-4d7f-87a1-92f1a6564f9f"
+                guard="Сохранение настроек игры"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8071930b-37a6-4537-9708-9dcd13c1125f"
+                  LastKnownName="Ожидание выбора игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="058dc5c4-c66b-4823-bfde-61d6dd4d80ff"
+            name="Проверка слова "
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="438dc1b4-ecc9-49c6-a786-5fa428042db9"
+                guard="Слово существует или уже использовано"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5300d215-dc88-43f7-b361-9747004addfa"
+                  LastKnownName="Ожидание действия игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <objectFlowTargets>
+              <objectFlow
+                Id="e60cbbfa-963a-4d8f-a448-7f54107a3a09"
+                guard="Слово верное, передача слова след. игроку"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="bc640f90-24bb-4d08-bb5e-3f96a2c340dc"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5300d215-dc88-43f7-b361-9747004addfa"
+            name="Ожидание действия игрока"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fe7eb733-d8dc-4e2e-a287-d046bd9c96ad"
+                guard="выделение слова"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="789ca447-a1d6-42db-8f07-d970e64dc576"
+                  LastKnownName="Ожидание выделения слова игроком"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="36088590-e228-4c6e-9688-213736b1326e"
+                guard="Игрок сдался"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8071930b-37a6-4537-9708-9dcd13c1125f"
+                  LastKnownName="Ожидание выбора игрока"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="bc640f90-24bb-4d08-bb5e-3f96a2c340dc"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="35f3f278-58c6-4872-9f2b-bb80a87022ec"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <activityFinalNode
+            Id="412923fb-ba36-4c3f-b43d-977c27684b44"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <objectNode
+            Id="ba15c335-a9d2-4840-987c-e71dc0c603c5"
+            name="Игровой процес"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="9400ed19-6f4a-406f-a171-e4485d346076"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="f521a3d7-dcc3-45ac-8f54-17aad69bcdad"
+            name="Вход в систему"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="996c8b34-6d5a-4f1c-adae-33288e196f33"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
