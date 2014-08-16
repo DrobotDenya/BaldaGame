@@ -38,16 +38,16 @@ namespace Balda.ViewModel
             if (_gameWindow.Keyboard.Children.Contains(cell))
             {
                 _lastKey = cell.GetText();
-                DisableBoardCell();
+                //DisableBoardCell();
                 ////disableBoardCellWithLetter();
 
             }
 
             if (_gameWindow.Board.Children.Contains(cell))
             {
-                if (_lastKey.Equals("") == false)
+                if (!String.IsNullOrEmpty(_lastKey))
                 {
-                    if (cell.GetText().Equals(""))
+                    if (String.IsNullOrEmpty(cell.GetText()))
                     {
                         _lastCell = cell;
                         _lastCell.SetText(_lastKey);
@@ -65,7 +65,7 @@ namespace Balda.ViewModel
                 {
                     //// Иначе если игрок выделяет слово
 
-                    if (!cell.GetText().Equals(""))
+                    if (!String.IsNullOrEmpty(cell.GetText()))
                     {
                         cell.IsEnabled = false;
                         _currentWord += cell.GetText();
@@ -128,7 +128,7 @@ namespace Balda.ViewModel
             {
                 for (int j = 0; j < _gameManager.GetGameBoard().Heigth(); j++)
                 {
-                    if (_gameManager.GetGameBoard().GetCellValue(i, j) == "")
+                    if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j)))
                     {
                         if (!EnableCellOnBoard(i, j))
                         {
@@ -148,28 +148,28 @@ namespace Balda.ViewModel
         {
             if (i + 1 != _gameManager.GetGameBoard().Width())
             {
-                if (_gameManager.GetGameBoard().GetCellValue(i + 1, j) != "")
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i + 1, j)))
                 {
                     return true;
                 }
             }
             if (i - 1 != -1)
             {
-                if (_gameManager.GetGameBoard().GetCellValue(i - 1, j) != "")
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i - 1, j)))
                 {
                     return true;
                 }
             }
             if (j + 1 != _gameManager.GetGameBoard().Heigth())
             {
-                if (_gameManager.GetGameBoard().GetCellValue(i, j + 1) != "")
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j + 1)))
                 {
                     return true;
                 }
             }
             if (j - 1 != -1)
             {
-                if (_gameManager.GetGameBoard().GetCellValue(i, j - 1) != "")
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j - 1)))
                 {
                     return true;
                 }
@@ -315,7 +315,7 @@ namespace Balda.ViewModel
                 }
                 else
                 {
-                    if (_currentWord.Equals(""))
+                    if (String.IsNullOrEmpty(_currentWord))
                     {
                         MessageBox.Show("Слово не выделено!");
                     }
