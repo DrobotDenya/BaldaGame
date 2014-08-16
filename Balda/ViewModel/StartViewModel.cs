@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
+using System.Data.OleDb;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Balda.Data;
 using Balda.View;
+using ActiveRecord;
 
 namespace Balda.ViewModel
 {
@@ -20,7 +18,6 @@ namespace Balda.ViewModel
             RegistrationbtnCommand = new Command(new Action<object>(RegistrationClick));
             _window = window;
             Login = "qwe";
-            Password = "qwe";
         }
 
         private string _login;
@@ -31,17 +28,6 @@ namespace Balda.ViewModel
             {
                 _login = value;
                 OnPropertyChanged("Login");
-            }
-        }
-
-        private string _password;
-        public string Password
-        {
-            get { return _password; }
-            set
-            {
-                _password = value;
-                OnPropertyChanged("Password");
             }
         }
 
@@ -56,14 +42,31 @@ namespace Balda.ViewModel
 
         private void LoginClick(object obj)
         {
-            User.SharedUser.Password = Password;
-            User.SharedUser.Nickname = Login;
+            RowMapper<User> rowMapper = RowMapper;
+            ActiveRecord<User> dao = new ActiveRecord<User>("Users", rowMapper);
+            User us = dao.Select(Login);
+            
+            if (us != null)
+            {
+                User.SharedUser = us;
+                MenuWindow menu = new MenuWindow();
+                MenuViewModel viewModel = new MenuViewModel(menu);
+                menu.DataContext = viewModel;
+                menu.Show();
+            }
 
-            MenuWindow menu = new MenuWindow();
-            MenuViewModel viewModel = new MenuViewModel(menu);
-            menu.DataContext = viewModel;
-            menu.Show();
         }
+
+        private User RowMapper(OleDbDataReader reader)
+        {
+            User user = new User();
+            user.Nickname = reader["Nickname"] as string;
+            user.FirstName = reader["Name"] as string;
+            user.SecondName = reader["Sername"] as string;
+            return user;
+        }
+
+
 
         public ICommand RegistrationbtnCommand { get; set; }
 

@@ -136,6 +136,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ActiveRecord\ActiveRecord.csproj">
+      <Project>{1f28b72c-f299-4fa4-8565-b943c9501d2f}</Project>
+      <Name>ActiveRecord</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Balda.Data\Balda.Data.csproj">
       <Project>{e2979bc1-9149-4db1-bb04-b4969cfd1350}</Project>
       <Name>Balda.Data</Name>

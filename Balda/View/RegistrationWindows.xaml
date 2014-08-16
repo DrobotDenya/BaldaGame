@@ -30,10 +30,6 @@
             <TextBox x:Name="tbFirstName" Text="{Binding Path=FirstName, Mode=TwoWay}" />
             <Label Content="Second Name"/>
             <TextBox x:Name="tbSecondName" Text="{Binding Path=SecondName, Mode=TwoWay}"/>
-            <Label Content="Password"/>
-            <TextBox x:Name="tbPassword" Text="{Binding Path=Password, Mode=TwoWay}"/>
-            <Label Content="ConfirmPassword"/>
-            <TextBox x:Name="tbConfPassword" Text="{Binding Path=ConfirmPassword, Mode=TwoWay}"/>
         </StackPanel>
         <Button x:Name="btnRegister" Command="{Binding RegisterBtnCommand}" Grid.Row="4">
             <Button.RenderTransform>

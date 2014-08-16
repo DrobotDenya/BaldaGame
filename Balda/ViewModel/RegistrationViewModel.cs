@@ -54,38 +54,14 @@ namespace Balda.ViewModel
             }
         }
 
-        private string _password;
-        public string Password
-        {
-            get { return _password; }
-            set
-            {
-                _password = value;
-                OnPropertyChanged("Password");
-            }
-        }
-
-        private string _confirmPassword;
-        public string ConfirmPassword
-        {
-            get { return _confirmPassword; }
-            set
-            {
-                _confirmPassword = value;
-                OnPropertyChanged("ConfirmPassword");
-            }
-        }
-
         #region Command
 
         private void RegisterClick(object obj)
         {
-            if (Nickname != "" && FirstName != ""
-                && SecondName != "" && Password != ""
-                && ConfirmPassword == Password)
+            if (String.IsNullOrEmpty(Nickname) && String.IsNullOrEmpty(FirstName)
+                && String.IsNullOrEmpty(SecondName))
             {
-                User user = new User(Nickname, FirstName, SecondName, Password);
-                user.UsingInsert();
+                User user = new User(Nickname, FirstName, SecondName);
                 _window.Close();
             }
         }
