@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0ff8d5bc-a591-40eb-891a-68454cf1624d" name="Activity3" linkedPackageId="390c6710-7de5-4b02-a83b-2eb7765edab8" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="533cb4c7-d271-4b0c-b9b3-55302badcb63">
+      <profileInstance Id="71a21793-8395-44c3-acc1-d90c488c7839" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5ff770d1-990a-46c2-8187-3193379e11dc">
+      <profileInstance Id="007dfeff-1dfd-435b-bf65-980694cea17e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dd08b694-ac5d-42fd-91f4-9f1289f75a12">
+      <profileInstance Id="8fe07ad9-4d92-4169-8163-1a3d1eea70a6" name="TextTemplateBindings">
+        <elementDefinition Id="3e0e7e36-6680-4e15-8a4d-0bf942bd7e27" />
+      </profileInstance>
+      <elementDefinition Id="240c0982-118d-4a16-8b86-e108c7c82522" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="fa53a12d-0a3d-4455-abc1-ecd88ec333e0" name="Activity3" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="1f553994-08e2-44c3-ae81-59fda08fc6b9" />
+        <nodes>
+          <initialNode Id="83798fca-80bc-47a9-86b2-528fe3c98a0b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="fe271270-e2ed-4e27-a1f1-c34ecc9faef6" />
+            <flowNodeTargets>
+              <controlFlow Id="4617adce-357c-4212-bea5-28995f438e14" isLeaf="false">
+                <opaqueActionMoniker Id="46c973c9-2046-4aad-81a0-eccaaea348d7" LastKnownName="Авторизация" />
+                <elementDefinition Id="d23f7da1-a143-4836-89ea-2f3bfee49f00" />
+              </controlFlow>
+              <controlFlow Id="5eb91092-c94c-428e-8da7-4fe9b8785fcf" isLeaf="false">
+                <opaqueActionMoniker Id="b23f459a-e2c8-4110-815f-ebeb2c1fc2b1" LastKnownName="Регистрация" />
+                <elementDefinition Id="bb25bae9-6712-422f-85f7-f218c3f3fd8c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="46c973c9-2046-4aad-81a0-eccaaea348d7" name="Авторизация" isLeaf="false">
+            <elementDefinition Id="ffcbe7e8-6775-4364-bdae-aeeda7a97e52" />
+            <flowNodeTargets>
+              <controlFlow Id="58e04fc2-e919-4c7d-a2f5-b06c0a28449a" guard="Верная" isLeaf="false">
+                <opaqueActionMoniker Id="ac0a4b68-b8d9-49f4-a126-915d2a85c439" LastKnownName="Меню" />
+                <elementDefinition Id="815bd52f-ac17-49f5-8984-9aa1b80169a2" />
+              </controlFlow>
+              <controlFlow Id="1215625d-d4ef-46a4-8b9d-5594da872040" guard="Не верная" isLeaf="false">
+                <opaqueActionMoniker Id="46c973c9-2046-4aad-81a0-eccaaea348d7" LastKnownName="Авторизация" />
+                <elementDefinition Id="246a509f-c384-4af9-8791-a68b481029af" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b23f459a-e2c8-4110-815f-ebeb2c1fc2b1" name="Регистрация" isLeaf="false">
+            <elementDefinition Id="56bd32b6-b34b-4cf4-80c6-20940703edce" />
+            <flowNodeTargets>
+              <controlFlow Id="2f347bde-15a7-4130-9c2f-4717d7799763" guard="Закончена" isLeaf="false">
+                <opaqueActionMoniker Id="46c973c9-2046-4aad-81a0-eccaaea348d7" LastKnownName="Авторизация" />
+                <elementDefinition Id="210d05b7-c4a1-4522-ae36-f4a446e73f1c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ac0a4b68-b8d9-49f4-a126-915d2a85c439" name="Меню" isLeaf="false">
+            <elementDefinition Id="29bce255-376d-44de-9d69-10191edf6c39" />
+            <flowNodeTargets>
+              <controlFlow Id="735ac3ed-e22b-4f4b-a553-9795cf83fd35" isLeaf="false">
+                <opaqueActionMoniker Id="5e66b1e9-2b82-420b-9a03-2d4cd0a09dfc" LastKnownName="Настройки" />
+                <elementDefinition Id="af22d1ef-9f34-475b-94a9-aaeb45e71796" />
+              </controlFlow>
+              <controlFlow Id="7d7fa664-f833-4205-8bd8-d20682610ee2" isLeaf="false">
+                <activityFinalNodeMoniker Id="4d3b049b-f37f-4a1a-90e5-936e111c7f69" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="728b4432-ba1d-4000-ad5d-89e6803b336e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a52154a5-cef3-45c2-8be8-ddf0542eb3aa" name="Игра" isLeaf="false">
+            <elementDefinition Id="0a2c69f9-9a83-4c4a-9554-d0d253f83f80" />
+            <flowNodeTargets>
+              <controlFlow Id="753ca7a7-3bbe-4e61-8533-5dcaa098c1b0" guard="Старт" isLeaf="false">
+                <opaqueActionMoniker Id="ac0a4b68-b8d9-49f4-a126-915d2a85c439" LastKnownName="Меню" />
+                <elementDefinition Id="adbafc7c-5d24-45eb-b7d2-44d4b42de7e9" />
+              </controlFlow>
+              <controlFlow Id="d0662ee5-3d41-419d-9b6c-3126701d4c7c" isLeaf="false">
+                <opaqueActionMoniker Id="a6cf9156-7263-41e4-b567-6364ef07286e" LastKnownName="Ход" />
+                <elementDefinition Id="5396bc95-41f7-4f33-8ad0-b1a5e308eeb2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5e66b1e9-2b82-420b-9a03-2d4cd0a09dfc" name="Настройки" isLeaf="false">
+            <elementDefinition Id="fce482f7-2817-42f7-a553-7fb6a45c372b" />
+            <flowNodeTargets>
+              <controlFlow Id="76136102-8ada-41d3-8c99-7ab4a2fb0346" isLeaf="false">
+                <opaqueActionMoniker Id="ac0a4b68-b8d9-49f4-a126-915d2a85c439" LastKnownName="Меню" />
+                <elementDefinition Id="b99614b1-9923-4dd3-97cb-a7d6899459ea" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="4d3b049b-f37f-4a1a-90e5-936e111c7f69" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="73dd531b-1d87-423f-ac99-8de58c00695b" />
+          </activityFinalNode>
+          <opaqueAction Id="a6cf9156-7263-41e4-b567-6364ef07286e" name="Ход" isLeaf="false">
+            <elementDefinition Id="fb30f340-425e-49bc-b463-20619a83aec2" />
+            <flowNodeTargets>
+              <controlFlow Id="3dc12ad9-4875-428c-9f03-6a6cbb692af3" guard="Конец игры" isLeaf="false">
+                <opaqueActionMoniker Id="ac0a4b68-b8d9-49f4-a126-915d2a85c439" LastKnownName="Меню" />
+                <elementDefinition Id="c5b0d927-703a-44b1-9448-561b6ab77407" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="390c6710-7de5-4b02-a83b-2eb7765edab8" name="ModelingProject1">
+    <elementDefinition Id="281249fd-b010-4d7b-80b4-f27a13834471" />
+  </package>
+</activityRootModel>
