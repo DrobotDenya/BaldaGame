@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.OleDb;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ActiveRecord;
 using Balda.Data;
 using Balda.View;
 
@@ -58,13 +60,30 @@ namespace Balda.ViewModel
 
         private void RegisterClick(object obj)
         {
-            if (String.IsNullOrEmpty(Nickname) && String.IsNullOrEmpty(FirstName)
-                && String.IsNullOrEmpty(SecondName))
+            if (!String.IsNullOrEmpty(Nickname) && !String.IsNullOrEmpty(FirstName)
+                && !String.IsNullOrEmpty(SecondName))
             {
-                User user = new User(Nickname, FirstName, SecondName);
+                RowMapper<User> rowMapper = RowMapper;
+                ActiveRecord<User> dao = new ActiveRecord<User>("Users", RowMapper);
+                User user = new User();
+                user.Nickname = Nickname;
+                user.SecondName = SecondName;
+                user.FirstName = FirstName;
+                dao.Insert(user);
+
                 _window.Close();
             }
         }
+
+        private User RowMapper(OleDbDataReader reader)
+        {
+            User user = new User();
+            user.Nickname = reader["Nickname"] as string;
+            user.FirstName = reader["Name"] as string;
+            user.SecondName = reader["Sername"] as string;
+            return user;
+        }
+
         public ICommand RegisterBtnCommand { get; set; }
 
         #endregion
