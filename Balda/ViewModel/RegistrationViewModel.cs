@@ -64,7 +64,7 @@ namespace Balda.ViewModel
                 && !String.IsNullOrEmpty(SecondName))
             {
                 RowMapper<User> rowMapper = RowMapper;
-                ActiveRecord<User> dao = new ActiveRecord<User>("Users", RowMapper);
+                ActiveRecord<User> dao = new ActiveRecord<User>("User", RowMapper);
                 User user = new User();
                 user.Nickname = Nickname;
                 user.SecondName = SecondName;
