@@ -279,7 +279,7 @@ namespace Balda.Data
             {
                 for (int col = 0; col < _board.Width(); col++)
                 {
-                    if (_board.CellPool[row, col].Equals(string.Empty))
+                    if (string.IsNullOrEmpty(_board.CellPool[row, col]))
                     {
                         return false;
                     }

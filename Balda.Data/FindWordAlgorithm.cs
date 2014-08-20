@@ -67,7 +67,7 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.CellPool[i, j] == string.Empty)
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i, j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                         for (_aj = 0; _aj < _heigth; _aj++)
@@ -196,7 +196,7 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.CellPool[i,j] == string.Empty)
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i,j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                     {
@@ -319,7 +319,7 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (_gameBoard.CellPool[i,j]== string.Empty)
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i,j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                     {
