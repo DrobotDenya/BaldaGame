@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Star.xaml.cs" />
     <Compile Include="ViewModel\Command.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
@@ -76,6 +77,10 @@
     <Compile Include="View\SettingGameWindow.xaml.cs">
       <DependentUpon>SettingGameWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Star.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\GameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

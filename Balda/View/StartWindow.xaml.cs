@@ -20,7 +20,7 @@ namespace Balda.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            About.Message = "Балда 2014";
         }
     }
 }
