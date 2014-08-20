@@ -43,7 +43,7 @@ namespace Balda.ViewModel
         private void LoginClick(object obj)
         {
             RowMapper<User> rowMapper = RowMapper;
-            ActiveRecord<User> dao = new ActiveRecord<User>("Users", rowMapper);
+            ActiveRecord<User> dao = new ActiveRecord<User>("User", rowMapper);
             User us = dao.Select(Login);
             
             if (us != null)
