@@ -50,12 +50,12 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button Style="{StaticResource NewGameBtn}" Name="ButtonNewGame" Command="{Binding StartBtnCommand}">
+        <Button Style="{StaticResource NewGameBtn}" Command="{Binding StartBtnCommand}">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform x:Name="rotBut" Angle="10.864"/>
+                    <RotateTransform x:Name="RotBut" Angle="10.864"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
@@ -63,15 +63,15 @@
                 <EventTrigger RoutedEvent="Window.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Storyboard.TargetName="ButtonNewGame" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
-                            <DoubleAnimation Storyboard.TargetName="rotBut" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="11" Duration="0:0:1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1"/>
+                            <DoubleAnimation Storyboard.TargetName="RotBut" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="11" Duration="0:0:1"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
             </Button.Triggers>
         </Button>
         <DockPanel Style="{StaticResource RightDockPanel}" LastChildFill="False">
-            <Button Style="{StaticResource VerticalButton}" x:Name="RightVerticalButton" Command="{Binding HighScoreBtnCommand}">
+            <Button Style="{StaticResource VerticalButton}" Command="{Binding HighScoreBtnCommand}">
                 <ListBox>
                     <ListBoxItem>H</ListBoxItem>
                     <ListBoxItem>i</ListBoxItem>
@@ -86,7 +86,7 @@
             </Button>
         </DockPanel>
         <DockPanel >
-            <Button Style="{StaticResource VerticalButton}" Name="LeftVerticalButton" Command="{Binding SettingsBtnCommand}">
+            <Button Style="{StaticResource VerticalButton}" Command="{Binding SettingsBtnCommand}">
                 <ListBox >
                     <ListBoxItem>S</ListBoxItem>
                     <ListBoxItem>e</ListBoxItem>

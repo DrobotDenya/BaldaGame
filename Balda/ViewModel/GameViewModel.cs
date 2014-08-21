@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,8 +17,8 @@ namespace Balda.ViewModel
     {
         private readonly GameManager _gameManager = new GameManager();
         private readonly GameWindow _gameWindow;
-        private Cell[,] _cellArray;
-        private readonly List<Cell> _keysList = new List<Cell>();
+        private Cell[][] _cellArray;
+        private readonly Collection<Cell> _keysList = new Collection<Cell>();
         private string _lastKey = "";
         private Cell _lastCell = null;
         private bool _isCurrentPlayerMove = false;
@@ -37,7 +38,7 @@ namespace Balda.ViewModel
             Cell cell = (Cell)sender;
             if (_gameWindow.Keyboard.Children.Contains(cell))
             {
-                _lastKey = cell.GetText();
+                _lastKey = cell.Text();
                 //DisableBoardCell();
                 ////disableBoardCellWithLetter();
 
@@ -47,7 +48,7 @@ namespace Balda.ViewModel
             {
                 if (!String.IsNullOrEmpty(_lastKey))
                 {
-                    if (String.IsNullOrEmpty(cell.GetText()))
+                    if (String.IsNullOrEmpty(cell.Text()))
                     {
                         _lastCell = cell;
                         _lastCell.SetText(_lastKey);
@@ -65,10 +66,10 @@ namespace Balda.ViewModel
                 {
                     //// Иначе если игрок выделяет слово
 
-                    if (!String.IsNullOrEmpty(cell.GetText()))
+                    if (!String.IsNullOrEmpty(cell.Text()))
                     {
                         cell.IsEnabled = false;
-                        _currentWord += cell.GetText();
+                        _currentWord += cell.Text();
                         ////cell.BorderBrush = Brushes.Purple;
                     }
 
@@ -110,66 +111,67 @@ namespace Balda.ViewModel
         private void CreateCellForBoard()
         {
             Cell cell;
-            _cellArray = new Cell[_gameManager.GetSizeBoard(), _gameManager.GetSizeBoard()];
+            _cellArray = new Cell[_gameManager.GetSizeBoard()][];
             for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
             {
+                _cellArray[i] = new Cell[_gameManager.GetSizeBoard()];
                 for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
                     cell = new Cell();
-                    _cellArray[i, j] = cell;
+                    _cellArray[i][j] = cell;
                     cell.MouseDown += CellMouseDown;
                 }
             }
         }
 
-        private void DisableBoardCell()
-        {
-            for (int i = 0; i < _gameManager.GetGameBoard().Width(); i++)
-            {
-                for (int j = 0; j < _gameManager.GetGameBoard().Heigth(); j++)
-                {
-                    if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j)))
-                    {
-                        if (!EnableCellOnBoard(i, j))
-                        {
-                            _cellArray[i, j].IsEnabled = false;
-                            ////_cellArray[i, j].BorderBrush = Brushes.Red;
+        //private void DisableBoardCell()
+        //{
+        //    for (int i = 0; i < _gameManager.GetGameBoard().Width(); i++)
+        //    {
+        //        for (int j = 0; j < _gameManager.GetGameBoard().Heigth(); j++)
+        //        {
+        //            if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j)))
+        //            {
+        //                if (!EnableCellOnBoard(i, j))
+        //                {
+        //                    _cellArray[i][j].IsEnabled = false;
+        //                    ////_cellArray[row, column].BorderBrush = Brushes.Red;
 
-                        }
-                    }
+        //                }
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         /* Определяет существует ли сверху, снизу, 
         слева, справа ячейка с буквой*/
-        private bool EnableCellOnBoard(int i, int j)
+        protected bool EnableCellOnBoard(int row, int column)
         {
-            if (i + 1 != _gameManager.GetGameBoard().Width())
+            if (row++ != _gameManager.GetGameBoard().Width())
             {
-                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i + 1, j)))
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(row++, column)))
                 {
                     return true;
                 }
             }
-            if (i - 1 != -1)
+            if (row-- != -1)
             {
-                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i - 1, j)))
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(row--, column)))
                 {
                     return true;
                 }
             }
-            if (j + 1 != _gameManager.GetGameBoard().Heigth())
+            if (column++ != _gameManager.GetGameBoard().Heigth())
             {
-                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j + 1)))
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(row, column++)))
                 {
                     return true;
                 }
             }
-            if (j - 1 != -1)
+            if (column-- != -1)
             {
-                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j - 1)))
+                if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(row, column--)))
                 {
                     return true;
                 }
@@ -196,7 +198,7 @@ namespace Balda.ViewModel
             {
                 for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
-                    _cellArray[i, j].IsEnabled = a;
+                    _cellArray[i][j].IsEnabled = a;
 
                 }
             }
@@ -253,7 +255,7 @@ namespace Balda.ViewModel
             {
                 for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                 {
-                    _cellArray[i, j].SetText(_gameManager.GetGameBoard().GetCellValue(i, j));
+                    _cellArray[i][j].SetText(_gameManager.GetGameBoard().GetCellValue(i, j));
                 }
             }
 
@@ -304,7 +306,7 @@ namespace Balda.ViewModel
                         {
                             for (int j = 0; j < _gameManager.GetSizeBoard(); j++)
                             {
-                                _gameManager.GetGameBoard().SetCellValue(_cellArray[i, j].GetText(), i, j);
+                                _gameManager.GetGameBoard().SetCellValue(_cellArray[i][j].Text(), i, j);
 
                             }
                         }

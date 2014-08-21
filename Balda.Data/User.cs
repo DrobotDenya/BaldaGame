@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.OleDb;
-
+[assembly: CLSCompliant(true)]
 namespace Balda.Data
 {
     public class User
@@ -9,7 +11,7 @@ namespace Balda.Data
         public string Nickname { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
-        private List<string> _words = new List<string>();
+        private Collection<string> _words = new Collection<string>();
 
         private bool _isSurrender = false;
         private static User _user;
@@ -55,7 +57,7 @@ namespace Balda.Data
             _words.Add(word);
         }
 
-        public List<string> GetWordsList()
+        public Collection<string> GetWordsList()
         {
             return _words;
         }

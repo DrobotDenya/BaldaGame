@@ -9,7 +9,7 @@ namespace Balda.Data
 {
     public class GameBoard
     {
-        public string[,] CellPool;
+        public string[][] CellPool;
         private int _width;
         private int _heigth;
 
@@ -27,12 +27,13 @@ namespace Balda.Data
             this._width = width;
             this._heigth = heigth;
 
-            CellPool = new string[width, heigth];
+            CellPool = new string[width][];
             for (int row = 0; row < heigth; row++)
             {
+                CellPool[row] = new string[heigth];
                 for (int column = 0; column < width; column++)
                 {
-                    CellPool[row, column] = string.Empty;
+                    CellPool[row][column] = string.Empty;
                 }
             }
         }
@@ -52,19 +53,24 @@ namespace Balda.Data
         ////Clear gameBoard
         public void Clear()
         {
-            CellPool = new string[_width, _heigth];
+            CellPool = new string[_width][];
+            CellPool[0] = new string[5];
+            CellPool[1] = new string[5];
+            CellPool[2] = new string[5];
+            CellPool[3] = new string[5];
+            CellPool[4] = new string[5];
         }
 
         ////Return value cell
         public string GetCellValue(int row, int column)
         {
-            return CellPool[row, column];
+            return CellPool[row][column];
         }
 
         ////Set value for cell
         public void SetCellValue(string value, int row, int column)
         {
-            CellPool[row, column] = value;
+            CellPool[row][column] = value;
         }
     }
 }

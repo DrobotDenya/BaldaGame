@@ -1,7 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Balda.View;
 using Balda.ViewModel;
-
+[assembly: CLSCompliant(true)]
 namespace Balda
 {
     /// <summary>
@@ -12,7 +13,7 @@ namespace Balda
         protected override void OnStartup(StartupEventArgs e)
         {
             StartWindow window = new StartWindow();
-            StartViewModel viewModel = new StartViewModel(window);
+            StartViewModel viewModel = new StartViewModel(/*window*/);
             window.DataContext = viewModel;
             window.Show();
         }

@@ -64,7 +64,7 @@ namespace Balda.ViewModel
                 && !String.IsNullOrEmpty(SecondName))
             {
                 RowMapper<User> rowMapper = RowMapper;
-                ActiveRecord<User> dao = new ActiveRecord<User>("User", RowMapper);
+                ActiveRecord<User> dao = new ActiveRecord<User>("User", rowMapper);
                 User user = new User();
                 user.Nickname = Nickname;
                 user.SecondName = SecondName;
@@ -90,7 +90,7 @@ namespace Balda.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));

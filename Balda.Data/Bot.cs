@@ -26,7 +26,7 @@
             if (_levelOfComplexity == 1 || _levelOfComplexity == 0)
             {
                 findedWord = _alho.FindWord();
-                if (findedWord.Equals(string.Empty) == false)
+                if (!string.IsNullOrEmpty(findedWord))
                 {
                     AddWord(findedWord);
                     return 1;
@@ -36,7 +36,7 @@
             if (_levelOfComplexity == 2)
             {
                 findedWord = _alho.FindWordWithMaxLength();
-                if (findedWord.Equals(string.Empty) == false)
+                if (!string.IsNullOrEmpty(findedWord))
                 {
                     AddWord(findedWord);
                     return 1;
