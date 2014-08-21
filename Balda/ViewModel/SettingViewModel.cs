@@ -18,7 +18,9 @@ namespace Balda.ViewModel
             SetListBox();
             _isEnabled = false;
         }
-
+        /// <summary>
+        /// Заполнение лист бокса
+        /// </summary>
         private void SetListBox()
         {
             foreach (var s in _difficulty)
@@ -26,7 +28,9 @@ namespace Balda.ViewModel
                 _settingWindow.ListboxDifficulty.Items.Add(s);
             }
         }
-
+        /// <summary>
+        /// Значение CheckBox-а
+        /// </summary>
         private bool _isChecked;
         public bool IsChecked
         {
@@ -37,7 +41,9 @@ namespace Balda.ViewModel
                 OnPropertyChanged("IsChecked");
             }
         }
-
+        /// <summary>
+        /// On/Off 
+        /// </summary>
         private bool _isEnabled;
         public bool IsEnabled
         {
@@ -50,6 +56,9 @@ namespace Balda.ViewModel
         }
 
         #region Command
+        /// <summary>
+        /// Сохранение настроек и откритие окна меню
+        /// </summary>
         private void BackClick(object obj)
         {
             Settings.Setting.SetBotComplexity(_settingWindow.ListboxDifficulty.SelectedIndex);

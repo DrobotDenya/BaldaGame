@@ -2,6 +2,9 @@
 
 namespace Balda.Data
 {
+    /// <summary>
+    /// Класс реализовывает поиск слов
+    /// </summary>
     public class FindWordAlgorithm
     {
         private GameBoard _gameBoard = new GameBoard();
@@ -45,9 +48,7 @@ namespace Balda.Data
             _width = _gameBoard.Width();
             _heigth = _gameBoard.Heigth();
         }
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+        
         public FindWordAlgorithm()
         {
         }

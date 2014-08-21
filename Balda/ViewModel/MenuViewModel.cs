@@ -17,6 +17,9 @@ namespace Balda.ViewModel
         }
 
         #region ButtonCommand
+        /// <summary>
+        /// Открытие окна игры
+        /// </summary>
         private void StartGameClick(object obj)
         {
             GameWindow gameWindow = new GameWindow();
@@ -24,7 +27,9 @@ namespace Balda.ViewModel
             gameWindow.DataContext = viewModel;
             gameWindow.Show();
         }
-
+        /// <summary>
+        /// открытие окна настроек
+        /// </summary>
         private void SettingClick(object obj)
         {
             SettingGameWindow settingWindow = new SettingGameWindow();
@@ -37,7 +42,6 @@ namespace Balda.ViewModel
         {
 
         }
-
 
         public ICommand StartBtnCommand { get; set; }
 

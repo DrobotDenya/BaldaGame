@@ -1,5 +1,8 @@
 ﻿namespace Balda.Data
 {
+    /// <summary>
+    /// Класс настроек
+    /// </summary>
     public class Settings
     {
         private static Settings _settings;
@@ -15,9 +18,7 @@
         ///Имя второго игрока
         /// </summary> 
         private string _playerName;
-        /// <summary>
-        ///Конструктор
-        /// </summary> 
+        
         private Settings()
         {
         }

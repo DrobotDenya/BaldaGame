@@ -11,11 +11,26 @@ namespace Balda.ViewModel
     {
         private readonly GameManager _gameManager = new GameManager();
         private readonly GameWindow _gameWindow;
+        /// <summary>
+        /// Список ячеек поля
+        /// </summary>
         private Cell[][] _cellArray;
+        /// <summary>
+        /// Список ячеек клавиатуры
+        /// </summary>
         private readonly Collection<Cell> _keysList = new Collection<Cell>();
+        /// <summary>
+        /// Значение выделеной ячейки
+        /// </summary>
         private string _lastKey = "";
+        /// <summary>
+        /// Выделеная ячейка
+        /// </summary>
         private Cell _lastCell = null;
         private bool _isCurrentPlayerMove = false;
+        /// <summary>
+        /// Выделеное слово
+        /// </summary>
         private string _currentWord = "";
 
         public GameViewModel(GameWindow gameWindow)
@@ -26,7 +41,9 @@ namespace Balda.ViewModel
             _gameWindow = gameWindow;
             StartGame();
         }
-
+        /// <summary>
+        /// Вызывается при выделении ячеейки поля или клавиатуры
+        /// </summary>
         public void CellMouseDown(object sender, MouseEventArgs e)
         {
             Cell cell = (Cell)sender;
@@ -74,7 +91,10 @@ namespace Balda.ViewModel
                 }
             }
         }
-
+        /// <summary>
+        /// Начало новй игры;
+        /// Генерация всех елементов игры
+        /// </summary>
         private void StartGame()
         {
             _gameManager.SetBotsComplexity(Settings.Setting.GetBotComplexity());
@@ -92,7 +112,9 @@ namespace Balda.ViewModel
 
             _gameWindow.SetNamePlayers(User.SharedUser.Nickname, _gameManager.Players()[1].GetNickname());
         }
-
+        /// <summary>
+        /// Создание ячеек для клавиатуры
+        /// </summary>
         private void CreateKeysForKeyBoard()
         {
             for (int i = 0; i < _gameManager.GetKeyBoard().GetKeys().Count; i++)
@@ -101,7 +123,9 @@ namespace Balda.ViewModel
                 _keysList.Add(cell);
             }
         }
-
+        /// <summary>
+        /// Создание ячеек для поля
+        /// </summary>
         private void CreateCellForBoard()
         {
             Cell cell;
@@ -117,29 +141,15 @@ namespace Balda.ViewModel
                 }
             }
         }
-
-        //private void DisableBoardCell()
-        //{
-        //    for (int i = 0; i < _gameManager.GetGameBoard().Width(); i++)
-        //    {
-        //        for (int j = 0; j < _gameManager.GetGameBoard().Heigth(); j++)
-        //        {
-        //            if (String.IsNullOrEmpty(_gameManager.GetGameBoard().GetCellValue(i, j)))
-        //            {
-        //                if (!EnableCellOnBoard(i, j))
-        //                {
-        //                    _cellArray[i][j].IsEnabled = false;
-        //                    ////_cellArray[row, column].BorderBrush = Brushes.Red;
-
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //}
-
-        /* Определяет существует ли сверху, снизу, 
-        слева, справа ячейка с буквой*/
+        /// <summary>
+        /// Определяет существует ли сверху, снизу, слева, справа ячейка с буквой
+        /// </summary>
+        /// /// <param name="row">
+        /// Координата рядка
+        /// </param>
+        /// /// <param name="column">
+        /// Координата колонки
+        /// </param>
         protected bool EnableCellOnBoard(int row, int column)
         {
             if (row++ != _gameManager.GetGameBoard().Width())
@@ -174,8 +184,9 @@ namespace Balda.ViewModel
             return false;
 
         }
-
-        ////Активирует/деактевирует клавиатуру
+        /// <summary>
+        /// Активирует/деактевирует клавиатуру
+        /// </summary>
         private void SetEnableKeyboard(bool a)
         {
             foreach (Cell cell in _keysList)
@@ -184,8 +195,9 @@ namespace Balda.ViewModel
             }
 
         }
-
-        //Активирует/деактевирует поле
+        /// <summary>
+        /// Активирует/деактевирует поле
+        /// </summary>
         private void SetEnableBoard(bool a)
         {
             for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
@@ -197,8 +209,9 @@ namespace Balda.ViewModel
                 }
             }
         }
-
-        /*Возвращает окно в состояние начала хода игрока */
+        /// <summary>
+        /// Возвращает окно в состояние начала хода игрока
+        /// </summary>
         private void UndoWindow()
         {
             SetEnableBoard(true);
@@ -213,20 +226,26 @@ namespace Balda.ViewModel
                 _lastCell = null;
             }
         }
-
+        /// <summary>
+        /// Обновление списка  первого игрока
+        /// </summary>
         private void UpdateListBox()
         {
             _gameWindow.UpdateListP1(_gameManager.Players()[0].GetWordsList());
             _gameWindow.UpdateListP2(_gameManager.Players()[1].GetWordsList());
         }
-
+        /// <summary>
+        /// Обновление списка игрока
+        /// </summary>
         private void UpdateValue()
         {
             _gameWindow.UpdateValueP1(_gameManager.Players()[0].GetPoints());
             _gameWindow.UpdateValueP2(_gameManager.Players()[1].GetPoints());
 
         }
-
+        /// <summary>
+        /// Передача хода второму игроку
+        /// </summary>
         private void ExchangePlayer()
         {
             if (_gameManager.DetermineWinner() != null)
@@ -242,7 +261,9 @@ namespace Balda.ViewModel
 
             ReloadDataBoard();
         }
-
+        /// <summary>
+        /// Обновление ячеек поля
+        /// </summary>
         private void ReloadDataBoard()
         {
             for (int i = 0; i < _gameManager.GetSizeBoard(); i++)
@@ -254,7 +275,9 @@ namespace Balda.ViewModel
             }
 
         }
-
+        /// <summary>
+        /// Обновление ячеек клавиатуры
+        /// </summary>
         private void ReloadKeyBoard()
         {
             int i = 0;
@@ -268,19 +291,26 @@ namespace Balda.ViewModel
         }
 
         #region Button Command
+        /// <summary>
+        /// Пропуск хода
+        /// </summary>
         private void Miss(object obj)
         {
             SetEnableBoard(true);
             UndoWindow();
             ExchangePlayer();
         }
-
+        /// <summary>
+        /// Отмена хода
+        /// </summary>
         private void Cancel(object obj)
         {
             SetEnableBoard(true);
             UndoWindow();
         }
-
+        /// <summary>
+        /// Отправка слова
+        /// </summary>
         private void Submit(object obj)
         {
             if (!_gameManager.WordIsUsed(_currentWord))

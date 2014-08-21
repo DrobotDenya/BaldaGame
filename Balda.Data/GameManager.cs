@@ -2,6 +2,9 @@
 
 namespace Balda.Data
 {
+    /// <summary>
+    /// Класс содержит логику игрового процесса
+    /// </summary>
     public class GameManager
     {
 
@@ -46,9 +49,7 @@ namespace Balda.Data
         private int _activePlayer;
 
         private FindWordAlgorithm _algorithm;
-        /// <summary>
-        ///Конструктор
-        /// </summary>  
+        
         public GameManager()
         {
             _board.SetSize(_size, _size);

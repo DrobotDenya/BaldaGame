@@ -4,15 +4,16 @@ using System.IO;
 
 namespace Balda.Data
 {
+    /// <summary>
+    /// Класс словаря
+    /// </summary>
     public class Dictionary
     {
         /// <summary>
         /// Список всех слов в словаре
         /// </summary>
         private Collection<string> _words = new Collection<string>();
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+       
         public Dictionary()
         {
             string word;
@@ -25,6 +26,8 @@ namespace Balda.Data
 
             file.Close();
         }
+        /// <summary>
+        /// </summary>
         /// <returns>
         /// Кл-во слов в словаре
         /// </returns>
@@ -32,6 +35,8 @@ namespace Balda.Data
         {
             return _words.Count;
         }
+        /// <summary>
+        /// </summary>
         /// <returns>
         /// Список всех слов в словаре
         /// </returns>
