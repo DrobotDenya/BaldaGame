@@ -1,29 +1,38 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Balda.Data
 {
     public class GameKeys
     {
+        /// <summary>
+        /// Список всех клавиш
+        /// </summary>
         private ArrayList _keys = new ArrayList();
-
+        /// <summary>
+        /// Путь к значениям клавиш
+        /// </summary>
         private string _path = @"..\..\..\Resources\Keyboard.txt";
-
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public GameKeys()
         {
             ReadKeyBoard();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>
+        /// Список клавиш
+        /// </returns>
         public ArrayList GetKeys()
         {
             return _keys;
         }
-
+        /// <summary>
+        /// Считывание значений клавиш с файла
+        /// </summary>
         private void ReadKeyBoard()
         {
             string line;

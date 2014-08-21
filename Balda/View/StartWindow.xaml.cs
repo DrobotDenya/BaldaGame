@@ -1,10 +1,4 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using Balda.Data;
-using Balda.ViewModel;
+﻿using System.Windows;
 
 namespace Balda.View
 {

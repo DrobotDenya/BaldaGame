@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 
@@ -7,8 +6,13 @@ namespace Balda.Data
 {
     public class Dictionary
     {
+        /// <summary>
+        /// Список всех слов в словаре
+        /// </summary>
         private Collection<string> _words = new Collection<string>();
-
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public Dictionary()
         {
             string word;
@@ -21,30 +25,50 @@ namespace Balda.Data
 
             file.Close();
         }
-
+        /// <returns>
+        /// Кл-во слов в словаре
+        /// </returns>
         public int Count()
         {
             return _words.Count;
         }
-
+        /// <returns>
+        /// Список всех слов в словаре
+        /// </returns>
         public Collection<string> GetDictionary()
         {
             return _words;
         }
-
+        /// <summary>
+        /// Возвращает рандомное слово из словаря определенной длины
+        /// </summary>
+        ///<param name="length">
+        /// Длина слова
+        /// </param>
+        /// <returns>
+        /// Слово
+        /// </returns>
         public string GetRandomWord(int length)
         {
-            Collection<string> Collectionwords = GetWords(length);
-            if (Collectionwords.Count > 0)
+            Collection<string> collectionwords = GetWords(length);
+            if (collectionwords.Count > 0)
             {
                 Random rand = new Random();
-                int randomNumb = rand.Next(0, Collectionwords.Count);
-                return Collectionwords[randomNumb];
+                int randomNumb = rand.Next(0, collectionwords.Count);
+                return collectionwords[randomNumb];
             }
 
             return null;
         }
-
+        /// <summary>
+        /// Возвращает все слова из словаря определенной длины
+        /// </summary>
+        ///<param name="length">
+        /// Длина слова
+        /// </param>
+        /// <returns>
+        /// Список слов
+        /// </returns>
         public Collection<string> GetWords(int length)
         {
             Collection<string> CollectionWords = new Collection<string>();
@@ -59,42 +83,15 @@ namespace Balda.Data
 
             return CollectionWords;
         }
-
+        /// <summary>
+        /// Проверяет есть ли слова в словаре
+        /// </summary>
+        ///<param name="word">
+        /// Слово
+        /// </param>
         public bool IsExist(string word)
         {
             return _words.Contains(word);
-        }
-
-        public bool IsCanExist(string letters)
-        {
-            foreach (string word in _words)
-            {
-                if (word.IndexOf(letters) != -1)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        public Collection<string> PossibleWords(string letters)
-        {
-            Collection<string> words = new Collection<string>();
-            foreach (string word in words)
-            {
-                if (word.Substring(1).IndexOf(word) != -1)
-                {
-                    words.Add(word);
-                }
-
-                if (word.Substring(0, word.Length - 2).IndexOf(word) != -1)
-                {
-                    words.Add(word);
-                }
-            }
-
-            return words;
         }
     }
 }

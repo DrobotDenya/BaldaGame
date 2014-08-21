@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
-using Balda.Data;
 
 namespace Balda.View
 {
