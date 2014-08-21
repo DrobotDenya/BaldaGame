@@ -1,27 +1,35 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Balda.Data
+﻿namespace Balda.Data
 {
     public class GameBoard
     {
+        /// <summary>
+        /// Список значений для ячеек
+        /// </summary>
         public string[][] CellPool;
+        /// <summary>
+        /// Ширина
+        /// </summary>
         private int _width;
+        /// <summary>
+        /// Высота
+        /// </summary>
         private int _heigth;
-
+        /// <summary>
+        /// Перегруденый конструктор
+        /// </summary>
         public GameBoard(int width, int heigth)
         {
             SetSize(width, heigth);
         }
-
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public GameBoard()
         {
         }
-        ////set size for board
+        /// <summary>
+        /// Установка размеров поля
+        /// </summary>
         public void SetSize(int width, int heigth)
         {
             this._width = width;
@@ -37,20 +45,23 @@ namespace Balda.Data
                 }
             }
         }
-
-        ////Retutn Width
+        /// <returns>
+        /// Ширина
+        /// </returns>
         public int Width()
         {
             return this._width;
         }
-
-        ////Return Heigth
+        /// <returns>
+        /// Высота
+        /// </returns>
         public int Heigth()
         {
             return this._heigth;
         }
-
-        ////Clear gameBoard
+        /// <summary>
+        /// Очистка поля
+        /// </summary>
         public void Clear()
         {
             CellPool = new string[_width][];
@@ -61,13 +72,33 @@ namespace Balda.Data
             CellPool[4] = new string[5];
         }
 
+        /// <param name="row">
+        /// Рядок
+        /// </param>
+        /// <param name="column">
+        /// Колонка
+        /// </param>
+        /// <returns>
+        /// Сначение ячеейки
+        /// </returns>
         ////Return value cell
         public string GetCellValue(int row, int column)
         {
             return CellPool[row][column];
         }
 
-        ////Set value for cell
+        /// <summary>
+        /// Установка значений для ячеек
+        /// </summary>
+        /// /// <param name="row">
+        /// Рядок
+        /// </param>
+        /// <param name="column">
+        /// Колонка
+        /// </param>
+        /// /// <param name="value">
+        /// Значение ячейки
+        /// </param>
         public void SetCellValue(string value, int row, int column)
         {
             CellPool[row][column] = value;

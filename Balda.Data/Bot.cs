@@ -2,9 +2,23 @@
 {
     public class Bot : User
     {
+        /// <summary>
+        /// Сложность бота
+        /// </summary>
         private int _levelOfComplexity = 0;
         private FindWordAlgorithm _alho = new FindWordAlgorithm();
-
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="name">
+        /// Имя бота
+        /// </param>
+        /// <param name="level">
+        /// Уровень сожности игрока
+        /// </param>
+        ///  <param name="alho">
+        /// Класс поиска слова
+        /// </param>
         public Bot(string name, int level, FindWordAlgorithm alho)
         {
             Nickname = name;

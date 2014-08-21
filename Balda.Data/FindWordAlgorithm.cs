@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace Balda.Data
 {
     public class FindWordAlgorithm
     {
         private GameBoard _gameBoard = new GameBoard();
+        /// <summary>
+        /// Слова использованые игроком
+        /// </summary>
         private Collection<string> _userWord = new Collection<string>();
         private Dictionary _dictionary = new Dictionary();
         private string[][] _strings;
@@ -20,10 +17,27 @@ namespace Balda.Data
         private int _bottomNumber, _topNumber;
         private int _currentWordInDict = 0;
         private string _word;
+        /// <summary>
+        /// Подходит л
+        /// </summary>
         private bool _isAcceptWord;
+        /// <summary>
+        /// Ширина поля
+        /// </summary>
         private int _width;
+        /// <summary>
+        /// Высота поля
+        /// </summary>
         private int _heigth;
-
+        /// <summary>
+        /// Перегруженый конструктор
+        /// </summary>
+        /// <param name="gameBoard">
+        /// Игровое поле
+        /// </param>
+        ///<param name="userWord">
+        /// Слова использованые игроком
+        /// </param>
         public FindWordAlgorithm(GameBoard gameBoard, Collection<string> userWord)
         {
             this._gameBoard = gameBoard;
@@ -31,12 +45,18 @@ namespace Balda.Data
             _width = _gameBoard.Width();
             _heigth = _gameBoard.Heigth();
         }
-
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public FindWordAlgorithm()
         {
         }
-
-        ////Ищет все подходящие слова в словаре
+        /// <summary>
+        /// Ищет все подходящие слова в словаре
+        /// </summary>
+        /// <returns>
+        /// Список слов
+        /// </returns>
         public Collection<string> FindWords()
         {
             Collection<string> res = new Collection<string>();
@@ -148,7 +168,15 @@ namespace Balda.Data
             }
             return res;
         }
-
+        /// <summary>
+        /// Ищет самое длинное слова
+        /// </summary>
+        /// <param name="words">
+        /// Список слов
+        /// </param>
+        /// <returns>
+        /// Длину слова
+        /// </returns>
         public int MaxLength(Collection<string> words)
         {
             int length = 0;
@@ -162,8 +190,13 @@ namespace Balda.Data
             }
             return length;
         }
-
-        ////Возворащает первое подходящие слово из словаря
+        /// <summary>
+        /// Возворащает первое подходящие слово из словаря
+        /// </summary>
+        /// <returns>
+        /// Слово
+        /// </returns>
+        ////
         public string FindWord()
         {
             _strings = new string[_width][];
@@ -285,7 +318,12 @@ namespace Balda.Data
             }
             return string.Empty;
         }
-
+        /// <summary>
+        /// Ищет сомое длинное слова
+        /// </summary>
+        /// <returns>
+        /// Слово
+        /// </returns>
         public string FindWordWithMaxLength()
         {
             _strings = new string[_width][];
@@ -407,8 +445,9 @@ namespace Balda.Data
             }
             return string.Empty;
         }
-
-        ////Определяет, есть ли буква на поле сверху или снизу или влева или справа текущей ячейки
+        /// <summary>
+        /// Определяет, есть ли буква на поле сверху или снизу или влева или справа текущей ячейки
+        /// </summary>
         public bool CheckLetter(int index)
         {
             string letter = _word.Substring(index, 1);

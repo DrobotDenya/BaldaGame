@@ -1,38 +1,72 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace Balda.Data
 {
     public class GameManager
     {
+
         private GameBoard _board = new GameBoard();
         private GameKeys _keyBoard = new GameKeys();
         private Dictionary _dictionary = new Dictionary();
+        /// <summary>
+        ///Список всех использованых слов
+        /// </summary>  
         private Collection<string> _usedWords = new Collection<string>();
+        /// <summary>
+        ///Список игрокав
+        /// </summary>  
         private Collection<User> _playersList = new Collection<User>();
+        /// <summary>
+        ///Размер поля
+        /// </summary>  
         private int _size = 5;
+        /// <summary>
+        ///Ширина клавиатуры
+        /// </summary>  
         private int _width = 11;
+        /// <summary>
+        ///Висота клавиатуры
+        /// </summary>  
         private int _heigth = 3;
+        /// <summary>
+        ///Количество игроков
+        /// </summary>  
         private int _playersCount;
+        /// <summary>
+        ///Сложность боа
+        /// </summary>  
         private int _botComplexity;
+        /// <summary>
+        ///Кл-во ботов
+        /// </summary>  
         private int _botsCount;
+        /// <summary>
+        ///Текуший игрок
+        /// </summary>  
         private int _activePlayer;
 
         private FindWordAlgorithm _algorithm;
-
+        /// <summary>
+        ///Конструктор
+        /// </summary>  
         public GameManager()
         {
             _board.SetSize(_size, _size);
             _algorithm = new FindWordAlgorithm(_board, _usedWords);
         }
-
-        ////Return ширину словарь
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        /// Словарь
+        /// </returns> 
         public Dictionary GetDictionary()
         {
             return _dictionary;
         }
-
-        ////Генерирует стартовое поле
+        /// <summary>
+        ///Генерирует стартовое поле
+        /// </summary> 
         public void GeneretaBoard()
         {
             _board.Clear();
@@ -59,13 +93,23 @@ namespace Balda.Data
                 _usedWords.Add(randWord);
             }
         }
-
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        /// Словарь
+        /// </returns> 
         ////Return поле
         public GameBoard GetGameBoard()
         {
             return _board;
         }
-
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        /// Словарь
+        /// </returns> 
         ////Return клавиатуру
         public GameKeys GetKeyBoard()
         {
@@ -76,26 +120,36 @@ namespace Balda.Data
         {
             return _size;
         }
-
-        ////Return ширину клавиатуры
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        /// ширина клавиатуры
+        /// </returns>  
         public int GetWidth()
         {
             return _width;
         }
-
-        ////Return висоту клавиатуры
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        /// висота клавиатуры
+        /// </returns> 
         public int GetHeigth()
         {
             return _heigth;
         }
-
-        ////Определяет, было ли слово использовано в игре
+        /// <summary>
+        ///Определяет, было ли слово использовано в игре
+        /// </summary> 
         public bool WordIsUsed(string word)
         {
             return _usedWords.Contains(word);
         }
-
-        ////Генерируем игроков
+        /// <summary>
+        ///Генерируем игроков
+        /// </summary> 
         public void GeneratePalyers()
         {
             _playersList.Clear();
@@ -109,8 +163,9 @@ namespace Balda.Data
                 _playersList.Add(new User(Settings.Setting.GetNamePlayer()));
             }
         }
-
-        ////Передает управление между игроками
+        /// <summary>
+        ///Передает управление между игроками
+        /// </summary> 
         public void ExchangePlayer()
         {
             if (DetermineWinner() != null)
@@ -141,8 +196,9 @@ namespace Balda.Data
                 ExchangePlayer();
             }
         }
-
-        ////Обновляет список использованых слов
+        /// <summary>
+        ///Обновляет список использованых слов
+        /// </summary> 
         public void UpdateUsedWords()
         {
             string firstWord = _usedWords[0];
@@ -152,8 +208,12 @@ namespace Balda.Data
                 foreach (string word in user.GetWordsList())
                     _usedWords.Add(word);
         }
-
-        ////Определяет победителя
+        /// <summary>
+        ///Определяет победителя
+        /// </summary> 
+        /// <returns>
+        /// Игрок
+        /// </returns> 
         public User DetermineWinner()
         {
             ////Игра закончена, если поле заполнено
@@ -206,14 +266,19 @@ namespace Balda.Data
             }
             return null;
         }
-
-        ////Возвращает список использованых слов в игре
+        /// <summary>
+        ///Возвращает список использованых слов в игре
+        /// </summary> 
+        /// <returns>
+        ///Список
+        /// </returns> 
         public Collection<string> GetUsedWord()
         {
             return _usedWords;
         }
-
-        ////Задаёт количество игроков-людей
+        /// <summary>
+        ///Задаёт количество игроков-людей
+        /// </summary> 
         public void SetPlayerCount(int count)
         {
             if (count > 0 && count < 6)
@@ -221,8 +286,9 @@ namespace Balda.Data
                 _playersCount = count;
             }
         }
-
-        ////Задаёт количество игроков-ботов
+        /// <summary>
+        ///Задаёт количество игроков-ботов
+        /// </summary> 
         public void SetBotsCount(int count)
         {
             if (count > 0 && count < 3)
@@ -230,8 +296,9 @@ namespace Balda.Data
                 _botsCount = count;
             }
         }
-
-        ////Задаёт сложность ботов
+        /// <summary>
+        ///Задаёт сложность ботов
+        /// </summary> 
         public void SetBotsComplexity(int compl)
         {
             if (compl == 0 || compl == 1 || compl == 2)
@@ -239,18 +306,29 @@ namespace Balda.Data
                 _botComplexity = compl;
             }
         }
-
-        ////Возвращает текущего игрока
+        /// <summary>
+        ///Возвращает текущего игрока
+        /// </summary> 
+        /// <returns>
+        ///Игрок
+        /// </returns> 
         public User ActivePlayer()
         {
             return _playersList[_activePlayer];
         }
-
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        ///Список игроков
+        /// </returns> 
         public Collection<User> Players()
         {
             return _playersList;
         }
-
+        /// <summary>
+        ///Запуск игры
+        /// </summary> 
         public void Start()
         {
             GeneretaBoard();
@@ -258,12 +336,19 @@ namespace Balda.Data
             _activePlayer = _playersList.Count - 1;
             ExchangePlayer();
         }
-
+        /// <summary>
+        ///
+        /// </summary> 
+        /// <returns>
+        ///Номер Ттекущего игрока
+        /// </returns> 
         public int GetActivePlayerIndex()
         {
             return _activePlayer;
         }
-
+        /// <summary>
+        ///Очистка всех использованых слов
+        /// </summary> 
         public void ClearUsedWords()
         {
             _usedWords.Clear();
@@ -272,8 +357,9 @@ namespace Balda.Data
                 user.GetWordsList().Clear();
             }
         }
-
-        ////Определяет, заполнено или нет игровое поле
+        /// <summary>
+        ///Определяет, заполнено или нет игровое поле
+        /// </summary> 
         private bool FieldIsFull()
         {
             for (int row = 0; row < _board.Heigth(); row++)
@@ -288,8 +374,12 @@ namespace Balda.Data
             }
             return true;
         }
-
-        ////Возвращает к-во играющих игроков
+        /// <summary>
+        ///Возвращает к-во играющих игроков
+        /// </summary> 
+        /// <returns>
+        ///Кл-во игроков
+        /// </returns> 
         private int CountPlayersInGame()
         {
             int countPlayers = 0;
