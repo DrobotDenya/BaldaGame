@@ -114,9 +114,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <WrapPanel x:Name="Keyboard" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Width="683" VerticalAlignment="Center"
-                       x:FieldModifier="public" />
+                       />
         </Grid>
-        <Grid x:Name="MiddleGrid" Grid.Row="2" >
+        <Grid Grid.Row="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="156*"/>
                 <RowDefinition Height="35*"/>
@@ -127,12 +127,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <WrapPanel HorizontalAlignment="Center" Width="304" VerticalAlignment="Center" Height="70" Grid.Row="1" Grid.Column="1">
-                <Button Style="{StaticResource CancelBtnn}" x:Name="BtnCancel" Command="{Binding CancelbtnCommand}"/>
-                <Button Style="{StaticResource MissBtn}" x:Name="BtnMiss" Command="{Binding MissbtnCommand}"/>
-                <Button Style="{StaticResource SubmitBtn}" x:Name="BtnSubmit" Command="{Binding SubmitbtnCommand}" />
+                <Button Style="{StaticResource CancelBtnn}" Command="{Binding CancelbtnCommand}"/>
+                <Button Style="{StaticResource MissBtn}" Command="{Binding MissbtnCommand}"/>
+                <Button Style="{StaticResource SubmitBtn}" Command="{Binding SubmitbtnCommand}" />
             </WrapPanel>
             <WrapPanel x:Name="Board" Height="285" Width="304" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1"
-                       x:FieldModifier="public" />
+                       />
             <StackPanel Width="141" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,1">
                 <TextBlock Style="{StaticResource TextBlockRight}" x:Name="TitleP1" Text="Player1" />
                 <ListBox Style="{StaticResource ListBox1}" ItemsSource="{Binding ListWord}" x:Name="ListBoxP1" HorizontalContentAlignment="Center"/>

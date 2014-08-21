@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Balda.Data
 {
@@ -7,8 +8,8 @@ namespace Balda.Data
         private GameBoard _board = new GameBoard();
         private GameKeys _keyBoard = new GameKeys();
         private Dictionary _dictionary = new Dictionary();
-        private List<string> _usedWords = new List<string>();
-        private List<User> _playersList = new List<User>();
+        private Collection<string> _usedWords = new Collection<string>();
+        private Collection<User> _playersList = new Collection<User>();
         private int _size = 5;
         private int _width = 11;
         private int _heigth = 3;
@@ -207,7 +208,7 @@ namespace Balda.Data
         }
 
         ////Возвращает список использованых слов в игре
-        public List<string> GetUsedWord()
+        public Collection<string> GetUsedWord()
         {
             return _usedWords;
         }
@@ -245,7 +246,7 @@ namespace Balda.Data
             return _playersList[_activePlayer];
         }
 
-        public List<User> Players()
+        public Collection<User> Players()
         {
             return _playersList;
         }
@@ -279,7 +280,7 @@ namespace Balda.Data
             {
                 for (int col = 0; col < _board.Width(); col++)
                 {
-                    if (string.IsNullOrEmpty(_board.CellPool[row, col]))
+                    if (string.IsNullOrEmpty(_board.CellPool[row][col]))
                     {
                         return false;
                     }

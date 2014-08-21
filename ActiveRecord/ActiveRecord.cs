@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+[assembly: CLSCompliant(true)]
 namespace ActiveRecord
 {
     public delegate T RowMapper<T>(OleDbDataReader reader);
@@ -26,26 +27,26 @@ namespace ActiveRecord
         #region Select
         public T Select(string id)
         {
-            return FindEntityById(id, rowMapper);
+            return FindEntityById(id);
         }
 
-        private T FindEntityById(string id, RowMapper<T> row)
+        private T FindEntityById(string id)
         {
             T result = default(T);
 
-            result = Find("select * from [" + _dataBase + "] where Nickname = ?", id, row);
+            result = Find("select * from [" + _dataBase + "] where Nickname = ?", id);
             return result;
 
 
         }
 
-        private T Find(string query, string id, RowMapper<T> row)
+        private T Find(string query, string id)
         {
             T result = default(T);
 
             using (OleDbDataReader reader = GetQueryDataReader(query, id))
             {
-                result = GetSingleEntity(reader, rowMapper);
+                result = GetSingleEntity(reader);
             }
 
             return result;
@@ -62,7 +63,7 @@ namespace ActiveRecord
             return dataReader;
         }
 
-        public T GetSingleEntity(OleDbDataReader reader, RowMapper<T> row)
+        public T GetSingleEntity(OleDbDataReader reader)
         {
             while (reader.Read())
             {
@@ -101,7 +102,7 @@ namespace ActiveRecord
         private OleDbParameter[] GetOleDbParametrs(T entity)
         {
 
-            List<OleDbParameter> parameters = new List<OleDbParameter>();
+            Collection<OleDbParameter> parameters = new Collection<OleDbParameter>();
 
             foreach (PropertyInfo propertyInfo in entity.GetType().GetProperties())
             {
@@ -123,7 +124,6 @@ namespace ActiveRecord
 
         private void Remove(string query, string id)
         {
-            T result = default(T);
             using (OleDbConnection connection = new OleDbConnection(ConnectionString + _dataBase + ".accdb"))
             {
                 connection.Open();
@@ -137,14 +137,14 @@ namespace ActiveRecord
 
         #region
 
-        public List<T> FindAll()
+        public Collection<T> FindAll()
         {
             return FindEntities("select * from [" + _dataBase + "]",rowMapper);
         }
 
-        public List<T> FindEntities(string query, RowMapper<T> row)
+        public Collection<T> FindEntities(string query, RowMapper<T> row)
         {
-            List<T> result = default(List<T>);
+            Collection<T> result = default(Collection<T>);
 
             using (OleDbDataReader reader = GetQueryDataReader(query, ""))
             {
@@ -155,9 +155,9 @@ namespace ActiveRecord
 
         }
 
-        public List<T> GetEntities<T>(OleDbDataReader reader, RowMapper<T> rowMapper)
+        public Collection<T> GetEntities(OleDbDataReader reader, RowMapper<T> rowMapper)
         {
-           List<T> results = new List<T>();
+           Collection<T> results = new Collection<T>();
 
             while (reader.Read())
             {

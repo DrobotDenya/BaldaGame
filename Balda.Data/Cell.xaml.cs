@@ -30,7 +30,7 @@ namespace Balda.Data
             mainLabel.Content = s;
         }
 
-        public string GetText()
+        public string Text()
         {
             return (string)mainLabel.Content;
         }

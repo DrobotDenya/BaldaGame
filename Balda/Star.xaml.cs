@@ -15,23 +15,10 @@ namespace Balda
         {
             InitializeComponent();
         }
-        public double Height
-        {
-            get { return Height; }
-            set { Height = value; }
-        }
-        public double Width
-        {
-            get { return Width; }
-            set { Width = value; }
-        }
 
-        public void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
+        public void UserControlMouseDown(object sender, MouseButtonEventArgs e)
         {
-
             MessageBox.Show(Message);
-            
-            
         }
         public static readonly DependencyProperty MessageProperty = DependencyProperty.Register("Massege", typeof(string), typeof(Star));
         public string Message

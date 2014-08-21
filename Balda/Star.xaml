@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" HorizontalAlignment="Center"  VerticalAlignment="Center" MouseDown="UserControl_MouseDown" Height="20" Width="20">
+             mc:Ignorable="d" HorizontalAlignment="Center"  VerticalAlignment="Center" MouseDown="UserControlMouseDown" Height="20" Width="20">
 
-    <Canvas Name="mainCanvas" Height="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="20">
-        <Polygon x:Name="star_Copy" Fill="Yellow" Stretch="Fill" Stroke="Orange" StrokeThickness="5"
+    <Canvas Height="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="20">
+        <Polygon Fill="Yellow" Stretch="Fill" Stroke="Orange" StrokeThickness="5"
         	Points="105,50 117,86 159,86 123,104 133,146 105,122 77,146 87,104 51,86 93,86" Height="20" Width="20" RenderTransformOrigin="3.7,-0.55" Canvas.Top="-10"/>
     </Canvas>
 

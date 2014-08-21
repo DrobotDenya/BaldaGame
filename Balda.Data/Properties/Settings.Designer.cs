@@ -26,22 +26,22 @@ namespace Balda.Data.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\ListForPlayer1.accd" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\CollectionForPlayer1.accd" +
             "b")]
-        public string ListForPlayer1ConnectionString {
+        public string CollectionForPlayer1ConnectionString {
             get {
-                return ((string)(this["ListForPlayer1ConnectionString"]));
+                return ((string)(this["CollectionForPlayer1ConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\ListForPlayer2.accd" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\CollectionForPlayer2.accd" +
             "b")]
-        public string ListForPlayer2ConnectionString {
+        public string CollectionForPlayer2ConnectionString {
             get {
-                return ((string)(this["ListForPlayer2ConnectionString"]));
+                return ((string)(this["CollectionForPlayer2ConnectionString"]));
             }
         }
         

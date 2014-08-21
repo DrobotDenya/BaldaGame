@@ -11,13 +11,19 @@ namespace Balda.ViewModel
 {
     class StartViewModel : INotifyPropertyChanged
     {
-        private StartWindow _window;
-        public StartViewModel(StartWindow window)
+        //private StartWindow _window;
+        public StartViewModel(/*StartWindow window*/)
+        {
+            
+           InitCommand();
+           // _window = window;
+            _login = "qwe";
+        }
+
+        private void InitCommand()
         {
             LoginBtnCommand = new Command(new Action<object>(LoginClick));
             RegistrationbtnCommand = new Command(new Action<object>(RegistrationClick));
-            _window = window;
-            Login = "qwe";
         }
 
         private string _login;

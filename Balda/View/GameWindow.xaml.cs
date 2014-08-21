@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using Balda.Data;
 
@@ -12,18 +13,18 @@ namespace Balda.View
             InitializeComponent();
         }
 
-        public void DrawBoardCell(Cell[,] array)
+        public void DrawBoardCell(Cell[][] array)
         {
-            for (int i = 0; i < Math.Sqrt(array.Length); i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                for (int j = 0; j < Math.Sqrt(array.Length); j++)
+                for (int j = 0; j < array.Length; j++)
                 {
-                    Board.Children.Add(array[i, j]);
+                    Board.Children.Add(array[i][j]);
                 }
             }
         }
 
-        public void DrawKeys(List<Cell> list)
+        public void DrawKeys(Collection<Cell> list)
         {
             foreach (var cell in list)
             {
@@ -37,7 +38,7 @@ namespace Balda.View
             TitleP2.Text = name2;
         }
 
-        public void UpdateListP1(List<string> listP1)
+        public void UpdateListP1(Collection<string> listP1)
         {
             ListBoxP1.Items.Clear();
             foreach (string word in listP1)
@@ -46,7 +47,7 @@ namespace Balda.View
             }
         }
 
-        public void UpdateListP2(List<string> listP2)
+        public void UpdateListP2(Collection<string> listP2)
         {
             ListBoxP2.Items.Clear();
             foreach (string word in listP2)

@@ -25,13 +25,13 @@
         </Grid.RowDefinitions>
         <StackPanel Height="292" Width="150" Grid.RowSpan="4">
             <Label Content="Nickname"/>
-            <TextBox x:Name="tbNickname" BorderThickness="3" Text="{Binding Path=Nickname, Mode=TwoWay}"/>
+            <TextBox BorderThickness="3" Text="{Binding Path=Nickname, Mode=TwoWay}"/>
             <Label Content="First Name"/>
-            <TextBox x:Name="tbFirstName" Text="{Binding Path=FirstName, Mode=TwoWay}" />
+            <TextBox Text="{Binding Path=FirstName, Mode=TwoWay}" />
             <Label Content="Second Name"/>
-            <TextBox x:Name="tbSecondName" Text="{Binding Path=SecondName, Mode=TwoWay}"/>
+            <TextBox Text="{Binding Path=SecondName, Mode=TwoWay}"/>
         </StackPanel>
-        <Button x:Name="btnRegister" Command="{Binding RegisterBtnCommand}" Grid.Row="4">
+        <Button Command="{Binding RegisterBtnCommand}" Grid.Row="4">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

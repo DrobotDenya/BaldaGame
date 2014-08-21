@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,10 @@ namespace Balda.Data
     public class FindWordAlgorithm
     {
         private GameBoard _gameBoard = new GameBoard();
-        private List<string> _userWord = new List<string>();
+        private Collection<string> _userWord = new Collection<string>();
         private Dictionary _dictionary = new Dictionary();
-        private string[,] _strings;
-        private int[,] _binaryMatrixLetters;
+        private string[][] _strings;
+        private int[][] _binaryMatrixLetters;
         private int _ai = 0;
         private int _aj = 0;
         private int _bottomNumber, _topNumber;
@@ -23,7 +24,7 @@ namespace Balda.Data
         private int _width;
         private int _heigth;
 
-        public FindWordAlgorithm(GameBoard gameBoard, List<string> userWord)
+        public FindWordAlgorithm(GameBoard gameBoard, Collection<string> userWord)
         {
             this._gameBoard = gameBoard;
             this._userWord = userWord;
@@ -36,27 +37,33 @@ namespace Balda.Data
         }
 
         ////Ищет все подходящие слова в словаре
-        public List<string> FindWords()
+        public Collection<string> FindWords()
         {
-            List<string> res = new List<string>();
-            _strings = new string[_width, _heigth];
+            Collection<string> res = new Collection<string>();
+            _strings = new string[_width][];
             for (int row = 0; row < _width; row++)
+            {
+                _strings[row] = new string[_heigth];
                 for (int column = 0; column < _heigth; column++)
-                    _strings[row, column] = string.Empty;
+                    _strings[row][column] = string.Empty;
+            }
 
-            _binaryMatrixLetters = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width][];
             for (int row = 0; row < _width; row++)
+            {
+                _binaryMatrixLetters[row] = new int[_heigth];
                 for (int column = 0; column < _heigth; column++)
-                    _binaryMatrixLetters[row, column] = 0;
+                    _binaryMatrixLetters[row][column] = 0;
+            }
 
-            while (_currentWordInDict < _dictionary.GetCount())
+            while (_currentWordInDict < _dictionary.Count())
             {
                 _word = _dictionary.GetDictionary()[_currentWordInDict];
                 if (!_userWord.Contains(_word))
                 {
                     for (int row = 0; row < _width; row++)
                         for (int column = 0; column < _heigth; column++)
-                            _binaryMatrixLetters[row, column] = 0;
+                            _binaryMatrixLetters[row][column] = 0;
 
                     bool tl = true;
                     ////Цикл по слову из словаря
@@ -67,11 +74,11 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i, j]))
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i][j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                         for (_aj = 0; _aj < _heigth; _aj++)
-                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai, _aj];
+                                            _strings[_ai][_aj] = _gameBoard.CellPool[_ai][_aj];
 
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
                                     _isAcceptWord = true;
@@ -82,9 +89,9 @@ namespace Balda.Data
 
                                     for (int i1 = 0; i1 < _width; ++i1)
                                         for (int j1 = 0; j1 < _heigth; ++j1)
-                                            _binaryMatrixLetters[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1][j1] = 0;
 
-                                    _binaryMatrixLetters[i, j] = 1;
+                                    _binaryMatrixLetters[i][j] = 1;
                                     for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
                                         if (CheckLetter(_bottomNumber))
@@ -112,7 +119,7 @@ namespace Balda.Data
                                             res.Add(_word);
                                             for (_ai = 0; _ai < 5; _ai++)
                                                 for (_aj = 0; _aj < 5; _aj++)
-                                                    _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);
+                                                    _gameBoard.SetCellValue(_strings[_ai][_aj], _ai, _aj);
 
                                             tl = false;
                                             break;   //// Слово подошло переходим к следующему слову
@@ -121,7 +128,7 @@ namespace Balda.Data
 
                                     for (_ai = 0; _ai < _width; _ai++)
                                         for (_aj = 0; _aj < _heigth; _aj++)
-                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  //// восстановили массив, в текущем состоянии.
+                                            _gameBoard.SetCellValue(_strings[_ai][_aj], _ai, _aj);  //// восстановили массив, в текущем состоянии.
                                 }
                             }
 
@@ -142,7 +149,7 @@ namespace Balda.Data
             return res;
         }
 
-        public int MaxLength(List<string> words)
+        public int MaxLength(Collection<string> words)
         {
             int length = 0;
 
@@ -159,25 +166,27 @@ namespace Balda.Data
         ////Возворащает первое подходящие слово из словаря
         public string FindWord()
         {
-            _strings = new string[_width, _heigth];
+            _strings = new string[_width][];
             for (int row = 0; row < _width; row++)
             {
+                _strings[row] = new string[_heigth];
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _strings[row, column] = string.Empty;
+                    _strings[row][column] = string.Empty;
                 }
             }
-            _binaryMatrixLetters = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width][];
 
             for (int row = 0; row < _width; row++)
             {
+                _binaryMatrixLetters[row] = new int[_heigth];
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _binaryMatrixLetters[row, column] = 0;
+                    _binaryMatrixLetters[row][column] = 0;
                 }
             }
 
-            while (_currentWordInDict < _dictionary.GetCount())
+            while (_currentWordInDict < _dictionary.Count())
             {
                 _word = _dictionary.GetDictionary()[_currentWordInDict];
                 if (!_userWord.Contains(_word))
@@ -186,7 +195,7 @@ namespace Balda.Data
                     {
                         for (int j = 0; j < _heigth; ++j)
                         {
-                            _binaryMatrixLetters[i, j] = 0;
+                            _binaryMatrixLetters[i][j] = 0;
                         }
                     }
                     bool tl = true;
@@ -196,14 +205,14 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i,j]))
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i][j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                     {
                                         for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai,_aj];
+                                            _strings[_ai][_aj] = _gameBoard.CellPool[_ai][_aj];
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
@@ -216,10 +225,10 @@ namespace Balda.Data
                                     {
                                         for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
-                                            _binaryMatrixLetters[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1][j1] = 0;
                                         }
                                     }
-                                    _binaryMatrixLetters[i, j] = 1;
+                                    _binaryMatrixLetters[i][j] = 1;
                                     for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
                                         if (CheckLetter(_bottomNumber))
@@ -256,7 +265,7 @@ namespace Balda.Data
                                     {
                                         for (_aj = 0; _aj < _heigth; _aj++)
                                         {
-                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
+                                            _gameBoard.SetCellValue(_strings[_ai][_aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
                                     }
                                 }
@@ -279,25 +288,27 @@ namespace Balda.Data
 
         public string FindWordWithMaxLength()
         {
-            _strings = new string[_width, _heigth];
+            _strings = new string[_width][];
 
             for (int row = 0; row < _width; row++)
             {
+                _strings[row] = new string[_heigth];
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _strings[row, column] = string.Empty;
+                    _strings[row][column] = string.Empty;
                 }
             }
-            _binaryMatrixLetters = new int[_width, _heigth];
+            _binaryMatrixLetters = new int[_width][];
 
             for (int row = 0; row < _width; row++)
             {
+                _binaryMatrixLetters[row] = new int[_heigth];
                 for (int column = 0; column < _heigth; column++)
                 {
-                    _binaryMatrixLetters[row, column] = 0;
+                    _binaryMatrixLetters[row][column] = 0;
                 }
             }
-            List<string> dict = FindWords();
+            Collection<string> dict = FindWords();
             _currentWordInDict = 0;
             while (_currentWordInDict < dict.Count)
             {
@@ -308,7 +319,7 @@ namespace Balda.Data
                     {
                         for (int j = 0; j < _heigth; ++j)
                         {
-                            _binaryMatrixLetters[i, j] = 0;
+                            _binaryMatrixLetters[i][j] = 0;
                         }
                     }
 
@@ -319,14 +330,14 @@ namespace Balda.Data
                         {
                             for (int j = 0; j < _heigth; j++)
                             {
-                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i,j]))
+                                if (string.IsNullOrEmpty(_gameBoard.CellPool[i][j]))
                                 {
                                     for (_ai = 0; _ai < _width; _ai++)
                                     {
                                         for (_aj = 0; _aj < _heigth; _aj++)
                                         {
                                             // сохранили массив, для возврата в предыдущее состояние.
-                                            _strings[_ai, _aj] = _gameBoard.CellPool[_ai,_aj];
+                                            _strings[_ai][_aj] = _gameBoard.CellPool[_ai][_aj];
                                         }
                                     }
                                     _gameBoard.SetCellValue(_word.Substring(k, 1), i, j);
@@ -339,10 +350,10 @@ namespace Balda.Data
                                     {
                                         for (int j1 = 0; j1 < _heigth; ++j1)
                                         {
-                                            _binaryMatrixLetters[i1, j1] = 0;
+                                            _binaryMatrixLetters[i1][j1] = 0;
                                         }
                                     }
-                                    _binaryMatrixLetters[i, j] = 1;
+                                    _binaryMatrixLetters[i][j] = 1;
                                     for (_bottomNumber = _bottomNumber + 1; _bottomNumber < _word.Length; _bottomNumber++)
                                     {
                                         if (CheckLetter(_bottomNumber))
@@ -376,7 +387,7 @@ namespace Balda.Data
                                     {
                                         for (_aj = 0; _aj < _heigth; _aj++)
                                         {
-                                            _gameBoard.SetCellValue(_strings[_ai, _aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
+                                            _gameBoard.SetCellValue(_strings[_ai][_aj], _ai, _aj);  // восстановили массив, в текущем состоянии.
                                         }
                                     }
                                 }
@@ -404,40 +415,40 @@ namespace Balda.Data
 
             if (_ai + 1 != _width)
             {
-                if ((_gameBoard.CellPool[_ai + 1, _aj] == letter)
-                        && (_binaryMatrixLetters[_ai + 1, _aj] != 1))
+                if ((_gameBoard.CellPool[_ai + 1][_aj] == letter)
+                        && (_binaryMatrixLetters[_ai + 1][_aj] != 1))
                 {
-                    _binaryMatrixLetters[_ai + 1, _aj] = 1;
+                    _binaryMatrixLetters[_ai + 1][_aj] = 1;
                     _ai++;
                     return true;
                 }
             }
             if (_ai - 1 != -1)
             {
-                if ((_gameBoard.CellPool[_ai - 1, _aj] == letter)
-                        && (_binaryMatrixLetters[_ai - 1, _aj] != 1))
+                if ((_gameBoard.CellPool[_ai - 1][_aj] == letter)
+                        && (_binaryMatrixLetters[_ai - 1][_aj] != 1))
                 {
-                    _binaryMatrixLetters[_ai - 1, _aj] = 1;
+                    _binaryMatrixLetters[_ai - 1][_aj] = 1;
                     _ai--;
                     return true;
                 }
             }
             if (_aj + 1 != _heigth)
             {
-                if ((_gameBoard.CellPool[_ai, _aj + 1] == letter)
-                        && (_binaryMatrixLetters[_ai, _aj + 1] != 1))
+                if ((_gameBoard.CellPool[_ai][_aj + 1] == letter)
+                        && (_binaryMatrixLetters[_ai][_aj + 1] != 1))
                 {
-                    _binaryMatrixLetters[_ai, _aj + 1] = 1;
+                    _binaryMatrixLetters[_ai][_aj + 1] = 1;
                     _aj++;
                     return true;
                 }
             }
             if (_aj - 1 != -1)
             {
-                if ((_gameBoard.CellPool[_ai, _aj - 1] == letter)
-                        && (_binaryMatrixLetters[_ai, _aj - 1] != 1))
+                if ((_gameBoard.CellPool[_ai][_aj - 1] == letter)
+                        && (_binaryMatrixLetters[_ai][_aj - 1] != 1))
                 {
-                    _binaryMatrixLetters[_ai, _aj - 1] = 1;
+                    _binaryMatrixLetters[_ai][_aj - 1] = 1;
                     _aj--;
                     return true;
                 }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace Balda.Data
 {
     public class Dictionary
     {
-        private List<string> _words = new List<string>();
+        private Collection<string> _words = new Collection<string>();
 
         public Dictionary()
         {
@@ -21,42 +22,42 @@ namespace Balda.Data
             file.Close();
         }
 
-        public int GetCount()
+        public int Count()
         {
             return _words.Count;
         }
 
-        public List<string> GetDictionary()
+        public Collection<string> GetDictionary()
         {
             return _words;
         }
 
         public string GetRandomWord(int length)
         {
-            List<string> listwords = GetWords(length);
-            if (listwords.Count > 0)
+            Collection<string> Collectionwords = GetWords(length);
+            if (Collectionwords.Count > 0)
             {
                 Random rand = new Random();
-                int randomNumb = rand.Next(0, listwords.Count);
-                return listwords[randomNumb];
+                int randomNumb = rand.Next(0, Collectionwords.Count);
+                return Collectionwords[randomNumb];
             }
 
             return null;
         }
 
-        public List<string> GetWords(int length)
+        public Collection<string> GetWords(int length)
         {
-            List<string> listWords = new List<string>();
+            Collection<string> CollectionWords = new Collection<string>();
 
             foreach (string word in _words)
             {
                 if (word.Length == length)
                 {
-                    listWords.Add(word);
+                    CollectionWords.Add(word);
                 }
             }
 
-            return listWords;
+            return CollectionWords;
         }
 
         public bool IsExist(string word)
@@ -77,9 +78,9 @@ namespace Balda.Data
             return false;
         }
 
-        public List<string> PossibleWords(string letters)
+        public Collection<string> PossibleWords(string letters)
         {
-            List<string> words = new List<string>();
+            Collection<string> words = new Collection<string>();
             foreach (string word in words)
             {
                 if (word.Substring(1).IndexOf(word) != -1)
