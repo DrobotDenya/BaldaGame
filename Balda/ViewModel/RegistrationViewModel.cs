@@ -17,7 +17,9 @@ namespace Balda.ViewModel
             _window = window;
             
         }
-
+        /// <summary>
+        /// Ник
+        /// </summary>
         private string _nickName;
         public string Nickname
         {
@@ -28,7 +30,9 @@ namespace Balda.ViewModel
                 OnPropertyChanged("Nickname");
             }
         }
-
+        /// <summary>
+        /// Имя
+        /// </summary>
         private string _firstName;
         public string FirstName
         {
@@ -39,7 +43,9 @@ namespace Balda.ViewModel
                 OnPropertyChanged("FirstName");           
             }
         }
-
+        /// <summary>
+        /// Фимилия
+        /// </summary>
         private string _secondName;
         public string SecondName
         {
@@ -52,7 +58,10 @@ namespace Balda.ViewModel
         }
 
         #region Command
-
+        /// <summary>
+        /// Регистрация пользователя;
+        /// Добавление пользователя в БД;
+        /// </summary>
         private void RegisterClick(object obj)
         {
             if (!String.IsNullOrEmpty(Nickname) && !String.IsNullOrEmpty(FirstName)
@@ -69,7 +78,9 @@ namespace Balda.ViewModel
                 _window.Close();
             }
         }
-
+        /// <summary>
+        /// Разметка БД пользователя
+        /// </summary>
         private User RowMapper(OleDbDataReader reader)
         {
             User user = new User();

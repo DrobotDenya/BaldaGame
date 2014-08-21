@@ -14,19 +14,15 @@ namespace Balda.ViewModel
         //private StartWindow _window;
         public StartViewModel(/*StartWindow window*/)
         {
-            
-           InitCommand();
+            LoginBtnCommand = new Command(new Action<object>(LoginClick));
+            RegistrationbtnCommand = new Command(new Action<object>(RegistrationClick));
            // _window = window;
             _login = "qwe";
         }
-
-        private void InitCommand()
-        {
-            LoginBtnCommand = new Command(new Action<object>(LoginClick));
-            RegistrationbtnCommand = new Command(new Action<object>(RegistrationClick));
-        }
-
-        private string _login;
+        /// <summary>
+        /// Логин
+        /// </summary>
+       private string _login;
         public string Login
         {
             get { return _login; }
@@ -38,6 +34,9 @@ namespace Balda.ViewModel
         }
 
         #region Command
+        /// <summary>
+        /// Открывается окно регистрации
+        /// </summary>
         private void RegistrationClick(object obj)
         {
             RegistrationWindows registrWindow = new RegistrationWindows();
@@ -45,7 +44,9 @@ namespace Balda.ViewModel
             registrWindow.DataContext = viewModel;
             registrWindow.Show();
         }
-
+        /// <summary>
+        /// Аутентификация пользователя
+        /// </summary>
         private void LoginClick(object obj)
         {
             RowMapper<User> rowMapper = RowMapper;
@@ -62,7 +63,9 @@ namespace Balda.ViewModel
             }
 
         }
-
+        /// <summary>
+        /// Разметка Пользовательской БД
+        /// </summary>
         private User RowMapper(OleDbDataReader reader)
         {
             User user = new User();
@@ -71,8 +74,6 @@ namespace Balda.ViewModel
             user.SecondName = reader["Sername"] as string;
             return user;
         }
-
-
 
         public ICommand RegistrationbtnCommand { get; set; }
 

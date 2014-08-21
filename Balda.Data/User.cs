@@ -45,26 +45,16 @@ namespace Balda.Data
 
             set { _user = value; }
         }
-
-        /// <summary>
-        ///Конструктор
-        /// </summary>
         public User(string nickname, string name, string sername)
         {
             this.Nickname = nickname;
             this.FirstName = name;
             this.SecondName = sername;
         }
-        /// <summary>
-        ///Конструктор
-        /// </summary>
         public User(string nickname)
         {
             Nickname = nickname;
         }
-        /// <summary>
-        ///Конструктор
-        /// </summary>
         public User()
         {
 

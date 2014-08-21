@@ -1,5 +1,8 @@
 ﻿namespace Balda.Data
 {
+    /// <summary>
+    /// Класс игрового поля
+    /// </summary>
     public class GameBoard
     {
         /// <summary>
@@ -21,9 +24,7 @@
         {
             SetSize(width, heigth);
         }
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+        
         public GameBoard()
         {
         }
@@ -45,6 +46,8 @@
                 }
             }
         }
+        /// <summary>
+        /// </summary>
         /// <returns>
         /// Ширина
         /// </returns>
@@ -52,6 +55,8 @@
         {
             return this._width;
         }
+        /// <summary>
+        /// </summary>
         /// <returns>
         /// Высота
         /// </returns>
@@ -59,6 +64,8 @@
         {
             return this._heigth;
         }
+        /// <summary>
+        /// </summary>
         /// <summary>
         /// Очистка поля
         /// </summary>

@@ -3,6 +3,9 @@ using System.IO;
 
 namespace Balda.Data
 {
+    /// <summary>
+    /// Класс игровой клавиатуры
+    /// </summary>
     public class GameKeys
     {
         /// <summary>
@@ -13,9 +16,7 @@ namespace Balda.Data
         /// Путь к значениям клавиш
         /// </summary>
         private string _path = @"..\..\..\Resources\Keyboard.txt";
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+       
         public GameKeys()
         {
             ReadKeyBoard();

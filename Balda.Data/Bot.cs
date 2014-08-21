@@ -1,5 +1,8 @@
 ﻿namespace Balda.Data
 {
+    /// <summary>
+    /// Класс бота
+    /// </summary>
     public class Bot : User
     {
         /// <summary>
