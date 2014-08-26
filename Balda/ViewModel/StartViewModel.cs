@@ -16,13 +16,13 @@ namespace Balda.ViewModel
         {
             LoginBtnCommand = new Command(new Action<object>(LoginClick));
             RegistrationbtnCommand = new Command(new Action<object>(RegistrationClick));
-           // _window = window;
+            // _window = window;
             _login = "qwe";
         }
         /// <summary>
         /// Логин
         /// </summary>
-       private string _login;
+        private string _login;
         public string Login
         {
             get { return _login; }
@@ -52,7 +52,7 @@ namespace Balda.ViewModel
             RowMapper<User> rowMapper = RowMapper;
             ActiveRecord<User> dao = new ActiveRecord<User>("User", rowMapper);
             User us = dao.Select(Login);
-            
+
             if (us != null)
             {
                 User.SharedUser = us;
