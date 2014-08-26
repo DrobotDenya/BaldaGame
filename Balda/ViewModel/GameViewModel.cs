@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ServiceModel;
 using System.Windows;
 using System.Windows.Input;
 using Balda.Data;
+using Balda.ServiceReference3;
 using Balda.View;
+using System.Drawing;
 
 namespace Balda.ViewModel
 {
-    public class GameViewModel
+    public class GameViewModel : IService1Callback
     {
         private readonly GameManager _gameManager = new GameManager();
         private readonly GameWindow _gameWindow;
@@ -32,14 +35,37 @@ namespace Balda.ViewModel
         /// Выделеное слово
         /// </summary>
         private string _currentWord = "";
+        private Service1Client client;
+        private bool isLocalGame;
+        public GameViewModel(string s, GameWindow gameWindow, Service1Client user)
+        {
+            isLocalGame = true;
+            MissbtnCommand = new Command(new Action<object>(Miss));
+            CancelbtnCommand = new Command(new Action<object>(Cancel));
+            SubmitbtnCommand = new Command(new Action<object>(Submit));
+            SubmitbtnCommand = new Command(new Action<object>(Submit));
+            _gameWindow = gameWindow;
+            _gameManager.ConnectToLocalGame(s);
+            client = user;
+            ConnectToLocalGame();
+        }
 
-        public GameViewModel(GameWindow gameWindow)
+        public GameViewModel(GameWindow gameWindow, bool isLocalGame)
         {
             MissbtnCommand = new Command(new Action<object>(Miss));
             CancelbtnCommand = new Command(new Action<object>(Cancel));
             SubmitbtnCommand = new Command(new Action<object>(Submit));
+            SubmitbtnCommand = new Command(new Action<object>(Submit));
             _gameWindow = gameWindow;
-            StartGame();
+            if (isLocalGame)
+            {
+                CreateLocalGame(null);
+            }
+            else
+            {
+                StartGame();
+            }
+
         }
         /// <summary>
         /// Вызывается при выделении ячеейки поля или клавиатуры
@@ -63,6 +89,7 @@ namespace Balda.ViewModel
                     {
                         _lastCell = cell;
                         _lastCell.SetText(_lastKey);
+
                         //_lastCell.Background = Brushes.Purple;
                         _lastKey = string.Empty;
 
@@ -298,7 +325,12 @@ namespace Balda.ViewModel
         {
             SetEnableBoard(true);
             UndoWindow();
-            ExchangePlayer();
+            if (!isLocalGame)
+            {
+                ExchangePlayer();
+            }
+
+
         }
         /// <summary>
         /// Отмена хода
@@ -308,6 +340,51 @@ namespace Balda.ViewModel
             SetEnableBoard(true);
             UndoWindow();
         }
+
+
+        private void CreateLocalGame(object obj)
+        {
+
+            _gameManager.CreateLocalGame();
+            CreateCellForBoard();
+            CreateKeysForKeyBoard();
+
+            _gameWindow.DrawBoardCell(_cellArray);
+            _gameWindow.DrawKeys(_keysList);
+
+            ReloadDataBoard();
+            ReloadKeyBoard();
+
+            SetEnableBoard(false);
+            SetEnableKeyboard(false);
+            _gameWindow.SetNamePlayers(User.SharedUser.Nickname, string.Empty);
+
+
+            InstanceContext instanceContext = new InstanceContext(this);
+            client = new Service1Client(instanceContext);
+            client.CreateGame(User.SharedUser.Nickname, _gameManager.StartWord);
+
+
+            MessageBox.Show("Waiting your oponent!!!");
+        }
+
+        private void ConnectToLocalGame()
+        {
+
+            CreateCellForBoard();
+            CreateKeysForKeyBoard();
+
+            _gameWindow.DrawBoardCell(_cellArray);
+            _gameWindow.DrawKeys(_keysList);
+
+            ReloadDataBoard();
+            ReloadKeyBoard();
+
+            SetEnableBoard(false);
+            SetEnableKeyboard(false);
+            _gameWindow.SetNamePlayers(User.SharedUser.Nickname, "player2222");
+        }
+
         /// <summary>
         /// Отправка слова
         /// </summary>
@@ -317,12 +394,21 @@ namespace Balda.ViewModel
             {
                 if (_gameManager.GetDictionary().IsExist(_currentWord))
                 {
-                   _gameManager.ActivePlayer().AddWord(_currentWord);
+                    _gameManager.ActivePlayer().AddWord(_currentWord);
                     _gameManager.UpdateUsedWords();
-                    UpdateListBox();
-                    UpdateValue();
+                    if (!isLocalGame)
+                    {
+                        UpdateListBox();
+                        UpdateValue();
+                    }
+                    else
+                    {
+                        _gameWindow.ListBoxP1.Items.Add(_currentWord);
+                    }
+
+
                     CreateKeysForKeyBoard();
-                    _currentWord = "";
+
 
                     if (_lastCell != null)
                     {
@@ -336,8 +422,14 @@ namespace Balda.ViewModel
                         }
                         _lastCell = null;
                     }
+                    client.SetLetter(_gameManager.GetGameBoard().CellPool, _currentWord, User.SharedUser.Nickname);
+                    _currentWord = "";
                     MessageBox.Show("Конец хода!");
-                    ExchangePlayer();
+                    if (!isLocalGame)
+                    {
+                        ExchangePlayer();
+                    }
+
                 }
                 else
                 {
@@ -365,6 +457,33 @@ namespace Balda.ViewModel
         public ICommand CancelbtnCommand { get; set; }
 
         public ICommand SubmitbtnCommand { get; set; }
+
+
+
+        #endregion
+
+        #region local Game
+
+        public void Turn(string[][] list, string word)
+        {
+            _gameManager.GetGameBoard().CellPool = list;
+            _gameWindow.ListBoxP2.Items.Add(word);
+            ReloadDataBoard();
+            SetEnableBoard(true);
+            SetEnableKeyboard(true);
+        }
+
+        public void ConnectionNewPlayer(string nickname)
+        {
+            User user = new User();
+            user.Nickname = nickname;
+            _gameManager.PlayersList.Add(user);
+            MessageBox.Show("Player" + nickname + "Connection to game!!!!!");
+            _gameWindow.SetNamePlayers(User.SharedUser.Nickname, nickname);
+            SetEnableBoard(true);
+            SetEnableKeyboard(true);
+        }
+
         #endregion
     }
 }

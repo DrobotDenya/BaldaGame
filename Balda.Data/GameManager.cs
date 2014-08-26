@@ -11,6 +11,8 @@ namespace Balda.Data
         private GameBoard _board = new GameBoard();
         private GameKeys _keyBoard = new GameKeys();
         private Dictionary _dictionary = new Dictionary();
+
+        public string StartWord;
         /// <summary>
         ///Список всех использованых слов
         /// </summary>  
@@ -18,7 +20,7 @@ namespace Balda.Data
         /// <summary>
         ///Список игрокав
         /// </summary>  
-        private Collection<User> _playersList = new Collection<User>();
+        public Collection<User> PlayersList = new Collection<User>();
         /// <summary>
         ///Размер поля
         /// </summary>  
@@ -54,6 +56,7 @@ namespace Balda.Data
         {
             _board.SetSize(_size, _size);
             _algorithm = new FindWordAlgorithm(_board, _usedWords);
+            StartWord = GetDictionary().GetRandomWord(_size);
         }
         /// <summary>
         ///
@@ -68,7 +71,7 @@ namespace Balda.Data
         /// <summary>
         ///Генерирует стартовое поле
         /// </summary> 
-        public void GeneretaBoard()
+        public void GeneretaBoard(string word)
         {
             _board.Clear();
             _board.SetSize(_size, _size);
@@ -81,17 +84,17 @@ namespace Balda.Data
                 }
             }
 
-            string randWord = GetDictionary().GetRandomWord(_size);
+            
 
-            if (randWord != null)
+            if (word != null)
             {
                 int middleRow = _size / 2;
                 for (int i = 0; i < _size; ++i)
                 {
-                    _board.SetCellValue(randWord.Substring(i, 1), middleRow, i);
+                    _board.SetCellValue(word.Substring(i, 1), middleRow, i);
                 }
 
-                _usedWords.Add(randWord);
+                _usedWords.Add(word);
             }
         }
         /// <summary>
@@ -153,15 +156,15 @@ namespace Balda.Data
         /// </summary> 
         public void GeneratePalyers()
         {
-            _playersList.Clear();
-            _playersList.Add(User.SharedUser);
+            PlayersList.Clear();
+            PlayersList.Add(User.SharedUser);
             if (Settings.Setting.GetIsBot())
             {
-                _playersList.Add(new Bot("Bot ", _botComplexity, _algorithm));
+                PlayersList.Add(new Bot("Bot ", _botComplexity, _algorithm));
             }
             else
             {
-                _playersList.Add(new User(Settings.Setting.GetNamePlayer()));
+                PlayersList.Add(new User(Settings.Setting.GetNamePlayer()));
             }
         }
         /// <summary>
@@ -178,7 +181,7 @@ namespace Balda.Data
 
             //// Сменить игрока
             _activePlayer++;
-            if (_activePlayer >= _playersList.Count)
+            if (_activePlayer >= PlayersList.Count)
             {
                 _activePlayer = 0;
             }
@@ -221,7 +224,7 @@ namespace Balda.Data
             if (FieldIsFull() == true)
             {
                 User winner = new User();
-                foreach (User user in _playersList)
+                foreach (User user in PlayersList)
                 {
                     if (!user.IsSurrender())
                     {
@@ -236,7 +239,7 @@ namespace Balda.Data
             ////Игра закончена, если в игре остался только один игрок
             if (CountPlayersInGame() < 2)
             {
-                foreach (User user in _playersList)
+                foreach (User user in PlayersList)
                 {
                     if (!user.IsSurrender())
                     {
@@ -247,7 +250,7 @@ namespace Balda.Data
             ////Игра закончена, если все оставшиеся игроки боты
             bool humanInGame = false;
 
-            foreach (User user in _playersList)
+            foreach (User user in PlayersList)
             {
                 if (!user.IsSurrender() && !(user is Bot))
                 {
@@ -257,7 +260,7 @@ namespace Balda.Data
 
             if (!humanInGame)
             {
-                foreach (User user in _playersList)
+                foreach (User user in PlayersList)
                 {
                     if (!user.IsSurrender())
                     {
@@ -315,7 +318,7 @@ namespace Balda.Data
         /// </returns> 
         public User ActivePlayer()
         {
-            return _playersList[_activePlayer];
+            return PlayersList[_activePlayer];
         }
         /// <summary>
         ///
@@ -325,16 +328,32 @@ namespace Balda.Data
         /// </returns> 
         public Collection<User> Players()
         {
-            return _playersList;
+            return PlayersList;
         }
+
+        public void CreateLocalGame()
+        {
+            GeneretaBoard(StartWord);
+            PlayersList.Clear();
+            PlayersList.Add(User.SharedUser);
+        }
+
+        public void ConnectToLocalGame(string s)
+        {
+            GeneretaBoard(s);
+            PlayersList.Clear();
+            PlayersList.Add(User.SharedUser);
+        }
+
+
         /// <summary>
         ///Запуск игры
         /// </summary> 
         public void Start()
         {
-            GeneretaBoard();
+            GeneretaBoard(StartWord);
             GeneratePalyers();
-            _activePlayer = _playersList.Count - 1;
+            _activePlayer = PlayersList.Count - 1;
             ExchangePlayer();
         }
         /// <summary>
@@ -353,7 +372,7 @@ namespace Balda.Data
         public void ClearUsedWords()
         {
             _usedWords.Clear();
-            foreach (User user in _playersList)
+            foreach (User user in PlayersList)
             {
                 user.GetWordsList().Clear();
             }
@@ -384,7 +403,7 @@ namespace Balda.Data
         private int CountPlayersInGame()
         {
             int countPlayers = 0;
-            foreach (User p in _playersList)
+            foreach (User p in PlayersList)
             {
                 if (!p.IsSurrender())
                 {
